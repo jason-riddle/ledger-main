@@ -1,0 +1,21 @@
+;;
+;; 2024 - YEAR
+;;
+
+; Depreciation
+include "./depreciation/2023_05_206_building.bean"
+include "./depreciation/2023_11_206_improvements.bean"
+include "./depreciation/2023_01_2943_building.bean"
+include "./depreciation/2023_02_2943_water_heater.bean"
+include "./depreciation/2023_01_2943_back_door.bean"
+
+; Mortgage
+include "./mortgage/2024_mortgage_payments.bean"
+include "./mortgage/2024_escrow_payouts.bean"
+
+; Taxes
+include "./taxes/206.bean"
+include "./taxes/2943.bean"
+
+; Transactions
+include "./transactions.bean"

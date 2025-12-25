@@ -1,0 +1,10 @@
+;;
+;; 2022 - YEAR
+;;
+
+; Mortgage
+include "./mortgage/2022_mortgage_payments.bean"
+include "./mortgage/2022_escrow_payouts.bean"
+
+; Transactions
+include "./transactions.bean"

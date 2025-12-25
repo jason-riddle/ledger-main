@@ -1,0 +1,71 @@
+;;
+;; ALL - MAIN LEDGER
+;;
+
+include "./_header.bean"
+
+;;
+;; PLUGINS
+;;
+
+; Official plugins
+
+; Validates that currencies held at cost aren't ever converted at price and vice-versa
+plugin "beancount.plugins.coherent_cost"
+
+; Validates that there are no duplicate transactions
+plugin "beancount.plugins.noduplicates"
+
+; Validates that there are no unused accounts
+; plugin "beancount.plugins.nounused"
+
+; Issues errors when amounts are posted to non-leaf accounts (accounts with child accounts)
+plugin "beancount.plugins.leafonly"
+
+; Third-party plugins
+
+; Generates periodic transactions based on recurring patterns in transaction metadata
+; plugin "beancount_periodic.recur" ; Removed due to unreliability
+
+;;
+;; PROPERTY PURCHASE
+;;
+
+include "./purchases/206_property_purchase.bean"
+include "./purchases/2943_property_purchase.bean"
+
+;;
+;; 2022
+;;
+
+include "./2022/_2022.bean"
+
+;;
+;; 2023
+;;
+
+include "./2023/_2023.bean"
+
+;;
+;; 2024
+;;
+
+include "./2024/_2024.bean"
+
+;;
+;; 2025
+;;
+
+include "./2025/_2025.bean"
+
+;;
+;; 2026
+;;
+
+include "./2026/_2026.bean"
+
+;;
+;; BALANCE ASSERTIONS
+;;
+
+include "./_balances.bean"

@@ -1,0 +1,162 @@
+;;
+;; ALL - HEADER
+;;
+
+;;
+;; ACCOUNTS
+;;
+
+;; Assets
+
+; Primary checking account for rental income and expenses
+1970-01-01 open Assets:Cash---Bank:Checking
+
+; Funds held by property management companies
+1970-01-01 open Assets:Property-Management:CloverLeaf-PM
+1970-01-01 open Assets:Property-Management:SheerValue-PM
+
+; Escrow accounts for Taxes and Insurance
+1970-01-01 open Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm
+
+; Amounts owed by tenants (Accrual basis tracking)
+1970-01-01 open Assets:Accounts-Receivable:2943-Butterfly-Palm
+
+; Security deposits held in trust for tenants
+1970-01-01 open Assets:Security-Deposits-Held:206-Hoover-Ave
+
+; Capitalized property improvements (Subject to depreciation)
+1970-01-01 open Assets:Capital-Improvements-Depreciable:206-Hoover-Ave
+1970-01-01 open Assets:Capital-Improvements-Depreciable:2943-Butterfly-Palm
+
+; Loan Costs (Amortizable)
+1970-01-01 open Assets:Loan-Costs:2943-Butterfly-Palm
+
+; Contra-asset for accumulated depreciation
+1970-01-01 open Assets:Accumulated-Depreciation:2943-Butterfly-Palm-Building-AD
+1970-01-01 open Assets:Accumulated-Depreciation:206-Hoover-Building-AD
+
+; Contra-asset for accumulated amortization
+1970-01-01 open Assets:Accumulated-Amortization:2943-Butterfly-Palm-Loan-Costs-AD
+
+; Land value (Never depreciated)
+1970-01-01 open Assets:Land:206-Hoover-Ave
+1970-01-01 open Assets:Land:2943-Butterfly-Palm
+
+;; Liabilities
+
+; Mortgage Principal outstanding
+1970-01-01 open Liabilities:Mortgages:206-Hoover-Ave
+1970-01-01 open Liabilities:Mortgages:2943-Butterfly-Palm
+
+; Security deposits owed back to tenants (Liability)
+1970-01-01 open Liabilities:Security-Deposits-Owed:206-Hoover-Ave
+1970-01-01 open Liabilities:Security-Deposits-Owed:2943-Butterfly-Palm
+
+;; Equity
+
+; Owner's personal cash injected into the business
+1970-01-01 open Equity:Owner-Contributions:Cash-Infusion
+
+; Owner's withdrawals for personal use
+1970-01-01 open Equity:Owner-Distributions:Owner-Draw
+
+; Opening balances for imported statements
+1970-01-01 open Equity:Opening-Balances
+
+; Accumulated net earnings retained in the business
+1970-01-01 open Equity:Retained-Earnings
+
+;; Income (IRS Schedule E - Part 1 Income)
+
+; Rental income
+1970-01-01 open Income:Rent:206-Hoover-Ave
+1970-01-01 open Income:Rent:2943-Butterfly-Palm
+
+; Late fees charged to tenants
+1970-01-01 open Income:Late-Rent-Fee:206-Hoover-Ave
+1970-01-01 open Income:Late-Rent-Fee:2943-Butterfly-Palm
+
+; Pet fees
+1970-01-01 open Income:Pet-Fee:206-Hoover-Ave
+1970-01-01 open Income:Pet-Fee:2943-Butterfly-Palm
+
+; Security deposits forfeited (recognized as income)
+1970-01-01 open Income:Security-Deposit-Forfeited:206-Hoover-Ave
+1970-01-01 open Income:Security-Deposit-Forfeited:2943-Butterfly-Palm
+
+;; Expenses (IRS Schedule E Categories)
+
+; Cleaning and maintenance (Garden, pest control, maid)
+1970-01-01 open Expenses:Cleaning---Maintenance:206-Hoover-Ave
+1970-01-01 open Expenses:Cleaning---Maintenance:2943-Butterfly-Palm
+
+; Property management fees
+1970-01-01 open Expenses:Management-Fees:206-Hoover-Ave
+1970-01-01 open Expenses:Management-Fees:2943-Butterfly-Palm
+
+; Mortgage interest expense
+1970-01-01 open Expenses:Mortgage-Interest:206-Hoover-Ave
+1970-01-01 open Expenses:Mortgage-Interest:2943-Butterfly-Palm
+
+; Insurance premiums
+1970-01-01 open Expenses:Insurance:206-Hoover-Ave
+1970-01-01 open Expenses:Insurance:2943-Butterfly-Palm
+
+; Property taxes
+1970-01-01 open Expenses:Property-Taxes:206-Hoover-Ave
+1970-01-01 open Expenses:Property-Taxes:2943-Butterfly-Palm
+
+; Repairs (Minor fixes, plumbing, etc.)
+1970-01-01 open Expenses:Repairs:206-Hoover-Ave
+1970-01-01 open Expenses:Repairs:2943-Butterfly-Palm
+
+; Utilities
+1970-01-01 open Expenses:Utilities:Electric:206-Hoover-Ave
+1970-01-01 open Expenses:Utilities:Water:206-Hoover-Ave
+1970-01-01 open Expenses:Utilities:Gas:206-Hoover-Ave
+
+; Uncollectible rent/debts
+1970-01-01 open Expenses:Bad-Debt:206-Hoover-Ave
+
+; HOA Fees
+1970-01-01 open Expenses:Other:HOA:2943-Butterfly-Palm
+
+; Unidentified expenses (Temporary holding)
+1970-01-01 open Expenses:Unidentified
+
+; Depreciation expense
+1970-01-01 open Expenses:Depreciation:2943-Butterfly-Palm
+1970-01-01 open Expenses:Depreciation:206-Hoover-Ave
+
+; Amortization expense
+1970-01-01 open Expenses:Amortization:2943-Butterfly-Palm
+
+;;
+;; BALANCE OPENINGS
+;;
+
+;; Use 'pad' and 'balance' together to set a starting amount for an account.
+
+; 1969-12-31 pad Assets:Property-Management:SheerValue-PM Equity:Owner-Contributions:Cash-Infusion
+; 1970-01-01 balance Assets:Property-Management:SheerValue-PM      0.00 USD
+
+; 1969-12-31 pad Assets:Property-Management:CloverLeaf-PM Equity:Owner-Contributions:Cash-Infusion
+; 1970-01-01 balance Assets:Property-Management:CloverLeaf-PM      0.00 USD
+
+;;
+;; OPTIONS
+;;
+
+option "title" "Rental Property Ledger"
+option "operating_currency" "USD"
+option "inferred_tolerance_default" "*:0.001"
+
+;; Root Account Names
+option "name_assets" "Assets"
+option "name_liabilities" "Liabilities"
+option "name_equity" "Equity"
+option "name_income" "Income"
+option "name_expenses" "Expenses"
+
+;; Document Storage
+;; option "documents" "/path/to/docs"

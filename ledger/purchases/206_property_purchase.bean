@@ -1,0 +1,38 @@
+;;
+;; 206 HOOVER AVE PROPERTY PURCHASE
+;;
+
+2023-05-26 * "Property Purchase - 206 Hoover Ave" #206-hoover-ave #purchases #review
+  documents: "2023-05-26 206 Hoover Ave Closing - Master Statement.pdf"
+  settlement_agent: "Alamo Title Company"
+  escrow_number: "4000082301404"
+  buyer_address: "1497 15th Ave, San Francisco, CA 94122"
+  ; Basis Calculation:
+  ; Sale Price: $100,000.00
+  ; + eRecording Fee: $4.32
+  ; + Escrow Fee: $450.00
+  ; + Owner's Title Insurance: $832.00
+  ; + Guaranty Fee: $2.00
+  ; + Recording Fees: $30.00
+  ; + Survey: $450.00
+  ; = Total Cost Basis: $101,768.32
+  ;
+  ; Allocation (Based on depreciation records):
+  ; Building: $73,358.00 (72.1%)
+  ; Land: $28,410.32 (27.9%)
+  Assets:Land:206-Hoover-Ave                               28410.32 USD
+  Assets:Capital-Improvements-Depreciable:206-Hoover-Ave   73358.00 USD
+  ; Prorations:
+  ; County Tax Credit (Seller pays their share for 01/01/23-05/27/23)
+  ; Total Annual Tax Estimate: $3,553.03
+  Expenses:Property-Taxes:206-Hoover-Ave                   -1421.21 USD
+  ; Funding:
+  Equity:Owner-Contributions:Cash-Infusion                -99047.11 USD ; Balance Due FROM Buyer
+  Equity:Owner-Contributions:Cash-Infusion                 -1100.00 USD ; Earnest Money
+  Equity:Owner-Contributions:Cash-Infusion                  -200.00 USD ; Option Money
+  ; Information Only (Paid by Seller):
+  ; Commission - Listing Agent (Keller Willis): $3,000.00
+  ; Commission - Selling Agent (EXP Realty): $2,000.00
+  ; Payoff of First Mortgage (Pecos Loan Servicing): $46,896.49
+  ; Doc Prep Fee: $125.00
+  ; Tax Certificate: $44.00
