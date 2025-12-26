@@ -1,6 +1,10 @@
 ;;
-;; 2023 - SHEERVALUE - ALL
+;; 2023 - SheerValue - ALL
 ;;
+
+; TRANSACTIONS
+include "./2023-SheerValue-206-Hoover-Ave-Transactions.bean"
+include "./2023-SheerValue-2943-Butterfly-Palm-Transactions.bean"
 
 2023-12-31 * "Adjustment" "Correcting Asset Basis to match 2023 Tax Return Form 4562" #tax-adjustment
   ; References:

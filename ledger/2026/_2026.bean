@@ -18,8 +18,8 @@ include "./mortgage/2026-2943-Butterfly-Palm-Escrow-Payouts.bean"
 include "./taxes/2026-206-Hoover-Ave-Taxes.bean"
 include "./taxes/2026-2943-Butterfly-Palm-Taxes.bean"
 
-; CLOVERLEAF
-include "./2026-CLOVERLEAF-ALL.bean"
+; Cloverleaf
+include "./clover-leaf/2026-Cloverleaf-All.bean"
 
-; SHEERVALUE
-include "./2026-SHEERVALUE-ALL.bean"
+; SheerValue
+include "./sheer-value/2026-SheerValue-All.bean"

@@ -8,5 +8,5 @@ include "./mortgage/2022-2943-Butterfly-Palm-Mortgage-Payments.bean"
 ; ASSETS
 include "./assets/buildings/2022-2943-Butterfly-Palm-2022-10-21-Property-Purchase.bean"
 
-; SHEERVALUE
-include "./2022-SHEERVALUE-ALL.bean"
+; SheerValue
+include "./sheer-value/2022-SheerValue-All.bean"
