@@ -67,7 +67,7 @@
 3.  **Total Cost Basis:** **$101,768.32**
 
 ### Allocation
-Based on existing depreciation records (`ledger/2023/depreciation/2023_05_206_building.bean`):
+Based on existing depreciation records (`ledger/2023/depreciation/buildings/2023-206-Hoover-Ave-2023-05-26-Building.bean`):
 *   **Building (72.1%):** $73,358.00
 *   **Land (27.9%):** $28,410.32
 

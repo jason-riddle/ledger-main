@@ -3,12 +3,12 @@
 ;;
 
 ; DEPRECIATION
-include "./depreciation/2025-206-Hoover-Ave-2023-05-26-Building.bean"
-include "./depreciation/2025-206-Hoover-Ave-2023-11-17-Improvements.bean"
-include "./depreciation/2025-2943-Butterfly-Palm-2023-01-01-Building.bean"
-include "./depreciation/2025-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
-include "./depreciation/2025-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
-include "./depreciation/2025-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
+include "./depreciation/buildings/2025-206-Hoover-Ave-2023-05-26-Building.bean"
+include "./depreciation/buildings/2025-2943-Butterfly-Palm-2023-01-01-Building.bean"
+include "./depreciation/improvements/2025-206-Hoover-Ave-2023-11-17-Improvements.bean"
+include "./depreciation/improvements/2025-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
+include "./depreciation/improvements/2025-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "./depreciation/improvements/2025-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
 ; MORTGAGE
 include "./mortgage/2025-2943-Butterfly-Palm-Mortgage-Payments.bean"
