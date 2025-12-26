@@ -1,0 +1,9 @@
+;;
+;; 2023 - CloverLeaf - ALL
+;;
+
+; TRANSACTIONS
+include "./2023-CloverLeaf-206-Hoover-Ave-Transactions.bean"
+include "./2023-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
+
+;; TODO: Split by month if needed once postings exist.

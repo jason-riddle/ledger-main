@@ -19,17 +19,19 @@
   - Vendor summaries: `YYYY-VENDOR-ALL.bean`.
   - Vendor statements: `YYYY-VENDOR-PROPERTY-Statement.bean`.
   - SheerValue transactions: `YYYY-SheerValue-PROPERTY-Transactions.bean` (stored in `sheer-value/`).
+  - CloverLeaf transactions: `YYYY-CloverLeaf-PROPERTY-Transactions.bean` (stored in `clover-leaf/`).
   - Buildings (property purchases): `YYYY-PROPERTY-YYYY-MM-DD-Property-Purchase.bean`.
   - Improvements: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
   - Depreciation/amortization: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
   - Mortgage/escrow: `YYYY-PROPERTY-Mortgage-Payments.bean`, `YYYY-PROPERTY-Escrow-Payouts.bean`.
   - Taxes: `YYYY-PROPERTY-Taxes.bean`.
-  - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and vendor casing is `SheerValue` / `Cloverleaf` in filenames.
+  - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and vendor casing is `SheerValue` / `CloverLeaf` in filenames.
 - Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `depreciation/buildings/`, `depreciation/improvements/`, `assets/`, `assets/buildings/`, `assets/improvements/`, `sheer-value/`, `clover-leaf/`).
 - Use `_`-prefixed files for includes (`_header.bean`, `_2025.bean`).
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For multi-line transactions, list negative postings first, then positive postings.
 - `YYYY-SheerValue-All.bean` should include the per-property `YYYY-SheerValue-PROPERTY-Transactions.bean` files.
+- `YYYY-CloverLeaf-All.bean` should include the per-property `YYYY-CloverLeaf-PROPERTY-Transactions.bean` files.
 - Comment styling:
   - File headers use a 3-line double-semicolon block with uppercase titles and hyphenated property names, followed by a blank line. Format:
     - Line 1: `;;`
