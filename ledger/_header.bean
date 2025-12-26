@@ -135,6 +135,9 @@
 ; HOA Fees
 1970-01-01 open Expenses:Other:HOA:2943-Butterfly-Palm
 
+; Card processing fees
+1970-01-01 open Expenses:Other:Card-Processing:2943-Butterfly-Palm
+
 ; Unidentified expenses (Temporary holding)
 1970-01-01 open Expenses:Unidentified
 

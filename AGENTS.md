@@ -17,6 +17,7 @@
 - File naming follows descriptive, date/asset-driven patterns: `YYYY-MM-Property-Asset-Detail.bean` for asset/depreciation files and `_YYYY.bean` for yearly includes.
 - Use `_`-prefixed files for includes (`_header.bean`, `_2025.bean`).
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
+- For multi-line transactions, list negative postings first, then positive postings.
 
 ## Testing Guidelines
 - No automated test framework is configured.

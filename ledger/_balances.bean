@@ -94,7 +94,7 @@
 2024-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building      -11735.40 USD
 2024-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door  -42.82 USD
 2024-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater    0.00 USD
-2024-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater  -63.69 USD
+2024-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater  -63.65 USD
 
 ; 2024 Escrow Taxes/Insurance (2943 Butterfly Palm)
 ; Start balance: 4211.78, Additions: 4212.60, Disbursements: 6676.85
@@ -116,7 +116,7 @@
 ;; Expenses
 ; 2024 Depreciation Expenses (Cumulative)
 2024-12-31 balance Expenses:Depreciation:206-Hoover-Ave                                5574.45 USD
-2024-12-31 balance Expenses:Depreciation:2943-Butterfly-Palm                          11969.02 USD
+2024-12-31 balance Expenses:Depreciation:2943-Butterfly-Palm                          11968.98 USD
 
 ;;
 ;; 2025 YEAR-END BALANCES
@@ -131,7 +131,7 @@
 2025-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building      -17727.80 USD
 2025-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door  -64.64 USD
 2025-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater    0.00 USD
-2025-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater -165.61 USD
+2025-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater -165.50 USD
 
 ; 2025 Escrow Taxes/Insurance (2943 Butterfly Palm)
 ; Start 2025 Balance: 747.53 (End of 2024).
@@ -156,7 +156,7 @@
 ;; Expenses
 ; 2025 Depreciation Expenses (Cumulative)
 2025-12-31 balance Expenses:Depreciation:206-Hoover-Ave                                9343.90 USD
-2025-12-31 balance Expenses:Depreciation:2943-Butterfly-Palm                          18085.16 USD
+2025-12-31 balance Expenses:Depreciation:2943-Butterfly-Palm                          18085.05 USD
 
 ;;
 ;; 2026 YEAR-END BALANCES
@@ -171,7 +171,7 @@
 2026-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building      -23720.20 USD
 2026-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door  -86.46 USD
 2026-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater    0.00 USD
-2026-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater -267.53 USD
+2026-12-31 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater -267.35 USD
 
 ; 2026 Escrow Taxes/Insurance (2943 Butterfly Palm)
 ; No escrow activity in 2026 (commented until transactions are available)
@@ -197,4 +197,4 @@
 ;; Expenses
 ; 2026 Depreciation Expenses (Cumulative)
 2026-12-31 balance Expenses:Depreciation:206-Hoover-Ave                               13113.35 USD
-2026-12-31 balance Expenses:Depreciation:2943-Butterfly-Palm                          24201.30 USD
+2026-12-31 balance Expenses:Depreciation:2943-Butterfly-Palm                          24201.12 USD
