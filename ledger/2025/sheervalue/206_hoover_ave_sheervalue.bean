@@ -24,8 +24,8 @@
 ; --- Opening PM cash balance per statement ---
 ; PDF: Summary / Detail transactions shows Beginning cash balance as of 2/1/2025 = $996.00
 2025-02-01 * "Sheer Value PM" "Opening statement balance (beginning cash as of 2/1/2025)"
-  Assets:Property-Management:SheerValue-PM                           996.00 USD
-  Equity:Opening-Balances                                           -996.00 USD
+  Equity:Opening-Balances                                                            -996.00 USD
+  Assets:Property-Management:SheerValue-PM                                            996.00 USD
 
 
 ; ======================
@@ -34,35 +34,35 @@
 
 ; PDF: 2/1/2025 Rent Income ... 1,150.00
 2025-02-01 * "Unit 1 - George Mahara" "206 Hoover Ave - Rent payment received (per statement)"
-  Assets:Property-Management:SheerValue-PM                          1150.00 USD
-  Income:Rent:206-Hoover-Ave                                       -1150.00 USD
+  Income:Rent:206-Hoover-Ave                                                        -1150.00 USD
+  Assets:Property-Management:SheerValue-PM                                           1150.00 USD
 
 ; PDF: 2/28/2025 Rent Income ... 1,150.00
 2025-02-28 * "Unit 1 - George Mahara" "206 Hoover Ave - Rent payment received (per statement)"
-  Assets:Property-Management:SheerValue-PM                          1150.00 USD
-  Income:Rent:206-Hoover-Ave                                       -1150.00 USD
+  Income:Rent:206-Hoover-Ave                                                        -1150.00 USD
+  Assets:Property-Management:SheerValue-PM                                           1150.00 USD
 
 ; PDF: 4/9/2025 Rent Income ... 1,150.00 (later reversed)
 2025-04-09 * "Unit 1 - George Mahara" "206 Hoover Ave - Rent payment posted (later reversed)"
-  Assets:Property-Management:SheerValue-PM                          1150.00 USD
-  Income:Rent:206-Hoover-Ave                                       -1150.00 USD
+  Income:Rent:206-Hoover-Ave                                                        -1150.00 USD
+  Assets:Property-Management:SheerValue-PM                                           1150.00 USD
 
 ; PDF: 4/9/2025 Late Fee Income ... 138.00 (later reversed)
 2025-04-09 * "Unit 1 - George Mahara" "206 Hoover Ave - Late fee posted (later reversed)"
-  Assets:Property-Management:SheerValue-PM                           138.00 USD
-  Income:Late-Rent-Fee:206-Hoover-Ave                               -138.00 USD
+  Income:Late-Rent-Fee:206-Hoover-Ave                                                -138.00 USD
+  Assets:Property-Management:SheerValue-PM                                            138.00 USD
 
 
 ; ---- Cash reversals to match statement ----
 ; PDF: 4/14/2025 Rent Income ... REVERSED ... (1,150.00)
 2025-04-14 * "Unit 1 - George Mahara" "206 Hoover Ave - Rent payment reversed (R01 NSF) (cash reversal)"
-  Assets:Property-Management:SheerValue-PM                         -1150.00 USD
-  Income:Rent:206-Hoover-Ave                                        1150.00 USD
+  Assets:Property-Management:SheerValue-PM                                          -1150.00 USD
+  Income:Rent:206-Hoover-Ave                                                         1150.00 USD
 
 ; PDF: 4/14/2025 Late Fee Income ... REVERSED ... (138.00)
 2025-04-14 * "Unit 1 - George Mahara" "206 Hoover Ave - Late fee reversed (R01 NSF) (cash reversal)"
-  Assets:Property-Management:SheerValue-PM                          -138.00 USD
-  Income:Late-Rent-Fee:206-Hoover-Ave                                138.00 USD
+  Assets:Property-Management:SheerValue-PM                                           -138.00 USD
+  Income:Late-Rent-Fee:206-Hoover-Ave                                                 138.00 USD
 
 
 ; ---- A/R accrual splits for reversals (reversal = still owed) ----
@@ -70,13 +70,13 @@
 
 ; PDF: 4/14 reversal of $1,150 rent => rent becomes due/unpaid
 2025-04-14 * "Unit 1 - George Mahara" "206 Hoover Ave - Rent due (unpaid, reversal means still owed)"
-  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave   1150.00 USD
-  Income:Rent:Accrued-Not-Received:206-Hoover-Ave                  -1150.00 USD
+  Income:Rent:Accrued-Not-Received:206-Hoover-Ave                                   -1150.00 USD
+  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave                    1150.00 USD
 
 ; PDF: 4/14 reversal of $138 late fee => late fee becomes due/unpaid
 2025-04-14 * "Unit 1 - George Mahara" "206 Hoover Ave - Late fee due (unpaid, reversal means still owed)"
-  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave    138.00 USD
-  Income:Late-Rent-Fee:Accrued-Not-Received:206-Hoover-Ave          -138.00 USD
+  Income:Late-Rent-Fee:Accrued-Not-Received:206-Hoover-Ave                           -138.00 USD
+  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave                     138.00 USD
 
 
 ; ---- Tenant payments AFTER 4/14 are allocated oldest-first against A/R ----
@@ -84,8 +84,8 @@
 ; PDF: 4/26/2025 Rent Income ... 1,000.00
 ; Allocation: apply $1,000 to oldest A/R (4/14 rent due). A/R rent due goes 1,150 -> 150.
 2025-04-26 * "Unit 1 - George Mahara" "206 Hoover Ave - Payment received; applied to oldest A/R (4/14 rent due)"
-  Assets:Property-Management:SheerValue-PM                          1000.00 USD
-  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave  -1000.00 USD
+  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave                   -1000.00 USD
+  Assets:Property-Management:SheerValue-PM                                           1000.00 USD
 
 ; PDF: 5/17/2025 Rent Income ... 400.00
 ; Allocation (oldest-first):
@@ -93,49 +93,56 @@
 ; - $138 pays 4/14 late fee due
 ; - remaining $112 is treated as current rent income received
 2025-05-17 * "Unit 1 - George Mahara" "206 Hoover Ave - Payment received; finishes oldest A/R then remainder to rent income"
-  Assets:Property-Management:SheerValue-PM                           400.00 USD
-  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave   -288.00 USD
-  Income:Rent:206-Hoover-Ave                                        -112.00 USD
+  Assets:Property-Management:SheerValue-PM                                            400.00 USD
+  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave                    -288.00 USD
+  Income:Rent:206-Hoover-Ave                                                         -112.00 USD
+
+; Reclass April accruals to regular income once the April A/R was fully paid off.
+; After this, the Accrued-Not-Received balances will reflect only still-unpaid items (the July reversals).
+2025-05-17 * "Unit 1 - George Mahara" "Reclass collected April accruals (oldest-first A/R cleared)"
+  Income:Rent:Accrued-Not-Received:206-Hoover-Ave                                    1150.00 USD
+  Income:Rent:206-Hoover-Ave                                                        -1150.00 USD
+  Income:Late-Rent-Fee:Accrued-Not-Received:206-Hoover-Ave                            138.00 USD
+  Income:Late-Rent-Fee:206-Hoover-Ave                                                -138.00 USD
 
 ; PDF: 6/2/2025 Rent Income ... 1,000.00
 ; Allocation: no A/R outstanding at this moment (April A/R fully cleared on 5/17), so treat as rent income received.
 2025-06-02 * "Unit 1 - George Mahara" "206 Hoover Ave - Payment received; no A/R outstanding, booked as rent income"
-  Assets:Property-Management:SheerValue-PM                          1000.00 USD
-  Income:Rent:206-Hoover-Ave                                       -1000.00 USD
+  Income:Rent:206-Hoover-Ave                                                        -1000.00 USD
+  Assets:Property-Management:SheerValue-PM                                           1000.00 USD
 
 ; PDF: 6/12/2025 Rent Income ... 700.00
 2025-06-12 * "Unit 1 - George Mahara" "206 Hoover Ave - Payment received; no A/R outstanding, booked as rent income"
-  Assets:Property-Management:SheerValue-PM                           700.00 USD
-  Income:Rent:206-Hoover-Ave                                        -700.00 USD
-
+  Income:Rent:206-Hoover-Ave                                                         -700.00 USD
+  Assets:Property-Management:SheerValue-PM                                            700.00 USD
 
 ; --- July posted payment + late fee, then reversed ---
 ; PDF: 7/16 Rent Income 1,500.00 and 7/16 Late Fee 628.50 (both later reversed on 7/21)
 2025-07-16 * "Unit 1 - George Mahara" "206 Hoover Ave - Rent payment posted (later reversed)"
-  Assets:Property-Management:SheerValue-PM                          1500.00 USD
-  Income:Rent:206-Hoover-Ave                                       -1500.00 USD
+  Income:Rent:206-Hoover-Ave                                                        -1500.00 USD
+  Assets:Property-Management:SheerValue-PM                                           1500.00 USD
 
 2025-07-16 * "Unit 1 - George Mahara" "206 Hoover Ave - Late fee posted (later reversed)"
-  Assets:Property-Management:SheerValue-PM                           628.50 USD
-  Income:Late-Rent-Fee:206-Hoover-Ave                               -628.50 USD
+  Income:Late-Rent-Fee:206-Hoover-Ave                                                -628.50 USD
+  Assets:Property-Management:SheerValue-PM                                            628.50 USD
 
 ; Cash reversals per statement
 2025-07-21 * "Unit 1 - George Mahara" "206 Hoover Ave - Rent payment reversed (R01 NSF) (cash reversal)"
-  Assets:Property-Management:SheerValue-PM                         -1500.00 USD
-  Income:Rent:206-Hoover-Ave                                        1500.00 USD
+  Assets:Property-Management:SheerValue-PM                                          -1500.00 USD
+  Income:Rent:206-Hoover-Ave                                                         1500.00 USD
 
 2025-07-21 * "Unit 1 - George Mahara" "206 Hoover Ave - Late fee reversed (R01 NSF) (cash reversal)"
-  Assets:Property-Management:SheerValue-PM                          -628.50 USD
-  Income:Late-Rent-Fee:206-Hoover-Ave                                628.50 USD
+  Assets:Property-Management:SheerValue-PM                                           -628.50 USD
+  Income:Late-Rent-Fee:206-Hoover-Ave                                                 628.50 USD
 
 ; A/R accrual splits for July reversals (still owed)
 2025-07-21 * "Unit 1 - George Mahara" "206 Hoover Ave - Rent due (unpaid, reversal means still owed)"
-  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave   1500.00 USD
-  Income:Rent:Accrued-Not-Received:206-Hoover-Ave                  -1500.00 USD
+  Income:Rent:Accrued-Not-Received:206-Hoover-Ave                                   -1500.00 USD
+  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave                    1500.00 USD
 
 2025-07-21 * "Unit 1 - George Mahara" "206 Hoover Ave - Late fee due (unpaid, reversal means still owed)"
-  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave    628.50 USD
-  Income:Late-Rent-Fee:Accrued-Not-Received:206-Hoover-Ave          -628.50 USD
+  Income:Late-Rent-Fee:Accrued-Not-Received:206-Hoover-Ave                           -628.50 USD
+  Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave                     628.50 USD
 
 
 ; ======================
@@ -144,59 +151,62 @@
 
 ; PDF: 2/7 Management Fee (9% of $1150) 103.50
 2025-02-07 * "Sheer Value PM" "206 Hoover Ave - Property management fee (per statement)"
-  Expenses:Management-Fees:206-Hoover-Ave                            103.50 USD
-  Assets:Property-Management:SheerValue-PM                          -103.50 USD
+  Assets:Property-Management:SheerValue-PM                                           -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave                                             103.50 USD
 
 ; PDF: 2/7 Owner Draw 892.50
 2025-02-07 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)"
-  Equity:Owner-Distributions:Owner-Draw                              892.50 USD
-  Assets:Property-Management:SheerValue-PM                          -892.50 USD
+  Assets:Property-Management:SheerValue-PM                                           -892.50 USD
+  Equity:Owner-Distributions:Owner-Draw                                               892.50 USD
 
 ; PDF: 3/5 Management Fee 103.50
 2025-03-05 * "Sheer Value PM" "206 Hoover Ave - Property management fee (per statement)"
-  Expenses:Management-Fees:206-Hoover-Ave                            103.50 USD
-  Assets:Property-Management:SheerValue-PM                          -103.50 USD
+  Assets:Property-Management:SheerValue-PM                                           -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave                                             103.50 USD
 
 ; PDF: 3/5 Owner Draw 1,046.50
 2025-03-05 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)"
-  Equity:Owner-Distributions:Owner-Draw                             1046.50 USD
-  Assets:Property-Management:SheerValue-PM                         -1046.50 USD
+  Assets:Property-Management:SheerValue-PM                                          -1046.50 USD
+  Equity:Owner-Distributions:Owner-Draw                                              1046.50 USD
 
 ; PDF: 4/7 Management Fee 103.50
 2025-04-07 * "Sheer Value PM" "206 Hoover Ave - Property management fee (per statement)"
-  Expenses:Management-Fees:206-Hoover-Ave                            103.50 USD
-  Assets:Property-Management:SheerValue-PM                          -103.50 USD
+  Assets:Property-Management:SheerValue-PM                                           -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave                                             103.50 USD
 
 ; PDF: 4/11 Owner Draw 1,184.50
 2025-04-11 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)"
-  Equity:Owner-Distributions:Owner-Draw                             1184.50 USD
-  Assets:Property-Management:SheerValue-PM                         -1184.50 USD
+  Assets:Property-Management:SheerValue-PM                                          -1184.50 USD
+  Equity:Owner-Distributions:Owner-Draw                                              1184.50 USD
 
 ; PDF: 5/7 Management Fee 103.50
 2025-05-07 * "Sheer Value PM" "206 Hoover Ave - Property management fee (per statement)"
-  Expenses:Management-Fees:206-Hoover-Ave                            103.50 USD
-  Assets:Property-Management:SheerValue-PM                          -103.50 USD
+  Assets:Property-Management:SheerValue-PM                                           -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave                                             103.50 USD
 
 ; PDF: 6/13 Owner Draw 1,605.00
 2025-06-13 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)"
-  Equity:Owner-Distributions:Owner-Draw                             1605.00 USD
-  Assets:Property-Management:SheerValue-PM                         -1605.00 USD
+  Assets:Property-Management:SheerValue-PM                                          -1605.00 USD
+  Equity:Owner-Distributions:Owner-Draw                                              1605.00 USD
 
 ; PDF: 6/13 Owner Draw 103.50 (as shown on statement)
 2025-06-13 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)"
-  Equity:Owner-Distributions:Owner-Draw                              103.50 USD
-  Assets:Property-Management:SheerValue-PM                          -103.50 USD
+  Assets:Property-Management:SheerValue-PM                                           -103.50 USD
+  Equity:Owner-Distributions:Owner-Draw                                               103.50 USD
 
 ; PDF: 6/23 Repairs 280.00 (memo mentions AC window unit)
 2025-06-23 * "Repairs - Richard Wagner" "206 Hoover Ave - AC window unit repair/install (per statement memo)"
-  Expenses:Repairs:206-Hoover-Ave                                    280.00 USD
-  Assets:Property-Management:SheerValue-PM                          -280.00 USD
+  Assets:Property-Management:SheerValue-PM                                           -280.00 USD
+  Expenses:Repairs:206-Hoover-Ave                                                     280.00 USD
 
 ; PDF: 7/7 Management Fee 103.50
 2025-07-07 * "Sheer Value PM" "206 Hoover Ave - Property management fee (per statement)"
-  Expenses:Management-Fees:206-Hoover-Ave                            103.50 USD
-  Assets:Property-Management:SheerValue-PM                          -103.50 USD
-
+  Assets:Property-Management:SheerValue-PM                                           -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave                                             103.50 USD
 
 ; --- Ending balance assertion (statement says ending cash balance as of 8/31/2025 is $766.50) ---
-2025-08-31 balance Assets:Property-Management:SheerValue-PM          766.50 USD
+2025-08-31 balance Assets:Property-Management:SheerValue-PM                           766.50 USD
+
+2025-08-31 balance Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave   2128.50 USD
+2025-08-31 balance Income:Rent:Accrued-Not-Received:206-Hoover-Ave                  -1500.00 USD
+2025-08-31 balance Income:Late-Rent-Fee:Accrued-Not-Received:206-Hoover-Ave          -628.50 USD
