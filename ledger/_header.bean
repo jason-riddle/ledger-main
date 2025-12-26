@@ -30,6 +30,7 @@
 1970-01-01 open Assets:Fixed-Assets:2943-Butterfly-Palm:Building:2023-01-01-Building
 1970-01-01 open Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door
 1970-01-01 open Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater
+1970-01-01 open Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater
 
 ; Loan Costs (Amortizable)
 1970-01-01 open Assets:Loan-Costs:2943-Butterfly-Palm:2023-SPS-Mortgage
@@ -40,6 +41,7 @@
 1970-01-01 open Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building
 1970-01-01 open Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door
 1970-01-01 open Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater
+1970-01-01 open Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater
 
 ; Contra-asset for accumulated amortization
 1970-01-01 open Assets:Accumulated-Amortization:2943-Butterfly-Palm:2023-SPS-Mortgage
@@ -139,6 +141,9 @@
 ; Depreciation expense
 1970-01-01 open Expenses:Depreciation:2943-Butterfly-Palm
 1970-01-01 open Expenses:Depreciation:206-Hoover-Ave
+
+; Loss on disposal of assets
+1970-01-01 open Expenses:Loss-on-Disposal:2943-Butterfly-Palm
 
 ; Amortization expense
 1970-01-01 open Expenses:Amortization:2943-Butterfly-Palm
