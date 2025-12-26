@@ -37,6 +37,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from utils.depreciation import (
     calculate_monthly_depreciation,
     calculate_annual_depreciation,
+    calculate_first_year_depreciation,
 )
 
 # Beancount imports
@@ -57,7 +58,7 @@ ASSET_CONFIGS = {
         "month_placed": 1,
         "year_placed": 2023,
     },
-    "2943-Butterfly-Palm:Building:2023-01-01-Back-Door": {
+    "2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door": {
         "name": "2943 Butterfly Palm Back Door",
         "cost_basis": 600,
         "recovery_years": 27.5,
@@ -80,7 +81,7 @@ ASSET_CONFIGS = {
     },
     "2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater": {
         "name": "2943 Butterfly Palm Water Heater (2024-05-08)",
-        "cost_basis": 2895,
+        "cost_basis": 2800.75,
         "recovery_years": 27.5,
         "month_placed": 5,
         "year_placed": 2024,
@@ -183,6 +184,8 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
     all_correct = True
     total_checked = 0
     total_discrepancies = 0
+    monthly_tolerance = Decimal('0.02')
+    total_tolerance = Decimal('0.50')
 
     for asset_key, txns in sorted(depreciation_txns.items()):
         config = find_asset_config(asset_key)
@@ -210,23 +213,62 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
 
         # Check each transaction
         discrepancies = []
+        txns_by_year = defaultdict(list)
         for txn in txns:
-            actual = Decimal(str(txn['amount']))
-            diff = abs(actual - expected_monthly)
+            txns_by_year[txn['date'].year].append(txn)
 
-            if diff > Decimal('0.02'):  # Allow 2 cent rounding difference
+        for year, year_txns in sorted(txns_by_year.items()):
+            total_actual = sum(Decimal(str(txn['amount'])) for txn in year_txns)
+            if year == config['year_placed']:
+                expected_total = calculate_first_year_depreciation(
+                    config['cost_basis'],
+                    config['recovery_years'],
+                    config['month_placed'],
+                )
+                check_monthly = False
+            else:
+                expected_total = calculate_annual_depreciation(
+                    config['cost_basis'],
+                    config['recovery_years'],
+                )
+                check_monthly = True
+
+            total_diff = abs(total_actual - expected_total)
+            if total_diff > total_tolerance:
                 discrepancies.append({
-                    "date": txn['date'],
-                    "expected": expected_monthly,
-                    "actual": actual,
-                    "difference": diff,
+                    "kind": "year-total",
+                    "year": year,
+                    "expected": expected_total,
+                    "actual": total_actual,
+                    "difference": total_diff,
                 })
+
+            if check_monthly:
+                for txn in year_txns:
+                    actual = Decimal(str(txn['amount']))
+                    diff = abs(actual - expected_monthly)
+                    if diff > monthly_tolerance:
+                        discrepancies.append({
+                            "kind": "monthly",
+                            "date": txn['date'],
+                            "expected": expected_monthly,
+                            "actual": actual,
+                            "difference": diff,
+                        })
 
         if discrepancies:
             print(f"   ❌ Found {len(discrepancies)} discrepancies:")
             for disc in discrepancies[:3]:  # Show first 3
-                print(f"      {disc['date']}: Expected ${disc['expected']}, "
-                      f"Got ${disc['actual']}, Diff ${disc['difference']}")
+                if disc["kind"] == "year-total":
+                    print(
+                        f"      {disc['year']}: Expected total ${disc['expected']}, "
+                        f"Got ${disc['actual']}, Diff ${disc['difference']}"
+                    )
+                else:
+                    print(
+                        f"      {disc['date']}: Expected ${disc['expected']}, "
+                        f"Got ${disc['actual']}, Diff ${disc['difference']}"
+                    )
             if len(discrepancies) > 3:
                 print(f"      ... and {len(discrepancies) - 3} more")
             all_correct = False
