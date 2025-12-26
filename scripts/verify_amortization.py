@@ -83,6 +83,7 @@ def extract_mortgage_payments(entries):
 
     Returns a dictionary mapping property names to lists of payment details.
     """
+
     class VerifiedPaymentInfo(TypedDict):
         date: date
         narration: str
@@ -156,7 +157,7 @@ def get_balance_at_date(entries, account_pattern, target_date):
 
     Returns balance as Decimal.
     """
-    balance = Decimal('0')
+    balance = Decimal("0")
 
     for entry in entries:
         if not isinstance(entry, data.Transaction):
@@ -241,22 +242,23 @@ def verify_mortgage_amortization(ledger_path: str = "ledger/main.bean"):
             # Get balance before this payment
             # We need to look at balance just before this payment
             if prev_date:
-                balance_before = get_balance_at_date(entries, mortgage_account, prev_date)
+                balance_before = get_balance_at_date(
+                    entries, mortgage_account, prev_date
+                )
             else:
                 # For first payment, get initial balance
-                balance_before = get_balance_at_date(entries, mortgage_account,
-                                                     payment["date"].replace(day=1))
+                balance_before = get_balance_at_date(
+                    entries, mortgage_account, payment["date"].replace(day=1)
+                )
 
             balance_before = abs(balance_before)  # Liabilities are negative
 
             # Calculate expected values
             expected_interest = calculate_interest_payment(
-                float(balance_before),
-                config['annual_rate']
+                float(balance_before), config["annual_rate"]
             )
             expected_principal = calculate_principal_payment(
-                config['expected_payment'],
-                float(expected_interest)
+                config["expected_payment"], float(expected_interest)
             )
 
             # Compare with actual
@@ -267,17 +269,19 @@ def verify_mortgage_amortization(ledger_path: str = "ledger/main.bean"):
             principal_diff = abs(actual_principal - expected_principal)
 
             # Allow small rounding differences (5 cents for each)
-            if interest_diff > Decimal('0.05') or principal_diff > Decimal('0.05'):
-                discrepancies.append({
-                    "date": payment["date"],
-                    "balance_before": balance_before,
-                    "expected_interest": expected_interest,
-                    "actual_interest": actual_interest,
-                    "interest_diff": interest_diff,
-                    "expected_principal": expected_principal,
-                    "actual_principal": actual_principal,
-                    "principal_diff": principal_diff,
-                })
+            if interest_diff > Decimal("0.05") or principal_diff > Decimal("0.05"):
+                discrepancies.append(
+                    {
+                        "date": payment["date"],
+                        "balance_before": balance_before,
+                        "expected_interest": expected_interest,
+                        "actual_interest": actual_interest,
+                        "interest_diff": interest_diff,
+                        "expected_principal": expected_principal,
+                        "actual_principal": actual_principal,
+                        "principal_diff": principal_diff,
+                    }
+                )
 
             prev_date = payment["date"]
 
@@ -286,10 +290,14 @@ def verify_mortgage_amortization(ledger_path: str = "ledger/main.bean"):
             for disc in discrepancies[:5]:  # Show first 5
                 print(f"      {disc['date']}:")
                 print(f"         Balance: ${disc['balance_before']:,.2f}")
-                print(f"         Interest: Expected ${disc['expected_interest']}, "
-                      f"Actual ${disc['actual_interest']}, Diff ${disc['interest_diff']}")
-                print(f"         Principal: Expected ${disc['expected_principal']}, "
-                      f"Actual ${disc['actual_principal']}, Diff ${disc['principal_diff']}")
+                print(
+                    f"         Interest: Expected ${disc['expected_interest']}, "
+                    f"Actual ${disc['actual_interest']}, Diff ${disc['interest_diff']}"
+                )
+                print(
+                    f"         Principal: Expected ${disc['expected_principal']}, "
+                    f"Actual ${disc['actual_principal']}, Diff ${disc['principal_diff']}"
+                )
             if len(discrepancies) > 5:
                 print(f"      ... and {len(discrepancies) - 5} more")
             all_correct = False
@@ -328,6 +336,7 @@ def main():
     except Exception as e:
         print(f"\n❌ Error: {e}")
         import traceback
+
         traceback.print_exc()
         sys.exit(1)
 

@@ -134,14 +134,20 @@ def extract_depreciation_transactions(entries):
                 parts = posting.account.split(":")
                 if len(parts) >= 4:
                     # Get property and asset parts
-                    asset_key = ":".join(parts[2:])  # "2943-Butterfly-Palm:Building:2023-01-01-Building"
+                    asset_key = ":".join(
+                        parts[2:]
+                    )  # "2943-Butterfly-Palm:Building:2023-01-01-Building"
 
-                    depreciation_txns[asset_key].append({
-                        "date": entry.date,
-                        "amount": abs(posting.units.number),  # Make positive for comparison
-                        "account": posting.account,
-                        "narration": entry.narration,
-                    })
+                    depreciation_txns[asset_key].append(
+                        {
+                            "date": entry.date,
+                            "amount": abs(
+                                posting.units.number
+                            ),  # Make positive for comparison
+                            "account": posting.account,
+                            "narration": entry.narration,
+                        }
+                    )
 
     return depreciation_txns
 
@@ -183,8 +189,8 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
     all_correct = True
     total_checked = 0
     total_discrepancies = 0
-    monthly_tolerance = Decimal('0.03')
-    total_tolerance = Decimal('0.50')
+    monthly_tolerance = Decimal("0.03")
+    total_tolerance = Decimal("0.50")
 
     for asset_key, txns in sorted(depreciation_txns.items()):
         config = find_asset_config(asset_key)
@@ -203,8 +209,7 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
 
         # Calculate expected monthly amount
         expected_monthly = calculate_monthly_depreciation(
-            config['cost_basis'],
-            config['recovery_years']
+            config["cost_basis"], config["recovery_years"]
         )
 
         print(f"   Expected Monthly: ${expected_monthly}")
@@ -214,51 +219,55 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
         discrepancies = []
         txns_by_year = defaultdict(list)
         for txn in txns:
-            txns_by_year[txn['date'].year].append(txn)
+            txns_by_year[txn["date"].year].append(txn)
 
         for year, year_txns in sorted(txns_by_year.items()):
-            total_actual = sum(Decimal(str(txn['amount'])) for txn in year_txns)
-            if year == config['year_placed']:
+            total_actual = sum(Decimal(str(txn["amount"])) for txn in year_txns)
+            if year == config["year_placed"]:
                 expected_total = calculate_first_year_depreciation(
-                    config['cost_basis'],
-                    config['recovery_years'],
-                    config['month_placed'],
+                    config["cost_basis"],
+                    config["recovery_years"],
+                    config["month_placed"],
                 )
                 check_monthly = False
             else:
                 if len(year_txns) < 12:
-                    expected_total = (expected_monthly * Decimal(len(year_txns))).quantize(
-                        Decimal('0.01')
-                    )
+                    expected_total = (
+                        expected_monthly * Decimal(len(year_txns))
+                    ).quantize(Decimal("0.01"))
                 else:
                     expected_total = calculate_annual_depreciation(
-                        config['cost_basis'],
-                        config['recovery_years'],
+                        config["cost_basis"],
+                        config["recovery_years"],
                     )
                 check_monthly = True
 
             total_diff = abs(total_actual - expected_total)
             if total_diff > total_tolerance:
-                discrepancies.append({
-                    "kind": "year-total",
-                    "year": year,
-                    "expected": expected_total,
-                    "actual": total_actual,
-                    "difference": total_diff,
-                })
+                discrepancies.append(
+                    {
+                        "kind": "year-total",
+                        "year": year,
+                        "expected": expected_total,
+                        "actual": total_actual,
+                        "difference": total_diff,
+                    }
+                )
 
             if check_monthly:
                 for txn in year_txns:
-                    actual = Decimal(str(txn['amount']))
+                    actual = Decimal(str(txn["amount"]))
                     diff = abs(actual - expected_monthly)
                     if diff > monthly_tolerance:
-                        discrepancies.append({
-                            "kind": "monthly",
-                            "date": txn['date'],
-                            "expected": expected_monthly,
-                            "actual": actual,
-                            "difference": diff,
-                        })
+                        discrepancies.append(
+                            {
+                                "kind": "monthly",
+                                "date": txn["date"],
+                                "expected": expected_monthly,
+                                "actual": actual,
+                                "difference": diff,
+                            }
+                        )
 
         if discrepancies:
             print(f"   ❌ Found {len(discrepancies)} discrepancies:")
@@ -311,6 +320,7 @@ def main():
     except Exception as e:
         print(f"\n❌ Error: {e}")
         import traceback
+
         traceback.print_exc()
         sys.exit(1)
 
