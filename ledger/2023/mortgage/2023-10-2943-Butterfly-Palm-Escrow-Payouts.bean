@@ -13,8 +13,8 @@
 
 ; 2023: Refund to escrow account
 2023-11-02 * "Insurance Refund to Escrow - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #escrow-review
-  Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm   1447.00 USD
   Expenses:Insurance:2943-Butterfly-Palm               -1447.00 USD
+  Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm   1447.00 USD
 
 ; 2023: Escrow refund to owner
 2023-11-27 * "Escrow Refund - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #escrow-review

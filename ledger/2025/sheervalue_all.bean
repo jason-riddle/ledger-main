@@ -1,6 +1,7 @@
 ;;
 ;; 2025 - SHEERVALUE - ALL
 ;;
+;; TODO: Rename with YYYY-MM prefix once postings exist (use earliest posting month).
 
 ; 206 Hoover Ave
-include "./sheervalue/206_hoover_ave_sheervalue.bean"
+include "./sheervalue/2025-02-206-Hoover-Ave-SheerValue.bean"

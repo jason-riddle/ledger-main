@@ -17,12 +17,12 @@
   ; 2943 Butterfly Palm Calculation:
   ; -----------------------------------------------------------------------
   ; Land:
-  ;   Original Book Value: $44,358.00 (from ledger/2943_property_purchase.bean)
+  ;   Original Book Value: $44,358.00 (from ledger/2022-10-2943-Butterfly-Palm-Property-Purchase.bean)
   ;   Verified Tax Basis:  $45,191.00 (from Form 4562)
   ;   Adjustment:          +$833.00
   ;
   ; Building (Capital Improvements):
-  ;   Original Book Value: $161,766.40 (from ledger/2943_property_purchase.bean)
+  ;   Original Book Value: $161,766.40 (from ledger/2022-10-2943-Butterfly-Palm-Property-Purchase.bean)
   ;   Verified Tax Basis:  $164,791.00 (from Form 4562)
   ;   Adjustment:          +$3,024.60
   ;
@@ -31,15 +31,12 @@
   ;   Verified Tax Basis:  $2,389.00
   ;   Adjustment:          +$0.25
   ;
-  Assets:Land:2943-Butterfly-Palm                                833.00 USD
-  Assets:Fixed-Assets:2943-Butterfly-Palm:Building:2023-01-01-Building   3024.60 USD
-  Assets:Loan-Costs:2943-Butterfly-Palm:2023-SPS-Mortgage                0.25 USD
   ;
   ; -----------------------------------------------------------------------
   ; 206 Hoover Ave Calculation:
   ; -----------------------------------------------------------------------
   ; Land:
-  ;   Original Book Value: $28,410.32 (from ledger/206_property_purchase.bean)
+  ;   Original Book Value: $28,410.32 (from ledger/2023-05-206-Hoover-Ave-Property-Purchase.bean)
   ;   Verified Tax Basis:  $27,469.00 (from Form 4562)
   ;   Adjustment:          -$941.32
   ;
@@ -48,7 +45,6 @@
   ;   Verified Tax Basis:  $73,358.00
   ;   Adjustment:          $0.00 (Match)
   ;
-  Assets:Land:206-Hoover-Ave                                    -941.32 USD
   ;
   ; -----------------------------------------------------------------------
   ; Balancing Entry:
@@ -57,4 +53,8 @@
   ; Credited to Equity to represent the increase in Net Worth derived from
   ; the finalized tax valuation (likely due to capitalized closing costs
   ; that were previously expensed or omitted).
-  Equity:Retained-Earnings                                     -2916.53 USD
+  Assets:Land:206-Hoover-Ave                                             -941.32 USD
+  Equity:Retained-Earnings                                              -2916.53 USD
+  Assets:Land:2943-Butterfly-Palm                                         833.00 USD
+  Assets:Fixed-Assets:2943-Butterfly-Palm:Building:2023-01-01-Building   3024.60 USD
+  Assets:Loan-Costs:2943-Butterfly-Palm:2023-SPS-Mortgage                   0.25 USD

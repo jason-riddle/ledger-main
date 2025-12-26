@@ -15,8 +15,8 @@ include "./depreciation/2024-01-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-S
 include "./assets/2024-05-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
 
 ; Mortgage
-include "./mortgage/2024_mortgage_payments.bean"
-include "./mortgage/2024_escrow_payouts.bean"
+include "./mortgage/2024-01-2943-Butterfly-Palm-Mortgage-Payments.bean"
+include "./mortgage/2024-02-2943-Butterfly-Palm-Escrow-Payouts.bean"
 
 ; Taxes
 include "./taxes/206.bean"

@@ -11,15 +11,15 @@ include "./depreciation/2025-01-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
 include "./depreciation/2025-01-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
 ; Mortgage
-include "./mortgage/2025_mortgage_payments.bean"
+include "./mortgage/2025-01-2943-Butterfly-Palm-Mortgage-Payments.bean"
 include "./mortgage/2025_escrow_payouts.bean"
 
 ; Taxes
-include "./taxes/206.bean"
+include "./taxes/2025-12-206-Hoover-Ave-Taxes.bean"
 include "./taxes/2943.bean"
 
 ; CloverLeaf
-include "./clover.bean"
+include "./2025-09-CloverLeaf-Multi.bean"
 
 ; SheerValue
 include "./sheervalue_all.bean"

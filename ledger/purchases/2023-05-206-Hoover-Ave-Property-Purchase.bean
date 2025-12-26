@@ -20,19 +20,19 @@
   ; Allocation (Based on depreciation records):
   ; Building: $73,358.00 (72.1%)
   ; Land: $28,410.32 (27.9%)
-  Assets:Land:206-Hoover-Ave                               28410.32 USD
-  Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building   73358.00 USD
   ; Prorations:
   ; County Tax Credit (Seller pays their share for 01/01/23-05/27/23)
   ; Total Annual Tax Estimate: $3,553.03
-  Expenses:Property-Taxes:206-Hoover-Ave                   -1421.21 USD
   ; Funding:
-  Equity:Owner-Contributions:Cash-Infusion                -99047.11 USD ; Balance Due FROM Buyer
-  Equity:Owner-Contributions:Cash-Infusion                 -1100.00 USD ; Earnest Money
-  Equity:Owner-Contributions:Cash-Infusion                  -200.00 USD ; Option Money
   ; Information Only (Paid by Seller):
   ; Commission - Listing Agent (Keller Willis): $3,000.00
   ; Commission - Selling Agent (EXP Realty): $2,000.00
   ; Payoff of First Mortgage (Pecos Loan Servicing): $46,896.49
   ; Doc Prep Fee: $125.00
   ; Tax Certificate: $44.00
+  Expenses:Property-Taxes:206-Hoover-Ave                            -1421.21 USD
+  Equity:Owner-Contributions:Cash-Infusion                         -99047.11 USD ; Balance Due FROM Buyer
+  Equity:Owner-Contributions:Cash-Infusion                          -1100.00 USD ; Earnest Money
+  Equity:Owner-Contributions:Cash-Infusion                           -200.00 USD ; Option Money
+  Assets:Land:206-Hoover-Ave                                        28410.32 USD
+  Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building   73358.00 USD
