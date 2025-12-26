@@ -1,0 +1,83 @@
+# Test fixture data for loan amortization calculations
+# Based on actual 2943 Butterfly Palm mortgage
+
+loan:
+  name: "2943 Butterfly Palm Mortgage"
+  original_principal: 102500
+  annual_rate: 8.625
+  term_years: 30
+  expected_monthly_payment: 797.23
+
+# Expected first 12 payments (months 1-12)
+payments:
+  - month: 1
+    balance_before: 102500.00
+    expected_interest: 736.72
+    expected_principal: 60.51
+    balance_after: 102439.49
+
+  - month: 2
+    balance_before: 102439.49
+    expected_interest: 736.28
+    expected_principal: 60.95
+    balance_after: 102378.54
+
+  - month: 3
+    balance_before: 102378.54
+    expected_interest: 735.85
+    expected_principal: 61.38
+    balance_after: 102317.16
+
+  - month: 4
+    balance_before: 102317.16
+    expected_interest: 735.40
+    expected_principal: 61.83
+    balance_after: 102255.33
+
+  - month: 5
+    balance_before: 102255.33
+    expected_interest: 734.96
+    expected_principal: 62.27
+    balance_after: 102193.06
+
+  - month: 6
+    balance_before: 102193.06
+    expected_interest: 734.51
+    expected_principal: 62.72
+    balance_after: 102130.34
+
+  - month: 7
+    balance_before: 102130.34
+    expected_interest: 734.06
+    expected_principal: 63.17
+    balance_after: 102067.17
+
+  - month: 8
+    balance_before: 102067.17
+    expected_interest: 733.61
+    expected_principal: 63.62
+    balance_after: 102003.55
+
+  - month: 9
+    balance_before: 102003.55
+    expected_interest: 733.15
+    expected_principal: 64.08
+    balance_after: 101939.47
+
+  - month: 10
+    balance_before: 101939.47
+    expected_interest: 732.69
+    expected_principal: 64.54
+    balance_after: 101874.93
+
+  - month: 11
+    balance_before: 101874.93
+    expected_interest: 732.23
+    expected_principal: 65.00
+    balance_after: 101809.93
+
+  - month: 12
+    balance_before: 101809.93
+    expected_interest: 731.76
+    expected_principal: 65.47
+    balance_after: 101744.46
