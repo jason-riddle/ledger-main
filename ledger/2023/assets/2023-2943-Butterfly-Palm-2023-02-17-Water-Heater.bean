@@ -3,5 +3,7 @@
 ;;
 
 2023-02-17 * "Asset Purchase - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #asset
-  Assets:Cash---Bank:Checking                                                   -2895.00 USD
-  Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater   2895.00 USD
+  Assets:Cash---Bank:Checking                                                                    -2895.00 USD
+  Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater                    2895.00 USD
+
+2023-02-18 balance Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater   2895.00 USD

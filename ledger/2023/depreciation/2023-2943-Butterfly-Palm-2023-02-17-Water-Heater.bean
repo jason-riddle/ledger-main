@@ -6,5 +6,7 @@
 ; Annual depreciation: $2,895 / 27.5 = $105.27
 ; 2023 (Mid-month convention, 10.5/12 year): $92 (Tax Summary)
 2023-12-15 * "Annual Depreciation 2023 - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #depreciation
-   Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater  -92.00 USD
-   Expenses:Depreciation:2943-Butterfly-Palm                                                  92.00 USD
+   Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater                  -92.00 USD
+   Expenses:Depreciation:2943-Butterfly-Palm                                                                  92.00 USD
+
+2023-12-16 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater  -92.00 USD
