@@ -184,7 +184,10 @@ def main() -> int:
         range_end = args.to_month
 
     if range_start is not None and range_end is not None:
-        start_idx, end_idx = clamp_month_range(range_start, range_end, total_months)
+        try:
+            start_idx, end_idx = clamp_month_range(range_start, range_end, total_months)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
         output["range"] = [
             serialize_entry(entry)
             for entry in schedule[start_idx - 1 : end_idx]
