@@ -17,12 +17,12 @@
   ; 2943 Butterfly Palm Calculation:
   ; -----------------------------------------------------------------------
   ; Land:
-  ;   Original Book Value: $44,358.00 (from ledger/2022-10-2943-Butterfly-Palm-Property-Purchase.bean)
+  ;   Original Book Value: $44,358.00 (from ledger/2022/purchases/2022-10-2943-Butterfly-Palm-Property-Purchase.bean)
   ;   Verified Tax Basis:  $45,191.00 (from Form 4562)
   ;   Adjustment:          +$833.00
   ;
   ; Building (Capital Improvements):
-  ;   Original Book Value: $161,766.40 (from ledger/2022-10-2943-Butterfly-Palm-Property-Purchase.bean)
+  ;   Original Book Value: $161,766.40 (from ledger/2022/purchases/2022-10-2943-Butterfly-Palm-Property-Purchase.bean)
   ;   Verified Tax Basis:  $164,791.00 (from Form 4562)
   ;   Adjustment:          +$3,024.60
   ;
@@ -36,7 +36,7 @@
   ; 206 Hoover Ave Calculation:
   ; -----------------------------------------------------------------------
   ; Land:
-  ;   Original Book Value: $28,410.32 (from ledger/2023-05-206-Hoover-Ave-Property-Purchase.bean)
+  ;   Original Book Value: $28,410.32 (from ledger/2023/purchases/2023-05-206-Hoover-Ave-Property-Purchase.bean)
   ;   Verified Tax Basis:  $27,469.00 (from Form 4562)
   ;   Adjustment:          -$941.32
   ;
