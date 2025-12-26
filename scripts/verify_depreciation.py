@@ -113,19 +113,19 @@ def find_asset_config(account_name: str):
 def extract_depreciation_transactions(entries):
     """
     Extract depreciation transactions from ledger entries.
-    
+
     Returns a dictionary mapping asset accounts to lists of depreciation postings.
     """
     depreciation_txns = defaultdict(list)
-    
+
     for entry in entries:
         if not isinstance(entry, data.Transaction):
             continue
-        
+
         # Look for depreciation transactions
         if "depreciation" not in entry.narration.lower():
             continue
-        
+
         # Find accumulated depreciation postings (negative amounts)
         for posting in entry.postings:
             if "Accumulated-Depreciation" in posting.account:
@@ -135,37 +135,37 @@ def extract_depreciation_transactions(entries):
                 if len(parts) >= 4:
                     # Get property and asset parts
                     asset_key = ":".join(parts[2:])  # "2943-Butterfly-Palm:Building:2023-01-01-Building"
-                    
+
                     depreciation_txns[asset_key].append({
                         "date": entry.date,
                         "amount": abs(posting.units.number),  # Make positive for comparison
                         "account": posting.account,
                         "narration": entry.narration,
                     })
-    
+
     return depreciation_txns
 
 
 def verify_depreciation(ledger_path: str = "ledger/main.bean"):
     """
     Verify depreciation calculations in the ledger.
-    
+
     Returns True if all calculations are correct, False otherwise.
     """
     print("=" * 80)
     print("DEPRECIATION VERIFICATION")
     print("=" * 80)
     print()
-    
+
     # Load ledger
     ledger_abs_path = Path(ledger_path).absolute()
     if not ledger_abs_path.exists():
         print(f"Error: Ledger file not found: {ledger_abs_path}")
         return False
-    
+
     print(f"Loading ledger: {ledger_abs_path}")
     entries, errors, options = loader.load_file(str(ledger_abs_path))
-    
+
     if errors:
         print(f"\nWarning: {len(errors)} errors found in ledger:")
         for error in errors[:5]:  # Show first 5 errors
@@ -173,47 +173,47 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
         if len(errors) > 5:
             print(f"  ... and {len(errors) - 5} more")
         print()
-    
+
     # Extract depreciation transactions
     print("Extracting depreciation transactions...")
     depreciation_txns = extract_depreciation_transactions(entries)
     print(f"Found {len(depreciation_txns)} assets with depreciation\n")
-    
+
     # Verify each asset
     all_correct = True
     total_checked = 0
     total_discrepancies = 0
-    
+
     for asset_key, txns in sorted(depreciation_txns.items()):
         config = find_asset_config(asset_key)
-        
+
         if not config:
             print(f"⚠️  Asset not configured: {asset_key}")
             print(f"   Found {len(txns)} transactions but no configuration")
             print()
             all_correct = False
             continue
-        
+
         print(f"📋 {config['name']}")
         print(f"   Cost Basis: ${config['cost_basis']:,.2f}")
         print(f"   Recovery: {config['recovery_years']} years")
         print(f"   Placed: {config['year_placed']}-{config['month_placed']:02d}")
-        
+
         # Calculate expected monthly amount
         expected_monthly = calculate_monthly_depreciation(
             config['cost_basis'],
             config['recovery_years']
         )
-        
+
         print(f"   Expected Monthly: ${expected_monthly}")
         print(f"   Transactions: {len(txns)}")
-        
+
         # Check each transaction
         discrepancies = []
         for txn in txns:
             actual = Decimal(str(txn['amount']))
             diff = abs(actual - expected_monthly)
-            
+
             if diff > Decimal('0.02'):  # Allow 2 cent rounding difference
                 discrepancies.append({
                     "date": txn['date'],
@@ -221,7 +221,7 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
                     "actual": actual,
                     "difference": diff,
                 })
-        
+
         if discrepancies:
             print(f"   ❌ Found {len(discrepancies)} discrepancies:")
             for disc in discrepancies[:3]:  # Show first 3
@@ -233,17 +233,17 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
             total_discrepancies += len(discrepancies)
         else:
             print(f"   ✓ All {len(txns)} transactions correct")
-        
+
         total_checked += len(txns)
         print()
-    
+
     # Summary
     print("=" * 80)
     print("SUMMARY")
     print("=" * 80)
     print(f"Total assets checked: {len(depreciation_txns)}")
     print(f"Total transactions checked: {total_checked}")
-    
+
     if all_correct:
         print(f"\n✅ SUCCESS: All depreciation calculations verified!")
         return True
@@ -258,7 +258,7 @@ def main():
     script_dir = Path(__file__).parent
     repo_root = script_dir.parent
     ledger_path = repo_root / "ledger" / "main.bean"
-    
+
     try:
         success = verify_depreciation(str(ledger_path))
         sys.exit(0 if success else 1)
