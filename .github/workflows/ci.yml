@@ -94,7 +94,8 @@ jobs:
       
       - name: Run unit tests
         run: |
-          # Run each test file individually since they have inline dependencies
+          # Run each test file individually since they have inline dependencies (PEP 723)
+          # Using `uv run` instead of pytest to leverage inline script metadata
           echo "Running test_depreciation.py..."
           uv run scripts/tests/test_depreciation.py
           echo "Running test_amortization.py..."
@@ -128,10 +129,6 @@ jobs:
         uses: astral-sh/setup-uv@v4
         with:
           version: "latest"
-      
-      - name: Install mypy
-        run: |
-          uv tool install mypy
       
       - name: Run mypy
         run: |
