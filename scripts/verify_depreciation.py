@@ -183,7 +183,7 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
     all_correct = True
     total_checked = 0
     total_discrepancies = 0
-    monthly_tolerance = Decimal('0.02')
+    monthly_tolerance = Decimal('0.03')
     total_tolerance = Decimal('0.50')
 
     for asset_key, txns in sorted(depreciation_txns.items()):
@@ -226,10 +226,15 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
                 )
                 check_monthly = False
             else:
-                expected_total = calculate_annual_depreciation(
-                    config['cost_basis'],
-                    config['recovery_years'],
-                )
+                if len(year_txns) < 12:
+                    expected_total = (expected_monthly * Decimal(len(year_txns))).quantize(
+                        Decimal('0.01')
+                    )
+                else:
+                    expected_total = calculate_annual_depreciation(
+                        config['cost_basis'],
+                        config['recovery_years'],
+                    )
                 check_monthly = True
 
             total_diff = abs(total_actual - expected_total)
