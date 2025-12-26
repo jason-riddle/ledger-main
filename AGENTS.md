@@ -18,6 +18,10 @@
 - Use `_`-prefixed files for includes (`_header.bean`, `_2025.bean`).
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For multi-line transactions, list negative postings first, then positive postings.
+- Comment styling:
+  - File headers use double-semicolon blocks with uppercase titles and hyphenated property names (e.g., `;; 2024 - DEPRECIATION - 2943-BUTTERFLY-PALM - BUILDING`), followed by a blank line.
+  - Use single-semicolon `;` for explanatory notes and inline context; keep alignment compact and ASCII-friendly.
+  - TODOs use `;; TODO:` and live near the top of files or sections they apply to.
 
 ## Testing Guidelines
 - No automated test framework is configured.
