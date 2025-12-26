@@ -1,4 +1,5 @@
 ;;
 ;; 2024 - TAXES - 206-HOOVER-AVE
 ;;
-;; TODO: Rename with YYYY-MM prefix once postings exist (use earliest posting month).
+
+;; TODO: Split by month if needed once postings exist.

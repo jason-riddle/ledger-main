@@ -1,6 +1,7 @@
 ;;
-;; BALANCE ASSERTIONS - YEAR-END ACCOUNT BALANCES
+;; ALL - BALANCES - YEAR-END ACCOUNT BALANCES
 ;;
+
 ;; This file contains all year-end balance assertions for the ledger.
 ;; Balance assertions verify that account balances match expected values at year-end.
 ;; All calculations are based on transaction activity during each year.
@@ -28,7 +29,7 @@
 
 ; 2022 Property Management (SheerValue PM)
 ; Opening balance of 0.00 from 2021, with 2022 activity resulting in 1.00 balance
-; TODO: Correct balance - no transactions exist to support 1.00 USD
+;; TODO: Correct balance - no transactions exist to support 1.00 USD
 ; 2022-12-31 balance Assets:Property-Management:SheerValue-PM                               1.00 USD
 
 ;; Liabilities
@@ -60,7 +61,7 @@
 
 ; 2023 Property Management (SheerValue PM)
 ; Opening balance carried forward from 2022
-; TODO: Correct balance - no transactions exist to support 1.00 USD
+;; TODO: Correct balance - no transactions exist to support 1.00 USD
 ; 2023-12-31 balance Assets:Property-Management:SheerValue-PM                               1.00 USD
 
 ;; Liabilities
@@ -104,7 +105,7 @@
 
 ; 2024 Property Management (SheerValue PM)
 ; Opening balance carried forward from 2023
-; TODO: Correct balance - no transactions exist to support 1.00 USD
+;; TODO: Correct balance - no transactions exist to support 1.00 USD
 ; 2024-12-31 balance Assets:Property-Management:SheerValue-PM                               1.00 USD
 
 ;; Liabilities
@@ -145,7 +146,7 @@
 
 ; 2025 Property Management (SheerValue PM)
 ; Opening balance carried forward from 2024
-; TODO: Correct balance - no transactions exist to support 1.00 USD
+;; TODO: Correct balance - no transactions exist to support 1.00 USD
 ; 2025-12-31 balance Assets:Property-Management:SheerValue-PM                               1.00 USD
 
 ;; Liabilities
@@ -175,23 +176,23 @@
 
 ; 2026 Escrow Taxes/Insurance (2943 Butterfly Palm)
 ; No escrow activity in 2026 (commented until transactions are available)
-; TODO: Update escrow balance when 2026 transactions are available
+;; TODO: Update escrow balance when 2026 transactions are available
 ; 2026-12-31 balance Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                  0.00 USD
 
 ; 2026 Property Management (CloverLeaf PM)
 ; No property management activity in 2026 (commented until transactions are available)
-; TODO: Update CloverLeaf property management balance when available
+;; TODO: Update CloverLeaf property management balance when available
 ; 2026-12-31 balance Assets:Property-Management:CloverLeaf-PM                    0.00 USD
 
 ; 2026 Property Management (SheerValue PM)
 ; No property management activity in 2026 (commented until transactions are available)
-; TODO: Update SheerValue property management balance when available
+;; TODO: Update SheerValue property management balance when available
 ; 2026-12-31 balance Assets:Property-Management:SheerValue-PM                    0.00 USD
 
 ;; Liabilities
 ; 2026 Mortgage Principal Balance (2943 Butterfly Palm)
 ; No mortgage activity in 2026 (commented until transactions are available)
-; TODO: Update mortgage balance when 2026 transactions are available
+;; TODO: Update mortgage balance when 2026 transactions are available
 ; 2026-12-31 balance Liabilities:Mortgages:2943-Butterfly-Palm                        -0.00 USD
 
 ;; Expenses

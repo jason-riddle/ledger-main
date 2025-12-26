@@ -1,6 +1,7 @@
 ;;
-;; 2026 - MORTGAGE PAYMENTS - 2943-BUTTERFLY-PALM
+;; 2026 - MORTGAGE - 2943-BUTTERFLY-PALM - PAYMENTS
 ;;
-;; TODO: Rename with YYYY-MM prefix once postings exist (use earliest posting month).
+
+;; TODO: Split by month if needed once postings exist.
 
 ; 2026 Mortgage payments will be added here

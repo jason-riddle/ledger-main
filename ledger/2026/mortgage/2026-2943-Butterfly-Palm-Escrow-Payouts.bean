@@ -1,6 +1,7 @@
 ;;
-;; 2026 - ESCROW PAYOUTS - 2943-BUTTERFLY-PALM
+;; 2026 - ESCROW - 2943-BUTTERFLY-PALM - PAYOUTS
 ;;
-;; TODO: Rename with YYYY-MM prefix once postings exist (use earliest posting month).
+
+;; TODO: Split by month if needed once postings exist.
 
 ; 2026 Escrow payouts will be added here

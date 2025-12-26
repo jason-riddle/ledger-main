@@ -1,12 +1,12 @@
 ;;
-;; 2022 - YEAR
+;; 2022 - YEAR - ALL
 ;;
 
-; Mortgage
+; MORTGAGE
 include "./mortgage/2022-2943-Butterfly-Palm-Mortgage-Payments.bean"
 
-; Purchases
+; PURCHASES
 include "./purchases/2022-2943-Butterfly-Palm-2022-10-21-Property-Purchase.bean"
 
-; Transactions
-include "./2022-SheerValue-Multi.bean"
+; SHEERVALUE
+include "./2022-SHEERVALUE-ALL.bean"

@@ -2,8 +2,8 @@
 
 ## Project Structure & Module Organization
 - `ledger/` contains the Beancount source files. `main.bean` is the entry point and includes `_header.bean`, yearly ledgers (`2022/`–`2026/`), and `_balances.bean` for assertions.
-- Year folders (e.g., `ledger/2025/`) hold the primary `_*year*.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/`, `assets/`, and other domain slices.
-- `ledger/purchases/` stores property purchase ledgers. Supporting notes live under `_notes/` with Markdown context files.
+- Year folders (e.g., `ledger/2025/`) hold the primary `_*year*.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/`, `assets/`, `purchases/`, and other domain slices.
+- Supporting notes live under `_notes/` with Markdown context files.
 - Environment metadata is in `devenv.nix`/`devenv.yaml` (Nix-based dev setup).
 
 ## Build, Test, and Development Commands
@@ -14,12 +14,22 @@
 
 ## Coding Style & Naming Conventions
 - Use Beancount syntax and keep `.bean` files UTF-8 and ASCII-friendly.
-- File naming follows descriptive, date/asset-driven patterns: `YYYY-MM-Property-Asset-Detail.bean` for asset/depreciation files and `_YYYY.bean` for yearly includes.
+- File naming follows descriptive, date/asset-driven patterns:
+  - Year includes: `_YYYY.bean`.
+  - Vendor summaries: `YYYY-VENDOR-ALL.bean`.
+  - Vendor statements: `YYYY-VENDOR-PROPERTY-STATEMENT.bean`.
+  - Purchases: `YYYY-PROPERTY-YYYY-MM-DD-Property-Purchase.bean`.
+  - Assets: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
+  - Depreciation/amortization: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
+  - Mortgage/escrow: `YYYY-PROPERTY-Mortgage-Payments.bean`, `YYYY-PROPERTY-Escrow-Payouts.bean`.
+  - Taxes: `YYYY-PROPERTY-Taxes.bean`.
+  - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and `VENDOR` is uppercase (`SHEERVALUE`, `CLOVERLEAF`).
+- Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `assets/`, `sheervalue/`).
 - Use `_`-prefixed files for includes (`_header.bean`, `_2025.bean`).
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For multi-line transactions, list negative postings first, then positive postings.
 - Comment styling:
-  - File headers use double-semicolon blocks with uppercase titles and hyphenated property names (e.g., `;; 2024 - DEPRECIATION - 2943-BUTTERFLY-PALM - BUILDING`), followed by a blank line.
+  - File headers use double-semicolon blocks with uppercase titles and hyphenated property names, following `;; YEAR/ALL - DOMAIN - PROPERTY - DETAIL`, followed by a blank line.
   - Use single-semicolon `;` for explanatory notes and inline context; keep alignment compact and ASCII-friendly.
   - TODOs use `;; TODO:` and live near the top of files or sections they apply to.
 

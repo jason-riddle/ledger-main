@@ -1,8 +1,8 @@
 ;;
-;; 2024 - YEAR
+;; 2024 - YEAR - ALL
 ;;
 
-; Depreciation
+; DEPRECIATION
 include "./depreciation/2024-206-Hoover-Ave-2023-05-26-Building.bean"
 include "./depreciation/2024-206-Hoover-Ave-2023-11-17-Improvements.bean"
 include "./depreciation/2024-2943-Butterfly-Palm-2023-01-01-Building.bean"
@@ -11,16 +11,16 @@ include "./depreciation/2024-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
 include "./depreciation/2024-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
 include "./depreciation/2024-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
-; Assets
+; ASSETS
 include "./assets/2024-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
 
-; Mortgage
+; MORTGAGE
 include "./mortgage/2024-2943-Butterfly-Palm-Mortgage-Payments.bean"
 include "./mortgage/2024-2943-Butterfly-Palm-Escrow-Payouts.bean"
 
-; Taxes
+; TAXES
 include "./taxes/2024-206-Hoover-Ave-Taxes.bean"
 include "./taxes/2024-2943-Butterfly-Palm-Taxes.bean"
 
-; SheerValue
-include "./2024-SheerValue-Multi.bean"
+; SHEERVALUE
+include "./2024-SHEERVALUE-ALL.bean"

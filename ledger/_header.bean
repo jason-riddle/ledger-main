@@ -92,10 +92,10 @@
 1970-01-01 open Income:Security-Deposit-Forfeited:206-Hoover-Ave
 1970-01-01 open Income:Security-Deposit-Forfeited:2943-Butterfly-Palm
 
-; TODO
+;; TODO:
 1970-01-01 open Income:Rent:Accrued-Not-Received:206-Hoover-Ave
 
-; TODO
+;; TODO:
 1970-01-01 open Income:Late-Rent-Fee:Accrued-Not-Received:206-Hoover-Ave
 
 ;; Expenses (IRS Schedule E Categories)

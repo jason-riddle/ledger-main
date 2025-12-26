@@ -1,13 +1,13 @@
 ;;
-;; 2025 - SHEERVALUE - 206 Hoover Ave
+;; 2025 - SHEERVALUE - 206-HOOVER-AVE - STATEMENT
 ;;
 
 ; ============================================================
-; 206 Hoover Ave — Sheer Value PM owner statement import
+; 206 Hoover Ave - Sheer Value PM owner statement import
 ; Statement period: 2025-02-01 .. 2025-08-31
 ;
 ; Option 1 (you chose): CASH INCOME CORRECT BY DATE
-; - We keep a "shadow" Accounts Receivable so you can see what’s still owed.
+; - We keep a "shadow" Accounts Receivable so you can see what's still owed.
 ; - When a payment is applied to A/R (oldest-first), we ALSO reclass the same amount
 ;   from Accrued-Not-Received into regular income on that same payment date.
 ;
@@ -15,8 +15,8 @@
 ; - Oldest-first: tenant payments reduce the oldest A/R balances first.
 ;
 ; Source mapping:
-; - “Detail transactions” Additions to cash (tenant receipts + reversals)
-; - “Detail transactions” Subtractions from cash (mgmt fees, owner draws, repairs)
+; - "Detail transactions" Additions to cash (tenant receipts + reversals)
+; - "Detail transactions" Subtractions from cash (mgmt fees, owner draws, repairs)
 ; - Summary for beginning/ending PM-held cash balance
 ;
 ; Formatting preference:
@@ -76,7 +76,7 @@
   Income:Late-Rent-Fee:206-Hoover-Ave                                                 138.00 USD
 
 
-; ---- A/R “shadow” splits for reversals (reversal = still owed) ----
+; ---- A/R "shadow" splits for reversals (reversal = still owed) ----
 ; These do NOT change cash; they track what is owed.
 
 ; PDF: 4/14 reversal of $1,150 rent => rent becomes due/unpaid
@@ -159,7 +159,7 @@
   Assets:Property-Management:SheerValue-PM                                           -628.50 USD
   Income:Late-Rent-Fee:206-Hoover-Ave                                                 628.50 USD
 
-; A/R “shadow” splits for July reversals (still owed as of 8/31)
+; A/R "shadow" splits for July reversals (still owed as of 8/31)
 2025-07-21 * "Unit 1 - George Mahara" "206 Hoover Ave - Rent due (unpaid, reversal means still owed)"
   Income:Rent:Accrued-Not-Received:206-Hoover-Ave                                   -1500.00 USD
   Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave                    1500.00 USD
@@ -239,6 +239,6 @@
 ; July reversals still owed as of 8/31: $1,500 rent + $628.50 late fee = $2,128.50
 2025-08-31 balance Assets:Accounts-Receivable:Tenants:George-Mahara:206-Hoover-Ave   2128.50 USD
 
-; Accrued-Not-Received should equal ONLY what’s still unpaid as of 8/31 (the July reversals)
+; Accrued-Not-Received should equal ONLY what's still unpaid as of 8/31 (the July reversals)
 2025-08-31 balance Income:Rent:Accrued-Not-Received:206-Hoover-Ave                  -1500.00 USD
 2025-08-31 balance Income:Late-Rent-Fee:Accrued-Not-Received:206-Hoover-Ave          -628.50 USD
