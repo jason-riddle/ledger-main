@@ -17,7 +17,7 @@
 - File naming follows descriptive, date/asset-driven patterns:
   - Year includes: `_YYYY.bean`.
   - Vendor summaries: `YYYY-VENDOR-ALL.bean`.
-  - Vendor statements: `YYYY-VENDOR-PROPERTY-STATEMENT.bean`.
+  - Vendor statements: `YYYY-VENDOR-PROPERTY-STATEMENT.bean` (STATEMENT is uppercase).
   - Purchases: `YYYY-PROPERTY-YYYY-MM-DD-Property-Purchase.bean`.
   - Assets: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
   - Depreciation/amortization: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
@@ -29,7 +29,10 @@
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For multi-line transactions, list negative postings first, then positive postings.
 - Comment styling:
-  - File headers use double-semicolon blocks with uppercase titles and hyphenated property names, following `;; YEAR/ALL - DOMAIN - PROPERTY - DETAIL`, followed by a blank line.
+  - File headers use a 3-line double-semicolon block with uppercase titles and hyphenated property names, followed by a blank line. Format:
+    - Line 1: `;;`
+    - Line 2: `;; YEAR/ALL - DOMAIN - PROPERTY - DETAIL` (PROPERTY and DETAIL are optional; use `ALL` where appropriate)
+    - Line 3: `;;`
   - Use single-semicolon `;` for explanatory notes and inline context; keep alignment compact and ASCII-friendly.
   - TODOs use `;; TODO:` and live near the top of files or sections they apply to.
 
