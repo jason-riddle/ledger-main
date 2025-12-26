@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 - `ledger/` contains the Beancount source files. `main.bean` is the entry point and includes `_header.bean`, yearly ledgers (`2022/`–`2026/`), and `_balances.bean` for assertions.
-- Year folders (e.g., `ledger/2025/`) hold the primary `_*year*.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/`, `assets/` (with `buildings/` and `improvements/`), and other domain slices.
+- Year folders (e.g., `ledger/2025/`) hold the primary `_*year*.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/` (with `buildings/` and `improvements/`), `assets/` (with `buildings/` and `improvements/`), and other domain slices.
 - Supporting notes live under `_notes/` with Markdown context files.
 - Environment metadata is in `devenv.nix`/`devenv.yaml` (Nix-based dev setup).
 
@@ -24,7 +24,7 @@
   - Mortgage/escrow: `YYYY-PROPERTY-Mortgage-Payments.bean`, `YYYY-PROPERTY-Escrow-Payouts.bean`.
   - Taxes: `YYYY-PROPERTY-Taxes.bean`.
   - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and `VENDOR` is uppercase (`SHEERVALUE`, `CLOVERLEAF`).
-- Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `assets/`, `assets/buildings/`, `assets/improvements/`, `sheervalue/`).
+- Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `depreciation/buildings/`, `depreciation/improvements/`, `assets/`, `assets/buildings/`, `assets/improvements/`, `sheervalue/`).
 - Use `_`-prefixed files for includes (`_header.bean`, `_2025.bean`).
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For multi-line transactions, list negative postings first, then positive postings.
