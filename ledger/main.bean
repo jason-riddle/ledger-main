@@ -38,31 +38,31 @@ plugin "beancount.plugins.leafonly"
 ;; 2022
 ;;
 
-include "./2022/_2022.bean"
+include "./2022/2022.bean"
 
 ;;
 ;; 2023
 ;;
 
-include "./2023/_2023.bean"
+include "./2023/2023.bean"
 
 ;;
 ;; 2024
 ;;
 
-include "./2024/_2024.bean"
+include "./2024/2024.bean"
 
 ;;
 ;; 2025
 ;;
 
-include "./2025/_2025.bean"
+include "./2025/2025.bean"
 
 ;;
 ;; 2026
 ;;
 
-include "./2026/_2026.bean"
+include "./2026/2026.bean"
 
 ;;
 ;; BALANCE ASSERTIONS

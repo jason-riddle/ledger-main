@@ -10,3 +10,6 @@ include "./assets/buildings/2022-2943-Butterfly-Palm-2022-10-21-Property-Purchas
 
 ; SheerValue
 include "./sheer-value/2022-SheerValue-All.bean"
+
+; CloverLeaf
+include "./clover-leaf/2022-CloverLeaf-All.bean"

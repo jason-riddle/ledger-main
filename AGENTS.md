@@ -15,7 +15,7 @@
 ## Coding Style & Naming Conventions
 - Use Beancount syntax and keep `.bean` files UTF-8 and ASCII-friendly.
 - File naming follows descriptive, date/asset-driven patterns:
-  - Year includes: `_YYYY.bean`.
+  - Year includes: `YYYY.bean`.
   - Vendor summaries: `YYYY-VENDOR-ALL.bean`.
   - Vendor statements: `YYYY-VENDOR-PROPERTY-Statement.bean`.
   - SheerValue transactions: `YYYY-SheerValue-PROPERTY-Transactions.bean` (stored in `sheer-value/`).
@@ -27,7 +27,7 @@
   - Taxes: `YYYY-PROPERTY-Taxes.bean`.
   - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and vendor casing is `SheerValue` / `CloverLeaf` in filenames.
 - Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `depreciation/buildings/`, `depreciation/improvements/`, `assets/`, `assets/buildings/`, `assets/improvements/`, `sheer-value/`, `clover-leaf/`).
-- Use `_`-prefixed files for includes (`_header.bean`, `_2025.bean`).
+- Use `_`-prefixed files for includes (`_header.bean`), but year files are `YYYY.bean`.
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For multi-line transactions, list negative postings first, then positive postings.
 - `YYYY-SheerValue-All.bean` should include the per-property `YYYY-SheerValue-PROPERTY-Transactions.bean` files.

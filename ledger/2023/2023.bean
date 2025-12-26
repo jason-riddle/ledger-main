@@ -27,3 +27,6 @@ include "./taxes/2023-2943-Butterfly-Palm-Taxes.bean"
 
 ; SheerValue
 include "./sheer-value/2023-SheerValue-All.bean"
+
+; CloverLeaf
+include "./clover-leaf/2023-CloverLeaf-All.bean"
