@@ -1,0 +1,57 @@
+# Test fixture data for depreciation calculations
+# Based on actual assets from _notes/_depreciation.md
+
+assets:
+  - name: "2943 Butterfly Palm Building"
+    cost_basis: 164791
+    recovery_years: 27.5
+    month_placed: 1
+    expected_annual: 5992.40
+    expected_monthly: 499.37
+    expected_first_year: 5742.76
+    expected_last_year: 249.69
+
+  - name: "2943 Butterfly Palm Back Door"
+    cost_basis: 600
+    recovery_years: 27.5
+    month_placed: 1
+    expected_annual: 21.82
+    expected_monthly: 1.82
+    expected_first_year: 20.93
+    expected_last_year: 0.91
+
+  - name: "2943 Butterfly Palm Loan Costs"
+    cost_basis: 2389
+    recovery_years: 30
+    month_placed: 1
+    expected_annual: 79.63
+    expected_monthly: 6.64
+    expected_first_year: 76.36
+    expected_last_year: 3.32
+
+  - name: "2943 Butterfly Palm Water Heater"
+    cost_basis: 2895
+    recovery_years: 27.5
+    month_placed: 2
+    expected_annual: 105.27
+    expected_monthly: 8.77
+    expected_first_year: 92.09
+    expected_last_year: 13.16
+
+  - name: "206 Hoover Ave Building"
+    cost_basis: 73358
+    recovery_years: 27.5
+    month_placed: 5
+    expected_annual: 2667.56
+    expected_monthly: 222.30
+    expected_first_year: 1667.25
+    expected_last_year: 1000.35
+
+  - name: "206 Hoover Ave Improvements"
+    cost_basis: 30302
+    recovery_years: 27.5
+    month_placed: 11
+    expected_annual: 1101.89
+    expected_monthly: 91.82
+    expected_first_year: 137.73
+    expected_last_year: 964.11
