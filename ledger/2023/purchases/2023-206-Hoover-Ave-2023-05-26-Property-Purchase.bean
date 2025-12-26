@@ -30,9 +30,12 @@
   ; Payoff of First Mortgage (Pecos Loan Servicing): $46,896.49
   ; Doc Prep Fee: $125.00
   ; Tax Certificate: $44.00
-  Expenses:Property-Taxes:206-Hoover-Ave                            -1421.21 USD
-  Equity:Owner-Contributions:Cash-Infusion                         -99047.11 USD ; Balance Due FROM Buyer
-  Equity:Owner-Contributions:Cash-Infusion                          -1100.00 USD ; Earnest Money
-  Equity:Owner-Contributions:Cash-Infusion                           -200.00 USD ; Option Money
-  Assets:Land:206-Hoover-Ave                                        28410.32 USD
-  Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building   73358.00 USD
+  Expenses:Property-Taxes:206-Hoover-Ave                                             -1421.21 USD
+  Equity:Owner-Contributions:Cash-Infusion                                          -99047.11 USD ; Balance Due FROM Buyer
+  Equity:Owner-Contributions:Cash-Infusion                                           -1100.00 USD ; Earnest Money
+  Equity:Owner-Contributions:Cash-Infusion                                            -200.00 USD ; Option Money
+  Assets:Land:206-Hoover-Ave                                                         28410.32 USD
+  Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building                    73358.00 USD
+
+2023-05-27 balance Assets:Land:206-Hoover-Ave                                        28410.32 USD
+2023-05-27 balance Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building   73358.00 USD

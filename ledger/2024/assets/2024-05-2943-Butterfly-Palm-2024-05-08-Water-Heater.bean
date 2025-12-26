@@ -1,8 +1,0 @@
-;;
-;; 2024 - ASSET ACQUISITION - 2943 BUTTERFLY PALM - 2024-05-08 WATER HEATER
-;;
-
-2024-05-08 * "Asset Purchase - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #asset
-  Assets:Cash---Bank:Checking                                                   -2802.75 USD
-  Expenses:Other:Card-Processing:2943-Butterfly-Palm                                2.00 USD
-  Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater   2800.75 USD

@@ -49,3 +49,5 @@
 2026-12-15 * "Monthly Depreciation - 206 Hoover Ave Improvements" #206-hoover-ave #depreciation
    Assets:Accumulated-Depreciation:206-Hoover-Ave:Improvements:2023-11-17-Improvements  -91.82 USD
    Expenses:Depreciation:206-Hoover-Ave                                                  91.82 USD
+
+; 2026-12-16 balance Assets:Accumulated-Depreciation:206-Hoover-Ave:Improvements:2023-11-17-Improvements  -4334.56 USD

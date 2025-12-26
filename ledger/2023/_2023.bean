@@ -3,28 +3,28 @@
 ;;
 
 ; Depreciation
-include "./depreciation/2023-12-206-Hoover-Ave-2023-05-26-Building.bean"
-include "./depreciation/2023-12-206-Hoover-Ave-2023-11-17-Improvements.bean"
-include "./depreciation/2023-12-2943-Butterfly-Palm-2023-01-01-Building.bean"
-include "./depreciation/2023-12-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
-include "./depreciation/2023-12-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
-include "./depreciation/2023-12-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
+include "./depreciation/2023-206-Hoover-Ave-2023-05-26-Building.bean"
+include "./depreciation/2023-206-Hoover-Ave-2023-11-17-Improvements.bean"
+include "./depreciation/2023-2943-Butterfly-Palm-2023-01-01-Building.bean"
+include "./depreciation/2023-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
+include "./depreciation/2023-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "./depreciation/2023-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
 ; Assets
-include "./assets/2023-01-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
-include "./assets/2023-02-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
-include "./assets/2023-11-206-Hoover-Ave-2023-11-17-Improvements.bean"
+include "./assets/2023-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "./assets/2023-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
+include "./assets/2023-206-Hoover-Ave-2023-11-17-Improvements.bean"
 
 ; Mortgage
-include "./mortgage/2023-02-2943-Butterfly-Palm-Mortgage-Payments.bean"
-include "./mortgage/2023-10-2943-Butterfly-Palm-Escrow-Payouts.bean"
+include "./mortgage/2023-2943-Butterfly-Palm-Mortgage-Payments.bean"
+include "./mortgage/2023-2943-Butterfly-Palm-Escrow-Payouts.bean"
 
 ; Purchases
-include "./purchases/2023-05-206-Hoover-Ave-Property-Purchase.bean"
+include "./purchases/2023-206-Hoover-Ave-2023-05-26-Property-Purchase.bean"
 
 ; Taxes
-include "./taxes/206.bean"
-include "./taxes/2943.bean"
+include "./taxes/2023-206-Hoover-Ave-Taxes.bean"
+include "./taxes/2023-2943-Butterfly-Palm-Taxes.bean"
 
 ; Transactions
-include "./2023-12-Transactions-Multi.bean"
+include "./2023-SheerValue-Multi.bean"

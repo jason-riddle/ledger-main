@@ -5,6 +5,6 @@
 ; Building: Placed in service 1/1/2023, 27.5-year MACRS SL
 ; Annual depreciation: $164,791 / 27.5 = $5,992.40
 ; 2023 (Mid-month convention, 11.5/12 year): $5,743 (Tax Summary)
-2023-12-30 * "Annual Depreciation 2023 - 2943 Butterfly Palm Building" #2943-butterfly-palm #depreciation
+2023-12-15 * "Annual Depreciation 2023 - 2943 Butterfly Palm Building" #2943-butterfly-palm #depreciation
    Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building  -5743.00 USD
    Expenses:Depreciation:2943-Butterfly-Palm                                          5743.00 USD

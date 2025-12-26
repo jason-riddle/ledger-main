@@ -1,5 +1,5 @@
 ;;
-;; 2023 - TRANSACTIONS
+;; 2023 - SHEERVALUE - ALL
 ;;
 
 2023-12-31 * "Adjustment" "Correcting Asset Basis to match 2023 Tax Return Form 4562" #tax-adjustment
@@ -58,3 +58,5 @@
   Assets:Land:2943-Butterfly-Palm                                         833.00 USD
   Assets:Fixed-Assets:2943-Butterfly-Palm:Building:2023-01-01-Building   3024.60 USD
   Assets:Loan-Costs:2943-Butterfly-Palm:2023-SPS-Mortgage                   0.25 USD
+
+; TODO add check for land and fix asset adjustments

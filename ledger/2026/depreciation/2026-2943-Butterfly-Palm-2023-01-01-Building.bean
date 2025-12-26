@@ -49,3 +49,5 @@
 2026-12-15 * "Monthly Depreciation - 2943 Butterfly Palm Building" #2943-butterfly-palm #depreciation
    Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building  -499.36 USD
    Expenses:Depreciation:2943-Butterfly-Palm                                          499.36 USD
+
+; 2026-12-16 balance Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building  -4334.56 USD

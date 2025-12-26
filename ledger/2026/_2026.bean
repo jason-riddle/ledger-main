@@ -3,23 +3,23 @@
 ;;
 
 ; Depreciation
-include "./depreciation/2026-01-206-Hoover-Ave-2023-05-26-Building.bean"
-include "./depreciation/2026-01-206-Hoover-Ave-2023-11-17-Improvements.bean"
-include "./depreciation/2026-01-2943-Butterfly-Palm-2023-01-01-Building.bean"
-include "./depreciation/2026-01-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
-include "./depreciation/2026-01-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
-include "./depreciation/2026-01-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
+include "./depreciation/2026-206-Hoover-Ave-2023-05-26-Building.bean"
+include "./depreciation/2026-206-Hoover-Ave-2023-11-17-Improvements.bean"
+include "./depreciation/2026-2943-Butterfly-Palm-2023-01-01-Building.bean"
+include "./depreciation/2026-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
+include "./depreciation/2026-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "./depreciation/2026-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
 ; Mortgage
-include "./mortgage/2026_mortgage_payments.bean"
-include "./mortgage/2026_escrow_payouts.bean"
+include "./mortgage/2026-2943-Butterfly-Palm-Mortgage-Payments.bean"
+include "./mortgage/2026-2943-Butterfly-Palm-Escrow-Payouts.bean"
 
 ; Taxes
-include "./taxes/206.bean"
-include "./taxes/2943.bean"
+include "./taxes/2026-206-Hoover-Ave-Tax-Payments.bean"
+include "./taxes/2026-2943-Butterfly-Palm-Tax-Payments.bean"
 
 ; CloverLeaf
-include "./clover.bean"
+include "./2026-CloverLeaf-Multi.bean"
 
 ; SheerValue
-include "./sheervalue.bean"
+include "./2026-SheerValue-Multi.bean"
