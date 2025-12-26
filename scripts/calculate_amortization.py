@@ -146,7 +146,9 @@ def main() -> int:
         start_month=1,
     )
 
-    payment = calculate_monthly_payment(args.principal, args.annual_rate, args.term_years)
+    payment = calculate_monthly_payment(
+        args.principal, args.annual_rate, args.term_years
+    )
     interest_total = total_interest(schedule)
     paid_total = total_payments(schedule)
 
@@ -189,8 +191,7 @@ def main() -> int:
         except ValueError as exc:
             raise SystemExit(str(exc)) from exc
         output["range"] = [
-            serialize_entry(entry)
-            for entry in schedule[start_idx - 1 : end_idx]
+            serialize_entry(entry) for entry in schedule[start_idx - 1 : end_idx]
         ]
 
     if args.full_schedule:
