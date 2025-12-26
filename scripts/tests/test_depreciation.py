@@ -184,6 +184,9 @@ def test_total_depreciation_by_months():
     For any recovery period, total months * monthly rate should approximately
     equal the cost basis (within rounding tolerance).
     """
+    # Allow $2 tolerance due to rounding across 330 months
+    MAX_ROUNDING_TOLERANCE = Decimal('2.00')
+    
     cost_basis = 164791
     recovery_years = 27.5
     
@@ -194,7 +197,7 @@ def test_total_depreciation_by_months():
     
     # Should be very close to cost basis (within $2 due to rounding)
     difference = abs(total - Decimal(str(cost_basis)))
-    assert difference < Decimal('2.00'), f"Total depreciation {total} differs from cost basis {cost_basis} by {difference}"
+    assert difference < MAX_ROUNDING_TOLERANCE, f"Total depreciation {total} differs from cost basis {cost_basis} by {difference}"
 
 
 if __name__ == "__main__":

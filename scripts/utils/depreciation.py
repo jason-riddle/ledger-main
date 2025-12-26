@@ -18,6 +18,10 @@ Key IRS Rules:
 
 from decimal import Decimal, ROUND_HALF_UP
 
+# Month validation constants
+MIN_MONTH = 1
+MAX_MONTH = 12
+
 
 def calculate_annual_depreciation(cost_basis: float, recovery_years: float) -> Decimal:
     """
@@ -83,8 +87,8 @@ def calculate_first_year_depreciation(
         >>> calculate_first_year_depreciation(164791, 27.5, 1)
         Decimal('5742.93')  # (5992.40 / 12) * (12 - 1 + 0.5) = 5742.93
     """
-    if not 1 <= month_placed <= 12:
-        raise ValueError(f"month_placed must be between 1 and 12, got {month_placed}")
+    if not MIN_MONTH <= month_placed <= MAX_MONTH:
+        raise ValueError(f"month_placed must be between {MIN_MONTH} and {MAX_MONTH}, got {month_placed}")
     
     monthly = calculate_monthly_depreciation(cost_basis, recovery_years)
     months_in_service = Decimal('12') - Decimal(str(month_placed)) + Decimal('0.5')
@@ -134,8 +138,8 @@ def calculate_last_year_depreciation(
         >>> calculate_last_year_depreciation(164791, 27.5, 1)
         Decimal('249.69')  # (5992.40 / 12) * (1 - 0.5) = 249.69
     """
-    if not 1 <= month_placed <= 12:
-        raise ValueError(f"month_placed must be between 1 and 12, got {month_placed}")
+    if not MIN_MONTH <= month_placed <= MAX_MONTH:
+        raise ValueError(f"month_placed must be between {MIN_MONTH} and {MAX_MONTH}, got {month_placed}")
     
     monthly = calculate_monthly_depreciation(cost_basis, recovery_years)
     months_in_final_year = Decimal(str(month_placed)) - Decimal('0.5')
