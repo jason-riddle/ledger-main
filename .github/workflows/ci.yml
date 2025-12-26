@@ -45,15 +45,22 @@ jobs:
       - name: Check bean-format on all bean files
         run: |
           # Find all .bean files and check if they are formatted
-          find . -name "*.bean" -type f | while read file; do
+          # Using -exec to avoid subshell issues and handle special characters
+          errors=0
+          while IFS= read -r -d '' file; do
             echo "Checking format of $file"
             # bean-format outputs the formatted version; compare with original
             if ! bean-format "$file" | diff -u "$file" - > /dev/null; then
               echo "ERROR: $file is not formatted correctly"
               echo "Run: bean-format -o $file $file"
-              exit 1
+              errors=$((errors + 1))
             fi
-          done
+          done < <(find . -name "*.bean" -type f -print0)
+          
+          if [ $errors -gt 0 ]; then
+            echo "Found $errors incorrectly formatted file(s)"
+            exit 1
+          fi
           echo "All bean files are properly formatted"
 
   verification-scripts:
@@ -107,6 +114,7 @@ jobs:
       
       - name: Run ruff check
         run: |
+          # Note: Only checking scripts/ directory as that's where Python code lives
           uv tool run ruff check scripts/
 
   python-type-checking:
@@ -116,11 +124,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      
       - name: Install uv
         uses: astral-sh/setup-uv@v4
         with:
@@ -128,9 +131,10 @@ jobs:
       
       - name: Install mypy
         run: |
-          pip install mypy
+          uv tool install mypy
       
       - name: Run mypy
         run: |
           # Run mypy on all Python files in scripts/
-          mypy scripts/ --ignore-missing-imports
+          # Note: Only checking scripts/ directory as that's where Python code lives
+          uv tool run mypy scripts/ --ignore-missing-imports
