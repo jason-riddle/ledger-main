@@ -6,5 +6,5 @@
 ; Annual amortization: $2,389 / 30 = $79.63
 ; 2023 (Full year): $80 (Tax Summary)
 2023-12-30 * "Annual Amortization 2023 - 2943 Butterfly Palm Loan Costs" #2943-butterfly-palm #depreciation #amortization
-   Assets:Accumulated-Amortization:2943-Butterfly-Palm-Loan-Costs-AD  -80.00 USD
+   Assets:Accumulated-Amortization:2943-Butterfly-Palm:2023-SPS-Mortgage  -80.00 USD
    Expenses:Amortization:2943-Butterfly-Palm                           80.00 USD

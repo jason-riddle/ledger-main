@@ -24,19 +24,25 @@
 ; Security deposits held in trust for tenants
 1970-01-01 open Assets:Security-Deposits-Held:206-Hoover-Ave
 
-; Capitalized property improvements (Subject to depreciation)
-1970-01-01 open Assets:Capital-Improvements-Depreciable:206-Hoover-Ave
-1970-01-01 open Assets:Capital-Improvements-Depreciable:2943-Butterfly-Palm
+; Fixed assets (Subject to depreciation)
+1970-01-01 open Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building
+1970-01-01 open Assets:Fixed-Assets:206-Hoover-Ave:Improvements:2023-11-17-Improvements
+1970-01-01 open Assets:Fixed-Assets:2943-Butterfly-Palm:Building:2023-01-01-Building
+1970-01-01 open Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door
+1970-01-01 open Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater
 
 ; Loan Costs (Amortizable)
-1970-01-01 open Assets:Loan-Costs:2943-Butterfly-Palm
+1970-01-01 open Assets:Loan-Costs:2943-Butterfly-Palm:2023-SPS-Mortgage
 
 ; Contra-asset for accumulated depreciation
-1970-01-01 open Assets:Accumulated-Depreciation:2943-Butterfly-Palm-Building-AD
-1970-01-01 open Assets:Accumulated-Depreciation:206-Hoover-Building-AD
+1970-01-01 open Assets:Accumulated-Depreciation:206-Hoover-Ave:Building:2023-05-26-Building
+1970-01-01 open Assets:Accumulated-Depreciation:206-Hoover-Ave:Improvements:2023-11-17-Improvements
+1970-01-01 open Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building
+1970-01-01 open Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door
+1970-01-01 open Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater
 
 ; Contra-asset for accumulated amortization
-1970-01-01 open Assets:Accumulated-Amortization:2943-Butterfly-Palm-Loan-Costs-AD
+1970-01-01 open Assets:Accumulated-Amortization:2943-Butterfly-Palm:2023-SPS-Mortgage
 
 ; Land value (Never depreciated)
 1970-01-01 open Assets:Land:206-Hoover-Ave

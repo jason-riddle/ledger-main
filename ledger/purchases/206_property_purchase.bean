@@ -21,7 +21,7 @@
   ; Building: $73,358.00 (72.1%)
   ; Land: $28,410.32 (27.9%)
   Assets:Land:206-Hoover-Ave                               28410.32 USD
-  Assets:Capital-Improvements-Depreciable:206-Hoover-Ave   73358.00 USD
+  Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building   73358.00 USD
   ; Prorations:
   ; County Tax Credit (Seller pays their share for 01/01/23-05/27/23)
   ; Total Annual Tax Estimate: $3,553.03

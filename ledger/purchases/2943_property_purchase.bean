@@ -17,10 +17,10 @@
   ; = Total Cost Basis: $206,124.40
   ; Allocation (approx 21.5% Land / 78.5% Building based on previous estimates):
   Assets:Land:2943-Butterfly-Palm                                44358.00 USD
-  Assets:Capital-Improvements-Depreciable:2943-Butterfly-Palm   161766.40 USD
+  Assets:Fixed-Assets:2943-Butterfly-Palm:Building:2023-01-01-Building   161766.40 USD
   ; Loan Costs (Amortizable):
   ; Origination ($1793.75) + Doc Review ($595.00)
-  Assets:Loan-Costs:2943-Butterfly-Palm                           2388.75 USD
+  Assets:Loan-Costs:2943-Butterfly-Palm:2023-SPS-Mortgage          2388.75 USD
   ; Escrow & Prepaids:
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm              762.80 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm                   270.13 USD

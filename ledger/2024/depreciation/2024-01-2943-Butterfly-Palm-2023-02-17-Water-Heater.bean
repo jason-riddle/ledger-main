@@ -3,19 +3,19 @@
 ;;
 
 2024-01-15 * "Monthly Depreciation - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #depreciation
-   Assets:Accumulated-Depreciation:2943-Butterfly-Palm-Building-AD  -8.78 USD
+   Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater  -8.78 USD
    Expenses:Depreciation:2943-Butterfly-Palm                         8.78 USD
 
 2024-02-15 * "Monthly Depreciation - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #depreciation
-   Assets:Accumulated-Depreciation:2943-Butterfly-Palm-Building-AD  -8.78 USD
+   Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater  -8.78 USD
    Expenses:Depreciation:2943-Butterfly-Palm                         8.78 USD
 
 2024-03-15 * "Monthly Depreciation - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #depreciation
-   Assets:Accumulated-Depreciation:2943-Butterfly-Palm-Building-AD  -8.78 USD
+   Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater  -8.78 USD
    Expenses:Depreciation:2943-Butterfly-Palm                         8.78 USD
 
 2024-04-15 * "Monthly Depreciation - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #depreciation
-   Assets:Accumulated-Depreciation:2943-Butterfly-Palm-Building-AD  -8.77 USD
+   Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater  -8.77 USD
    Expenses:Depreciation:2943-Butterfly-Palm                         8.77 USD
 
 ; TODO(IMPORTANT) Removed from service on 4/28/2024

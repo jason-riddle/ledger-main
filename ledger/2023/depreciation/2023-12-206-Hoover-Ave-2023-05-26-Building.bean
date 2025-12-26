@@ -6,5 +6,5 @@
 ; Annual depreciation: $73,358 / 27.5 = $2,667.56
 ; 2023 (Mid-month convention, 7.5/12 year): $1,667 (Tax Summary)
 2023-12-30 * "Annual Depreciation 2023 - 206 Hoover Ave Building" #206-hoover-ave #depreciation
-   Assets:Accumulated-Depreciation:206-Hoover-Building-AD  -1667.00 USD
+   Assets:Accumulated-Depreciation:206-Hoover-Ave:Building:2023-05-26-Building  -1667.00 USD
    Expenses:Depreciation:206-Hoover-Ave                     1667.00 USD
