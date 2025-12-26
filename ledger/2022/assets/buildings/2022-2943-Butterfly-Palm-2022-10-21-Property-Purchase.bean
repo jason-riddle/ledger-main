@@ -1,0 +1,44 @@
+;;
+;; 2022 - PURCHASE - 2943-BUTTERFLY-PALM - 2022-10-21 PROPERTY PURCHASE
+;;
+
+2022-10-20 balance Expenses:Mortgage-Interest:2943-Butterfly-Palm                                 0 USD
+2022-10-20 balance Liabilities:Mortgages:2943-Butterfly-Palm                                      0 USD
+2022-10-20 balance Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                            0 USD
+
+2022-10-21 * "Property Purchase - 2943 Butterfly Palm" #2943-butterfly-palm #purchases #review
+  documents: "2022-10-21 2943 Butterfly Palm Closing - HUD-1 Settlement Statement.pdf"
+  settlement_agent: "Priority Settlement Group of Texas, LLC"
+  loan_number: "10003510"
+  ; Basis Calculation:
+  ; Purchase Price: $205,000.00
+  ; + Title Services: $100.00
+  ; + Settlement Fee: $399.00
+  ; + Endorsements: $120.00
+  ; + Recording Fees: $168.40
+  ; + HOA Setup: $335.00
+  ; + GTY Fee: $2.00
+  ; = Total Cost Basis: $206,124.40
+  ; Allocation (approx 21.5% Land / 78.5% Building based on previous estimates):
+  ; Loan Costs (Amortizable):
+  ; Origination ($1793.75) + Doc Review ($595.00)
+  ; Escrow & Prepaids:
+  ; Funding:
+  Liabilities:Mortgages:2943-Butterfly-Palm                                              -102500.00 USD
+  Equity:Owner-Contributions:Cash-Infusion                                               -106571.47 USD ; Cash to Close
+  Equity:Owner-Contributions:Cash-Infusion                                                 -2250.00 USD ; Earnest Money
+  Assets:Land:2943-Butterfly-Palm                                                          44358.00 USD
+  Assets:Fixed-Assets:2943-Butterfly-Palm:Building:2023-01-01-Building                    161766.40 USD
+  Assets:Loan-Costs:2943-Butterfly-Palm:2023-SPS-Mortgage                                   2388.75 USD
+  Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                                        762.80 USD
+  Expenses:Mortgage-Interest:2943-Butterfly-Palm                                             270.13 USD
+  Expenses:Insurance:2943-Butterfly-Palm                                                    1067.00 USD ; 1 Year Premium
+  Expenses:Property-Taxes:2943-Butterfly-Palm                                                682.71 USD ; Seller Reimbursement
+  Expenses:Other:HOA:2943-Butterfly-Palm                                                      25.68 USD ; Proration
+
+2022-10-22 balance Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                       762.80 USD
+2022-10-22 balance Liabilities:Mortgages:2943-Butterfly-Palm                             -102500.00 USD
+2022-10-22 balance Expenses:Mortgage-Interest:2943-Butterfly-Palm                            270.13 USD
+
+2022-10-22 balance Assets:Land:2943-Butterfly-Palm                                         44358.00 USD
+2022-10-22 balance Assets:Fixed-Assets:2943-Butterfly-Palm:Building:2023-01-01-Building   161766.40 USD

@@ -11,16 +11,15 @@ include "./depreciation/2023-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
 include "./depreciation/2023-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
 ; ASSETS
-include "./assets/2023-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
-include "./assets/2023-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
-include "./assets/2023-206-Hoover-Ave-2023-11-17-Improvements.bean"
+include "./assets/buildings/2023-206-Hoover-Ave-2023-05-26-Property-Purchase.bean"
+include "./assets/improvements/2023-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "./assets/improvements/2023-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
+include "./assets/improvements/2023-206-Hoover-Ave-2023-11-17-Improvements.bean"
 
 ; MORTGAGE
 include "./mortgage/2023-2943-Butterfly-Palm-Mortgage-Payments.bean"
 include "./mortgage/2023-2943-Butterfly-Palm-Escrow-Payouts.bean"
 
-; PURCHASES
-include "./purchases/2023-206-Hoover-Ave-2023-05-26-Property-Purchase.bean"
 
 ; TAXES
 include "./taxes/2023-206-Hoover-Ave-Taxes.bean"
