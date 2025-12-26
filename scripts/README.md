@@ -69,6 +69,39 @@ uv run scripts/verify_amortization.py
 - `0` - All calculations verified successfully
 - `1` - Discrepancies found or errors occurred
 
+#### `calculate_amortization.py`
+Calculates amortization details and emits JSON:
+- Summary (monthly payment, total interest, total paid)
+- Optional point lookup (by month number or date)
+- Optional range output (by month numbers or dates)
+
+**Usage:**
+```bash
+# Summary only
+uv run scripts/calculate_amortization.py \
+  --principal 102500 --annual-rate 8.625 --term-years 30
+
+# Point lookup by month
+uv run scripts/calculate_amortization.py \
+  --principal 102500 --annual-rate 8.625 --term-years 30 \
+  --month 12
+
+# Point lookup by date (requires start-date)
+uv run scripts/calculate_amortization.py \
+  --principal 102500 --annual-rate 8.625 --term-years 30 \
+  --start-date 2023-01 --date 2024-06
+
+# Range by month
+uv run scripts/calculate_amortization.py \
+  --principal 102500 --annual-rate 8.625 --term-years 30 \
+  --from-month 1 --to-month 12
+
+# Full schedule
+uv run scripts/calculate_amortization.py \
+  --principal 102500 --annual-rate 8.625 --term-years 30 \
+  --full-schedule
+```
+
 ### Utility Modules
 
 #### `utils/depreciation.py`
