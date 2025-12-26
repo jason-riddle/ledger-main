@@ -20,7 +20,7 @@ Tests verify IRS depreciation calculations including:
 """
 
 import pytest
-import yaml
+import yaml  # type: ignore[import-untyped]
 from decimal import Decimal
 from pathlib import Path
 import sys
@@ -112,7 +112,7 @@ def test_first_year_depreciation_month_validation():
     """Test that invalid months raise ValueError."""
     with pytest.raises(ValueError, match="month_placed must be between 1 and 12"):
         calculate_first_year_depreciation(10000, 27.5, 0)
-    
+
     with pytest.raises(ValueError, match="month_placed must be between 1 and 12"):
         calculate_first_year_depreciation(10000, 27.5, 13)
 
@@ -121,7 +121,7 @@ def test_last_year_depreciation_month_validation():
     """Test that invalid months raise ValueError."""
     with pytest.raises(ValueError, match="month_placed must be between 1 and 12"):
         calculate_last_year_depreciation(10000, 27.5, 0)
-    
+
     with pytest.raises(ValueError, match="month_placed must be between 1 and 12"):
         calculate_last_year_depreciation(10000, 27.5, 13)
 
@@ -129,7 +129,7 @@ def test_last_year_depreciation_month_validation():
 def test_mid_month_convention_january():
     """
     Test mid-month convention for January placement.
-    
+
     For an asset placed in service in January (month 1):
     - First year months: 12 - 1 + 0.5 = 11.5 months
     - Last year months: 1 - 0.5 = 0.5 months
@@ -137,16 +137,15 @@ def test_mid_month_convention_january():
     cost_basis = 10000
     recovery_years = 27.5
     
-    annual = calculate_annual_depreciation(cost_basis, recovery_years)
     monthly = calculate_monthly_depreciation(cost_basis, recovery_years)
-    
+
     first_year = calculate_first_year_depreciation(cost_basis, recovery_years, 1)
     last_year = calculate_last_year_depreciation(cost_basis, recovery_years, 1)
-    
+
     # First year should be 11.5 months worth
     expected_first = monthly * Decimal('11.5')
     assert first_year == expected_first.quantize(Decimal('0.01'))
-    
+
     # Last year should be 0.5 months worth
     expected_last = monthly * Decimal('0.5')
     assert last_year == expected_last.quantize(Decimal('0.01'))
@@ -155,23 +154,23 @@ def test_mid_month_convention_january():
 def test_mid_month_convention_december():
     """
     Test mid-month convention for December placement.
-    
+
     For an asset placed in service in December (month 12):
     - First year months: 12 - 12 + 0.5 = 0.5 months
     - Last year months: 12 - 0.5 = 11.5 months
     """
     cost_basis = 10000
     recovery_years = 27.5
-    
+
     monthly = calculate_monthly_depreciation(cost_basis, recovery_years)
-    
+
     first_year = calculate_first_year_depreciation(cost_basis, recovery_years, 12)
     last_year = calculate_last_year_depreciation(cost_basis, recovery_years, 12)
-    
+
     # First year should be 0.5 months worth
     expected_first = monthly * Decimal('0.5')
     assert first_year == expected_first.quantize(Decimal('0.01'))
-    
+
     # Last year should be 11.5 months worth
     expected_last = monthly * Decimal('11.5')
     assert last_year == expected_last.quantize(Decimal('0.01'))
@@ -180,21 +179,21 @@ def test_mid_month_convention_december():
 def test_total_depreciation_by_months():
     """
     Test that total depreciation calculated monthly equals cost basis.
-    
+
     For any recovery period, total months * monthly rate should approximately
     equal the cost basis (within rounding tolerance).
     """
     # Allow $2 tolerance due to rounding across 330 months
     MAX_ROUNDING_TOLERANCE = Decimal('2.00')
-    
+
     cost_basis = 164791
     recovery_years = 27.5
-    
+
     monthly = calculate_monthly_depreciation(cost_basis, recovery_years)
     total_months = Decimal(str(recovery_years)) * Decimal('12')
-    
+
     total = monthly * total_months
-    
+
     # Should be very close to cost basis (within $2 due to rounding)
     difference = abs(total - Decimal(str(cost_basis)))
     assert difference < MAX_ROUNDING_TOLERANCE, f"Total depreciation {total} differs from cost basis {cost_basis} by {difference}"
