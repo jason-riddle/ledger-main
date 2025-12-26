@@ -13,6 +13,7 @@ include "./depreciation/improvements/2024-2943-Butterfly-Palm-2023-01-01-Loan-Co
 
 ; ASSETS
 include "./assets/improvements/2024-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
+;; TODO: add 2024 building assets.
 
 ; MORTGAGE
 include "./mortgage/2024-2943-Butterfly-Palm-Mortgage-Payments.bean"

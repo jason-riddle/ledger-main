@@ -10,6 +10,10 @@ include "./depreciation/improvements/2025-2943-Butterfly-Palm-2024-05-08-Water-H
 include "./depreciation/improvements/2025-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
 include "./depreciation/improvements/2025-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
+; ASSETS
+;; TODO: add 2025 building assets.
+;; TODO: add 2025 improvements assets.
+
 ; MORTGAGE
 include "./mortgage/2025-2943-Butterfly-Palm-Mortgage-Payments.bean"
 include "./mortgage/2025-2943-Butterfly-Palm-Escrow-Payouts.bean"
