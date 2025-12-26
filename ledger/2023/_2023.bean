@@ -8,6 +8,7 @@ include "./depreciation/2023-12-206-Hoover-Ave-2023-11-17-Improvements.bean"
 include "./depreciation/2023-12-2943-Butterfly-Palm-2023-01-01-Building.bean"
 include "./depreciation/2023-12-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
 include "./depreciation/2023-12-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "./depreciation/2023-12-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
 ; Assets
 include "./assets/2023-01-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
