@@ -13,7 +13,16 @@ Standard Amortization Formulas:
 """
 
 from decimal import Decimal, ROUND_HALF_UP
-from typing import List, Dict
+from typing import List, TypedDict
+
+
+class AmortizationEntry(TypedDict):
+    month: int
+    balance_before: Decimal
+    payment: Decimal
+    interest: Decimal
+    principal: Decimal
+    balance_after: Decimal
 
 
 def calculate_monthly_payment(
@@ -107,7 +116,7 @@ def generate_amortization_schedule(
     annual_rate: float,
     term_years: int,
     start_month: int = 1
-) -> List[Dict[str, Decimal]]:
+) -> List[AmortizationEntry]:
     """
     Generate a complete amortization schedule for a loan.
 
@@ -135,7 +144,7 @@ def generate_amortization_schedule(
     """
     monthly_payment = calculate_monthly_payment(principal, annual_rate, term_years)
     balance = Decimal(str(principal))
-    schedule = []
+    schedule: List[AmortizationEntry] = []
     total_months = term_years * 12
 
     for month in range(start_month, start_month + total_months):

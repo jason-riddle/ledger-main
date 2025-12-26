@@ -29,7 +29,6 @@ import sys
 from pathlib import Path
 from decimal import Decimal
 from collections import defaultdict
-from datetime import datetime
 
 # Add utils to path
 sys.path.insert(0, str(Path(__file__).parent))
@@ -43,7 +42,7 @@ from utils.depreciation import (
 # Beancount imports
 try:
     from beancount import loader
-    from beancount.core import amount, data
+    from beancount.core import data
 except ImportError:
     print("Error: beancount library not found. Install with: pip install beancount")
     sys.exit(1)
@@ -287,7 +286,7 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
     print(f"Total transactions checked: {total_checked}")
 
     if all_correct:
-        print(f"\n✅ SUCCESS: All depreciation calculations verified!")
+        print("\n✅ SUCCESS: All depreciation calculations verified!")
         return True
     else:
         print(f"\n❌ FAILED: Found {total_discrepancies} discrepancies")

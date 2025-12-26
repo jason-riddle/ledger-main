@@ -19,7 +19,7 @@ Tests verify standard loan amortization calculations including:
 """
 
 import pytest
-import yaml
+import yaml  # type: ignore[import-untyped]
 from decimal import Decimal
 from pathlib import Path
 import sys

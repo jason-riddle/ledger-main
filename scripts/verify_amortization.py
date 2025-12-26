@@ -29,28 +29,34 @@ import sys
 from pathlib import Path
 from decimal import Decimal
 from collections import defaultdict
-from datetime import datetime
+from datetime import date
+from typing import TypedDict
 
 # Add utils to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from utils.amortization import (
-    calculate_monthly_payment,
-    calculate_interest_payment,
-    calculate_principal_payment,
-)
+from utils.amortization import calculate_interest_payment, calculate_principal_payment
 
 # Beancount imports
 try:
     from beancount import loader
-    from beancount.core import amount, data
+    from beancount.core import data
 except ImportError:
     print("Error: beancount library not found. Install with: pip install beancount")
     sys.exit(1)
 
 
+class MortgageConfig(TypedDict):
+    name: str
+    original_principal: float
+    annual_rate: float
+    term_years: int
+    start_date: str
+    expected_payment: float
+
+
 # Mortgage configurations
-MORTGAGE_CONFIGS = {
+MORTGAGE_CONFIGS: dict[str, MortgageConfig] = {
     "2943-Butterfly-Palm": {
         "name": "2943 Butterfly Palm Mortgage",
         "original_principal": 102500,
@@ -62,13 +68,30 @@ MORTGAGE_CONFIGS = {
 }
 
 
+class PaymentInfo(TypedDict):
+    date: date
+    narration: str
+    interest: Decimal | None
+    principal: Decimal | None
+    escrow: Decimal | None
+    total: Decimal | None
+
+
 def extract_mortgage_payments(entries):
     """
     Extract mortgage payment transactions from ledger entries.
 
     Returns a dictionary mapping property names to lists of payment details.
     """
-    mortgage_payments = defaultdict(list)
+    class VerifiedPaymentInfo(TypedDict):
+        date: date
+        narration: str
+        interest: Decimal
+        principal: Decimal
+        escrow: Decimal | None
+        total: Decimal | None
+
+    mortgage_payments: dict[str, list[VerifiedPaymentInfo]] = defaultdict(list)
     for entry in entries:
         if not isinstance(entry, data.Transaction):
             continue
@@ -78,7 +101,7 @@ def extract_mortgage_payments(entries):
             continue
 
         # Extract payment details from postings
-        payment_info = {
+        payment_info: PaymentInfo = {
             "date": entry.date,
             "narration": entry.narration,
             "interest": None,
@@ -86,6 +109,7 @@ def extract_mortgage_payments(entries):
             "escrow": None,
             "total": None,
         }
+        property_name: str | None = None
         for posting in entry.postings:
             account = posting.account
             amt = posting.units.number
@@ -108,8 +132,20 @@ def extract_mortgage_payments(entries):
             elif "Checking" in account or "Cash" in account:
                 payment_info["total"] = abs(amt)
 
-        if payment_info["interest"] is not None and payment_info["principal"] is not None:
-            mortgage_payments[property_name].append(payment_info)
+        if (
+            property_name
+            and payment_info["interest"] is not None
+            and payment_info["principal"] is not None
+        ):
+            completed: VerifiedPaymentInfo = {
+                "date": payment_info["date"],
+                "narration": payment_info["narration"],
+                "interest": payment_info["interest"],
+                "principal": payment_info["principal"],
+                "escrow": payment_info["escrow"],
+                "total": payment_info["total"],
+            }
+            mortgage_payments[property_name].append(completed)
 
     return mortgage_payments
 
@@ -272,7 +308,7 @@ def verify_mortgage_amortization(ledger_path: str = "ledger/main.bean"):
     print(f"Total payments checked: {total_checked}")
 
     if all_correct:
-        print(f"\n✅ SUCCESS: All amortization calculations verified!")
+        print("\n✅ SUCCESS: All amortization calculations verified!")
         return True
     else:
         print(f"\n❌ FAILED: Found {total_discrepancies} discrepancies")
