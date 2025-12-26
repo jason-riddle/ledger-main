@@ -31,8 +31,8 @@ plugin "beancount.plugins.leafonly"
 ;; PROPERTY PURCHASE
 ;;
 
-include "./2023/purchases/2023-05-206-Hoover-Ave-Property-Purchase.bean"
-include "./2022/purchases/2022-10-2943-Butterfly-Palm-Property-Purchase.bean"
+; include "./2023/purchases/2023-05-206-Hoover-Ave-Property-Purchase.bean"
+; include "./2022/purchases/2022-10-2943-Butterfly-Palm-Property-Purchase.bean"
 
 ;;
 ;; 2022

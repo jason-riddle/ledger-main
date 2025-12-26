@@ -5,5 +5,8 @@
 ; Mortgage
 include "./mortgage/2022-12-2943-Butterfly-Palm-Mortgage-Payments.bean"
 
+; Purchases
+include "./purchases/2022-10-2943-Butterfly-Palm-Property-Purchase.bean"
+
 ; Transactions
 include "./transactions.bean"
