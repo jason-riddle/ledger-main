@@ -20,7 +20,6 @@ include "./assets/improvements/2023-206-Hoover-Ave-2023-11-17-Improvements.bean"
 include "./mortgage/2023-2943-Butterfly-Palm-Mortgage-Payments.bean"
 include "./mortgage/2023-2943-Butterfly-Palm-Escrow-Payouts.bean"
 
-
 ; TAXES
 include "./taxes/2023-206-Hoover-Ave-Taxes.bean"
 include "./taxes/2023-2943-Butterfly-Palm-Taxes.bean"

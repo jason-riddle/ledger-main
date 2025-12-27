@@ -5,12 +5,12 @@
 ; DEPRECIATION
 ;; TODO: add depreciation entries for 2022.
 
-; MORTGAGE
-include "./mortgage/2022-2943-Butterfly-Palm-Mortgage-Payments.bean"
-
 ; ASSETS
 include "./assets/buildings/2022-2943-Butterfly-Palm-2022-10-21-Property-Purchase.bean"
 ;; TODO: add 2022 improvements assets.
+
+; MORTGAGE
+include "./mortgage/2022-2943-Butterfly-Palm-Mortgage-Payments.bean"
 
 ; TAXES
 ;; TODO: add 2022 tax entries.

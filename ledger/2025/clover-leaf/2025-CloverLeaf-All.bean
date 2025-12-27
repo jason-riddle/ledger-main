@@ -2,6 +2,10 @@
 ;; 2025 - CloverLeaf - ALL
 ;;
 
+; TRANSACTIONS
+include "./2025-CloverLeaf-206-Hoover-Ave-Transactions.bean"
+include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
+
 2025-09-16 * "CloverLeaf Property Management" "Memo: Management Fee Expense for 09/2025" #206-hoover-ave
   paperless_bill_invoice_receipt_url: "http://go/paperless/2157"
   property_manager_bill_url: "http://go/pm/bills/43516"
