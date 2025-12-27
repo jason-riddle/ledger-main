@@ -8,6 +8,11 @@ include "./_header.bean"
 ;; PLUGINS
 ;;
 
+; Jason's plugins
+
+option "insert_pythonpath" "True"
+plugin "plugins.comments_required"
+
 ; Official plugins
 
 ; Validates that currencies held at cost aren't ever converted at price and vice-versa
