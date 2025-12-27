@@ -1,8 +1,8 @@
 """
 IRS Depreciation Calculation Utilities.
 
-This module provides functions to calculate depreciation for rental property assets
-following IRS rules:
+This module provides functions to calculate depreciation for rental property
+assets following IRS rules:
 - 27.5-year straight-line for residential rental buildings and improvements
 - 30-year straight-line for loan costs
 - Mid-month convention (assets placed in service mid-month)
@@ -16,20 +16,23 @@ Key IRS Rules:
 - Last year: remaining basis or partial year amount
 """
 
-from decimal import Decimal, ROUND_HALF_UP
+import decimal
 
 # Month validation constants
 MIN_MONTH = 1
 MAX_MONTH = 12
 
 
-def calculate_annual_depreciation(cost_basis: float, recovery_years: float) -> Decimal:
+def calculate_annual_depreciation(
+    cost_basis: float, recovery_years: float
+) -> decimal.Decimal:
     """
     Calculate annual depreciation amount using straight-line method.
 
     Args:
         cost_basis: The depreciable basis of the asset in dollars
-        recovery_years: The IRS recovery period (27.5 for buildings, 30 for loan costs)
+        recovery_years: The IRS recovery period (27.5 for buildings, 30 for
+            loan costs)
 
     Returns:
         Annual depreciation amount rounded to 2 decimal places
@@ -38,17 +41,20 @@ def calculate_annual_depreciation(cost_basis: float, recovery_years: float) -> D
         >>> calculate_annual_depreciation(164791, 27.5)
         Decimal('5992.40')
     """
-    annual = Decimal(str(cost_basis)) / Decimal(str(recovery_years))
-    return annual.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+    annual = decimal.Decimal(str(cost_basis)) / decimal.Decimal(str(recovery_years))
+    return annual.quantize(decimal.Decimal("0.01"), rounding=decimal.ROUND_HALF_UP)
 
 
-def calculate_monthly_depreciation(cost_basis: float, recovery_years: float) -> Decimal:
+def calculate_monthly_depreciation(
+    cost_basis: float, recovery_years: float
+) -> decimal.Decimal:
     """
     Calculate monthly depreciation amount using straight-line method.
 
     Args:
         cost_basis: The depreciable basis of the asset in dollars
-        recovery_years: The IRS recovery period (27.5 for buildings, 30 for loan costs)
+        recovery_years: The IRS recovery period (27.5 for buildings, 30 for
+            loan costs)
 
     Returns:
         Monthly depreciation amount rounded to 2 decimal places
@@ -58,24 +64,25 @@ def calculate_monthly_depreciation(cost_basis: float, recovery_years: float) -> 
         Decimal('499.37')
     """
     annual = calculate_annual_depreciation(cost_basis, recovery_years)
-    monthly = annual / Decimal("12")
-    return monthly.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+    monthly = annual / decimal.Decimal("12")
+    return monthly.quantize(decimal.Decimal("0.01"), rounding=decimal.ROUND_HALF_UP)
 
 
 def calculate_first_year_depreciation(
     cost_basis: float, recovery_years: float, month_placed: int
-) -> Decimal:
+) -> decimal.Decimal:
     """
     Calculate first year depreciation using mid-month convention.
 
-    IRS mid-month convention: Asset is treated as placed in service in the middle
-    of the month. For month placed in service, count 0.5 months.
+    IRS mid-month convention: Asset is treated as placed in service in the
+    middle of the month. For month placed in service, count 0.5 months.
 
     Formula: (annual / 12) * (12 - month_placed + 0.5)
 
     Args:
         cost_basis: The depreciable basis of the asset in dollars
-        recovery_years: The IRS recovery period (27.5 for buildings, 30 for loan costs)
+        recovery_years: The IRS recovery period (27.5 for buildings, 30 for
+            loan costs)
         month_placed: Month asset was placed in service (1-12, where 1=January)
 
     Returns:
@@ -87,18 +94,23 @@ def calculate_first_year_depreciation(
     """
     if not MIN_MONTH <= month_placed <= MAX_MONTH:
         raise ValueError(
-            f"month_placed must be between {MIN_MONTH} and {MAX_MONTH}, got {month_placed}"
+            "month_placed must be between "
+            f"{MIN_MONTH} and {MAX_MONTH}, got {month_placed}"
         )
 
     monthly = calculate_monthly_depreciation(cost_basis, recovery_years)
-    months_in_service = Decimal("12") - Decimal(str(month_placed)) + Decimal("0.5")
+    months_in_service = (
+        decimal.Decimal("12")
+        - decimal.Decimal(str(month_placed))
+        + decimal.Decimal("0.5")
+    )
     first_year = monthly * months_in_service
-    return first_year.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+    return first_year.quantize(decimal.Decimal("0.01"), rounding=decimal.ROUND_HALF_UP)
 
 
 def calculate_remaining_basis(
     cost_basis: float, accumulated_depreciation: float
-) -> Decimal:
+) -> decimal.Decimal:
     """
     Calculate remaining depreciable basis of an asset.
 
@@ -113,22 +125,26 @@ def calculate_remaining_basis(
         >>> calculate_remaining_basis(164791, 11735.40)
         Decimal('153055.60')
     """
-    remaining = Decimal(str(cost_basis)) - Decimal(str(accumulated_depreciation))
-    return remaining.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+    remaining = decimal.Decimal(str(cost_basis)) - decimal.Decimal(
+        str(accumulated_depreciation)
+    )
+    return remaining.quantize(decimal.Decimal("0.01"), rounding=decimal.ROUND_HALF_UP)
 
 
 def calculate_last_year_depreciation(
     cost_basis: float, recovery_years: float, month_placed: int
-) -> Decimal:
+) -> decimal.Decimal:
     """
     Calculate last year (final year) depreciation using mid-month convention.
 
-    In the final year, only partial depreciation is taken for the remaining months.
+    In the final year, only partial depreciation is taken for the remaining
+    months.
     Formula: (annual / 12) * (month_placed - 0.5)
 
     Args:
         cost_basis: The depreciable basis of the asset in dollars
-        recovery_years: The IRS recovery period (27.5 for buildings, 30 for loan costs)
+        recovery_years: The IRS recovery period (27.5 for buildings, 30 for
+            loan costs)
         month_placed: Month asset was placed in service (1-12, where 1=January)
 
     Returns:
@@ -140,10 +156,11 @@ def calculate_last_year_depreciation(
     """
     if not MIN_MONTH <= month_placed <= MAX_MONTH:
         raise ValueError(
-            f"month_placed must be between {MIN_MONTH} and {MAX_MONTH}, got {month_placed}"
+            "month_placed must be between "
+            f"{MIN_MONTH} and {MAX_MONTH}, got {month_placed}"
         )
 
     monthly = calculate_monthly_depreciation(cost_basis, recovery_years)
-    months_in_final_year = Decimal(str(month_placed)) - Decimal("0.5")
+    months_in_final_year = decimal.Decimal(str(month_placed)) - decimal.Decimal("0.5")
     last_year = monthly * months_in_final_year
-    return last_year.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+    return last_year.quantize(decimal.Decimal("0.01"), rounding=decimal.ROUND_HALF_UP)

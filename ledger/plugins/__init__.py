@@ -1,1 +1,1 @@
-# Package marker for Beancount plugins.
+"""Beancount plugin package marker."""

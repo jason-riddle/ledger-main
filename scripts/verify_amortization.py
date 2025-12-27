@@ -25,17 +25,17 @@ Exit codes:
     1 - Discrepancies found or errors occurred
 """
 
+import collections
+import datetime
+import decimal
+import pathlib
 import sys
-from pathlib import Path
-from decimal import Decimal
-from collections import defaultdict
-from datetime import date
 from typing import TypedDict
 
 # Add utils to path
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
-from utils.amortization import calculate_interest_payment, calculate_principal_payment
+from utils import amortization
 
 # Beancount imports
 try:
@@ -69,12 +69,12 @@ MORTGAGE_CONFIGS: dict[str, MortgageConfig] = {
 
 
 class PaymentInfo(TypedDict):
-    date: date
+    date: datetime.date
     narration: str
-    interest: Decimal | None
-    principal: Decimal | None
-    escrow: Decimal | None
-    total: Decimal | None
+    interest: decimal.Decimal | None
+    principal: decimal.Decimal | None
+    escrow: decimal.Decimal | None
+    total: decimal.Decimal | None
 
 
 def extract_mortgage_payments(entries):
@@ -85,14 +85,16 @@ def extract_mortgage_payments(entries):
     """
 
     class VerifiedPaymentInfo(TypedDict):
-        date: date
+        date: datetime.date
         narration: str
-        interest: Decimal
-        principal: Decimal
-        escrow: Decimal | None
-        total: Decimal | None
+        interest: decimal.Decimal
+        principal: decimal.Decimal
+        escrow: decimal.Decimal | None
+        total: decimal.Decimal | None
 
-    mortgage_payments: dict[str, list[VerifiedPaymentInfo]] = defaultdict(list)
+    mortgage_payments: dict[str, list[VerifiedPaymentInfo]] = collections.defaultdict(
+        list
+    )
     for entry in entries:
         if not isinstance(entry, data.Transaction):
             continue
@@ -157,7 +159,7 @@ def get_balance_at_date(entries, account_pattern, target_date):
 
     Returns balance as Decimal.
     """
-    balance = Decimal("0")
+    balance = decimal.Decimal("0")
 
     for entry in entries:
         if not isinstance(entry, data.Transaction):
@@ -168,7 +170,7 @@ def get_balance_at_date(entries, account_pattern, target_date):
 
         for posting in entry.postings:
             if account_pattern in posting.account:
-                balance += Decimal(str(posting.units.number))
+                balance += decimal.Decimal(str(posting.units.number))
 
     return balance
 
@@ -185,13 +187,14 @@ def verify_mortgage_amortization(ledger_path: str = "ledger/main.bean"):
     print()
 
     # Load ledger
-    ledger_abs_path = Path(ledger_path).absolute()
+    ledger_abs_path = pathlib.Path(ledger_path).absolute()
     if not ledger_abs_path.exists():
         print(f"Error: Ledger file not found: {ledger_abs_path}")
         return False
 
     print(f"Loading ledger: {ledger_abs_path}")
     entries, errors, options = loader.load_file(str(ledger_abs_path))
+    del options  # Unused.
 
     if errors:
         print(f"\nWarning: {len(errors)} errors found in ledger:")
@@ -254,22 +257,24 @@ def verify_mortgage_amortization(ledger_path: str = "ledger/main.bean"):
             balance_before = abs(balance_before)  # Liabilities are negative
 
             # Calculate expected values
-            expected_interest = calculate_interest_payment(
+            expected_interest = amortization.calculate_interest_payment(
                 float(balance_before), config["annual_rate"]
             )
-            expected_principal = calculate_principal_payment(
+            expected_principal = amortization.calculate_principal_payment(
                 config["expected_payment"], float(expected_interest)
             )
 
             # Compare with actual
-            actual_interest = Decimal(str(payment["interest"]))
-            actual_principal = Decimal(str(payment["principal"]))
+            actual_interest = decimal.Decimal(str(payment["interest"]))
+            actual_principal = decimal.Decimal(str(payment["principal"]))
 
             interest_diff = abs(actual_interest - expected_interest)
             principal_diff = abs(actual_principal - expected_principal)
 
             # Allow small rounding differences (5 cents for each)
-            if interest_diff > Decimal("0.05") or principal_diff > Decimal("0.05"):
+            if interest_diff > decimal.Decimal(
+                "0.05"
+            ) or principal_diff > decimal.Decimal("0.05"):
                 discrepancies.append(
                     {
                         "date": payment["date"],
@@ -291,12 +296,16 @@ def verify_mortgage_amortization(ledger_path: str = "ledger/main.bean"):
                 print(f"      {disc['date']}:")
                 print(f"         Balance: ${disc['balance_before']:,.2f}")
                 print(
-                    f"         Interest: Expected ${disc['expected_interest']}, "
-                    f"Actual ${disc['actual_interest']}, Diff ${disc['interest_diff']}"
+                    "         Interest: Expected $"
+                    f"{disc['expected_interest']}, Actual $"
+                    f"{disc['actual_interest']}, Diff $"
+                    f"{disc['interest_diff']}"
                 )
                 print(
-                    f"         Principal: Expected ${disc['expected_principal']}, "
-                    f"Actual ${disc['actual_principal']}, Diff ${disc['principal_diff']}"
+                    "         Principal: Expected $"
+                    f"{disc['expected_principal']}, Actual $"
+                    f"{disc['actual_principal']}, Diff $"
+                    f"{disc['principal_diff']}"
                 )
             if len(discrepancies) > 5:
                 print(f"      ... and {len(discrepancies) - 5} more")
@@ -326,7 +335,7 @@ def verify_mortgage_amortization(ledger_path: str = "ledger/main.bean"):
 def main():
     """Main entry point."""
     # Determine ledger path
-    script_dir = Path(__file__).parent
+    script_dir = pathlib.Path(__file__).parent
     repo_root = script_dir.parent
     ledger_path = repo_root / "ledger" / "main.bean"
 

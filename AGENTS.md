@@ -16,6 +16,7 @@
 
 ## Coding Style & Naming Conventions
 - Use Beancount syntax and keep `.bean` files UTF-8 and ASCII-friendly.
+- Python code follows the Google Python Style Guide; see `PYTHON_STYLE_GUIDE.md`.
 - File naming follows descriptive, date/asset-driven patterns:
   - Year includes: `YYYY.bean`.
   - Vendor summaries: `YYYY-VENDOR-ALL.bean`.

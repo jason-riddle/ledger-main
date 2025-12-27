@@ -12,22 +12,22 @@
 
 import datetime as dt
 import logging
-from pathlib import Path
+import pathlib
 import sys
 
 import beancount.core.data as data
-from beancount.core.amount import Amount
-from beancount.core.number import D
+from beancount.core import amount as bc_amount
+from beancount.core import number as bc_number
 
-PLUGINS_DIR = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(PLUGINS_DIR))
+LEDGER_DIR = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(LEDGER_DIR))
 
-import find_duplicates  # type: ignore  # noqa: E402
+from plugins import find_duplicates  # type: ignore  # noqa: E402
 
 
 def _txn(date_str, amount, account="Assets:Cash---Bank:Checking"):
     date = dt.date.fromisoformat(date_str)
-    units = Amount(D(str(amount)), "USD")
+    units = bc_amount.Amount(bc_number.D(str(amount)), "USD")
     postings = [
         data.Posting(account, units, None, None, None, None),
         data.Posting("Income:Rent:206-Hoover-Ave", None, None, None, None, None),
@@ -38,10 +38,17 @@ def _txn(date_str, amount, account="Assets:Cash---Bank:Checking"):
 
 def _txn_with_expense(date_str, amount, account="Assets:Cash---Bank:Checking"):
     date = dt.date.fromisoformat(date_str)
-    units = Amount(D(str(amount)), "USD")
+    units = bc_amount.Amount(bc_number.D(str(amount)), "USD")
     postings = [
         data.Posting(account, units, None, None, None, None),
-        data.Posting("Expenses:Repairs:206-Hoover-Ave", -units, None, None, None, None),
+        data.Posting(
+            "Expenses:Repairs:206-Hoover-Ave",
+            -units,
+            None,
+            None,
+            None,
+            None,
+        ),
     ]
     meta = {"comments": "test"}
     return data.Transaction(meta, date, "*", "Vendor", "Repair", None, None, postings)

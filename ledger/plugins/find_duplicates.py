@@ -4,11 +4,11 @@ This plugin compares transactions within a small date window and emits
 warnings or errors when a confidence threshold is met.
 """
 
+import collections
 import decimal
 import logging
 import re
 import shlex
-from collections import defaultdict, namedtuple
 
 import beancount.core.data as data
 import beancount.core.number as number
@@ -30,7 +30,7 @@ _DEFAULT_CONFIG = {
     "property_match": False,
 }
 
-DuplicateError = namedtuple("DuplicateError", "source message entry")
+DuplicateError = collections.namedtuple("DuplicateError", "source message entry")
 
 
 def plugin(entries, unused_options_map, config_str=""):
@@ -84,7 +84,7 @@ def parse_config(config_str):
 
 def index_transactions(txns, cfg):
     """Index transactions by currency and amount when tolerance is zero."""
-    index = defaultdict(list)
+    index = collections.defaultdict(list)
     for txn in txns:
         currency = _first_currency(txn, cfg["cash_only"])
         if currency is None:
@@ -201,6 +201,7 @@ def cash_accounts(txn):
 
 
 def property_score(txn_a, txn_b):
+    """Return 1.0 when property tokens overlap, else 0.0."""
     tokens_a = property_tokens(txn_a)
     tokens_b = property_tokens(txn_b)
     if not tokens_a or not tokens_b:
@@ -218,15 +219,18 @@ def message(txn_a, txn_b, score, parts):
 
 
 def _error(txn_b, txn_a, score, parts):
+    """Build a diagnostic error entry."""
     source = txn_b.meta or data.new_metadata("<find_duplicates>", 0)
     return DuplicateError(source, message(txn_a, txn_b, score, parts), txn_b)
 
 
 def _warn(txn_b, txn_a, score, parts):
+    """Log a diagnostic warning."""
     logging.warning(message(txn_a, txn_b, score, parts))
 
 
 def _first_currency(txn, cash_only):
+    """Return the first currency found in postings."""
     postings = _postings_for_amount(txn, cash_only)
     if not postings:
         return None
@@ -236,6 +240,7 @@ def _first_currency(txn, cash_only):
 
 
 def _postings_for_amount(txn, cash_only):
+    """Return postings considered for amount comparisons."""
     postings = []
     for posting in txn.postings:
         if posting.units is None:
@@ -247,6 +252,7 @@ def _postings_for_amount(txn, cash_only):
 
 
 def property_tokens(txn):
+    """Extract property tags or account tokens from a transaction."""
     tokens = set()
     for tag in txn.tags or set():
         if _PROPERTY_RE.match(tag):
@@ -259,6 +265,7 @@ def property_tokens(txn):
 
 
 def _has_property_tokens(txn_a, txn_b):
+    """Return True when both transactions include property tokens."""
     return bool(property_tokens(txn_a)) and bool(property_tokens(txn_b))
 
 

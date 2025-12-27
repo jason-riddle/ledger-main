@@ -25,19 +25,15 @@ Exit codes:
     1 - Discrepancies found or errors occurred
 """
 
+import collections
+import decimal
+import pathlib
 import sys
-from pathlib import Path
-from decimal import Decimal
-from collections import defaultdict
 
 # Add utils to path
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
-from utils.depreciation import (
-    calculate_monthly_depreciation,
-    calculate_annual_depreciation,
-    calculate_first_year_depreciation,
-)
+from utils import depreciation
 
 # Beancount imports
 try:
@@ -114,9 +110,10 @@ def extract_depreciation_transactions(entries):
     """
     Extract depreciation transactions from ledger entries.
 
-    Returns a dictionary mapping asset accounts to lists of depreciation postings.
+    Returns a dictionary mapping asset accounts to lists of depreciation
+    postings.
     """
-    depreciation_txns = defaultdict(list)
+    depreciation_txns = collections.defaultdict(list)
 
     for entry in entries:
         if not isinstance(entry, data.Transaction):
@@ -130,7 +127,8 @@ def extract_depreciation_transactions(entries):
         for posting in entry.postings:
             if "Accumulated-Depreciation" in posting.account:
                 # Extract the asset identifier from account path
-                # e.g., "Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building"
+                # e.g., "Assets:Accumulated-Depreciation:2943-Butterfly-Palm:"
+                # "Building:2023-01-01-Building"
                 parts = posting.account.split(":")
                 if len(parts) >= 4:
                     # Get property and asset parts
@@ -141,9 +139,7 @@ def extract_depreciation_transactions(entries):
                     depreciation_txns[asset_key].append(
                         {
                             "date": entry.date,
-                            "amount": abs(
-                                posting.units.number
-                            ),  # Make positive for comparison
+                            "amount": abs(posting.units.number),
                             "account": posting.account,
                             "narration": entry.narration,
                         }
@@ -164,13 +160,14 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
     print()
 
     # Load ledger
-    ledger_abs_path = Path(ledger_path).absolute()
+    ledger_abs_path = pathlib.Path(ledger_path).absolute()
     if not ledger_abs_path.exists():
         print(f"Error: Ledger file not found: {ledger_abs_path}")
         return False
 
     print(f"Loading ledger: {ledger_abs_path}")
     entries, errors, options = loader.load_file(str(ledger_abs_path))
+    del options  # Unused.
 
     if errors:
         print(f"\nWarning: {len(errors)} errors found in ledger:")
@@ -189,8 +186,8 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
     all_correct = True
     total_checked = 0
     total_discrepancies = 0
-    monthly_tolerance = Decimal("0.03")
-    total_tolerance = Decimal("0.50")
+    monthly_tolerance = decimal.Decimal("0.03")
+    total_tolerance = decimal.Decimal("0.50")
 
     for asset_key, txns in sorted(depreciation_txns.items()):
         config = find_asset_config(asset_key)
@@ -205,10 +202,11 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
         print(f"📋 {config['name']}")
         print(f"   Cost Basis: ${config['cost_basis']:,.2f}")
         print(f"   Recovery: {config['recovery_years']} years")
-        print(f"   Placed: {config['year_placed']}-{config['month_placed']:02d}")
+        placed_date = f"{config['year_placed']}-{config['month_placed']:02d}"
+        print(f"   Placed: {placed_date}")
 
         # Calculate expected monthly amount
-        expected_monthly = calculate_monthly_depreciation(
+        expected_monthly = depreciation.calculate_monthly_depreciation(
             config["cost_basis"], config["recovery_years"]
         )
 
@@ -217,14 +215,14 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
 
         # Check each transaction
         discrepancies = []
-        txns_by_year = defaultdict(list)
+        txns_by_year = collections.defaultdict(list)
         for txn in txns:
             txns_by_year[txn["date"].year].append(txn)
 
         for year, year_txns in sorted(txns_by_year.items()):
-            total_actual = sum(Decimal(str(txn["amount"])) for txn in year_txns)
+            total_actual = sum(decimal.Decimal(str(txn["amount"])) for txn in year_txns)
             if year == config["year_placed"]:
-                expected_total = calculate_first_year_depreciation(
+                expected_total = depreciation.calculate_first_year_depreciation(
                     config["cost_basis"],
                     config["recovery_years"],
                     config["month_placed"],
@@ -233,10 +231,10 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
             else:
                 if len(year_txns) < 12:
                     expected_total = (
-                        expected_monthly * Decimal(len(year_txns))
-                    ).quantize(Decimal("0.01"))
+                        expected_monthly * decimal.Decimal(len(year_txns))
+                    ).quantize(decimal.Decimal("0.01"))
                 else:
-                    expected_total = calculate_annual_depreciation(
+                    expected_total = depreciation.calculate_annual_depreciation(
                         config["cost_basis"],
                         config["recovery_years"],
                     )
@@ -256,7 +254,7 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
 
             if check_monthly:
                 for txn in year_txns:
-                    actual = Decimal(str(txn["amount"]))
+                    actual = decimal.Decimal(str(txn["amount"]))
                     diff = abs(actual - expected_monthly)
                     if diff > monthly_tolerance:
                         discrepancies.append(
@@ -274,8 +272,9 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
             for disc in discrepancies[:3]:  # Show first 3
                 if disc["kind"] == "year-total":
                     print(
-                        f"      {disc['year']}: Expected total ${disc['expected']}, "
-                        f"Got ${disc['actual']}, Diff ${disc['difference']}"
+                        f"      {disc['year']}: Expected total "
+                        f"${disc['expected']}, Got ${disc['actual']}, "
+                        f"Diff ${disc['difference']}"
                     )
                 else:
                     print(
@@ -310,7 +309,7 @@ def verify_depreciation(ledger_path: str = "ledger/main.bean"):
 def main():
     """Main entry point."""
     # Determine ledger path
-    script_dir = Path(__file__).parent
+    script_dir = pathlib.Path(__file__).parent
     repo_root = script_dir.parent
     ledger_path = repo_root / "ledger" / "main.bean"
 

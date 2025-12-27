@@ -16,28 +16,29 @@ Outputs include:
 """
 
 import argparse
+import dataclasses
+import datetime
+import decimal
 import json
-from dataclasses import dataclass
-from datetime import date
-from decimal import Decimal
-from typing import Iterable, Optional, Tuple
+from typing import Any, Iterable, Optional, Tuple
 
-from utils.amortization import (
-    calculate_monthly_payment,
-    generate_amortization_schedule,
-)
+from utils import amortization
 
 
-@dataclass(frozen=True)
+@dataclasses.dataclass(frozen=True)
 class YearMonth:
+    """Container for a year and month pair."""
+
     year: int
     month: int
 
-    def to_date(self) -> date:
-        return date(self.year, self.month, 1)
+    def to_date(self) -> datetime.date:
+        """Return the first day of the month."""
+        return datetime.date(self.year, self.month, 1)
 
 
 def parse_year_month(value: str) -> YearMonth:
+    """Parse a YYYY-MM string into a YearMonth."""
     try:
         parts = value.split("-")
         if len(parts) != 2:
@@ -54,12 +55,14 @@ def parse_year_month(value: str) -> YearMonth:
 
 
 def month_index_from_start(start: YearMonth, target: YearMonth) -> int:
+    """Return 1-based month index from start to target."""
     start_total = start.year * 12 + (start.month - 1)
     target_total = target.year * 12 + (target.month - 1)
     return (target_total - start_total) + 1
 
 
 def clamp_month_range(start: int, end: int, total_months: int) -> Tuple[int, int]:
+    """Validate and return the inclusive month range."""
     if start < 1 or end < 1:
         raise ValueError("Month range must be >= 1.")
     if start > end:
@@ -70,6 +73,7 @@ def clamp_month_range(start: int, end: int, total_months: int) -> Tuple[int, int
 
 
 def parse_args() -> argparse.Namespace:
+    """Parse CLI arguments."""
     parser = argparse.ArgumentParser(description="Calculate amortization details.")
     parser.add_argument("--principal", type=float, required=True)
     parser.add_argument("--annual-rate", type=float, required=True)
@@ -91,11 +95,15 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def decimal_to_str(value: Decimal) -> str:
+def decimal_to_str(value: decimal.Decimal) -> str:
+    """Format a Decimal as a two-decimal string."""
     return f"{value:.2f}"
 
 
-def serialize_entry(entry: dict) -> dict:
+def serialize_entry(
+    entry: amortization.AmortizationEntry,
+) -> dict[str, str | int]:
+    """Serialize a schedule entry to JSON-friendly primitives."""
     return {
         "month": entry["month"],
         "balance_before": decimal_to_str(entry["balance_before"]),
@@ -106,21 +114,28 @@ def serialize_entry(entry: dict) -> dict:
     }
 
 
-def total_interest(schedule: Iterable[dict]) -> Decimal:
-    total = Decimal("0")
+def total_interest(
+    schedule: Iterable[amortization.AmortizationEntry],
+) -> decimal.Decimal:
+    """Sum interest across schedule entries."""
+    total = decimal.Decimal("0")
     for entry in schedule:
         total += entry["interest"]
     return total
 
 
-def total_payments(schedule: Iterable[dict]) -> Decimal:
-    total = Decimal("0")
+def total_payments(
+    schedule: Iterable[amortization.AmortizationEntry],
+) -> decimal.Decimal:
+    """Sum total payments across schedule entries."""
+    total = decimal.Decimal("0")
     for entry in schedule:
         total += entry["payment"]
     return total
 
 
 def main() -> int:
+    """Run amortization calculator."""
     args = parse_args()
 
     if args.term_years <= 0:
@@ -139,20 +154,20 @@ def main() -> int:
 
     total_months = args.term_years * 12
 
-    schedule = generate_amortization_schedule(
+    schedule = amortization.generate_amortization_schedule(
         args.principal,
         args.annual_rate,
         args.term_years,
         start_month=1,
     )
 
-    payment = calculate_monthly_payment(
+    payment = amortization.calculate_monthly_payment(
         args.principal, args.annual_rate, args.term_years
     )
     interest_total = total_interest(schedule)
     paid_total = total_payments(schedule)
 
-    output = {
+    output: dict[str, Any] = {
         "summary": {
             "monthly_payment": decimal_to_str(payment),
             "total_interest": decimal_to_str(interest_total),
