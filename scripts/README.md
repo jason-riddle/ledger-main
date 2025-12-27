@@ -102,6 +102,53 @@ uv run scripts/calculate_amortization.py \
   --full-schedule
 ```
 
+#### `calculate_depreciation.py`
+Generates Beancount depreciation postings (straight-line, mid-month convention):
+- Yearly output (`--year`) or date-range output (`--from-date`/`--to-date`)
+- First-year annual or monthly output (`--first-year-mode`)
+- Optional end-date truncation (`--end-date`)
+- Optional balance assertion (`--include-balance`)
+
+**Usage:**
+```bash
+# Yearly postings (monthly)
+uv run scripts/calculate_depreciation.py \
+  --asset-name "2943 Butterfly Palm Building" \
+  --placed-in-service 2023-01-01 \
+  --cost-basis 164791 \
+  --recovery-years 27.5 \
+  --accum-account "Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Building:2023-01-01-Building" \
+  --expense-account "Expenses:Depreciation:2943-Butterfly-Palm" \
+  --year 2024 \
+  --first-year-mode monthly
+
+# First-year annual posting (rounded to whole dollars)
+uv run scripts/calculate_depreciation.py \
+  --asset-name "206 Hoover Ave Building" \
+  --placed-in-service 2023-05-26 \
+  --cost-basis 73358 \
+  --recovery-years 27.5 \
+  --accum-account "Assets:Accumulated-Depreciation:206-Hoover-Ave:Building:2023-05-26-Building" \
+  --expense-account "Expenses:Depreciation:206-Hoover-Ave" \
+  --year 2023 \
+  --first-year-mode annual \
+  --include-balance \
+  --starting-accumulated 0
+
+# Date range with an end-date cut-off
+uv run scripts/calculate_depreciation.py \
+  --asset-name "2943 Butterfly Palm Water Heater" \
+  --placed-in-service 2024-05-08 \
+  --cost-basis 2800.75 \
+  --recovery-years 27.5 \
+  --accum-account "Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2024-05-08-Water-Heater" \
+  --expense-account "Expenses:Depreciation:2943-Butterfly-Palm" \
+  --from-date 2024-05 \
+  --to-date 2024-12 \
+  --end-date 2024-10-31 \
+  --first-year-mode monthly
+```
+
 ### Utility Modules
 
 #### `utils/depreciation.py`
