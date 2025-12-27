@@ -48,6 +48,7 @@
 ## Commit & Pull Request Guidelines
 - Recent commit messages are short, imperative phrases (e.g., “Add ledger”, “Small changes”). Keep messages concise and specific.
 - PRs should explain the accounting intent (what changed and why), list affected properties/years, and include any supporting notes or documents.
+- Note: Pre-commit hooks may need escalated permissions to write cache files (e.g., under `~/.cache/pre-commit`). If a commit fails with a PermissionError, rerun the commit with the required permissions; also mark scripts with shebangs as executable when appropriate to satisfy hook checks.
 
 ## Security & Configuration Tips
 - Ledger data is sensitive. Avoid embedding secrets or personal identifiers outside of the existing account naming patterns.
