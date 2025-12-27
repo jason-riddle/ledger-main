@@ -1,0 +1,33 @@
+---
+extends: default
+
+# rules:
+#   comments:
+#     min-spaces-from-content: 1
+#   comments-indentation: disable
+#   line-length:
+#     max: 250
+#     level: warning
+#   truthy:
+#     ignore: |
+#       .github
+
+rules:
+  document-start: disable
+  indentation: disable
+  line-length:
+    max: 240
+    level: warning
+  truthy:
+    ignore: |
+      .github
+
+ignore: |
+  .github/stale.yml
+  .travis.yml
+  .venv
+  .github/dependabot.yml
+  .github/workflows/ci.yml
+  test/fixtures/*.yaml
+  internal/test/fixtures/*.yaml
+  render.yaml
