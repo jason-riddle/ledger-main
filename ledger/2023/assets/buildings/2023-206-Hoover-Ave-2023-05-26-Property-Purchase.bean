@@ -7,8 +7,15 @@
 2023-05-26 * "Property Purchase - 206 Hoover Ave" #206-hoover-ave #purchases ^equity-golden
   documents: "2023-05-26 206 Hoover Ave Closing - Master Statement.pdf"
   settlement_agent: "Alamo Title Company"
+  settlement_agent_address: "434 N. Loop 1604W, Suite 2208, San Antonio, TX 78232"
   escrow_number: "4000082301404"
+  escrow_officer: "Roberta Brown"
   buyer_address: "1497 15th Ave, San Francisco, CA 94122"
+  seller: "Jose Luis Gaytan and Mary Ann Rivera"
+  seller_address: "206 Hoover Avenue, San Antonio, TX 78225"
+  property_address: "206 Hoover Avenue, San Antonio, TX 78225"
+  property_legal_description: "Lot 9, New City Block 6936, Nogalitos Heights"
+  parcel_id: "385773"
   ; Basis Calculation:
   ; Sale Price: $100,000.00
   ; + eRecording Fee: $4.32
