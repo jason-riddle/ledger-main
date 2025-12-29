@@ -23,6 +23,7 @@ include "./mortgage/2023-2943-Butterfly-Palm-Escrow-Payouts.bean"
 ; TAXES
 include "./taxes/2023-206-Hoover-Ave-Taxes.bean"
 include "./taxes/2023-2943-Butterfly-Palm-Taxes.bean"
+include "./taxes/2023-Taxes-All.bean"
 
 ; SheerValue
 include "./sheer-value/2023-SheerValue-All.bean"

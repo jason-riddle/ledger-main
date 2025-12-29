@@ -7,3 +7,9 @@ include "./2022-SheerValue-206-Hoover-Ave-Transactions.bean"
 include "./2022-SheerValue-2943-Butterfly-Palm-Transactions.bean"
 
 ;; TODO: Split by month if needed once postings exist.
+
+;; TODO: Additions
+
+2022-11-29 * "Jason Riddle" "Memo: Owner Contribution for Door Purchase" #contributions ^equity
+  Equity:Owner-Contributions:Cash-Infusion  -900.00 USD
+  Assets:Property-Management:SheerValue-PM   900.00 USD
