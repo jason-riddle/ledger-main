@@ -12,6 +12,12 @@
   documents: "2022-10-21 2943 Butterfly Palm Closing - HUD-1 Settlement Statement.pdf"
   settlement_agent: "Priority Settlement Group of Texas, LLC"
   loan_number: "10003510"
+  file_number: "092236345"
+  borrower: "Jason Riddle"
+  seller: "David D. New"
+  lender: "MoFin Lending Corporation"
+  owners_title_insurance: "Paid by seller (HUD-1 notes)"
+  poc_fees: "Appraisal $750.00; Application $299.00 (paid outside closing)"
   ; Basis Calculation:
   ; Purchase Price: $205,000.00
   ; + Title Services: $100.00
