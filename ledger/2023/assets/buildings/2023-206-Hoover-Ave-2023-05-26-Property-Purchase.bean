@@ -2,7 +2,7 @@
 ;; 2023 - PURCHASE - 206-HOOVER-AVE - 2023-05-26 PROPERTY PURCHASE
 ;;
 
-2023-05-26 * "Property Purchase - 206 Hoover Ave" #206-hoover-ave #purchases #review
+2023-05-26 * "Property Purchase - 206 Hoover Ave" #206-hoover-ave #purchases #review ^eq-2023-05-26-206-hoover-ave-0001
   documents: "2023-05-26 206 Hoover Ave Closing - Master Statement.pdf"
   settlement_agent: "Alamo Title Company"
   escrow_number: "4000082301404"
