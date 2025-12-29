@@ -294,7 +294,7 @@
       name = "bean-check-main";
       description = "Validate beancount ledger files";
       entry = "${pkgs.beancount}/bin/bean-check";
-      files = "main\\.bean$";
+      files = "^ledger/main\\.bean$";
       types = [ "text" ];
     };
 
