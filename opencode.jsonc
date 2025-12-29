@@ -1,0 +1,46 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "beanquery": {
+      "command": [
+        "uv",
+        "run",
+        "--with",
+        "beancount",
+        "--with",
+        "beanquery",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "vendor/github.com/vanto/beanquery-mcp/server.py:mcp"
+      ],
+      "enabled": true,
+      "environment": {
+        "BEANCOUNT_LEDGER": "ledger/main.bean"
+      },
+      "type": "local"
+    },
+    "playwright": {
+      "command": [
+        "deno",
+        "--allow-net",
+        "--allow-env",
+        "--allow-run",
+        "--allow-sys",
+        "--allow-read",
+        "--allow-write",
+        "npm:@playwright/mcp@0.0.53",
+        "--caps",
+        "pdf,vision",
+        "--output-dir",
+        "/tmp"
+      ],
+      "enabled": true,
+      // "environment": {
+      //   "DENO_AUDIT_PERMISSIONS": "./logs-deno-playwright-mcp.jsonl"
+      // },
+      "type": "local"
+    }
+  }
+}
