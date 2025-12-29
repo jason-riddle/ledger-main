@@ -2,7 +2,9 @@
 ;; 2023 - PURCHASE - 206-HOOVER-AVE - 2023-05-26 PROPERTY PURCHASE
 ;;
 
-2023-05-26 * "Property Purchase - 206 Hoover Ave" #206-hoover-ave #purchases #review
+2023-05-25 balance Equity:Owner-Contributions:Cash-Infusion                         -109721.47 USD
+
+2023-05-26 * "Property Purchase - 206 Hoover Ave" #206-hoover-ave #purchases ^equity-golden
   documents: "2023-05-26 206 Hoover Ave Closing - Master Statement.pdf"
   settlement_agent: "Alamo Title Company"
   escrow_number: "4000082301404"
@@ -30,12 +32,14 @@
   ; Payoff of First Mortgage (Pecos Loan Servicing): $46,896.49
   ; Doc Prep Fee: $125.00
   ; Tax Certificate: $44.00
-  Expenses:Property-Taxes:206-Hoover-Ave                                             -1421.21 USD
-  Equity:Owner-Contributions:Cash-Infusion                                          -99047.11 USD ; Balance Due FROM Buyer
-  Equity:Owner-Contributions:Cash-Infusion                                           -1100.00 USD ; Earnest Money
-  Equity:Owner-Contributions:Cash-Infusion                                            -200.00 USD ; Option Money
-  Assets:Land:206-Hoover-Ave                                                         28410.32 USD
-  Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building                    73358.00 USD
+  Expenses:Property-Taxes:206-Hoover-Ave                                              -1421.21 USD
+  Equity:Owner-Contributions:Cash-Infusion                                           -99047.11 USD ; Balance Due FROM Buyer
+  Equity:Owner-Contributions:Cash-Infusion                                            -1100.00 USD ; Earnest Money
+  Equity:Owner-Contributions:Cash-Infusion                                             -200.00 USD ; Option Money
+  Assets:Land:206-Hoover-Ave                                                          28410.32 USD
+  Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building                     73358.00 USD
 
-2023-05-27 balance Assets:Land:206-Hoover-Ave                                        28410.32 USD
-2023-05-27 balance Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building   73358.00 USD
+2023-05-27 balance Equity:Owner-Contributions:Cash-Infusion                         -210068.58 USD
+
+2023-05-27 balance Assets:Land:206-Hoover-Ave                                         28410.32 USD
+2023-05-27 balance Assets:Fixed-Assets:206-Hoover-Ave:Building:2023-05-26-Building    73358.00 USD
