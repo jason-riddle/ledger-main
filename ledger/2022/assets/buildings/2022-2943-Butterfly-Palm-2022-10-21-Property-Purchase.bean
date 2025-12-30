@@ -2,8 +2,6 @@
 ;; 2022 - PURCHASE - 2943-BUTTERFLY-PALM - 2022-10-21 PROPERTY PURCHASE
 ;;
 
-2022-10-20 balance Equity:Owner-Contributions:Cash-Infusion                                       0 USD
-
 2022-10-20 balance Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                            0 USD
 2022-10-20 balance Expenses:Mortgage-Interest:2943-Butterfly-Palm                                 0 USD
 2022-10-20 balance Liabilities:Mortgages:2943-Butterfly-Palm                                      0 USD
@@ -43,8 +41,6 @@
   Expenses:Insurance:2943-Butterfly-Palm                                                    1067.00 USD ; 1 Year Premium
   Expenses:Property-Taxes:2943-Butterfly-Palm                                                682.71 USD ; Seller Reimbursement
   Expenses:Other:HOA:2943-Butterfly-Palm                                                      25.68 USD ; Proration
-
-2022-10-22 balance Equity:Owner-Contributions:Cash-Infusion                              -108821.47 USD
 
 2022-10-22 balance Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                       762.80 USD
 2022-10-22 balance Liabilities:Mortgages:2943-Butterfly-Palm                             -102500.00 USD

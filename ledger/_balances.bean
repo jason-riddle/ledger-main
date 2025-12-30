@@ -11,6 +11,10 @@
 ;; 2021 YEAR-END BALANCES
 ;;
 
+;; Equity
+2021-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                        0.00 USD
+2021-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                           0.00 USD
+
 ;; Assets
 ; 2021 Property Management (SheerValue PM)
 ; No property management activity in 2021
@@ -19,6 +23,10 @@
 ;;
 ;; 2022 YEAR-END BALANCES
 ;;
+
+;; Equity
+2022-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                  -112078.73 USD
+2022-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                           0.00 USD
 
 ;; Assets
 ; 2022 Escrow Taxes/Insurance (2943 Butterfly Palm)
@@ -42,6 +50,10 @@
 ;;
 ;; 2023 YEAR-END BALANCES
 ;;
+
+;; Equity
+2023-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                  -258381.43 USD
+2023-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                           0.00 USD
 
 ;; Assets
 ; 2023 Accumulated Depreciation (206 Hoover Ave, by asset)
@@ -86,6 +98,10 @@
 ;; 2024 YEAR-END BALANCES
 ;;
 
+;; Equity
+2024-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                  -274963.54 USD
+2024-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                           0.00 USD
+
 ;; Assets
 ; 2024 Accumulated Depreciation (206 Hoover Ave, by asset)
 2024-12-31 balance Assets:Accumulated-Depreciation:206-Hoover-Ave:Building:2023-05-26-Building                 -4334.56 USD
@@ -122,6 +138,10 @@
 ;;
 ;; 2025 YEAR-END BALANCES
 ;;
+
+;; Equity
+2025-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                  -288650.20 USD
+2025-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                        6885.02 USD
 
 ;; Assets
 ; 2025 Accumulated Depreciation (206 Hoover Ave, by asset)
@@ -162,6 +182,10 @@
 ;;
 ;; 2026 YEAR-END BALANCES
 ;;
+
+;; Equity
+2026-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                  -288650.20 USD
+2026-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                        6885.02 USD
 
 ;; Assets
 ; 2026 Accumulated Depreciation (206 Hoover Ave, by asset)

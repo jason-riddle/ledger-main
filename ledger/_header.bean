@@ -9,7 +9,7 @@
 ;; Assets
 
 ; Primary checking account for rental income and expenses
-1970-01-01 open Assets:Cash---Bank:Checking
+; 1970-01-01 open Assets:Cash---Bank:Checking
 
 ; Funds held by property management companies
 1970-01-01 open Assets:Property-Management:CloverLeaf-PM

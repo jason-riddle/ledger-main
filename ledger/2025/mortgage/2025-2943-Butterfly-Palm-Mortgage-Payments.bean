@@ -8,84 +8,84 @@
 
 ; January 2025 Payment (month 27)
 2025-01-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1148.28 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1148.28 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         724.85 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               72.38 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    351.05 USD
 
 ; February 2025 Payment (month 28)
 2025-02-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1148.28 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1148.28 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         724.33 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               72.90 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    351.05 USD
 
 ; March 2025 Payment (month 29)
 2025-03-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1148.28 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1148.28 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         723.81 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               73.42 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    351.05 USD
 
 ; April 2025 Payment (month 30)
 2025-04-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1137.98 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1137.98 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         723.28 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               73.95 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    340.75 USD
 
 ; May 2025 Payment (month 31)
 2025-05-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1137.98 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1137.98 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         722.75 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               74.48 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    340.75 USD
 
 ; June 2025 Payment (month 32)
 2025-06-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1137.98 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1137.98 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         722.22 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               75.01 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    340.75 USD
 
 ; July 2025 Payment (month 33)
 2025-07-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1137.98 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1137.98 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         721.68 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               75.55 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    340.75 USD
 
 ; August 2025 Payment (month 34)
 2025-08-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1137.98 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1137.98 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         721.13 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               76.10 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    340.75 USD
 
 ; September 2025 Payment (month 35)
 2025-09-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1137.98 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1137.98 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         720.59 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               76.64 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    340.75 USD
 
 ; October 2025 Payment (month 36)
 2025-10-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1137.98 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1137.98 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         720.04 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               77.19 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    340.75 USD
 
 ; November 2025 Payment (month 37)
 2025-11-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1137.98 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1137.98 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         719.48 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               77.75 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    340.75 USD
 
 ; December 2025 Payment (month 38)
 2025-12-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage
-  Assets:Cash---Bank:Checking                          -1137.98 USD
+  Equity:Owner-Contributions:Cash-Infusion             -1137.98 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm         718.92 USD
   Liabilities:Mortgages:2943-Butterfly-Palm               78.31 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    340.75 USD

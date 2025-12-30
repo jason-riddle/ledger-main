@@ -3,7 +3,7 @@
 ;;
 
 2023-11-17 * "Asset Purchase - 206 Hoover Ave Improvements" #206-hoover-ave #asset
-  Assets:Cash---Bank:Checking                                                               -30302.00 USD
+  Equity:Owner-Contributions:Cash-Infusion                                                  -30302.00 USD
   Assets:Fixed-Assets:206-Hoover-Ave:Improvements:2023-11-17-Improvements                    30302.00 USD
 
 2023-11-18 balance Assets:Fixed-Assets:206-Hoover-Ave:Improvements:2023-11-17-Improvements   30302.00 USD

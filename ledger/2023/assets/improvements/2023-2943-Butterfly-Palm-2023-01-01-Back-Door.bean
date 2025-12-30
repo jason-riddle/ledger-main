@@ -3,7 +3,7 @@
 ;;
 
 2023-01-01 * "Asset Purchase - 2943 Butterfly Palm Back Door" #2943-butterfly-palm #asset
-  Assets:Cash---Bank:Checking                                                                 -600.00 USD
+  Equity:Owner-Contributions:Cash-Infusion                                                    -600.00 USD
   Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door                    600.00 USD
 
 2023-01-02 balance Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door   600.00 USD
