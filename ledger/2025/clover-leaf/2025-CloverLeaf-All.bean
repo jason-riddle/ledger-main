@@ -105,7 +105,7 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   Assets:Property-Management:CloverLeaf-PM              -364.11 USD
   Expenses:Repairs:206-Hoover-Ave                        364.11 USD
 
-2025-10-22 * "Previous Tenant" "Memo: Move Out Deposit Release" #206-hoover-ave #security-deposits #turnovers
+2025-10-22 * "Previous Tenant" "Memo: Move Out Deposit Release" #206-hoover-ave #security-deposits #turnovers ^security-deposits
   paperless_bill_invoice_receipt_url: "No doc"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
@@ -114,7 +114,7 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   Income:Security-Deposit-Forfeited:206-Hoover-Ave      -800.00 USD
   Assets:Property-Management:CloverLeaf-PM               800.00 USD
 
-2025-10-22 * "Previous Tenant" "Memo: Move Out Deposit Release" #206-hoover-ave #security-deposits #turnovers
+2025-10-22 * "Previous Tenant" "Memo: Move Out Deposit Release" #206-hoover-ave #security-deposits #turnovers ^security-deposits
   paperless_bill_invoice_receipt_url: "No doc"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
@@ -123,7 +123,12 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   Income:Security-Deposit-Forfeited:206-Hoover-Ave      -350.00 USD
   Assets:Property-Management:CloverLeaf-PM               350.00 USD
 
-2025-10-22 * "Accounting Adjustment" "Clear liability for forfeited deposit" #206-hoover-ave #security-deposits #turnovers
+; TODO(AGENT): What is the correct way to handle this?
+;              the tenant forteited their deposit, but i know need to clear the liability
+;              Ive already added it as an asset in the above 2 transactions, but how
+;              to clear the libality? Also, I'm a self-propertier, so it doens't make sense
+;              to have a retained earnings account.
+2025-10-22 * "Accounting Adjustment" "Clear liability for forfeited deposit" #206-hoover-ave #security-deposits #turnovers ^security-deposits
   paperless_bill_invoice_receipt_url: "No doc"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"

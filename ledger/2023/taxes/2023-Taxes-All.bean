@@ -4,6 +4,9 @@
 ; include "./2023-206-Hoover-Ave-Taxes.bean"
 ; include "./2023-2943-Butterfly-Palm-Taxes.bean"
 
+; TODO(AGENT): I'm a self-propertier, so it doens't make sense
+;              to have a retained earnings account below, how to fix this?.
+
 2023-12-31 * "Adjustment" "Correcting Asset Basis to match 2023 Tax Return Form 4562" #tax-adjustment
   ; References:
   ; - 2023 Federal Tax Return (Form 4562 Depreciation and Amortization)

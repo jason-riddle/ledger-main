@@ -73,6 +73,8 @@
 
 ; Accumulated net earnings retained in the business
 1970-01-01 open Equity:Retained-Earnings
+1970-01-02 note Equity:Retained-Earnings "This account is not needed (not having to disburse payments to shareholders)"
+; 1970-01-03 close Equity:Retained-Earnings
 
 ;; Income (IRS Schedule E - Part 1 Income)
 
