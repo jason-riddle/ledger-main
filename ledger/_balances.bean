@@ -140,8 +140,8 @@
 ;;
 
 ;; Equity
-2025-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                  -288650.20 USD
-2025-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                        6885.02 USD
+; 2025-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                  -288650.20 USD
+; 2025-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                        6885.02 USD
 
 ;; Assets
 ; 2025 Accumulated Depreciation (206 Hoover Ave, by asset)
@@ -184,8 +184,8 @@
 ;;
 
 ;; Equity
-2026-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                  -288650.20 USD
-2026-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                        6885.02 USD
+; 2026-12-31 balance Equity:Owner-Contributions:Cash-Infusion                                                  -288650.20 USD
+; 2026-12-31 balance Equity:Owner-Distributions:Owner-Draw                                                        6885.02 USD
 
 ;; Assets
 ; 2026 Accumulated Depreciation (206 Hoover Ave, by asset)
