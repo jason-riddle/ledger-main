@@ -1,57 +1,19 @@
 TODO report for /home/jason/code/src/nas.greyhound-little.ts.net/jason/ledger-main
-Total TODO/todo occurrences: 69
+Total TODO/todo occurrences: 60
 
-2022 / CloverLeaf
------------------
-File: ledger/2022/clover-leaf/2022-CloverLeaf-All.bean
-Summary: CloverLeaf management aggregate include for 2022.
-  9: ;; TODO: Split by month if needed once postings exist.
-
-
-2022 / CloverLeaf-206-Hoover-Ave
---------------------------------
-File: ledger/2022/clover-leaf/2022-CloverLeaf-206-Hoover-Ave-Transactions.bean
-Summary: CloverLeaf management transactions for a property in 2022.
-  5: ;; TODO: add CloverLeaf transactions for 206-Hoover-Ave.
-
-
-2022 / CloverLeaf-2943-Butterfly-Palm
--------------------------------------
-File: ledger/2022/clover-leaf/2022-CloverLeaf-2943-Butterfly-Palm-Transactions.bean
-Summary: CloverLeaf management transactions for a property in 2022.
-  5: ;; TODO: add CloverLeaf transactions for 2943-Butterfly-Palm.
-
+2022 / 2943-Butterfly-Palm-Mortgage
+-----------------------------------
+File: ledger/2022/mortgage/2022-2943-Butterfly-Palm-Mortgage-Payments.bean
+Summary: Mortgage payments for a property in 2022.
+  13: 2022-12-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage #duplicates #todo
+  20: 2022-12-15 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage #duplicates #todo
 
 2022 / No-Property
 ------------------
 File: ledger/2022/2022.bean
 Summary: Year include file for 2022 (includes domain slices).
   6: ;; TODO: add depreciation entries for 2022.
-  10: ;; TODO: add 2022 improvements assets.
-  16: ;; TODO: add 2022 tax entries.
-
-
-2022 / SheerValue
------------------
-File: ledger/2022/sheer-value/2022-SheerValue-All.bean
-Summary: SheerValue management aggregate include for 2022.
-  9: ;; TODO: Split by month if needed once postings exist.
-  11: ;; TODO: Additions
-
-
-2022 / SheerValue-206-Hoover-Ave
---------------------------------
-File: ledger/2022/sheer-value/2022-SheerValue-206-Hoover-Ave-Transactions.bean
-Summary: SheerValue management transactions for a property in 2022.
-  5: ;; TODO: add SheerValue transactions for 206-Hoover-Ave.
-
-
-2022 / SheerValue-2943-Butterfly-Palm
--------------------------------------
-File: ledger/2022/sheer-value/2022-SheerValue-2943-Butterfly-Palm-Transactions.bean
-Summary: SheerValue management transactions for a property in 2022.
-  5: ;; TODO: add SheerValue transactions for 2943-Butterfly-Palm.
-
+  15: ;; TODO: add 2022 tax entries.
 
 2023 / 206-Hoover-Ave
 ---------------------
@@ -59,13 +21,11 @@ File: ledger/2023/taxes/2023-206-Hoover-Ave-Taxes.bean
 Summary: Taxes transactions for a property in 2023.
   5: ;; TODO: Split by month if needed once postings exist.
 
-
 2023 / 2943-Butterfly-Palm
 --------------------------
 File: ledger/2023/taxes/2023-2943-Butterfly-Palm-Taxes.bean
 Summary: Taxes transactions for a property in 2023.
   5: ;; TODO: Split by month if needed once postings exist.
-
 
 2023 / CloverLeaf
 -----------------
@@ -73,20 +33,17 @@ File: ledger/2023/clover-leaf/2023-CloverLeaf-All.bean
 Summary: CloverLeaf management aggregate include for 2023.
   9: ;; TODO: Split by month if needed once postings exist.
 
-
 2023 / CloverLeaf-206-Hoover-Ave
 --------------------------------
 File: ledger/2023/clover-leaf/2023-CloverLeaf-206-Hoover-Ave-Transactions.bean
 Summary: CloverLeaf management transactions for a property in 2023.
   5: ;; TODO: add CloverLeaf transactions for 206-Hoover-Ave.
 
-
 2023 / CloverLeaf-2943-Butterfly-Palm
 -------------------------------------
 File: ledger/2023/clover-leaf/2023-CloverLeaf-2943-Butterfly-Palm-Transactions.bean
 Summary: CloverLeaf management transactions for a property in 2023.
   5: ;; TODO: add CloverLeaf transactions for 2943-Butterfly-Palm.
-
 
 2023 / SheerValue
 -----------------
@@ -95,13 +52,11 @@ Summary: SheerValue management aggregate include for 2023.
   9: ;; TODO
   23: ;; TODO: in progress, continue from https://paperless-v2.jasonriddle.com/documents/2524/details
 
-
 2023 / SheerValue-206-Hoover-Ave
 --------------------------------
 File: ledger/2023/sheer-value/2023-SheerValue-206-Hoover-Ave-Transactions.bean
 Summary: SheerValue management transactions for a property in 2023.
   5: ;; TODO: add SheerValue transactions for 206-Hoover-Ave.
-
 
 2023 / SheerValue-2943-Butterfly-Palm
 -------------------------------------
@@ -109,15 +64,14 @@ File: ledger/2023/sheer-value/2023-SheerValue-2943-Butterfly-Palm-Transactions.b
 Summary: SheerValue management transactions for a property in 2023.
   5: ;; TODO: add SheerValue transactions for 2943-Butterfly-Palm.
 
-
 2023 / Taxes
 ------------
 File: ledger/2023/taxes/2023-Taxes-All.bean
 Summary: Taxes aggregate for 2023.
   1: ;; TODO add comments , make consistnet ot other files
   3: ; TODO, add comments
-  64: ;; TODO: add check for land and fix asset adjustments
-
+  7: ; TODO(AGENT): I'm a self-propertier, so it doens't make sense
+  67: ;; TODO: add check for land and fix asset adjustments
 
 2024 / 206-Hoover-Ave
 ---------------------
@@ -125,13 +79,11 @@ File: ledger/2024/taxes/2024-206-Hoover-Ave-Taxes.bean
 Summary: Taxes transactions for a property in 2024.
   5: ;; TODO: Split by month if needed once postings exist.
 
-
 2024 / 2943-Butterfly-Palm
 --------------------------
 File: ledger/2024/taxes/2024-2943-Butterfly-Palm-Taxes.bean
 Summary: Taxes transactions for a property in 2024.
   5: ;; TODO: Split by month if needed once postings exist.
-
 
 2024 / CloverLeaf
 -----------------
@@ -139,13 +91,11 @@ File: ledger/2024/clover-leaf/2024-CloverLeaf-All.bean
 Summary: CloverLeaf management aggregate include for 2024.
   9: ;; TODO: Split by month if needed once postings exist.
 
-
 2024 / CloverLeaf-206-Hoover-Ave
 --------------------------------
 File: ledger/2024/clover-leaf/2024-CloverLeaf-206-Hoover-Ave-Transactions.bean
 Summary: CloverLeaf management transactions for a property in 2024.
   5: ;; TODO: add CloverLeaf transactions for 206-Hoover-Ave.
-
 
 2024 / CloverLeaf-2943-Butterfly-Palm
 -------------------------------------
@@ -153,13 +103,11 @@ File: ledger/2024/clover-leaf/2024-CloverLeaf-2943-Butterfly-Palm-Transactions.b
 Summary: CloverLeaf management transactions for a property in 2024.
   5: ;; TODO: add CloverLeaf transactions for 2943-Butterfly-Palm.
 
-
 2024 / No-Property
 ------------------
 File: ledger/2024/2024.bean
 Summary: Year include file for 2024 (includes domain slices).
   16: ;; TODO: add 2024 building assets.
-
 
 2024 / SheerValue
 -----------------
@@ -167,13 +115,11 @@ File: ledger/2024/sheer-value/2024-SheerValue-All.bean
 Summary: SheerValue management aggregate include for 2024.
   9: ;; TODO: Split by month if needed once postings exist.
 
-
 2024 / SheerValue-206-Hoover-Ave
 --------------------------------
 File: ledger/2024/sheer-value/2024-SheerValue-206-Hoover-Ave-Transactions.bean
 Summary: SheerValue management transactions for a property in 2024.
   5: ;; TODO: add SheerValue transactions for 206-Hoover-Ave.
-
 
 2024 / SheerValue-2943-Butterfly-Palm
 -------------------------------------
@@ -181,6 +127,11 @@ File: ledger/2024/sheer-value/2024-SheerValue-2943-Butterfly-Palm-Transactions.b
 Summary: SheerValue management transactions for a property in 2024.
   5: ;; TODO: add SheerValue transactions for 2943-Butterfly-Palm.
 
+2025 / 206-Hoover-Ave
+---------------------
+File: ledger/2025/taxes/2025-206-Hoover-Ave-Taxes.bean
+Summary: Taxes transactions for a property in 2025.
+  5: ; TODO, uncomment when paied
 
 2025 / 2943-Butterfly-Palm
 --------------------------
@@ -188,21 +139,17 @@ File: ledger/2025/taxes/2025-2943-Butterfly-Palm-Taxes.bean
 Summary: Taxes transactions for a property in 2025.
   5: ;; TODO: Split by month if needed once postings exist.
 
-
 2025 / 2943-Butterfly-Palm-Escrow
 ---------------------------------
 File: ledger/2025/mortgage/2025-2943-Butterfly-Palm-Escrow-Payouts.bean
 Summary: Escrow payouts for a property in 2025.
   5: ;; TODO: Split by month if needed once postings exist.
 
-
 2025 / CloverLeaf
 -----------------
 File: ledger/2025/clover-leaf/2025-CloverLeaf-All.bean
 Summary: CloverLeaf management aggregate include for 2025.
-  270: ;; TODO: _DOC_ID"
-  306: ;; TODO: _DOC_ID"
-
+  113: ; TODO(AGENT): What is the correct way to handle this?
 
 2025 / CloverLeaf-206-Hoover-Ave
 --------------------------------
@@ -210,13 +157,11 @@ File: ledger/2025/clover-leaf/2025-CloverLeaf-206-Hoover-Ave-Transactions.bean
 Summary: CloverLeaf management transactions for a property in 2025.
   5: ;; TODO: add CloverLeaf transactions for 206-Hoover-Ave.
 
-
 2025 / CloverLeaf-2943-Butterfly-Palm
 -------------------------------------
 File: ledger/2025/clover-leaf/2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean
 Summary: CloverLeaf management transactions for a property in 2025.
   5: ;; TODO: add CloverLeaf transactions for 2943-Butterfly-Palm.
-
 
 2025 / No-Property
 ------------------
@@ -225,13 +170,11 @@ Summary: Year include file for 2025 (includes domain slices).
   14: ;; TODO: add 2025 building assets.
   15: ;; TODO: add 2025 improvements assets.
 
-
 2025 / SheerValue
 -----------------
 File: ledger/2025/sheer-value/2025-SheerValue-All.bean
 Summary: SheerValue management aggregate include for 2025.
   9: ;; TODO: Split by month if needed once postings exist.
-
 
 2025 / SheerValue-2943-Butterfly-Palm
 -------------------------------------
@@ -239,13 +182,11 @@ File: ledger/2025/sheer-value/2025-SheerValue-2943-Butterfly-Palm-Transactions.b
 Summary: SheerValue management transactions for a property in 2025.
   5: ;; TODO: add SheerValue transactions for 2943-Butterfly-Palm.
 
-
 2026 / 206-Hoover-Ave
 ---------------------
 File: ledger/2026/taxes/2026-206-Hoover-Ave-Taxes.bean
 Summary: Taxes transactions for a property in 2026.
   5: ;; TODO: Split by month if needed once postings exist.
-
 
 2026 / 2943-Butterfly-Palm
 --------------------------
@@ -253,13 +194,11 @@ File: ledger/2026/taxes/2026-2943-Butterfly-Palm-Taxes.bean
 Summary: Taxes transactions for a property in 2026.
   5: ;; TODO: Split by month if needed once postings exist.
 
-
 2026 / 2943-Butterfly-Palm-Escrow
 ---------------------------------
 File: ledger/2026/mortgage/2026-2943-Butterfly-Palm-Escrow-Payouts.bean
 Summary: Escrow payouts for a property in 2026.
   5: ;; TODO: Split by month if needed once postings exist.
-
 
 2026 / 2943-Butterfly-Palm-Mortgage
 -----------------------------------
@@ -267,13 +206,11 @@ File: ledger/2026/mortgage/2026-2943-Butterfly-Palm-Mortgage-Payments.bean
 Summary: Mortgage payments for a property in 2026.
   5: ;; TODO: Split by month if needed once postings exist.
 
-
 2026 / CloverLeaf
 -----------------
 File: ledger/2026/clover-leaf/2026-CloverLeaf-All.bean
 Summary: CloverLeaf management aggregate include for 2026.
   9: ;; TODO: Split by month if needed once postings exist.
-
 
 2026 / CloverLeaf-206-Hoover-Ave
 --------------------------------
@@ -281,13 +218,11 @@ File: ledger/2026/clover-leaf/2026-CloverLeaf-206-Hoover-Ave-Transactions.bean
 Summary: CloverLeaf management transactions for a property in 2026.
   5: ;; TODO: add CloverLeaf transactions for 206-Hoover-Ave.
 
-
 2026 / CloverLeaf-2943-Butterfly-Palm
 -------------------------------------
 File: ledger/2026/clover-leaf/2026-CloverLeaf-2943-Butterfly-Palm-Transactions.bean
 Summary: CloverLeaf management transactions for a property in 2026.
   5: ;; TODO: add CloverLeaf transactions for 2943-Butterfly-Palm.
-
 
 2026 / No-Property
 ------------------
@@ -296,13 +231,11 @@ Summary: Year include file for 2026 (includes domain slices).
   14: ;; TODO: add 2026 building assets.
   15: ;; TODO: add 2026 improvements assets.
 
-
 2026 / SheerValue
 -----------------
 File: ledger/2026/sheer-value/2026-SheerValue-All.bean
 Summary: SheerValue management aggregate include for 2026.
   9: ;; TODO: Split by month if needed once postings exist.
-
 
 2026 / SheerValue-206-Hoover-Ave
 --------------------------------
@@ -310,42 +243,33 @@ File: ledger/2026/sheer-value/2026-SheerValue-206-Hoover-Ave-Transactions.bean
 Summary: SheerValue management transactions for a property in 2026.
   5: ;; TODO: add SheerValue transactions for 206-Hoover-Ave.
 
-
 2026 / SheerValue-2943-Butterfly-Palm
 -------------------------------------
 File: ledger/2026/sheer-value/2026-SheerValue-2943-Butterfly-Palm-Transactions.bean
 Summary: SheerValue management transactions for a property in 2026.
   5: ;; TODO: add SheerValue transactions for 2943-Butterfly-Palm.
 
-
 No-Year / No-Property
 ---------------------
-File: .git/hooks/sendemail-validate.sample
-Summary: Project file.
-  22: # Replace the TODO placeholders with appropriate checks according to your
-  27: 	# TODO: Replace with appropriate checks (e.g. spell checking).
-  35: 	# TODO: Replace with appropriate checks for this patch
-  41: 	# TODO: Replace with appropriate checks for the whole series
-
 File: AGENTS.md
 Summary: Repository guidelines for ledger structure, naming, and workflows.
-  44:   - TODOs use `;; TODO:` and live near the top of files or sections they apply to.
+  45:   - TODOs use `;; TODO:` and live near the top of files or sections they apply to.
 
 File: ledger/_balances.bean
 Summary: Balance assertions for accounts.
-  32: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
-  64: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
-  108: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
-  149: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
-  179: ;; TODO: Update escrow balance when 2026 transactions are available
-  184: ;; TODO: Update CloverLeaf property management balance when available
-  189: ;; TODO: Update SheerValue property management balance when available
-  195: ;; TODO: Update mortgage balance when 2026 transactions are available
+  40: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
+  76: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
+  124: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
+  169: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
+  203: ;; TODO: Update escrow balance when 2026 transactions are available
+  208: ;; TODO: Update CloverLeaf property management balance when available
+  213: ;; TODO: Update SheerValue property management balance when available
+  219: ;; TODO: Update mortgage balance when 2026 transactions are available
 
 File: ledger/_header.bean
 Summary: Shared Beancount header (options, plugins, account declarations).
-  95: ;; TODO:
-  98: ;; TODO:
+  97: ;; TODO:
+  100: ;; TODO:
 
 File: main.bean
 Summary: Top-level Beancount entry point (includes header, yearly ledgers, balances).
