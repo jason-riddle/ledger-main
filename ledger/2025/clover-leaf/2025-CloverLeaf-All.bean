@@ -11,7 +11,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/43516"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM              -117.00 USD
   Expenses:Management-Fees:206-Hoover-Ave                117.00 USD
 
@@ -20,7 +19,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/43515"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM              -117.00 USD
   Expenses:Management-Fees:2943-Butterfly-Palm           117.00 USD
 
@@ -29,7 +27,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "Not a bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Income:Rent:2943-Butterfly-Palm                      -1550.00 USD
   Assets:Property-Management:CloverLeaf-PM              1550.00 USD
 
@@ -38,7 +35,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/44565"
   additional_url: "http://go/pm/statements/15079"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM              -117.00 USD
   Expenses:Management-Fees:2943-Butterfly-Palm           117.00 USD
 
@@ -47,7 +43,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/44566"
   additional_url: "http://go/pm/statements/15079"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM              -117.00 USD
   Expenses:Management-Fees:206-Hoover-Ave                117.00 USD
 
@@ -56,7 +51,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "Not a bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM              -182.00 USD
   Equity:Owner-Distributions:Owner-Draw                  182.00 USD
 
@@ -65,7 +59,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "Not a bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Income:Rent:2943-Butterfly-Palm                        -50.00 USD
   Assets:Property-Management:CloverLeaf-PM                50.00 USD
 
@@ -74,7 +67,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/45544"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM              -127.00 USD
   Expenses:Cleaning---Maintenance:2943-Butterfly-Palm    127.00 USD
 
@@ -83,7 +75,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/46187"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "http://go/pm/work-orders/10654"
   Assets:Property-Management:CloverLeaf-PM              -345.00 USD
   Expenses:Cleaning---Maintenance:206-Hoover-Ave         345.00 USD
 
@@ -92,7 +83,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/46189"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "http://go/pm/work-orders/10656"
   Assets:Property-Management:CloverLeaf-PM              -177.60 USD
   Expenses:Cleaning---Maintenance:206-Hoover-Ave         177.60 USD
 
@@ -101,7 +91,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/46191"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "http://go/pm/work-orders/10657"
   Assets:Property-Management:CloverLeaf-PM              -364.11 USD
   Expenses:Repairs:206-Hoover-Ave                        364.11 USD
 
@@ -110,7 +99,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Income:Security-Deposit-Forfeited:206-Hoover-Ave      -800.00 USD
   Assets:Property-Management:CloverLeaf-PM               800.00 USD
 
@@ -119,7 +107,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Income:Security-Deposit-Forfeited:206-Hoover-Ave      -350.00 USD
   Assets:Property-Management:CloverLeaf-PM               350.00 USD
 
@@ -133,7 +120,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Equity:Retained-Earnings                             -1150.00 USD
   Liabilities:Security-Deposits-Owed:206-Hoover-Ave     1150.00 USD
 
@@ -142,7 +128,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/46420"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "http://go/pm/work-orders/10750"
   Assets:Property-Management:CloverLeaf-PM              -300.00 USD
   Expenses:Cleaning---Maintenance:206-Hoover-Ave         300.00 USD
 
@@ -151,7 +136,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/46335"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM               -65.00 USD
   Expenses:Cleaning---Maintenance:206-Hoover-Ave          65.00 USD
 
@@ -160,7 +144,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/46335"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM                -7.00 USD
   Expenses:Repairs:206-Hoover-Ave                          7.00 USD
 
@@ -169,7 +152,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Income:Rent:2943-Butterfly-Palm                      -1600.00 USD
   Assets:Property-Management:CloverLeaf-PM              1600.00 USD
 
@@ -178,7 +160,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Expenses:Management-Fees:206-Hoover-Ave                 -3.00 USD
   Assets:Property-Management:CloverLeaf-PM                 3.00 USD
 
@@ -187,7 +168,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Expenses:Management-Fees:206-Hoover-Ave               -114.00 USD
   Assets:Property-Management:CloverLeaf-PM               114.00 USD
 
@@ -196,7 +176,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/47446"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM              -117.00 USD
   Expenses:Management-Fees:2943-Butterfly-Palm           117.00 USD
 
@@ -205,7 +184,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/47942"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM               -26.70 USD
   Expenses:Utilities:Electric:206-Hoover-Ave              26.70 USD
 
@@ -214,7 +192,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/47977"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "http://go/pm/work-orders/10558"
   Assets:Property-Management:CloverLeaf-PM              -334.49 USD
   Expenses:Repairs:206-Hoover-Ave                        334.49 USD
 
@@ -223,7 +200,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM             -1053.10 USD
   Equity:Owner-Distributions:Owner-Draw                 1053.10 USD
 
@@ -232,7 +208,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/48059"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "http://go/pm/work-orders/10655"
   Assets:Property-Management:CloverLeaf-PM              -350.00 USD
   Expenses:Cleaning---Maintenance:206-Hoover-Ave         350.00 USD
 
@@ -241,7 +216,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/48318"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM               -35.52 USD
   Expenses:Utilities:Water:206-Hoover-Ave                 35.52 USD
 
@@ -250,7 +224,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/48426"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM               -65.00 USD
   Expenses:Repairs:206-Hoover-Ave                         65.00 USD
 
@@ -259,7 +232,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/48522"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM               -90.99 USD
   Expenses:Utilities:Electric:206-Hoover-Ave              90.99 USD
 
@@ -268,7 +240,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "Not a bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Income:Rent:2943-Butterfly-Palm                      -1600.00 USD
   Assets:Property-Management:CloverLeaf-PM              1600.00 USD
 
@@ -277,7 +248,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/49269"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM              -117.00 USD
   Expenses:Management-Fees:2943-Butterfly-Palm           117.00 USD
 
@@ -286,7 +256,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/49940"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM               -43.57 USD
   Expenses:Utilities:Water:206-Hoover-Ave                 43.57 USD
 
@@ -295,7 +264,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/49895"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "http://go/pm/work-orders/11249"
   Assets:Property-Management:CloverLeaf-PM               -80.00 USD
   Expenses:Cleaning---Maintenance:206-Hoover-Ave          80.00 USD
 
@@ -304,7 +272,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "Not a bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM              -817.92 USD
   Equity:Owner-Distributions:Owner-Draw                  817.92 USD
 
@@ -313,7 +280,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "http://go/pm/bills/50171"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM               -75.00 USD
   Expenses:Management-Fees:206-Hoover-Ave                 75.00 USD
 
@@ -322,6 +288,5 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   property_manager_bill_url: "No bill"
   additional_url: "No additional url"
   comments: "No comments"
-  work_order_url: "Not a work order"
   Assets:Property-Management:CloverLeaf-PM               -63.98 USD
   Expenses:Utilities:Electric:206-Hoover-Ave              63.98 USD
