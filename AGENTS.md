@@ -8,6 +8,7 @@
 
 ## Build, Test, and Development Commands
 - This repository is ledger data; there is no build step or runtime.
+- Before making any code changes, always read `ledger/_header.bean` first.
 - If you have Beancount installed, validate the ledger with:
   - `bean-check ledger/main.bean` — verifies postings, balances, and plugin constraints.
   - `bean-report ledger/main.bean` — runs reports against the ledger.
