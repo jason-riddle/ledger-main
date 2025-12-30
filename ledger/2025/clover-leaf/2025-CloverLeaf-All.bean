@@ -111,7 +111,7 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   Assets:Property-Management:CloverLeaf-PM               350.00 USD
 
 ; TODO(AGENT): What is the correct way to handle this?
-;              the tenant forteited their deposit, but i know need to clear the liability
+;              the tenant forteited their deposit, so i need to clear the liability
 ;              Ive already added it as an asset in the above 2 transactions, but how
 ;              to clear the libality? Also, I'm a self-propertier, so it doens't make sense
 ;              to have a retained earnings account.
@@ -243,9 +243,8 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   Income:Rent:2943-Butterfly-Palm                      -1600.00 USD
   Assets:Property-Management:CloverLeaf-PM              1600.00 USD
 
-;; TODO: _DOC_ID"
 2025-12-01 * "CloverLeaf Property Management" "Memo: Management Fee Expense for 12/2025" #2943-butterfly-palm
-  paperless_bill_invoice_receipt_url: "TODO"
+  paperless_bill_invoice_receipt_url: "N/A"
   property_manager_bill_url: "http://go/pm/bills/49269"
   additional_url: "N/A"
   comments: "N/A"
@@ -276,7 +275,6 @@ include "./2025-CloverLeaf-2943-Butterfly-Palm-Transactions.bean"
   Assets:Property-Management:CloverLeaf-PM              -817.92 USD
   Equity:Owner-Distributions:Owner-Draw                  817.92 USD
 
-;; TODO: _DOC_ID"
 2025-12-17 * "CloverLeaf Property Management" "Memo: Appliance - Accept delivery" #206-hoover-ave #refrigerators #deliveries
   paperless_bill_invoice_receipt_url: "N/A"
   property_manager_bill_url: "http://go/pm/bills/50171"
