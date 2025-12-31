@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 - `ledger/` contains the Beancount source files. `main.bean` is the entry point and includes `_header.bean`, yearly ledgers (`2022/`–`2026/`), and `_balances.bean` for assertions.
-- Year folders (e.g., `ledger/2025/`) hold the primary `_*year*.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/` (with `buildings/` and `improvements/`), `assets/` (with `buildings/` and `improvements/`), `sheer-value/`, `clover-leaf/`, and other domain slices.
+- Year folders (e.g., `ledger/2025/`) hold the primary `_*year*.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/` (with `buildings/` and `improvements/`), `assets/` (with `buildings/` and `improvements/`), `operations/`, and other domain slices.
 - Supporting notes live under `_notes/` with Markdown context files.
 - Environment metadata is in `devenv.nix`/`devenv.yaml` (Nix-based dev setup).
 
@@ -20,22 +20,20 @@
 - Python code follows the Google Python Style Guide; see `PYTHON_STYLE_GUIDE.md`.
 - File naming follows descriptive, date/asset-driven patterns:
   - Year includes: `YYYY.bean`.
-  - Vendor summaries: `YYYY-VENDOR-ALL.bean`.
-  - Vendor statements: `YYYY-VENDOR-PROPERTY-Statement.bean`.
-  - SheerValue transactions: `YYYY-SheerValue-PROPERTY-Transactions.bean` (stored in `sheer-value/`).
-  - CloverLeaf transactions: `YYYY-CloverLeaf-PROPERTY-Transactions.bean` (stored in `clover-leaf/`).
+  - Operations summary: `YYYY-Operations-All.bean`.
+  - Statements (manager-specific when needed): `YYYY-VENDOR-PROPERTY-Statement.bean` (stored in `operations/`).
+  - Operations transactions: `YYYY-PROPERTY-Transactions.bean` (stored in `operations/`).
   - Buildings (property purchases): `YYYY-PROPERTY-YYYY-MM-DD-Property-Purchase.bean`.
   - Improvements: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
   - Depreciation/amortization: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
   - Mortgage/escrow: `YYYY-PROPERTY-Mortgage-Payments.bean`, `YYYY-PROPERTY-Escrow-Payouts.bean`.
   - Taxes: `YYYY-PROPERTY-Taxes.bean`.
-  - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and vendor casing is `SheerValue` / `CloverLeaf` in filenames.
-- Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `depreciation/buildings/`, `depreciation/improvements/`, `assets/`, `assets/buildings/`, `assets/improvements/`, `sheer-value/`, `clover-leaf/`).
+  - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and vendor casing is `SheerValue` / `CloverLeaf` in statement filenames when used.
+- Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `depreciation/buildings/`, `depreciation/improvements/`, `assets/`, `assets/buildings/`, `assets/improvements/`, `operations/`).
 - Use `_`-prefixed files for includes (`_header.bean`), but year files are `YYYY.bean`.
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For multi-line transactions, list negative postings first, then positive postings.
-- `YYYY-SheerValue-All.bean` should include the per-property `YYYY-SheerValue-PROPERTY-Transactions.bean` files.
-- `YYYY-CloverLeaf-All.bean` should include the per-property `YYYY-CloverLeaf-PROPERTY-Transactions.bean` files.
+- `YYYY-Operations-All.bean` should include the per-property `YYYY-PROPERTY-Transactions.bean` files.
 - Comment styling:
   - File headers use a 3-line double-semicolon block with uppercase titles and hyphenated property names, followed by a blank line. Format:
     - Line 1: `;;`
