@@ -47,38 +47,12 @@
       pkgs.python313Packages.beangulp
       pkgs.python313Packages.beanquery
       pkgs.python313Packages.fava
-      # pkgs.python313Packages.fava-investor
+
+      pkgs.python313Packages.regex
+      pkgs.python313Packages.pytest
 
       # pdftotext
       pkgs.poppler-utils
-
-      # Maid
-      # pkgs.maid
-
-      # Gemini
-      pkgs.gemini-cli
-
-      # Go
-      # pkgs.gopls
-
-      # Claude Code
-      # pkgs.claude-code
-      # Claude Code Router
-      # pkgs.claude-code-router
-
-      # MCP Servers
-      # pkgs.docker
-      # pkgs.gopls
-      # pkgs.deno
-
-      # Local MCP server
-      # (pkgs.buildGoModule rec {
-      #   pname = "mcp-server";
-      #   version = "0.1.0";
-      #   src = ./.;
-      #   vendorHash = "sha256-Y/JwXXoXscXmgTCBcPkG9ZWgfw2mmhovranQTpqIcL8=";
-      #   subPackages = [ "cmd/server" ];
-      # })
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
       # Conditionally include glibcLocales only on Linux systems
