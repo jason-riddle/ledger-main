@@ -5,6 +5,7 @@
 - Year folders (e.g., `ledger/2025/`) hold the primary `_*year*.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/` (with `buildings/` and `improvements/`), `assets/` (with `buildings/` and `improvements/`), `operations/`, and other domain slices.
 - Supporting notes live under `_notes/` with Markdown context files.
 - Environment metadata is in `devenv.nix`/`devenv.yaml` (Nix-based dev setup).
+- `src/beanout/` houses statement parsers and CLI utilities for generating Beancount output from `*.pdf.txt` files.
 
 ## Build, Test, and Development Commands
 - This repository is ledger data; there is no build step or runtime.
@@ -12,6 +13,7 @@
 - If you have Beancount installed, validate the ledger with:
   - `bean-check ledger/main.bean` — verifies postings, balances, and plugin constraints.
   - `bean-report ledger/main.bean` — runs reports against the ledger.
+- For SPS parser goldens, run `scripts/run-tests.sh` (set `PYTHON_BIN` to the nix Python if needed).
 - Plugin tests are runnable with `uv` (scripts include their own dependencies), e.g.:
   - `UV_PYTHON=/nix/store/3lll9y925zz9393sa59h653xik66srjb-python3-3.13.9/bin/python3.13 uv run ledger/plugins/tests/test_find_duplicates.py -q`.
 
