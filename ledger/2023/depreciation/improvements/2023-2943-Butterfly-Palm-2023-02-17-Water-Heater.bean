@@ -5,7 +5,7 @@
 ; Water Heater: Placed in service 2/17/2023, 27.5-year MACRS SL
 ; Annual depreciation: $2,895 / 27.5 = $105.27
 ; 2023 (Mid-month convention, 10.5/12 year): $92 (Tax Summary)
-2023-12-15 * "Annual Depreciation 2023 - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #depreciation
+2023-12-15 * "Annual Depreciation 2023 - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #depreciation #improvements
    Assets:Accumulated-Depreciation:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater                  -92.00 USD
    Expenses:Depreciation:2943-Butterfly-Palm                                                                  92.00 USD
 

@@ -2,10 +2,10 @@
 ;; 2022 - OPERATIONS - ALL
 ;;
 
-2022-11-28 * "Jason Riddle" "Memo: Owner Contribution for Door Purchase" #contributions ^equity-golden
+2022-11-28 * "Jason Riddle" "Memo: Owner Contribution for Door Purchase" #operating #contributions ^equity-golden
   Equity:Owner-Contributions:Cash-Infusion  -900.00 USD
   Assets:Property-Management:SheerValue-PM   900.00 USD
 
-2022-11-29 * "Jason Riddle" "Memo: Door Purchase" #contributions ^equity-golden
+2022-11-29 * "Jason Riddle" "Memo: Door Purchase" #operating #contributions ^equity-golden
   Assets:Property-Management:SheerValue-PM  -900.00 USD
   Expenses:Repairs:2943-Butterfly-Palm       900.00 USD

@@ -5,7 +5,7 @@
 ; Improvements: Done 11/17/2023, 27.5-year MACRS SL
 ; Annual depreciation: $30,302 / 27.5 = $1,101.89
 ; 2023 (Mid-month convention, 1.5/12 year): $138 (Tax Summary)
-2023-12-15 * "Annual Depreciation 2023 - 206 Hoover Ave Improvements" #206-hoover-ave #depreciation
+2023-12-15 * "Annual Depreciation 2023 - 206 Hoover Ave Improvements" #206-hoover-ave #depreciation #improvements
    Assets:Accumulated-Depreciation:206-Hoover-Ave:Improvements:2023-11-17-Improvements                  -138.00 USD
    Expenses:Depreciation:206-Hoover-Ave                                                                  138.00 USD
 

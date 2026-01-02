@@ -7,7 +7,7 @@
 ; TODO(AGENT): I'm a self-propertier, so it doens't make sense
 ;              to have a retained earnings account below, how to fix this?.
 
-2023-12-31 * "Adjustment" "Correcting Asset Basis to match 2023 Tax Return Form 4562" #tax-adjustment
+2023-12-31 * "Adjustment" "Correcting Asset Basis to match 2023 Tax Return Form 4562" #tax-adjustment #taxes
   ; References:
   ; - 2023 Federal Tax Return (Form 4562 Depreciation and Amortization)
   ; - ledger/_notes/_depreciation.bean (Verified Source of Truth)

@@ -3,22 +3,22 @@
 ;;
 
 ; 2024: Property tax payment from escrow (1/2)
-2024-02-23 * "Property Tax Payment from Escrow - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #escrow-review
+2024-02-23 * "Property Tax Payment from Escrow - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #mortgage
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                   -2587.84 USD
   Expenses:Property-Taxes:2943-Butterfly-Palm                            2587.84 USD
 
 ; 2024: Property tax payment from escrow (Supplemental)
-2024-03-15 * "Supplemental Property Tax Payment from Escrow - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #escrow-review
+2024-03-15 * "Supplemental Property Tax Payment from Escrow - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #mortgage
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                   -1000.00 USD
   Expenses:Property-Taxes:2943-Butterfly-Palm                            1000.00 USD
 
 ; 2024: Insurance payment from escrow
-2024-10-01 * "Insurance Payment from Escrow - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #escrow-review
+2024-10-01 * "Insurance Payment from Escrow - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #mortgage
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                    -773.03 USD
   Expenses:Insurance:2943-Butterfly-Palm                                  773.03 USD
 
 ; 2024: Property tax payment from escrow (2/2)
-2024-12-02 * "Property Tax Payment from Escrow - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #escrow-review
+2024-12-02 * "Property Tax Payment from Escrow - 2943 Butterfly Palm" #2943-butterfly-palm #escrow #mortgage
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                   -3315.98 USD
   Expenses:Property-Taxes:2943-Butterfly-Palm                            3315.98 USD
 

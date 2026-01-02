@@ -6,7 +6,7 @@
 ;; TODO: add SheerValue transactions for 2943-Butterfly-Palm.
 
 ; CloverLeaf
-2025-12-30 * "Sienna Park HOA" "Memo: HOA Fees" #2943-butterfly-palm
+2025-12-30 * "Sienna Park HOA" "Memo: HOA Fees" #2943-butterfly-palm #operating
   paperless_bill_invoice_receipt_url: "N/A"
   property_manager_bill_url: "N/A"
   additional_url: "N/A"

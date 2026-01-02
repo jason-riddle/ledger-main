@@ -2,7 +2,7 @@
 ;; 2023 - ASSET - 2943-BUTTERFLY-PALM - 2023-02-17 WATER HEATER
 ;;
 
-2023-02-17 * "Asset Purchase - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #asset
+2023-02-17 * "Asset Purchase - 2943 Butterfly Palm Water Heater" #2943-butterfly-palm #improvements #assets
   Equity:Owner-Contributions:Cash-Infusion                                                       -2895.00 USD
   Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater                    2895.00 USD
 
