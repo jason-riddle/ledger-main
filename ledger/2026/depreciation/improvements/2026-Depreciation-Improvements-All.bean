@@ -1,0 +1,8 @@
+;;
+;; 2026 - DEPRECIATION - IMPROVEMENTS - ALL
+;;
+
+; TRANSACTIONS
+include "./2026-206-Hoover-Ave-2023-11-17-Improvements.bean"
+include "./2026-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "./2026-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"

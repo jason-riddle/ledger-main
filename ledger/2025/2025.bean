@@ -3,26 +3,21 @@
 ;;
 
 ; AMORTIZATION
-include "./amortization/loans/2025-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
+include "./amortization/loans/2025-Amortization-Loans-All.bean"
 
 ; ASSETS
 ;; TODO: add 2025 building assets.
 ;; TODO: add 2025 improvements assets.
 
 ; DEPRECIATION
-include "./depreciation/buildings/2025-206-Hoover-Ave-2023-05-26-Building.bean"
-include "./depreciation/buildings/2025-2943-Butterfly-Palm-2023-01-01-Building.bean"
-include "./depreciation/improvements/2025-206-Hoover-Ave-2023-11-17-Improvements.bean"
-include "./depreciation/improvements/2025-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
-include "./depreciation/improvements/2025-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
+include "./depreciation/buildings/2025-Depreciation-Buildings-All.bean"
+include "./depreciation/improvements/2025-Depreciation-Improvements-All.bean"
 
 ; MORTGAGE
-include "./mortgage/2025-2943-Butterfly-Palm-Escrow-Payouts.bean"
-include "./mortgage/2025-2943-Butterfly-Palm-Mortgage-Payments.bean"
+include "./mortgage/2025-Mortgage-All.bean"
 
 ; OPERATIONS
 include "./operations/2025-Operations-All.bean"
 
 ; TAXES
-include "./taxes/2025-206-Hoover-Ave-Taxes.bean"
-include "./taxes/2025-2943-Butterfly-Palm-Taxes.bean"
+include "./taxes/2025-Taxes-All.bean"

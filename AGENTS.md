@@ -31,6 +31,7 @@
   - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and vendor casing is `SheerValue` / `CloverLeaf` in statement filenames when used.
 - Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `depreciation/buildings/`, `depreciation/improvements/`, `assets/`, `assets/buildings/`, `assets/improvements/`, `operations/`).
 - Use `_`-prefixed files for includes (`_header.bean`), but year files are `YYYY.bean`.
+- For each domain directory that contains transactions, create a `YYYY-*-All.bean` that includes every `.bean` file at that directory level, then have the yearly `YYYY.bean` include only those `*-All` files (not the individual transaction files).
 - In yearly `YYYY.bean` files, alphabetize the section headers and keep every line within a section in strict lexicographic order (including `include` lines and `;; TODO:` notes).
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For multi-line transactions, list negative postings first, then positive postings.

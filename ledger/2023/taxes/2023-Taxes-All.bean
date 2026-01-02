@@ -1,8 +1,12 @@
-;; TODO add comments , make consistnet ot other files
+;;
+;; 2023 - TAXES - ALL
+;;
 
-; TODO, add comments
-; include "./2023-206-Hoover-Ave-Taxes.bean"
-; include "./2023-2943-Butterfly-Palm-Taxes.bean"
+; TRANSACTIONS
+include "./2023-206-Hoover-Ave-Taxes.bean"
+include "./2023-2943-Butterfly-Palm-Taxes.bean"
+
+;; TODO: add comments, make consistent with other files.
 
 ; TODO(AGENT): I'm a self-propertier, so it doens't make sense
 ;              to have a retained earnings account below, how to fix this?.

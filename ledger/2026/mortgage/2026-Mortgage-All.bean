@@ -1,0 +1,7 @@
+;;
+;; 2026 - MORTGAGE - ALL
+;;
+
+; TRANSACTIONS
+include "./2026-2943-Butterfly-Palm-Escrow-Payouts.bean"
+include "./2026-2943-Butterfly-Palm-Mortgage-Payments.bean"
