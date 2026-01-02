@@ -2,30 +2,30 @@
 ;; 2023 - YEAR - ALL
 ;;
 
-; DEPRECIATION
-include "./depreciation/buildings/2023-206-Hoover-Ave-2023-05-26-Building.bean"
-include "./depreciation/buildings/2023-2943-Butterfly-Palm-2023-01-01-Building.bean"
-include "./depreciation/improvements/2023-206-Hoover-Ave-2023-11-17-Improvements.bean"
-include "./depreciation/improvements/2023-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
-include "./depreciation/improvements/2023-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
-
 ; AMORTIZATION
 include "./amortization/loans/2023-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
 ; ASSETS
 include "./assets/buildings/2023-206-Hoover-Ave-2023-05-26-Property-Purchase.bean"
+include "./assets/improvements/2023-206-Hoover-Ave-2023-11-17-Improvements.bean"
 include "./assets/improvements/2023-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
 include "./assets/improvements/2023-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
-include "./assets/improvements/2023-206-Hoover-Ave-2023-11-17-Improvements.bean"
+
+; DEPRECIATION
+include "./depreciation/buildings/2023-206-Hoover-Ave-2023-05-26-Building.bean"
+include "./depreciation/buildings/2023-2943-Butterfly-Palm-2023-01-01-Building.bean"
+include "./depreciation/improvements/2023-206-Hoover-Ave-2023-11-17-Improvements.bean"
+include "./depreciation/improvements/2023-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "./depreciation/improvements/2023-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
 
 ; MORTGAGE
-include "./mortgage/2023-2943-Butterfly-Palm-Mortgage-Payments.bean"
 include "./mortgage/2023-2943-Butterfly-Palm-Escrow-Payouts.bean"
+include "./mortgage/2023-2943-Butterfly-Palm-Mortgage-Payments.bean"
+
+; OPERATIONS
+include "./operations/2023-Operations-All.bean"
 
 ; TAXES
 include "./taxes/2023-206-Hoover-Ave-Taxes.bean"
 include "./taxes/2023-2943-Butterfly-Palm-Taxes.bean"
 include "./taxes/2023-Taxes-All.bean"
-
-; OPERATIONS
-include "./operations/2023-Operations-All.bean"
