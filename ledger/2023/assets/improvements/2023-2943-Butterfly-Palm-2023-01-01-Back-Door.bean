@@ -2,7 +2,7 @@
 ;; 2023 - ASSET - 2943-BUTTERFLY-PALM - 2023-01-01 BACK DOOR
 ;;
 
-2023-01-01 * "Asset Purchase - 2943 Butterfly Palm Back Door" #2943-butterfly-palm #improvements #assets
+2023-01-01 * "Asset Purchase - 2943 Butterfly Palm Back Door" #2943-butterfly-palm #assets #improvements
   Equity:Owner-Contributions:Cash-Infusion                                                    -600.00 USD
   Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-01-01-Back-Door                    600.00 USD
 

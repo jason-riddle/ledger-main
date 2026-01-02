@@ -10,14 +10,14 @@
 2022-12-08 balance Expenses:Mortgage-Interest:2943-Butterfly-Palm           270.13 USD
 
 ; December 2022 Payment (first payment - month 1)
-2022-12-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage #duplicates #todo
+2022-12-09 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #duplicates #mortgage #todo
   Equity:Owner-Contributions:Cash-Infusion                                -1178.63 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm                            736.72 USD
   Liabilities:Mortgages:2943-Butterfly-Palm                                  60.51 USD
   Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                       381.40 USD
 
 ; December 2022 Payment (second payment - extra - month 2)
-2022-12-15 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #mortgage #duplicates #todo
+2022-12-15 * "Mortgage Payment - 2943 Butterfly Palm" #2943-butterfly-palm #duplicates #mortgage #todo
   Equity:Owner-Contributions:Cash-Infusion                                -1178.63 USD
   Expenses:Mortgage-Interest:2943-Butterfly-Palm                            736.28 USD
   Liabilities:Mortgages:2943-Butterfly-Palm                                  60.95 USD

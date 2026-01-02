@@ -3,6 +3,6 @@
 ;;
 
 ; TODO, uncomment when paied
-2025-12-30 * "206 Hoover Ave Property Taxes" #206-hoover-ave #taxes #property-taxes
+2025-12-30 * "206 Hoover Ave Property Taxes" #206-hoover-ave #property-taxes #taxes
   Equity:Owner-Contributions:Cash-Infusion  -3,058.89 USD
   Expenses:Property-Taxes:206-Hoover-Ave     3,058.89 USD

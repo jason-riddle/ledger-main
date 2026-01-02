@@ -6,7 +6,7 @@
 2022-10-20 balance Expenses:Mortgage-Interest:2943-Butterfly-Palm                                 0 USD
 2022-10-20 balance Liabilities:Mortgages:2943-Butterfly-Palm                                      0 USD
 
-2022-10-21 * "Property Purchase - 2943 Butterfly Palm" #2943-butterfly-palm #buildings #assets ^equity-golden
+2022-10-21 * "Property Purchase - 2943 Butterfly Palm" #2943-butterfly-palm #assets #buildings ^equity-golden
   documents: "2022-10-21 2943 Butterfly Palm Closing - HUD-1 Settlement Statement.pdf"
   settlement_agent: "Priority Settlement Group of Texas, LLC"
   loan_number: "10003510"

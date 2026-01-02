@@ -39,6 +39,7 @@
   - Improvements transactions (including loan-cost amortization entries in improvements): `#improvements`.
   - Escrow-related transactions: `#escrow` and `#mortgage`.
   - Operations transactions: `#operations`.
+- Transaction header ordering: alphabetize tags (`#...`) first, then alphabetize links (`^...`), with tags placed before links.
 - Comment styling:
   - File headers use a 3-line double-semicolon block with uppercase titles and hyphenated property names, followed by a blank line. Format:
     - Line 1: `;;`
