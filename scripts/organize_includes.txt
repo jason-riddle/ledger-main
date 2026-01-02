@@ -1,0 +1,6 @@
+# Include-only files that should be kept in strict lexicographic order.
+ledger/2022/2022.bean
+ledger/2023/2023.bean
+ledger/2024/2024.bean
+ledger/2025/2025.bean
+ledger/2026/2026.bean
