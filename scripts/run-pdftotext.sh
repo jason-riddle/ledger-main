@@ -10,6 +10,7 @@ for root in documents fixtures; do
   if [[ -d "${root}" ]]; then
     find "${root}" -type f -iname "*.pdf" -print0 | while IFS= read -r -d '' pdf; do
       pdftotext -layout "${pdf}" "${pdf}.txt"
+      perl -0777 -pi -e 's/\s+\z/\n/s' "${pdf}.txt"
     done
   fi
 done
