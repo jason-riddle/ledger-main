@@ -34,6 +34,11 @@
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For multi-line transactions, list negative postings first, then positive postings.
 - `YYYY-Operations-All.bean` should include the per-property `YYYY-PROPERTY-Transactions.bean` files.
+- Tag conventions for transactions:
+  - Buildings transactions: `#buildings`.
+  - Improvements transactions (including loan-cost amortization entries in improvements): `#improvements`.
+  - Escrow-related transactions: `#escrow` and `#mortgage`.
+  - Operations transactions: `#operations`.
 - Comment styling:
   - File headers use a 3-line double-semicolon block with uppercase titles and hyphenated property names, followed by a blank line. Format:
     - Line 1: `;;`
