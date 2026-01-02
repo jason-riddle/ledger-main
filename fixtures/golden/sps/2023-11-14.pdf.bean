@@ -1,0 +1,21 @@
+2023-10-14 balance Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm    3,511.20 USD
+2023-10-14 balance Liabilities:Mortgages:2943-Butterfly-Palm            -101809.93 USD
+2023-10-14 balance Expenses:Mortgage-Interest:2943-Butterfly-Palm          -731.76 USD
+
+2023-10-16 * "SPS Mortgage Servicing" "Memo: Hazard Insurance" #beangulp #mortgage
+  Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                      -702.88 USD
+  Expenses:Insurance:2943-Butterfly-Palm                                    702.88 USD
+
+2023-11-01 * "SPS Mortgage Servicing" "Memo: Mortgage" #beangulp #mortgage
+  Equity:Owner-Contributions:Cash-Infusion                                -1178.63 USD
+  Liabilities:Mortgages:2943-Butterfly-Palm                                  65.47 USD
+  Expenses:Mortgage-Interest:2943-Butterfly-Palm                            731.76 USD
+  Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                       381.40 USD
+
+2023-11-02 * "SPS Mortgage Servicing" "Memo: Special Deposit" #beangulp #mortgage
+  Equity:Owner-Contributions:Cash-Infusion                                -1447.00 USD
+  Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                      1447.00 USD
+
+2023-11-14 balance Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm     4636.72 USD
+2023-11-14 balance Liabilities:Mortgages:2943-Butterfly-Palm            -101744.46 USD
+2023-11-14 balance Expenses:Mortgage-Interest:2943-Butterfly-Palm                0 USD
