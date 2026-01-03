@@ -95,6 +95,8 @@ jobs:
   golden-tests:
     name: Golden Tests (Statement Parsers)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
 
@@ -111,6 +113,8 @@ jobs:
   plugin-tests:
     name: Plugin Tests
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
 
