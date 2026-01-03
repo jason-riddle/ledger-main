@@ -15,6 +15,11 @@ import beancount.core.number as number
 
 __plugins__ = ["plugin"]
 
+# Weights for confidence score calculation in duplicate detection.
+# These determine the relative importance of each matching factor:
+# - amount: How closely the transaction amounts match (within tolerance)
+# - date: How close the transaction dates are (within date window)
+# - account: Whether the transactions share any cash accounts
 _WEIGHTS = {
     "amount": 0.5,
     "date": 0.3,
@@ -22,9 +27,18 @@ _WEIGHTS = {
 }
 
 # Default matching thresholds and behavior:
-# - error_score_threshold/warn_score_threshold: minimum confidence score to emit errors or warnings.
-# - date_window_days: max days between transactions considered for a candidate pair (and date score decay).
-# - amount_tolerance: allowed absolute net-amount delta for a full amount match.
+# - error_score_threshold: minimum confidence score (0.0-1.0) required to emit an error for a potential duplicate pair.
+#   Transactions with confidence scores above this threshold are considered definite duplicates and will cause
+#   the plugin to fail validation.
+# - warn_score_threshold: minimum confidence score (0.0-1.0) required to emit a warning for a potential duplicate pair.
+#   Transactions with confidence scores above this threshold but below error_score_threshold will generate
+#   warning messages but allow validation to pass.
+# - date_window_days: maximum number of days between transactions that will be considered as potential duplicates.
+#   This window is used both for generating candidate pairs and for calculating the date similarity score,
+#   which decays linearly from 1.0 (same date) to 0.0 (date_window_days apart).
+# - amount_tolerance: maximum allowed absolute difference in net transaction amounts for them to be considered
+#   a perfect amount match. For example, with a tolerance of $0.03, transactions with amounts $100.00 and $100.02
+#   would receive a full amount score of 1.0, while $100.00 and $100.04 would receive 0.0.
 # - cash_accounts_only: when true, limit amount/currency matching to Assets:* postings so the
 #   detector keys off the cash-side postings (typically the most stable signal) even when non-cash
 #   categorization differs between sources or imports.
@@ -183,6 +197,7 @@ def amount_score(txn_a, txn_b, tolerance, cash_only):
     amount_b = net_amount(txn_b, cash_only)
     if amount_a is None or amount_b is None:
         return 0.0
+    assert amount_a is not None and amount_b is not None
     delta = abs(amount_a - amount_b)
     return 1.0 if delta <= tolerance else 0.0
 
