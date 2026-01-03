@@ -61,6 +61,10 @@
 - No shared automated test framework is configured, but some tests are standalone `uv` scripts.
 - Treat `bean-check` as the primary validation step before changes.
 - Prefer adding balance assertions to `balances.bean` or year-specific files when introducing new accounts. Because `leafonly` is enabled, assertions must target leaf accounts.
+- Golden test files in `fixtures/golden/` follow the naming pattern `YYYY-MM-DD-ENTITY.filetype`:
+  - SPS files: `YYYY-MM-DD-SPS.pdf`, `YYYY-MM-DD-SPS.pdf.txt`, `YYYY-MM-DD-SPS.pdf.bean`, `YYYY-MM-DD-SPS.pdf.jsonl`
+  - Sheer Value files: `YYYY-MM-DD-SHEER-VALUE.pdf`, `YYYY-MM-DD-SHEER-VALUE.pdf.txt`, `YYYY-MM-DD-SHEER-VALUE.pdf.bean`, `YYYY-MM-DD-SHEER-VALUE.pdf.jsonl`
+  - Clover Leaf files: `YYYY-MM-DD-CLOVER-LEAF.pdf`, `YYYY-MM-DD-CLOVER-LEAF.pdf.txt`, `YYYY-MM-DD-CLOVER-LEAF.pdf.bean`, `YYYY-MM-DD-CLOVER-LEAF.pdf.jsonl`
 
 ## Plugin Notes
 - `plugins/find_duplicates.py` supports a `cash_only=true` flag to compare only `Assets:*` postings for amount/currency matching. Warning-level matches are logged and do not fail `bean-check`.
