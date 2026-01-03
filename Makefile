@@ -1,24 +1,25 @@
-UV_PYTHON_INSTALL_DIR ?= $(HOME)/.cache/uv/python
-UV_RUN ?= UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run
-BEANQUERY_HOME ?= $(TMPDIR)/beanquery-home
+# export UV_PYTHON_INSTALL_DIR ?= $(HOME)/.cache/uv/python
 
-.PHONY: uv-sync test plugins-test check pre-commit
+.PHONY: uv-sync test plugins-test check query query-cmd pre-commit
 
 uv-sync:
-	UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv sync --dev
+	uv sync --dev
 
 test:
-	$(UV_RUN) pytest -q
+	uv run pytest -q
 
 plugins-test:
-	$(UV_RUN) plugins/tests/test_find_duplicates.py -q
+	uv run plugins/tests/test_find_duplicates.py -q
 
 check:
-	PYTHONPATH=$(CURDIR) $(UV_RUN) bean-check ledger/main.bean
+	PYTHONPATH=$(CURDIR) uv run bean-check ledger/main.bean
 
 query:
-	mkdir -p $(BEANQUERY_HOME)/.config/beanquery
-	HOME=$(BEANQUERY_HOME) PYTHONPATH=$(CURDIR) $(UV_RUN) bean-query ledger/main.bean
+	PYTHONPATH=$(CURDIR) uv run python scripts/bin/bean-query-nohistory.py ledger/main.bean
+
+query-cmd:
+	@if [ -z "$(QUERY)" ]; then echo "Usage: make query-cmd QUERY='select ...'"; exit 2; fi
+	PYTHONPATH=$(CURDIR) uv run python scripts/bin/bean-query-nohistory.py ledger/main.bean "$(QUERY)"
 
 pre-commit:
 	PYTHONPATH=$(CURDIR) pre-commit run --all-files
