@@ -1,0 +1,233 @@
+                                                                                                            Rental Owner Statement
+      Prepared By: Sheer Value Property Management
+      7227 Broadway
+      San Antonio, TX 78209
+                                                                                                               Statement period 1/1/2025 - 8/7/2025
+                                                                                                                 Statement date            8/7/2025
+
+
+
+
+   Jason Riddle
+   1497 15th Avenue
+   San Francisco, CA 94122
+
+
+S u m m ar y b y p r op er ty
+                                               206 Hoover Avenue    2943 Butterfly Palm   All properties
+ Beginning cash balance                               $1 ,1 50.00          $2,000.00          $3,1 50.00
+ + Additions to cash
+ Income                                                 6,550.00             12,850.00         19,400.00
+ Owner contributions                                        0.00                  0.00              0.00
+ Other additions                                            0.00                  0.00              0.00
+ – Subtractions from cash
+ Expenses                                                1,055.00              1,152.00         2,207.00
+ Owner draws                                            5,878.50             10,242.00          16,120.50
+ Other subtractions                                         0.00                  0.00              0.00
+ Ending cash balance                                    $766.50            $3,456.00         $4,222.50
+ – Adjustments
+ Tenant security deposits and early payments             1,150.00             2,000.00          3,150.00
+ Property reserve                                           0.00                  0.00              0.00
+ Available for payment                                ($383.50)            $1 ,456.00         $1 ,072.50
+
+
+
+Jason Riddle - Generated 08/07/2025 11:53:42                                                                                                 Page 1
+                                                                                                           Rental Owner Statement
+      Prepared By: Sheer Value Property Management
+      7227 Broadway
+      San Antonio, TX 78209
+                                                                                                              Statement period 1/1/2025 - 8/7/2025
+                                                                                                                Statement date            8/7/2025
+
+
+I n com e statem en t
+                                               206 Hoover Avenue   2943 Butterfly Palm   All properties
+ Income
+   Late Fee Income                                          0.00                50.00             50.00
+   Pet Rent                                                 0.00               400.00            400.00
+   Rent Income                                          6,550.00            12,400.00         18,950.00
+   Total income                                       $6,550.00          $1 2,850.00       $1 9,400.00
+ Expense
+   Management Fees                                        621.00              1,152.00          1,773.00
+   Repairs                                                434.00                 0.00            434.00
+   Total expenses                                     $1 ,055.00           $1 ,1 52.00      $2,207.00
+ Net income                                           $5,495.00          $1 1 ,698.00       $1 7,1 93.00
+
+
+
+
+Jason Riddle - Generated 08/07/2025 11:53:42                                                                                                Page 2
+                                                                                                                      Rental Owner Statement
+      Prepared By: Sheer Value Property Management
+      7227 Broadway
+      San Antonio, TX 78209
+                                                                                                                                Statement period 1/1/2025 - 8/7/2025
+                                                                                                                                  Statement date            8/7/2025
+
+
+Detail tr an saction s
+            Date Property                      Unit   Account       Name                      Memo                                       Amount             Balance
+ Beginning cash balance as of 1 /1 /2025                                                                                                                 $3,1 50.00
+ Additions to cash
+         1/1/2025 2943 Butterfly Palm          1      Rent Income   Unit 1 - Layla Noble-Davis by Layla Noble-Davis                     1,550.00           4,700.00
+         1/1/2025 2943 Butterfly Palm          1      Pet Rent      Unit 1 - Layla Noble-Davis by Layla Noble-Davis                        50.00           4,750.00
+        1/3/2025 206 Hoover Avenue             1      Rent Income   Unit 1 - George Mahara    by George Mahara                           1,150.00          5,900.00
+        2/1/2025 2943 Butterfly Palm           1      Rent Income   Unit 1 - Layla Noble-Davis by Layla Noble-Davis                     1,550.00           7,450.00
+        2/1/2025 2943 Butterfly Palm           1      Pet Rent      Unit 1 - Layla Noble-Davis by Layla Noble-Davis                        50.00           7,500.00
+        2/1/2025 206 Hoover Avenue             1      Rent Income   Unit 1 - George Mahara    by George Mahara                           1,150.00          8,650.00
+      2/28/2025 206 Hoover Avenue              1      Rent Income   Unit 1 - George Mahara    by George Mahara                           1,150.00          9,800.00
+        3/1/2025 2943 Butterfly Palm           1      Rent Income   Unit 1 - Layla Noble-Davis by Layla Noble-Davis                     1,550.00           11,350.00
+        3/1/2025 2943 Butterfly Palm           1      Pet Rent      Unit 1 - Layla Noble-Davis by Layla Noble-Davis                        50.00           11,400.00
+        4/1/2025 2943 Butterfly Palm           1      Rent Income   Unit 1 - Layla Noble-Davis by Layla Noble-Davis                     1,550.00          12,950.00
+        4/1/2025 2943 Butterfly Palm           1      Pet Rent      Unit 1 - Layla Noble-Davis by Layla Noble-Davis                        50.00          13,000.00
+        4/4/2025 2943 Butterfly Palm           1      Late Fee      Unit 1 - Layla Noble-Davis by Layla Noble-Davis                        50.00          13,050.00
+                                                      Income
+        4/9/2025 206 Hoover Avenue             1      Rent Income   Unit 1 - George Mahara    by George Mahara                           1,150.00         14,200.00
+        4/9/2025 206 Hoover Avenue             1      Late Fee      Unit 1 - George Mahara    by George Mahara                            138.00          14,338.00
+                                                      Income
+       4/14/2025 206 Hoover Avenue             1      Rent Income   Unit 1 - George Mahara    REVERSED - (R01) Balance is not           (1,150.00)         13,188.00
+                                                                                              sufficient to cover value of
+                                                                                              transaction.: by George Mahara
+
+
+
+
+Jason Riddle - Generated 08/07/2025 11:53:42                                                                                                                  Page 3
+                                                                                                                      Rental Owner Statement
+      Prepared By: Sheer Value Property Management
+      7227 Broadway
+      San Antonio, TX 78209
+                                                                                                                                Statement period 1/1/2025 - 8/7/2025
+                                                                                                                                  Statement date            8/7/2025
+
+
+            Date Property                      Unit   Account       Name                      Memo                                       Amount             Balance
+       4/14/2025 206 Hoover Avenue             1      Late Fee      Unit 1 - George Mahara    REVERSED - (R01) Balance is not            (138.00)         13,050.00
+                                                      Income                                  sufficient to cover value of
+                                                                                              transaction.: by George Mahara
+      4/26/2025 206 Hoover Avenue              1      Rent Income   Unit 1 - George Mahara    by George Mahara                           1,000.00         14,050.00
+        5/1/2025 2943 Butterfly Palm           1      Rent Income   Unit 1 - Layla Noble-Davis by Layla Noble-Davis                      1,550.00         15,600.00
+        5/1/2025 2943 Butterfly Palm           1      Pet Rent      Unit 1 - Layla Noble-Davis by Layla Noble-Davis                        50.00          15,650.00
+       5/17/2025 206 Hoover Avenue             1      Rent Income   Unit 1 - George Mahara    by George Mahara                            400.00          16,050.00
+        6/1/2025 2943 Butterfly Palm           1      Rent Income   Unit 1 - Layla Noble-Davis by Layla Noble-Davis                      1,550.00         17,600.00
+        6/1/2025 2943 Butterfly Palm           1      Pet Rent      Unit 1 - Layla Noble-Davis by Layla Noble-Davis                        50.00          17,650.00
+        6/2/2025 206 Hoover Avenue             1      Rent Income   Unit 1 - George Mahara    by George Mahara                           1,000.00         18,650.00
+       6/12/2025 206 Hoover Avenue             1      Rent Income   Unit 1 - George Mahara    by George Mahara                            700.00          19,350.00
+        7/1/2025 2943 Butterfly Palm           1      Rent Income   Unit 1 - Layla Noble-Davis by Layla Noble-Davis                      1,550.00         20,900.00
+        7/1/2025 2943 Butterfly Palm           1      Pet Rent      Unit 1 - Layla Noble-Davis by Layla Noble-Davis                        50.00          20,950.00
+       7/16/2025 206 Hoover Avenue             1      Rent Income   Unit 1 - George Mahara    by George Mahara                           1,500.00         22,450.00
+       7/16/2025 206 Hoover Avenue             1      Late Fee      Unit 1 - George Mahara    by George Mahara                            628.50          23,078.50
+                                                      Income
+       7/21/2025 206 Hoover Avenue             1      Rent Income   Unit 1 - George Mahara    REVERSED - (R01) Balance is not           (1,500.00)        21,578.50
+                                                                                              sufficient to cover value of
+                                                                                              transaction.: by George Mahara
+       7/21/2025 206 Hoover Avenue             1      Late Fee      Unit 1 - George Mahara    REVERSED - (R01) Balance is not            (628.50)         20,950.00
+                                                      Income                                  sufficient to cover value of
+                                                                                              transaction.: by George Mahara
+        8/1/2025 2943 Butterfly Palm           1      Rent Income   Unit 1 - Layla Noble-Davis by Layla Noble-Davis                      1,550.00         22,500.00
+        8/1/2025 2943 Butterfly Palm           1      Pet Rent      Unit 1 - Layla Noble-Davis by Layla Noble-Davis                        50.00          22,550.00
+
+
+Jason Riddle - Generated 08/07/2025 11:53:42                                                                                                                  Page 4
+                                                                                                                            Rental Owner Statement
+      Prepared By: Sheer Value Property Management
+      7227 Broadway
+      San Antonio, TX 78209
+                                                                                                                                        Statement period 1/1/2025 - 8/7/2025
+                                                                                                                                          Statement date            8/7/2025
+
+
+            Date Property                      Unit       Account      Name                         Memo                                         Amount             Balance
+ Total from additions to cash                                                                                            $1 9,400.00
+ Subtractions from cash
+        1/7/2025 2943 Butterfly Palm           Property   Management   Sheer Value Property         Management Fee (9% of $1,600)                 144.00          22,406.00
+                                               level      Fees         Management
+        1/7/2025 2943 Butterfly Palm           Property   Owner Draw   Jason Riddle                 Owner Draw                                  1,456.00          20,950.00
+                                               level
+        1/7/2025 206 Hoover Avenue             1          Management   Unit 1 - Sheer Value         Management Fee (9% of $1150)                  103.50          20,846.50
+                                                          Fees         Property Management
+        1/7/2025 206 Hoover Avenue             Property   Owner Draw   Jason Riddle                 Owner Draw                                  1,046.50          19,800.00
+                                               level
+       1/22/2025 206 Hoover Avenue             1          Repairs      Unit 1 - American Electric   Replaced 3 breaker bc of tripping             154.00          19,646.00
+                                                                                                    and burnt.
+        2/7/2025 2943 Butterfly Palm           Property   Management   Sheer Value Property         Management Fee (9% of $1,600)                 144.00          19,502.00
+                                               level      Fees         Management
+        2/7/2025 2943 Butterfly Palm           Property   Owner Draw   Jason Riddle                 Owner Draw                                  1,456.00          18,046.00
+                                               level
+        2/7/2025 206 Hoover Avenue             1          Management   Unit 1 - Sheer Value         Management Fee (9% of $1150)                  103.50          17,942.50
+                                                          Fees         Property Management
+        2/7/2025 206 Hoover Avenue             Property   Owner Draw   Jason Riddle                 Owner Draw                                    892.50          17,050.00
+                                               level
+        3/5/2025 2943 Butterfly Palm           Property   Management   Sheer Value Property         Management Fee (9% of $1,600)                 144.00          16,906.00
+                                               level      Fees         Management
+        3/5/2025 2943 Butterfly Palm           Property   Owner Draw   Jason Riddle                 Owner Draw                                  1,456.00          15,450.00
+                                               level
+        3/5/2025 206 Hoover Avenue             1          Management   Unit 1 - Sheer Value         Management Fee (9% of $1150)                  103.50          15,346.50
+                                                          Fees         Property Management
+
+
+Jason Riddle - Generated 08/07/2025 11:53:42                                                                                                                          Page 5
+                                                                                                                     Rental Owner Statement
+      Prepared By: Sheer Value Property Management
+      7227 Broadway
+      San Antonio, TX 78209
+                                                                                                                                Statement period 1/1/2025 - 8/7/2025
+                                                                                                                                  Statement date            8/7/2025
+
+
+            Date Property                      Unit       Account      Name                   Memo                                       Amount             Balance
+        3/5/2025 206 Hoover Avenue             Property   Owner Draw   Jason Riddle           Owner Draw                                1,046.50          14,300.00
+                                               level
+        4/7/2025 2943 Butterfly Palm           Property   Management   Sheer Value Property   Management Fee (9% of $1,600)               144.00           14,156.00
+                                               level      Fees         Management
+        4/7/2025 206 Hoover Avenue             1          Management   Unit 1 - Sheer Value   Management Fee (9% of $1150)                103.50          14,052.50
+                                                          Fees         Property Management
+        4/8/2025 2943 Butterfly Palm           Property   Owner Draw   Jason Riddle           Owner Draw                                1,506.00          12,546.50
+                                               level
+       4/11/2025 206 Hoover Avenue             Property   Owner Draw   Jason Riddle           Owner Draw                                 1,184.50          11,362.00
+                                               level
+        5/7/2025 2943 Butterfly Palm           Property   Management   Sheer Value Property   Management Fee (9% of $1,600)               144.00           11,218.00
+                                               level      Fees         Management
+        5/7/2025 206 Hoover Avenue             1          Management   Unit 1 - Sheer Value   Management Fee (9% of $1150)                103.50            11,114.50
+                                                          Fees         Property Management
+        5/8/2025 2943 Butterfly Palm           Property   Owner Draw   Jason Riddle           Owner Draw                                1,456.00           9,658.50
+                                               level
+        6/4/2025 2943 Butterfly Palm           Property   Management   Sheer Value Property   Management Fee (9% of $1,600)               144.00           9,514.50
+                                               level      Fees         Management
+        6/5/2025 2943 Butterfly Palm           Property   Owner Draw   Jason Riddle           Owner Draw                                1,456.00           8,058.50
+                                               level
+       6/13/2025 206 Hoover Avenue             Property   Owner Draw   Jason Riddle           Owner Draw                                1,605.00           6,453.50
+                                               level
+       6/13/2025 206 Hoover Avenue             Property   Owner Draw   Jason Riddle           Owner Draw                                  103.50           6,350.00
+                                               level
+      6/23/2025 206 Hoover Avenue              Property   Repairs      Richard Wagner         checked out AC window unit. Got             280.00           6,070.00
+                                               level                                          new AC and installed
+
+
+Jason Riddle - Generated 08/07/2025 11:53:42                                                                                                                   Page 6
+                                                                                                                    Rental Owner Statement
+      Prepared By: Sheer Value Property Management
+      7227 Broadway
+      San Antonio, TX 78209
+                                                                                                                              Statement period 1/1/2025 - 8/7/2025
+                                                                                                                                Statement date            8/7/2025
+
+
+            Date Property                      Unit       Account      Name                   Memo                                     Amount             Balance
+        7/7/2025 2943 Butterfly Palm           Property   Management   Sheer Value Property   Management Fee (9% of $1,600)             144.00           5,926.00
+                                               level      Fees         Management
+        7/7/2025 2943 Butterfly Palm           Property   Owner Draw   Jason Riddle           Owner Draw                              1,456.00           4,470.00
+                                               level
+        7/7/2025 206 Hoover Avenue             1          Management   Unit 1 - Sheer Value   Management Fee (9% of $1150)              103.50           4,366.50
+                                                          Fees         Property Management
+        8/6/2025 2943 Butterfly Palm           Property   Management   Sheer Value Property   Management Fee (9% of $1,600)             144.00           4,222.50
+                                               level      Fees         Management
+ Total from subtractions from cash                                                                               $1 8,327.50
+
+ Ending cash balance as of 8/7/2025                                                                                                                   $4,222.50
+
+
+
+
+Jason Riddle - Generated 08/07/2025 11:53:42                                                                                                                Page 7

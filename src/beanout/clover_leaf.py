@@ -29,6 +29,7 @@ class CloverLeafConfig:
 
 
 _DATE_RE = re.compile(r"\b\d{2}-\d{2}-\d{4}\b")
+_PERIOD_RE = re.compile(r"(\d{2}-\d{2}-\d{4})\s+to\s+(\d{2}-\d{2}-\d{4})")
 
 _PROPERTY_TAGS = {
     "2943-Butterfly-Palm": "2943-butterfly-palm",
@@ -56,15 +57,25 @@ def render_clover_leaf_file(
 
 def parse_clover_leaf_text(
     text: str, config: Optional[CloverLeafConfig] = None
-) -> list[beancount.core.data.Transaction]:
+) -> list[beancount.core.data.Directive]:
     """Parse CloverLeaf statement text into Beancount directives."""
     if config is None:
         config = CloverLeafConfig()
 
+    period = _parse_statement_period(text)
+    beginning_balance, ending_balance = _parse_summary_balances(text)
+
     in_details = False
     current_property: Optional[str] = None
     current_owner: Optional[str] = None
-    entries: list[beancount.core.data.Transaction] = []
+    entries: list[beancount.core.data.Directive] = []
+
+    if period and beginning_balance is not None:
+        entries.append(
+            _build_balance(
+                period[0], config.account_property_management, beginning_balance, config
+            )
+        )
 
     for raw_line in text.splitlines():
         line = raw_line.rstrip()
@@ -101,6 +112,13 @@ def parse_clover_leaf_text(
         if entry is not None:
             entries.append(entry)
 
+    if period and ending_balance is not None:
+        entries.append(
+            _build_balance(
+                period[1], config.account_property_management, ending_balance, config
+            )
+        )
+
     return entries
 
 
@@ -119,12 +137,6 @@ def _parse_transaction_line(
     tx_date = datetime.datetime.strptime(date_match.group(0), "%m-%d-%Y").date()
 
     amounts = _extract_amounts(line)
-    if desc_upper.startswith("BEGINNING BALANCE"):
-        if not amounts:
-            return None
-        amount = _parse_amount(amounts[-1])
-        return _build_opening_balance(tx_date, amount, config)
-
     if len(amounts) < 2:
         return None
 
@@ -184,24 +196,20 @@ def _categorize_transaction(
     return None, None
 
 
-def _build_opening_balance(
-    tx_date: datetime.date, amount: Decimal, config: CloverLeafConfig
-) -> beancount.core.data.Transaction:
+def _build_balance(
+    tx_date: datetime.date,
+    account: str,
+    amount: Decimal,
+    config: CloverLeafConfig,
+) -> beancount.core.data.Balance:
     meta = beancount.core.data.new_metadata("beanout", 0)
-    postings = [
-        _posting(config.account_opening, _negate(amount), config),
-        _posting(config.account_property_management, amount, config),
-    ]
-    postings = _sorted_postings(postings)
-    return beancount.core.data.Transaction(
+    return beancount.core.data.Balance(
         meta,
         tx_date,
-        config.flag,
-        "Opening balance",
-        "Opening balance for property management account",
-        frozenset(config.tags),
-        beancount.core.data.EMPTY_SET,
-        postings,
+        account,
+        beancount.core.amount.Amount(amount, config.currency),
+        None,
+        None,
     )
 
 
@@ -297,7 +305,7 @@ def _parse_amount(amount_str: str) -> Decimal:
 
 
 def _render_entries(
-    entries: list[beancount.core.data.Transaction],
+    entries: list[beancount.core.data.Directive],
     config: Optional[CloverLeafConfig] = None,
 ) -> str:
     if config is None:
@@ -307,6 +315,9 @@ def _render_entries(
     for entry in entries:
         if lines:
             lines.append("")
+        if isinstance(entry, beancount.core.data.Balance):
+            lines.append(_render_balance(entry, config))
+            continue
         lines.extend(_render_transaction(entry, config))
     return "\n".join(lines) + ("\n" if lines else "")
 
@@ -330,7 +341,23 @@ def _render_transaction(
 
 
 def _format_account_line(prefix: str, amount: str, currency: str) -> str:
-    amount_end_col = 56
+    amount_end_col = 69
+    spaces = amount_end_col - len(prefix) - len(amount)
+    if spaces < 1:
+        spaces = 1
+    return f"{prefix}{' ' * spaces}{amount} {currency}"
+
+
+def _render_balance(
+    entry: beancount.core.data.Balance, config: CloverLeafConfig
+) -> str:
+    amount_str = _format_amount(entry.amount.number)
+    prefix = f"{entry.date.isoformat()} balance {entry.account}"
+    return _format_balance_line(prefix, amount_str, config.currency)
+
+
+def _format_balance_line(prefix: str, amount: str, currency: str) -> str:
+    amount_end_col = 69
     spaces = amount_end_col - len(prefix) - len(amount)
     if spaces < 1:
         spaces = 1
@@ -345,3 +372,40 @@ def _format_amount(value: Decimal) -> str:
     magnitude = -value if is_negative else value
     formatted = f"{magnitude:.2f}"
     return f"-{formatted}" if is_negative else formatted
+
+
+def _parse_statement_period(
+    text: str,
+) -> Optional[tuple[datetime.date, datetime.date]]:
+    match = _PERIOD_RE.search(text)
+    if not match:
+        return None
+    start_date = datetime.datetime.strptime(match.group(1), "%m-%d-%Y").date()
+    end_date = datetime.datetime.strptime(match.group(2), "%m-%d-%Y").date()
+    return start_date, end_date
+
+
+def _parse_summary_balances(text: str) -> tuple[Optional[Decimal], Optional[Decimal]]:
+    beginning = None
+    ending = None
+    in_summary = False
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        if line == "SUMMARY":
+            in_summary = True
+            continue
+        if in_summary and line == "TRANSACTION SUMMARY":
+            break
+        if not in_summary:
+            continue
+        if line.startswith("Beginning Balance"):
+            amounts = _extract_amounts(line)
+            if amounts:
+                beginning = _parse_amount(amounts[0])
+        if line.startswith("Ending Balance"):
+            amounts = _extract_amounts(line)
+            if amounts:
+                ending = _parse_amount(amounts[0])
+    return beginning, ending

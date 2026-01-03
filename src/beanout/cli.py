@@ -5,6 +5,7 @@ import pathlib
 import sys
 
 import beanout.clover_leaf
+import beanout.sheer_value
 import beanout.sps
 
 
@@ -46,6 +47,21 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output path or '-' for stdout (default).",
     )
 
+    sheer_value_parser = subparsers.add_parser(
+        "sheer-value",
+        help="Parse Sheer Value .pdf.txt files.",
+    )
+    sheer_value_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the Sheer Value .pdf.txt file.",
+    )
+    sheer_value_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+
     return parser
 
 
@@ -69,6 +85,18 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "clover-leaf":
         try:
             output = beanout.clover_leaf.render_clover_leaf_file(args.input)
+        except ValueError as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 2
+
+        if args.output == "-":
+            sys.stdout.write(output)
+        else:
+            pathlib.Path(args.output).write_text(output, encoding="utf-8")
+
+    if args.command == "sheer-value":
+        try:
+            output = beanout.sheer_value.render_sheer_value_file(args.input)
         except ValueError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2

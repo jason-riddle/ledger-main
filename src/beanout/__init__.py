@@ -1,3 +1,3 @@
 """Utilities for generating Beancount output from statements."""
 
-__all__ = ["cli", "clover_leaf", "sps"]
+__all__ = ["cli", "clover_leaf", "sheer_value", "sps"]
