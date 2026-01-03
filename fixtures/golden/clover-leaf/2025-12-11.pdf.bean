@@ -1,0 +1,47 @@
+2025-11-01 * "Opening balance" "Opening balance for property management account" #beangulp #imported
+  Equity:Opening-Balances                        -714.29 USD
+  Assets:Property-Management:CloverLeaf-PM        714.29 USD
+
+2025-11-06 * "Jason Riddle" "Memo: Owner Distribution" #beangulp #distributions #imported
+  Assets:Property-Management:CloverLeaf-PM      -1053.10 USD
+  Equity:Owner-Distributions:Owner-Draw          1053.10 USD
+
+2025-11-01 * "Tenant" "Memo: Rent - Rent (11-2025)" #2943-butterfly-palm #beangulp #imported
+  Income:Rent:2943-Butterfly-Palm               -1600.00 USD
+  Assets:Property-Management:CloverLeaf-PM       1600.00 USD
+
+2025-11-03 * "CloverLeaf Property Management" "Memo: Management Fee Expense - Management Fee Expense for 11/2025" #2943-butterfly-palm #beangulp #imported
+  Assets:Property-Management:CloverLeaf-PM       -117.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm    117.00 USD
+
+2025-11-03 * "CloverLeaf Property Management" "Memo: Management Fee Expense - Management Fee Expense Credit for 10/" #206-hoover-ave #beangulp #imported
+  Expenses:Management-Fees:206-Hoover-Ave          -3.00 USD
+  Assets:Property-Management:CloverLeaf-PM          3.00 USD
+
+2025-11-03 * "CloverLeaf Property Management" "Memo: Management Fee Expense - Management Fee Expense Credit for 10/" #206-hoover-ave #beangulp #imported
+  Expenses:Management-Fees:206-Hoover-Ave        -114.00 USD
+  Assets:Property-Management:CloverLeaf-PM        114.00 USD
+
+2025-11-04 * "CloverLeaf Property Management" "Memo: Utilities - Electric/Gas Bill - 10/6/25 to 10/10/25" #206-hoover-ave #beangulp #imported
+  Assets:Property-Management:CloverLeaf-PM        -26.70 USD
+  Expenses:Utilities:Electric:206-Hoover-Ave       26.70 USD
+
+2025-11-05 * "Contractor" "Memo: Lock Change - Lock change - Landlord compliance" #206-hoover-ave #beangulp #imported
+  Assets:Property-Management:CloverLeaf-PM       -334.49 USD
+  Expenses:Repairs:206-Hoover-Ave                 334.49 USD
+
+2025-11-07 * "Contractor" "Memo: General Repairs - Trash out" #206-hoover-ave #beangulp #imported
+  Assets:Property-Management:CloverLeaf-PM       -350.00 USD
+  Expenses:Repairs:206-Hoover-Ave                 350.00 USD
+
+2025-11-14 * "CloverLeaf Property Management" "Memo: Utilities - Water Bill - 10/6/25 to 10/22/25" #206-hoover-ave #beangulp #imported
+  Assets:Property-Management:CloverLeaf-PM        -35.52 USD
+  Expenses:Utilities:Water:206-Hoover-Ave          35.52 USD
+
+2025-11-17 * "Contractor" "Memo: EGM Maintenance - Measured current fridge 65in Heigh, 28in width," #206-hoover-ave #beangulp #imported
+  Assets:Property-Management:CloverLeaf-PM        -65.00 USD
+  Expenses:Repairs:206-Hoover-Ave                  65.00 USD
+
+2025-11-19 * "CloverLeaf Property Management" "Memo: Utilities - Electric/Gas Bill - 10/11/25 to 11/12/25" #206-hoover-ave #beangulp #imported
+  Assets:Property-Management:CloverLeaf-PM        -90.99 USD
+  Expenses:Utilities:Electric:206-Hoover-Ave       90.99 USD

@@ -4,6 +4,7 @@ import argparse
 import pathlib
 import sys
 
+import beanout.clover_leaf
 import beanout.sps
 
 
@@ -30,6 +31,21 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output path or '-' for stdout (default).",
     )
 
+    clover_leaf_parser = subparsers.add_parser(
+        "clover-leaf",
+        help="Parse CloverLeaf .pdf.txt files.",
+    )
+    clover_leaf_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the CloverLeaf .pdf.txt file.",
+    )
+    clover_leaf_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+
     return parser
 
 
@@ -41,6 +57,18 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "sps":
         try:
             output = beanout.sps.render_sps_file(args.input)
+        except ValueError as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 2
+
+        if args.output == "-":
+            sys.stdout.write(output)
+        else:
+            pathlib.Path(args.output).write_text(output, encoding="utf-8")
+
+    if args.command == "clover-leaf":
+        try:
+            output = beanout.clover_leaf.render_clover_leaf_file(args.input)
         except ValueError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2

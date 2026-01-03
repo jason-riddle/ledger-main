@@ -39,10 +39,12 @@
 - For each domain directory that contains transactions, create a `YYYY-*-All.bean` that includes every `.bean` file at that directory level, then have the yearly `YYYY.bean` include only those `*-All` files (not the individual transaction files).
 - In yearly `YYYY.bean` files, alphabetize the section headers and keep every line within a section in strict lexicographic order (including `include` lines and `;; TODO:` notes).
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
-- For multi-line transactions, list negative postings first, then positive postings.
+- For transactions, list negative postings first, then positive postings.
 - `YYYY-Operations-All.bean` should include the per-property `YYYY-PROPERTY-Transactions.bean` files.
 - Tag conventions for transactions:
+  - Amortization transactions: use the property tag plus `#amortization` only (no `#depreciation` or `#improvements`).
   - Buildings transactions: `#buildings`.
+  - Owner distributions: `#distributions`.
   - Improvements transactions (including loan-cost amortization entries in improvements): `#improvements`.
   - Escrow-related transactions: `#escrow` and `#mortgage`.
   - Operations transactions: `#operations`.

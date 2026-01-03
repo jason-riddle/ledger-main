@@ -24,7 +24,12 @@ class SPSConfig:
     payee: str = "SPS Mortgage Servicing"
     flag: str = "*"
     currency: str = "USD"
-    tags: tuple[str, ...] = ("beangulp", "mortgage")
+    tags: tuple[str, ...] = (
+        "2943-butterfly-palm",
+        "beangulp",
+        "imported",
+        "mortgage",
+    )
 
 
 _STATEMENT_DATE_RE = re.compile(r"Statement Date:(\d{2}/\d{2}/\d{4})")
