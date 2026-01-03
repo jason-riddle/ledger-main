@@ -171,18 +171,35 @@ def _parse_transaction_line(
         return None
 
     property_slug, property_label = _PROPERTY_MAP[property_display]
-    account = rest[2]
-    name = rest[3]
-    memo = rest[4] if len(rest) > 4 else ""
+    if len(rest) >= 5:
+        account = rest[2]
+        name = rest[3]
+        memo = rest[4] if len(rest) > 4 else ""
+    elif len(rest) == 4 and rest[1].isdigit():
+        account = rest[2]
+        name = rest[3]
+        memo = ""
+    else:
+        account = rest[1]
+        name = rest[2]
+        memo = rest[3] if len(rest) > 3 else ""
 
     if account == "Management":
         account = "Management Fees"
+
+    if account == "Management Fees":
         if name == "Sheer Value Property":
             name = config.payee_management
         if name == "Unit 1 - Sheer Value":
             name = "Unit 1 - Sheer Value Property Management"
 
-    if account in {"Rent Income", "Pet Rent", "Late Fee"}:
+    if account == "Cleaning and":
+        account = "Cleaning and Maintenance"
+
+    if account == "Owner":
+        account = "Owner Contribution"
+
+    if account in {"Rent Income", "Pet Rent", "Late Fee", "Security Deposit"}:
         tenant = None
         if name.startswith("Unit 1 - "):
             tenant = name.replace("Unit 1 - ", "", 1)
@@ -262,11 +279,29 @@ def _build_transaction(
             _posting(config.account_property_management, _negate(amount), config),
             _posting(config.account_owner_distribution, amount, config),
         ]
+    elif account == "Owner Contribution":
+        equity_account = "Equity:Owner-Contributions:Cash-Infusion"
+        postings = [
+            _posting(equity_account, _negate(amount), config),
+            _posting(config.account_property_management, amount, config),
+        ]
     elif account == "Repairs":
         expense_account = f"Expenses:Repairs:{property_slug}"
         postings = [
             _posting(config.account_property_management, _negate(amount), config),
             _posting(expense_account, amount, config),
+        ]
+    elif account in {"Cleaning and Maintenance", "Landscaping"}:
+        expense_account = f"Expenses:Cleaning---Maintenance:{property_slug}"
+        postings = [
+            _posting(config.account_property_management, _negate(amount), config),
+            _posting(expense_account, amount, config),
+        ]
+    elif account == "Security Deposit":
+        liability_account = f"Liabilities:Security-Deposits-Owed:{property_slug}"
+        postings = [
+            _posting(liability_account, _negate(amount), config),
+            _posting(config.account_property_management, amount, config),
         ]
     else:
         return None

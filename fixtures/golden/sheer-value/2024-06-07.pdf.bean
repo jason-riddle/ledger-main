@@ -1,5 +1,13 @@
 2024-05-09 balance Assets:Property-Management:SheerValue-PM   2000.00 USD
 
+2024-05-23 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Contribution" #2943-butterfly-palm #beangulp #imported
+  Equity:Owner-Contributions:Cash-Infusion                   -7397.00 USD
+  Assets:Property-Management:SheerValue-PM                    7397.00 USD
+
+2024-05-29 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Contribution" #2943-butterfly-palm #beangulp #imported
+  Equity:Owner-Contributions:Cash-Infusion                   -2800.75 USD
+  Assets:Property-Management:SheerValue-PM                    2800.75 USD
+
 2024-06-02 * "Unit 1 - Jonathan by Jonathan Robertson" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
   Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
   Assets:Property-Management:SheerValue-PM                    1550.00 USD

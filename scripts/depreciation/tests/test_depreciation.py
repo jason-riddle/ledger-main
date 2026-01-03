@@ -26,10 +26,10 @@ import sys
 import pytest
 import yaml  # type: ignore[import-untyped]
 
-# Add parent directory to path for imports
-sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
+# Add utils directory to path for imports
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "utils"))
 
-from utils import depreciation
+import depreciation
 
 
 @pytest.fixture
