@@ -122,6 +122,21 @@ To validate a JSONL file against this schema, you can use JSON Schema validation
 - **Node.js**: `ajv` package
 - **Online**: https://www.jsonschemavalidator.net/
 
+### Validation Script
+
+Use the included validation script to check JSONL files:
+
+```bash
+# Validate a JSONL file
+python schema/validate_jsonl.py path/to/file.jsonl
+
+# Verbose output
+python schema/validate_jsonl.py path/to/file.jsonl --verbose
+
+# Use a different schema file
+python schema/validate_jsonl.py path/to/file.jsonl --schema path/to/schema.json
+```
+
 Example Python validation:
 
 ```python
@@ -149,6 +164,24 @@ transaction = {
 
 jsonschema.validate(transaction, schema)
 ```
+
+## Converting JSONL to Beancount
+
+The included conversion script demonstrates the final step of the pipeline:
+
+```bash
+# Convert to stdout
+python schema/jsonl_to_bean.py input.jsonl
+
+# Convert to file
+python schema/jsonl_to_bean.py input.jsonl output.bean
+```
+
+The script will:
+- Skip failed transactions (ok=false)
+- Convert successful transactions to Beancount format
+- Report errors and warnings to stderr
+- Output Beancount text to stdout or file
 
 ## Usage in Pipeline
 
