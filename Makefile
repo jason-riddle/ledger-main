@@ -1,4 +1,4 @@
-UV_PYTHON_INSTALL_DIR ?= /home/jason/.cache/uv/python
+UV_PYTHON_INSTALL_DIR ?= $(HOME)/.cache/uv/python
 
 .PHONY: uv-sync test
 
