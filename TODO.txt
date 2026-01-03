@@ -168,7 +168,7 @@ Summary: Repository guidelines for ledger structure, naming, and workflows.
   59: - `plugins/find_duplicates.py` supports a `cash_only=true` flag to compare only `Assets:*` postings for amount/currency matching. Warning-level matches are logged and do not fail `bean-check`.
   60: - `plugins/find_duplicates.py` supports `property_match=true` to suppress duplicate matches when both transactions include different property tokens (tags like `#206-hoover-ave` or account segments like `...:206-Hoover-Ave`).
 
-File: ledger/_balances.bean
+File: ledger/balances.bean
 Summary: Balance assertions for accounts.
   40: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
   76: ;; TODO: Correct balance - no transactions exist to support 1.00 USD
@@ -179,7 +179,7 @@ Summary: Balance assertions for accounts.
   213: ;; TODO: Update SheerValue property management balance when available
   219: ;; TODO: Update mortgage balance when 2026 transactions are available
 
-File: ledger/_header.bean
+File: ledger/header.bean
 Summary: Shared Beancount header (options, plugins, account declarations).
   97: ;; TODO:
   100: ;; TODO:

@@ -1,15 +1,15 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `ledger/` contains the Beancount source files. `main.bean` is the entry point and includes `_header.bean`, yearly ledgers (`2022/`–`2026/`), and `_balances.bean` for assertions.
-- Year folders (e.g., `ledger/2025/`) hold the primary `_*year*.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/` (with `buildings/` and `improvements/`), `assets/` (with `buildings/` and `improvements/`), `operations/`, and other domain slices.
+- `ledger/` contains the Beancount source files. `main.bean` is the entry point and includes `header.bean`, yearly ledgers (`2022/`–`2026/`), and `balances.bean` for assertions.
+- Year folders (e.g., `ledger/2025/`) hold the primary `YYYY.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/` (with `buildings/` and `improvements/`), `assets/` (with `buildings/` and `improvements/`), `operations/`, and other domain slices.
 - Supporting notes live under `_notes/` with Markdown context files.
 - Environment metadata is in `devenv.nix`/`devenv.yaml` (Nix-based dev setup).
 - `src/beanout/` houses statement parsers and CLI utilities for generating Beancount output from `*.pdf.txt` files.
 
 ## Build, Test, and Development Commands
 - This repository is ledger data; there is no build step or runtime.
-- Before making any code changes, always read `ledger/_header.bean` first.
+- Before making any code changes, always read `ledger/header.bean` first.
 - If you have Beancount installed, validate the ledger with:
   - `bean-check ledger/main.bean` — verifies postings, balances, and plugin constraints.
   - `bean-report ledger/main.bean` — runs reports against the ledger.
@@ -35,7 +35,7 @@
   - Taxes: `YYYY-PROPERTY-Taxes.bean`.
   - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and vendor casing is `SheerValue` / `CloverLeaf` in statement filenames when used.
 - Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `depreciation/buildings/`, `depreciation/improvements/`, `assets/`, `assets/buildings/`, `assets/improvements/`, `operations/`).
-- Use `_`-prefixed files for includes (`_header.bean`), but year files are `YYYY.bean`.
+- Include files should be named descriptively; year files are `YYYY.bean`.
 - For each domain directory that contains transactions, create a `YYYY-*-All.bean` that includes every `.bean` file at that directory level, then have the yearly `YYYY.bean` include only those `*-All` files (not the individual transaction files).
 - In yearly `YYYY.bean` files, alphabetize the section headers and keep every line within a section in strict lexicographic order (including `include` lines and `;; TODO:` notes).
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
@@ -60,7 +60,7 @@
 ## Testing Guidelines
 - No shared automated test framework is configured, but some tests are standalone `uv` scripts.
 - Treat `bean-check` as the primary validation step before changes.
-- Prefer adding balance assertions to `_balances.bean` or year-specific files when introducing new accounts. Because `leafonly` is enabled, assertions must target leaf accounts.
+- Prefer adding balance assertions to `balances.bean` or year-specific files when introducing new accounts. Because `leafonly` is enabled, assertions must target leaf accounts.
 
 ## Plugin Notes
 - `plugins/find_duplicates.py` supports a `cash_only=true` flag to compare only `Assets:*` postings for amount/currency matching. Warning-level matches are logged and do not fail `bean-check`.

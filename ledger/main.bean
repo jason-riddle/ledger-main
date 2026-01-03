@@ -2,7 +2,7 @@
 ;; ALL - MAIN LEDGER
 ;;
 
-include "./_header.bean"
+include "./header.bean"
 
 ;;
 ;; PLUGINS
@@ -87,4 +87,4 @@ include "./2026/2026.bean"
 ;; BALANCE ASSERTIONS
 ;;
 
-include "./_balances.bean"
+include "./balances.bean"
