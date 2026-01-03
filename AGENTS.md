@@ -17,8 +17,8 @@
   - `UV_PYTHON_INSTALL_DIR=/home/jason/.cache/uv/python uv sync --dev`
   - `UV_PYTHON_INSTALL_DIR=/home/jason/.cache/uv/python uv run pytest -q`
 - For SPS parser goldens, run `scripts/bin/run-tests.sh` (set `PYTHON_BIN` to the nix Python if needed).
-- Plugin tests are runnable with `uv` (scripts include their own dependencies), e.g.:
-- `UV_PYTHON=/nix/store/3lll9y925zz9393sa59h653xik66srjb-python3-3.13.9/bin/python3.13 uv run plugins/tests/test_find_duplicates.py -q`.
+- Plugin tests are runnable with `uv`, e.g.:
+- `uv run src/plugins/tests/test_find_duplicates.py -q`.
 
 ## Coding Style & Naming Conventions
 - Use Beancount syntax and keep `.bean` files UTF-8 and ASCII-friendly.
