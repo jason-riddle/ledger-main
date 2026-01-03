@@ -1,8 +1,9 @@
 UV_PYTHON_INSTALL_DIR ?= $(HOME)/.cache/uv/python
 BEANCHECK_BIN ?= bean-check
 BEANQUERY_BIN ?= bean-query
+PRE_COMMIT_BIN ?= pre-commit
 
-.PHONY: uv-sync test plugins-test check
+.PHONY: uv-sync test plugins-test check pre-commit
 
 uv-sync:
 	UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv sync --dev
@@ -18,3 +19,6 @@ check:
 
 query:
 	PYTHONPATH=$(CURDIR) $(BEANQUERY_BIN) ledger/main.bean
+
+pre-commit:
+	PYTHONPATH=$(CURDIR) $(PRE_COMMIT_BIN) run --all-files

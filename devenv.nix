@@ -267,7 +267,7 @@
       enable = true;
       name = "bean-check-main";
       description = "Validate beancount ledger files";
-      entry = "${pkgs.beancount}/bin/bean-check";
+      entry = "env PYTHONPATH=. ${pkgs.beancount}/bin/bean-check";
       files = "^ledger/main\\.bean$";
       types = [ "text" ];
     };
@@ -276,7 +276,7 @@
       enable = true;
       name = "bean-check-combined";
       description = "Validate beancount ledger files";
-      entry = "${pkgs.beancount}/bin/bean-check";
+      entry = "env PYTHONPATH=. ${pkgs.beancount}/bin/bean-check";
       files = "combined\\.bean$";
       types = [ "text" ];
     };
