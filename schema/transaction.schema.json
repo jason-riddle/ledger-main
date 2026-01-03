@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/jason-riddle/ledger-main/schema/transaction.schema.json",
+  "title": "Beancount Transaction JSONL Schema",
+  "description": "Minimal schema for representing a transaction that will be converted to Beancount format. Each line in a JSONL file should be a valid JSON object matching this schema.",
+  "type": "object",
+  "properties": {
+    "ok": {
+      "type": "boolean",
+      "description": "Indicates whether the transaction was successfully parsed and validated"
+    },
+    "transaction": {
+      "type": "object",
+      "description": "The normalized transaction data when ok is true",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Transaction date in ISO 8601 format (YYYY-MM-DD)"
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "206-Hoover-Ave",
+            "2943-Butterfly-Palm",
+            "Unassigned"
+          ],
+          "description": "The property this transaction relates to"
+        },
+        "payee_payer": {
+          "type": "string",
+          "description": "The payee or payer for this transaction"
+        },
+        "description": {
+          "type": "string",
+          "description": "Transaction description or narration"
+        },
+        "entries": {
+          "type": "array",
+          "description": "Double-entry accounting postings (must have exactly 2 entries that sum to zero)",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "properties": {
+              "account": {
+                "type": "string",
+                "description": "Full Beancount account name (e.g., 'Assets:Property-Management:CloverLeaf-PM')"
+              },
+              "amount_usd": {
+                "type": "number",
+                "description": "Amount in USD (positive for debits, negative for credits)"
+              }
+            },
+            "required": [
+              "account",
+              "amount_usd"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "tags": {
+          "type": "array",
+          "description": "Optional list of tags for categorization (e.g., 'operations', '206-hoover-ave')",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "date",
+        "property",
+        "payee_payer",
+        "description",
+        "entries"
+      ],
+      "additionalProperties": false
+    },
+    "error": {
+      "type": "string",
+      "description": "Primary error message when ok is false"
+    },
+    "errors": {
+      "type": "array",
+      "description": "Optional list of warning or error messages even when ok is true",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional additional information about the transaction or parsing"
+    },
+    "raw_input": {
+      "type": "string",
+      "description": "Optional copy of the original input, useful for debugging when ok is false"
+    }
+  },
+  "required": [
+    "ok"
+  ],
+  "oneOf": [
+    {
+      "description": "Success case: ok is true and transaction is present",
+      "properties": {
+        "ok": {
+          "const": true
+        }
+      },
+      "required": [
+        "transaction"
+      ]
+    },
+    {
+      "description": "Failure case: ok is false and error is present",
+      "properties": {
+        "ok": {
+          "const": false
+        }
+      },
+      "required": [
+        "error"
+      ]
+    }
+  ]
+}
