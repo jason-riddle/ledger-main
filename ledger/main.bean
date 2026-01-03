@@ -23,6 +23,12 @@ plugin "plugins.find_duplicates" "
 
 ; Official plugins
 
+; TODO
+plugin "beancount.plugins.check_drained"
+
+; TODO
+plugin "beancount.plugins.close_tree"
+
 ; Validates that currencies held at cost aren't ever converted at price and vice-versa
 plugin "beancount.plugins.coherent_cost"
 
