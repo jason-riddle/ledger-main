@@ -134,7 +134,7 @@ with open('schema/transaction.schema.json') as f:
 
 # Validate a transaction
 transaction = {
-    "ok": true,
+    "ok": True,
     "transaction": {
         "date": "2024-01-15",
         "property": "206-Hoover-Ave",

@@ -12,6 +12,12 @@ import json
 import sys
 from pathlib import Path
 
+try:
+    import jsonschema
+    JSONSCHEMA_AVAILABLE = True
+except ImportError:
+    JSONSCHEMA_AVAILABLE = False
+
 
 def load_schema(schema_path: Path) -> dict:
     """Load the JSON schema from file."""
@@ -26,9 +32,7 @@ def validate_jsonl_file(jsonl_path: Path, schema: dict) -> tuple[int, int, list[
     Returns:
         tuple: (valid_count, invalid_count, errors)
     """
-    try:
-        import jsonschema
-    except ImportError:
+    if not JSONSCHEMA_AVAILABLE:
         print(
             "Error: jsonschema library not found. Install with: pip install jsonschema",
             file=sys.stderr,
