@@ -13,6 +13,9 @@
 - If you have Beancount installed, validate the ledger with:
   - `bean-check ledger/main.bean` — verifies postings, balances, and plugin constraints.
   - `bean-report ledger/main.bean` — runs reports against the ledger.
+- For local Python tooling (parser/tests), use `uv`:
+  - `UV_PYTHON_INSTALL_DIR=/home/jason/.cache/uv/python uv sync --dev`
+  - `UV_PYTHON_INSTALL_DIR=/home/jason/.cache/uv/python uv run pytest -q`
 - For SPS parser goldens, run `scripts/run-tests.sh` (set `PYTHON_BIN` to the nix Python if needed).
 - Plugin tests are runnable with `uv` (scripts include their own dependencies), e.g.:
   - `UV_PYTHON=/nix/store/3lll9y925zz9393sa59h653xik66srjb-python3-3.13.9/bin/python3.13 uv run ledger/plugins/tests/test_find_duplicates.py -q`.

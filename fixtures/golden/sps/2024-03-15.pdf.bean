@@ -1,0 +1,17 @@
+2024-02-14 balance Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm     4913.88 USD
+2024-02-14 balance Liabilities:Mortgages:2943-Butterfly-Palm            -101545.21 USD
+2024-02-14 balance Expenses:Mortgage-Interest:2943-Butterfly-Palm          -729.86 USD
+
+2024-02-23 * "SPS Mortgage Servicing" "Memo: County Tax" #beangulp #mortgage
+  Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                     -3587.84 USD
+  Expenses:Property-Taxes:2943-Butterfly-Palm                              3587.84 USD
+
+2024-03-01 * "SPS Mortgage Servicing" "Memo: Mortgage" #beangulp #mortgage
+  Equity:Owner-Contributions:Cash-Infusion                                -1148.28 USD
+  Liabilities:Mortgages:2943-Butterfly-Palm                                  67.37 USD
+  Expenses:Mortgage-Interest:2943-Butterfly-Palm                            729.86 USD
+  Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm                       351.05 USD
+
+2024-03-15 balance Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm     1677.09 USD
+2024-03-15 balance Liabilities:Mortgages:2943-Butterfly-Palm            -101477.84 USD
+2024-03-15 balance Expenses:Mortgage-Interest:2943-Butterfly-Palm                0 USD

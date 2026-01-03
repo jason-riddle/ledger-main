@@ -20,6 +20,7 @@ class SPSConfig:
     account_escrow: str = "Assets:Escrow:Taxes---Insurance:2943-Butterfly-Palm"
     account_equity: str = "Equity:Owner-Contributions:Cash-Infusion"
     account_insurance: str = "Expenses:Insurance:2943-Butterfly-Palm"
+    account_property_taxes: str = "Expenses:Property-Taxes:2943-Butterfly-Palm"
     payee: str = "SPS Mortgage Servicing"
     flag: str = "*"
     currency: str = "USD"
@@ -339,6 +340,14 @@ def _build_transaction(
         postings = [
             _posting(config.account_escrow, escrow_units, config),
             _posting(config.account_insurance, expense_units, config),
+        ]
+    elif "COUNTY TAX" in desc_upper:
+        memo = "Memo: County Tax"
+        escrow_units = _negate(escrow)
+        expense_units = _negate(escrow_units)
+        postings = [
+            _posting(config.account_escrow, escrow_units, config),
+            _posting(config.account_property_taxes, expense_units, config),
         ]
     elif "SPECIAL DEPOSIT" in desc_upper:
         memo = "Memo: Special Deposit"

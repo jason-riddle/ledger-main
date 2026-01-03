@@ -1,0 +1,26 @@
+[project]
+name = "ledger-main"
+version = "0.1.0"
+description = "Ledger data and statement parsers for Beancount."
+requires-python = ">=3.13"
+dependencies = [
+  "beancount",
+]
+
+[project.scripts]
+beanout = "beanout.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
