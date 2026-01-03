@@ -32,6 +32,12 @@ plugin "beancount.plugins.close_tree"
 ; Validates that currencies held at cost aren't ever converted at price and vice-versa
 plugin "beancount.plugins.coherent_cost"
 
+; TODO
+plugin "beancount.plugins.commodity_attr" "{
+  'category': ['Education'],
+  'currency': ['USD']
+}"
+
 ; Validates that there are no duplicate transactions
 plugin "beancount.plugins.noduplicates"
 
