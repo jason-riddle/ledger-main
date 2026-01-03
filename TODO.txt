@@ -162,11 +162,11 @@ No-Year / No-Property
 ---------------------
 File: AGENTS.md
 Summary: Repository guidelines for ledger structure, naming, and workflows.
-  16:   - `UV_PYTHON=/nix/store/3lll9y925zz9393sa59h653xik66srjb-python3-3.13.9/bin/python3.13 uv run ledger/plugins/tests/test_find_duplicates.py -q`.
+  16:   - `UV_PYTHON=/nix/store/3lll9y925zz9393sa59h653xik66srjb-python3-3.13.9/bin/python3.13 uv run plugins/tests/test_find_duplicates.py -q`.
   35: - In yearly `YYYY.bean` files, alphabetize the section headers and keep every line within a section in strict lexicographic order (including `include` lines and `;; TODO:` notes).
   51:   - TODOs use `;; TODO:` and live near the top of files or sections they apply to.
-  59: - `ledger/plugins/find_duplicates.py` supports a `cash_only=true` flag to compare only `Assets:*` postings for amount/currency matching. Warning-level matches are logged and do not fail `bean-check`.
-  60: - `ledger/plugins/find_duplicates.py` supports `property_match=true` to suppress duplicate matches when both transactions include different property tokens (tags like `#206-hoover-ave` or account segments like `...:206-Hoover-Ave`).
+  59: - `plugins/find_duplicates.py` supports a `cash_only=true` flag to compare only `Assets:*` postings for amount/currency matching. Warning-level matches are logged and do not fail `bean-check`.
+  60: - `plugins/find_duplicates.py` supports `property_match=true` to suppress duplicate matches when both transactions include different property tokens (tags like `#206-hoover-ave` or account segments like `...:206-Hoover-Ave`).
 
 File: ledger/_balances.bean
 Summary: Balance assertions for accounts.
@@ -189,17 +189,17 @@ Summary: Main ledger file (includes header, plugins, yearly ledgers, balances).
   15: plugin "plugins.find_duplicates" "
   30: plugin "beancount.plugins.noduplicates"
 
-File: ledger/plugins/find_duplicates.py
+File: plugins/find_duplicates.py
 Summary: Beancount plugin that detects likely duplicate transactions.
   217:         f"{txn_b.date} likely duplicates {txn_a.date}"
   223:     source = txn_b.meta or data.new_metadata("<find_duplicates>", 0)
 
-File: ledger/plugins/README.md
+File: plugins/README.md
 Summary: Plugin documentation for find_duplicates.
   3: ## find_duplicates
   10: plugin "plugins.find_duplicates" "
 
-File: ledger/plugins/tests/test_find_duplicates.py
+File: plugins/tests/test_find_duplicates.py
 Summary: Tests for the find_duplicates plugin.
   25: from plugins import find_duplicates  # type: ignore  # noqa: E402
   57: def test_warns_on_likely_duplicates(caplog):

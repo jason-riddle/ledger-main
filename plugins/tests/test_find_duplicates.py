@@ -19,8 +19,8 @@ import beancount.core.data as data
 from beancount.core import amount as bc_amount
 from beancount.core import number as bc_number
 
-LEDGER_DIR = pathlib.Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(LEDGER_DIR))
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT))
 
 from plugins import find_duplicates  # type: ignore  # noqa: E402
 

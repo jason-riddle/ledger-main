@@ -18,7 +18,7 @@
   - `UV_PYTHON_INSTALL_DIR=/home/jason/.cache/uv/python uv run pytest -q`
 - For SPS parser goldens, run `scripts/bin/run-tests.sh` (set `PYTHON_BIN` to the nix Python if needed).
 - Plugin tests are runnable with `uv` (scripts include their own dependencies), e.g.:
-  - `UV_PYTHON=/nix/store/3lll9y925zz9393sa59h653xik66srjb-python3-3.13.9/bin/python3.13 uv run ledger/plugins/tests/test_find_duplicates.py -q`.
+- `UV_PYTHON=/nix/store/3lll9y925zz9393sa59h653xik66srjb-python3-3.13.9/bin/python3.13 uv run plugins/tests/test_find_duplicates.py -q`.
 
 ## Coding Style & Naming Conventions
 - Use Beancount syntax and keep `.bean` files UTF-8 and ASCII-friendly.
@@ -63,8 +63,8 @@
 - Prefer adding balance assertions to `_balances.bean` or year-specific files when introducing new accounts. Because `leafonly` is enabled, assertions must target leaf accounts.
 
 ## Plugin Notes
-- `ledger/plugins/find_duplicates.py` supports a `cash_only=true` flag to compare only `Assets:*` postings for amount/currency matching. Warning-level matches are logged and do not fail `bean-check`.
-- `ledger/plugins/find_duplicates.py` supports `property_match=true` to suppress duplicate matches when both transactions include different property tokens (tags like `#206-hoover-ave` or account segments like `...:206-Hoover-Ave`).
+- `plugins/find_duplicates.py` supports a `cash_only=true` flag to compare only `Assets:*` postings for amount/currency matching. Warning-level matches are logged and do not fail `bean-check`.
+- `plugins/find_duplicates.py` supports `property_match=true` to suppress duplicate matches when both transactions include different property tokens (tags like `#206-hoover-ave` or account segments like `...:206-Hoover-Ave`).
 
 ## Commit & Pull Request Guidelines
 - Recent commit messages are short, imperative phrases (e.g., “Add ledger”, “Small changes”). Keep messages concise and specific.
