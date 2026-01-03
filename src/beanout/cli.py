@@ -31,6 +31,11 @@ def build_parser() -> argparse.ArgumentParser:
         default="-",
         help="Output path or '-' for stdout (default).",
     )
+    sps_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
 
     clover_leaf_parser = subparsers.add_parser(
         "clover-leaf",
@@ -45,6 +50,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--output",
         default="-",
         help="Output path or '-' for stdout (default).",
+    )
+    clover_leaf_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
     )
 
     sheer_value_parser = subparsers.add_parser(
@@ -61,6 +71,11 @@ def build_parser() -> argparse.ArgumentParser:
         default="-",
         help="Output path or '-' for stdout (default).",
     )
+    sheer_value_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
 
     return parser
 
@@ -70,33 +85,26 @@ def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
 
-    if args.command == "sps":
+    # Map command to render functions (bean and jsonl)
+    render_funcs = {
+        "sps": (
+            beanout.sps.render_sps_file,
+            beanout.sps.render_sps_file_to_jsonl,
+        ),
+        "clover-leaf": (
+            beanout.clover_leaf.render_clover_leaf_file,
+            beanout.clover_leaf.render_clover_leaf_file_to_jsonl,
+        ),
+        "sheer-value": (
+            beanout.sheer_value.render_sheer_value_file,
+            beanout.sheer_value.render_sheer_value_file_to_jsonl,
+        ),
+    }
+
+    if args.command in render_funcs:
+        render_func = render_funcs[args.command][1 if args.jsonl else 0]
         try:
-            output = beanout.sps.render_sps_file(args.input)
-        except ValueError as exc:
-            print(f"error: {exc}", file=sys.stderr)
-            return 2
-
-        if args.output == "-":
-            sys.stdout.write(output)
-        else:
-            pathlib.Path(args.output).write_text(output, encoding="utf-8")
-
-    if args.command == "clover-leaf":
-        try:
-            output = beanout.clover_leaf.render_clover_leaf_file(args.input)
-        except ValueError as exc:
-            print(f"error: {exc}", file=sys.stderr)
-            return 2
-
-        if args.output == "-":
-            sys.stdout.write(output)
-        else:
-            pathlib.Path(args.output).write_text(output, encoding="utf-8")
-
-    if args.command == "sheer-value":
-        try:
-            output = beanout.sheer_value.render_sheer_value_file(args.input)
+            output = render_func(args.input)
         except ValueError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2

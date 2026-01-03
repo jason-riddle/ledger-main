@@ -10,6 +10,8 @@ import beancount.core.amount
 import beancount.core.data
 import beancount.core.number
 
+import beanout.jsonl
+
 
 @dataclasses.dataclass(frozen=True)
 class SPSConfig:
@@ -85,6 +87,36 @@ def render_sps_file(filepath: str, config: Optional[SPSConfig] = None) -> str:
         raise ValueError("Input must be a .pdf.txt file")
     with open(filepath, "r", encoding="utf-8") as handle:
         return render_sps_text(handle.read(), config=config)
+
+
+def render_sps_text_to_jsonl(text: str, config: Optional[SPSConfig] = None) -> str:
+    """Render SPS statement text into JSONL format.
+
+    Args:
+        text: Full text extracted from an SPS PDF.
+        config: Optional SPSConfig for account defaults.
+
+    Returns:
+        JSONL-formatted text.
+    """
+    entries = parse_sps_text(text, config=config)
+    return beanout.jsonl.directives_to_jsonl(entries)
+
+
+def render_sps_file_to_jsonl(filepath: str, config: Optional[SPSConfig] = None) -> str:
+    """Render a *.pdf.txt SPS file into JSONL format.
+
+    Args:
+        filepath: Path to the SPS PDF text file.
+        config: Optional SPSConfig for account defaults.
+
+    Returns:
+        JSONL-formatted text.
+    """
+    if not filepath.endswith(".pdf.txt"):
+        raise ValueError("Input must be a .pdf.txt file")
+    with open(filepath, "r", encoding="utf-8") as handle:
+        return render_sps_text_to_jsonl(handle.read(), config=config)
 
 
 def parse_sps_text(

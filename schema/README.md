@@ -33,7 +33,7 @@ Each transaction object has the following top-level properties:
     - `"Unassigned"`
   - **`payee_payer`** (string): The payee or payer
   - **`description`** (string): Transaction description/narration
-  - **`entries`** (array): Exactly 2 posting entries for double-entry accounting
+  - **`entries`** (array): At least 2 posting entries for double-entry accounting
     - Each entry has:
       - **`account`** (string): Full Beancount account name
       - **`amount_usd`** (number): Amount in USD (positive for debits, negative for credits)
