@@ -49,6 +49,8 @@ plugin "beancount.plugins.leafonly"
 
 ; Third-party plugins
 
+plugin "beancount_docverif"
+
 ; Generates periodic transactions based on recurring patterns in transaction metadata
 ; plugin "beancount_periodic.recur" ; Removed due to unreliability
 

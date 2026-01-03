@@ -48,8 +48,12 @@
       pkgs.python313Packages.beanquery
       pkgs.python313Packages.fava
 
+      pkgs.python313Packages.beancount-docverif
+
       pkgs.python313Packages.regex
       pkgs.python313Packages.pytest
+
+      pkgs.beanprice
 
       # pdftotext
       pkgs.poppler-utils
