@@ -100,4 +100,4 @@ def directives_to_jsonl(
             obj = transaction_to_jsonl_object(directive)
             lines.append(json.dumps(obj, ensure_ascii=False))
 
-    return "\n".join(lines) + ("\n" if lines else "")
+    return "\n".join(lines)
