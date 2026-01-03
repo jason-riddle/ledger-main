@@ -31,6 +31,11 @@ def build_parser() -> argparse.ArgumentParser:
         default="-",
         help="Output path or '-' for stdout (default).",
     )
+    sps_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
 
     clover_leaf_parser = subparsers.add_parser(
         "clover-leaf",
@@ -45,6 +50,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--output",
         default="-",
         help="Output path or '-' for stdout (default).",
+    )
+    clover_leaf_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
     )
 
     sheer_value_parser = subparsers.add_parser(
@@ -61,6 +71,11 @@ def build_parser() -> argparse.ArgumentParser:
         default="-",
         help="Output path or '-' for stdout (default).",
     )
+    sheer_value_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
 
     return parser
 
@@ -72,7 +87,10 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "sps":
         try:
-            output = beanout.sps.render_sps_file(args.input)
+            if args.jsonl:
+                output = beanout.sps.render_sps_file_to_jsonl(args.input)
+            else:
+                output = beanout.sps.render_sps_file(args.input)
         except ValueError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2
@@ -84,7 +102,10 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "clover-leaf":
         try:
-            output = beanout.clover_leaf.render_clover_leaf_file(args.input)
+            if args.jsonl:
+                output = beanout.clover_leaf.render_clover_leaf_file_to_jsonl(args.input)
+            else:
+                output = beanout.clover_leaf.render_clover_leaf_file(args.input)
         except ValueError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2
@@ -96,7 +117,10 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "sheer-value":
         try:
-            output = beanout.sheer_value.render_sheer_value_file(args.input)
+            if args.jsonl:
+                output = beanout.sheer_value.render_sheer_value_file_to_jsonl(args.input)
+            else:
+                output = beanout.sheer_value.render_sheer_value_file(args.input)
         except ValueError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2

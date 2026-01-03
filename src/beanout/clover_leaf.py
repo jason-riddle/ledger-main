@@ -12,6 +12,8 @@ import beancount.core.amount
 import beancount.core.data
 import beancount.core.number
 
+import beanout.jsonl
+
 
 @dataclasses.dataclass(frozen=True)
 class CloverLeafConfig:
@@ -53,6 +55,24 @@ def render_clover_leaf_file(
         raise ValueError("Input must be a .pdf.txt file")
     with open(filepath, "r", encoding="utf-8") as handle:
         return render_clover_leaf_text(handle.read(), config=config)
+
+
+def render_clover_leaf_text_to_jsonl(
+    text: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render CloverLeaf statement text into JSONL format."""
+    entries = parse_clover_leaf_text(text, config=config)
+    return beanout.jsonl.directives_to_jsonl(entries)
+
+
+def render_clover_leaf_file_to_jsonl(
+    filepath: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render a *.pdf.txt CloverLeaf file into JSONL format."""
+    if not filepath.endswith(".pdf.txt"):
+        raise ValueError("Input must be a .pdf.txt file")
+    with open(filepath, "r", encoding="utf-8") as handle:
+        return render_clover_leaf_text_to_jsonl(handle.read(), config=config)
 
 
 def parse_clover_leaf_text(

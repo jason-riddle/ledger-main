@@ -2,7 +2,7 @@
 name = "ledger-main"
 version = "0.1.0"
 description = "Ledger data and statement parsers for Beancount."
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
   "beancount",
   "beancount-docverif",

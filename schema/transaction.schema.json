@@ -37,9 +37,8 @@
         },
         "entries": {
           "type": "array",
-          "description": "Double-entry accounting postings (must have exactly 2 entries that sum to zero)",
+          "description": "Double-entry accounting postings (must have at least 2 entries that sum to zero)",
           "minItems": 2,
-          "maxItems": 2,
           "items": {
             "type": "object",
             "properties": {

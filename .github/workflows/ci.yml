@@ -132,3 +132,43 @@ jobs:
           # Run mypy on all Python files in scripts/
           # Note: Only checking scripts/ directory as that's where Python code lives
           uv tool run mypy scripts/ --ignore-missing-imports
+
+  jsonl-validation:
+    name: JSONL Schema Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install jsonschema
+
+      - name: Validate all JSONL files
+        run: |
+          # Find all .jsonl files and validate them against the schema
+          errors=0
+          jsonl_files=$(find . -name "*.jsonl" -type f)
+          
+          if [ -z "$jsonl_files" ]; then
+            echo "No JSONL files found to validate"
+            exit 0
+          fi
+          
+          for file in $jsonl_files; do
+            echo "Validating $file"
+            if ! python schema/validate_jsonl.py "$file"; then
+              errors=$((errors + 1))
+            fi
+          done
+          
+          if [ $errors -gt 0 ]; then
+            echo "Found $errors file(s) with validation errors"
+            exit 1
+          fi
+          echo "All JSONL files are valid"
