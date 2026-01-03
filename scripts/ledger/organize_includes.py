@@ -93,7 +93,7 @@ def main() -> int:
         print("Error: choose exactly one of --check or --write.", file=sys.stderr)
         return 2
 
-    repo_root = pathlib.Path(__file__).resolve().parents[1]
+    repo_root = pathlib.Path(__file__).resolve().parents[2]
     file_paths: list[pathlib.Path] = []
 
     if args.organize_file:

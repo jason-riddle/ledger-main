@@ -17,8 +17,8 @@ match the expected IRS depreciation calculations using:
 - Mid-month convention for first/last year
 
 Usage:
-    ./scripts/verify_depreciation.py
-    uv run scripts/verify_depreciation.py
+    ./scripts/depreciation/verify_depreciation.py
+    uv run scripts/depreciation/verify_depreciation.py
 
 Exit codes:
     0 - All depreciation calculations verified successfully
@@ -310,7 +310,7 @@ def main():
     """Main entry point."""
     # Determine ledger path
     script_dir = pathlib.Path(__file__).parent
-    repo_root = script_dir.parent
+    repo_root = script_dir.parent.parent
     ledger_path = repo_root / "ledger" / "main.bean"
 
     try:

@@ -17,8 +17,8 @@ match the expected amortization calculations using standard loan formulas:
 - New Balance = Old Balance - Principal Payment
 
 Usage:
-    ./scripts/verify_amortization.py
-    uv run scripts/verify_amortization.py
+    ./scripts/amortization/verify_amortization.py
+    uv run scripts/amortization/verify_amortization.py
 
 Exit codes:
     0 - All amortization calculations verified successfully
@@ -336,7 +336,7 @@ def main():
     """Main entry point."""
     # Determine ledger path
     script_dir = pathlib.Path(__file__).parent
-    repo_root = script_dir.parent
+    repo_root = script_dir.parent.parent
     ledger_path = repo_root / "ledger" / "main.bean"
 
     try:

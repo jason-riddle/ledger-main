@@ -25,10 +25,10 @@ Verifies that depreciation transactions match IRS rules:
 **Usage:**
 ```bash
 # Run with uv (recommended)
-uv run scripts/verify_depreciation.py
+uv run scripts/depreciation/verify_depreciation.py
 
 # Or run directly
-./scripts/verify_depreciation.py
+./scripts/depreciation/verify_depreciation.py
 ```
 
 **Example output:**
@@ -49,10 +49,10 @@ Verifies mortgage payment calculations using standard amortization formulas:
 **Usage:**
 ```bash
 # Run with uv (recommended)
-uv run scripts/verify_amortization.py
+uv run scripts/amortization/verify_amortization.py
 
 # Or run directly
-./scripts/verify_amortization.py
+./scripts/amortization/verify_amortization.py
 ```
 
 **Example output:**
@@ -78,26 +78,26 @@ Calculates amortization details and emits JSON:
 **Usage:**
 ```bash
 # Summary only
-uv run scripts/calculate_amortization.py \
+uv run scripts/amortization/calculate_amortization.py \
   --principal 102500 --annual-rate 8.625 --term-years 30
 
 # Point lookup by month
-uv run scripts/calculate_amortization.py \
+uv run scripts/amortization/calculate_amortization.py \
   --principal 102500 --annual-rate 8.625 --term-years 30 \
   --month 12
 
 # Point lookup by date (requires start-date)
-uv run scripts/calculate_amortization.py \
+uv run scripts/amortization/calculate_amortization.py \
   --principal 102500 --annual-rate 8.625 --term-years 30 \
   --start-date 2023-01 --date 2024-06
 
 # Range by month
-uv run scripts/calculate_amortization.py \
+uv run scripts/amortization/calculate_amortization.py \
   --principal 102500 --annual-rate 8.625 --term-years 30 \
   --from-month 1 --to-month 12
 
 # Full schedule
-uv run scripts/calculate_amortization.py \
+uv run scripts/amortization/calculate_amortization.py \
   --principal 102500 --annual-rate 8.625 --term-years 30 \
   --full-schedule
 ```
@@ -112,7 +112,7 @@ Generates Beancount depreciation postings (straight-line, mid-month convention):
 **Usage:**
 ```bash
 # Yearly postings (monthly)
-uv run scripts/calculate_depreciation.py \
+uv run scripts/depreciation/calculate_depreciation.py \
   --asset-name "2943 Butterfly Palm Building" \
   --placed-in-service 2023-01-01 \
   --cost-basis 164791 \
@@ -123,7 +123,7 @@ uv run scripts/calculate_depreciation.py \
   --first-year-mode monthly
 
 # First-year annual posting (rounded to whole dollars)
-uv run scripts/calculate_depreciation.py \
+uv run scripts/depreciation/calculate_depreciation.py \
   --asset-name "206 Hoover Ave Building" \
   --placed-in-service 2023-05-26 \
   --cost-basis 73358 \
@@ -136,7 +136,7 @@ uv run scripts/calculate_depreciation.py \
   --starting-accumulated 0
 
 # Date range with an end-date cut-off
-uv run scripts/calculate_depreciation.py \
+uv run scripts/depreciation/calculate_depreciation.py \
   --asset-name "2943 Butterfly Palm Water Heater" \
   --placed-in-service 2024-05-08 \
   --cost-basis 2800.75 \
@@ -151,7 +151,7 @@ uv run scripts/calculate_depreciation.py \
 
 ### Utility Modules
 
-#### `utils/depreciation.py`
+#### `depreciation/utils/depreciation.py`
 IRS depreciation calculation functions:
 - `calculate_annual_depreciation(cost_basis, recovery_years)`
 - `calculate_monthly_depreciation(cost_basis, recovery_years)`
@@ -159,7 +159,7 @@ IRS depreciation calculation functions:
 - `calculate_last_year_depreciation(cost_basis, recovery_years, month_placed)`
 - `calculate_remaining_basis(cost_basis, accumulated_depreciation)`
 
-#### `utils/amortization.py`
+#### `amortization/utils/amortization.py`
 Loan amortization calculation functions:
 - `calculate_monthly_payment(principal, annual_rate, term_years)`
 - `calculate_interest_payment(balance, annual_rate)`
@@ -172,13 +172,13 @@ Run unit tests to verify the utility functions:
 
 ```bash
 # Test depreciation utilities
-uv run scripts/tests/test_depreciation.py
+uv run scripts/depreciation/tests/test_depreciation.py
 
 # Test amortization utilities
-uv run scripts/tests/test_amortization.py
+uv run scripts/amortization/tests/test_amortization.py
 
 # Or run all tests
-uv run pytest scripts/tests/
+uv run pytest scripts/amortization/tests/ scripts/depreciation/tests/
 ```
 
 ## Implementation Details
@@ -217,7 +217,7 @@ Where:
 
 ## Test Fixtures
 
-Test fixtures are stored in `scripts/tests/fixtures/`:
+Test fixtures are stored in `scripts/amortization/tests/fixtures/` and\n+`scripts/depreciation/tests/fixtures/`:
 - `depreciation_fixtures.yaml` - Expected values for known assets
 - `amortization_fixtures.yaml` - Expected values for mortgage payments
 
