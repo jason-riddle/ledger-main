@@ -53,13 +53,6 @@ plugin "beancount.plugins.leafonly"
 ; plugin "beancount_periodic.recur" ; Removed due to unreliability
 
 ;;
-;; PROPERTY PURCHASE
-;;
-
-; include "./2023/assets/buildings/2023-206-Hoover-Ave-2023-05-26-Property-Purchase.bean"
-; include "./2022/assets/buildings/2022-2943-Butterfly-Palm-2022-10-21-Property-Purchase.bean"
-
-;;
 ;; 2022
 ;;
 
