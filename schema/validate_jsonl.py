@@ -101,7 +101,7 @@ def main() -> int:
     print(f"Validating: {args.jsonl_file}")
     valid_count, invalid_count, errors = validate_jsonl_file(args.jsonl_file, schema)
 
-    print(f"\nResults:")
+    print("\nResults:")
     print(f"  ✓ Valid transactions:   {valid_count}")
     print(f"  ✗ Invalid transactions: {invalid_count}")
 
@@ -111,7 +111,7 @@ def main() -> int:
             for error in errors:
                 print(f"  {error}")
         else:
-            print(f"\nShowing first 10 errors (use --verbose to see all):")
+            print("\nShowing first 10 errors (use --verbose to see all):")
             for error in errors[:10]:
                 print(f"  {error}")
 
