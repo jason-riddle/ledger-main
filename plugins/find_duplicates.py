@@ -21,13 +21,24 @@ _WEIGHTS = {
     "account": 0.2,
 }
 
+# Default matching thresholds and behavior:
+# - error_score_threshold/warn_score_threshold: minimum confidence score to emit errors or warnings.
+# - date_window_days: max days between transactions considered for a candidate pair (and date score decay).
+# - amount_tolerance: allowed absolute net-amount delta for a full amount match.
+# - cash_accounts_only: when true, limit amount/currency matching to Assets:* postings so the
+#   detector keys off the cash-side postings (typically the most stable signal) even when non-cash
+#   categorization differs between sources or imports.
+#   (e.g., a txn with only Income/Expense postings is excluded when true; included when false).
+# - require_property_match: when true, require matching property tokens (regex ^[0-9]{3,4}-[A-Za-z].*)
+#   gathered from tags like #206-hoover-ave or account segments like Assets:...:2943-Butterfly-Palm:...
+#   (e.g., #206-hoover-ave vs #2943-butterfly-palm blocks a match when true; allowed when false).
 _DEFAULT_CONFIG = {
-    "error_threshold": 0.95,
-    "warn_threshold": 0.80,
-    "window": 3,
-    "tolerance": decimal.Decimal("0.03"),
-    "cash_only": False,
-    "property_match": False,
+    "error_score_threshold": 0.95,
+    "warn_score_threshold": 0.80,
+    "date_window_days": 3,
+    "amount_tolerance": decimal.Decimal("0.03"),
+    "cash_accounts_only": False,
+    "require_property_match": False,
 }
 
 DuplicateError = collections.namedtuple("DuplicateError", "source message entry")
@@ -52,11 +63,11 @@ def plugin(entries, unused_options_map, config_str=""):
     index = index_transactions(txns, cfg)
 
     for group in index.values():
-        for txn_a, txn_b in candidate_pairs(group, cfg["window"]):
+        for txn_a, txn_b in candidate_pairs(group, cfg["date_window_days"]):
             score, parts = confidence_score(txn_a, txn_b, cfg)
-            if score >= cfg["error_threshold"]:
+            if score >= cfg["error_score_threshold"]:
                 diagnostics.append(_error(txn_b, txn_a, score, parts))
-            elif score >= cfg["warn_threshold"]:
+            elif score >= cfg["warn_score_threshold"]:
                 _warn(txn_b, txn_a, score, parts)
 
     return entries, diagnostics
@@ -65,17 +76,26 @@ def plugin(entries, unused_options_map, config_str=""):
 def parse_config(config_str):
     """Parse the plugin configuration string into a dict."""
     cfg = dict(_DEFAULT_CONFIG)
+    aliases = {
+        "warn_threshold": "warn_score_threshold",
+        "error_threshold": "error_score_threshold",
+        "window": "date_window_days",
+        "tolerance": "amount_tolerance",
+        "cash_only": "cash_accounts_only",
+        "property_match": "require_property_match",
+    }
     for part in shlex.split(config_str):
         if "=" not in part:
             continue
         key, value = part.split("=", 1)
-        if key == "window":
+        key = aliases.get(key, key)
+        if key == "date_window_days":
             cfg[key] = int(value)
-        elif key == "tolerance":
+        elif key == "amount_tolerance":
             cfg[key] = decimal.Decimal(value)
-        elif key == "cash_only":
+        elif key == "cash_accounts_only":
             cfg[key] = value.lower() in {"1", "true", "yes"}
-        elif key == "property_match":
+        elif key == "require_property_match":
             cfg[key] = value.lower() in {"1", "true", "yes"}
         else:
             cfg[key] = float(value)
@@ -86,13 +106,13 @@ def index_transactions(txns, cfg):
     """Index transactions by currency and amount when tolerance is zero."""
     index = collections.defaultdict(list)
     for txn in txns:
-        currency = _first_currency(txn, cfg["cash_only"])
+        currency = _first_currency(txn, cfg["cash_accounts_only"])
         if currency is None:
             continue
-        amount = abs(net_amount(txn, cfg["cash_only"]))
+        amount = abs(net_amount(txn, cfg["cash_accounts_only"]))
         if amount is None:
             continue
-        if cfg["tolerance"] == number.ZERO:
+        if cfg["amount_tolerance"] == number.ZERO:
             key = (currency, amount)
         else:
             key = (currency,)
@@ -113,7 +133,7 @@ def candidate_pairs(txns, window):
 def confidence_score(txn_a, txn_b, cfg):
     """Compute confidence score and component details."""
     property_val = None
-    if cfg["property_match"]:
+    if cfg["require_property_match"]:
         property_val = property_score(txn_a, txn_b)
         if property_val == 0.0 and _has_property_tokens(txn_a, txn_b):
             parts = {
@@ -127,14 +147,14 @@ def confidence_score(txn_a, txn_b, cfg):
     amount_val = amount_score(
         txn_a,
         txn_b,
-        cfg["tolerance"],
-        cfg["cash_only"],
+        cfg["amount_tolerance"],
+        cfg["cash_accounts_only"],
     )
-    date_val = date_score(txn_a, txn_b, cfg["window"])
+    date_val = date_score(txn_a, txn_b, cfg["date_window_days"])
     account_val = account_score(txn_a, txn_b)
 
     weights = dict(_WEIGHTS)
-    if cfg["property_match"]:
+    if cfg["require_property_match"]:
         weights["property"] = 0.2
     total_weight = sum(weights.values())
     score = (
@@ -142,7 +162,7 @@ def confidence_score(txn_a, txn_b, cfg):
         + weights["date"] * date_val
         + weights["account"] * account_val
     )
-    if cfg["property_match"]:
+    if cfg["require_property_match"]:
         score += weights["property"] * (property_val or 0.0)
     if total_weight:
         score /= total_weight
@@ -152,7 +172,7 @@ def confidence_score(txn_a, txn_b, cfg):
         "date": date_val,
         "account": account_val,
     }
-    if cfg["property_match"]:
+    if cfg["require_property_match"]:
         parts["property"] = property_val or 0.0
     return min(1.0, score), parts
 

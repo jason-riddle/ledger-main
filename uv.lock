@@ -22,6 +22,33 @@ wheels = [
 ]
 
 [[package]]
+name = "beancount-docverif"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "beancount" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/19/1a/b10bf6e92abcfe54531b21b24f8054c744ccceea7b0a77bb6fe8208de5b4/beancount_docverif-1.0.1.tar.gz", hash = "sha256:08506fd4564fe493bed4c3e70fceadb6b3b8db3665bc4d79ef3aa283bb381ce8", size = 25407, upload-time = "2022-03-18T09:46:20.169Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/cd/d5dbed6c376c4a5da292112ecf77838d82be3ca0a9c60e93923279e4c601/beancount_docverif-1.0.1-py3-none-any.whl", hash = "sha256:e8a797b8df5eb3219f71cb6dd0dd1b97d783d7cee925cbf91fde8fa07ae8785e", size = 4740, upload-time = "2022-03-18T09:46:17.896Z" },
+]
+
+[[package]]
+name = "beanquery"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "beancount" },
+    { name = "click" },
+    { name = "python-dateutil" },
+    { name = "tatsu-lts" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7c/90/801eec23a07072dcf8df061cb6f27be6045e08c12a90b287e872ce0a12d3/beanquery-0.2.0.tar.gz", hash = "sha256:2d72b50a39003435c7fed183666572b8ea878b9860499d0f196b38469384cd2c", size = 99399, upload-time = "2025-03-24T20:27:53.116Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8b/b8/5b31f6047e50bc82f743760b4e0e7b42a9989c5b8986909c1309d65263ed/beanquery-0.2.0-py3-none-any.whl", hash = "sha256:980b7a328486d58cfd3e8fa98983fd501c33cf3a9be67f8b1e16c81e94018a3c", size = 108224, upload-time = "2025-03-24T20:27:51.728Z" },
+]
+
+[[package]]
 name = "click"
 version = "8.3.1"
 source = { registry = "https://pypi.org/simple" }
@@ -57,6 +84,8 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "beancount" },
+    { name = "beancount-docverif" },
+    { name = "beanquery" },
 ]
 
 [package.dev-dependencies]
@@ -66,7 +95,11 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "beancount" }]
+requires-dist = [
+    { name = "beancount" },
+    { name = "beancount-docverif" },
+    { name = "beanquery" },
+]
 
 [package.metadata.requires-dev]
 dev = [
@@ -236,4 +269,13 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81", size = 34031, upload-time = "2024-12-04T17:35:28.174Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050, upload-time = "2024-12-04T17:35:26.475Z" },
+]
+
+[[package]]
+name = "tatsu-lts"
+version = "5.14.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ec/c3/d542908e1e541ec028dd6a7be800c20da02282bda15b57de441afff98bfb/tatsu_lts-5.14.0.tar.gz", hash = "sha256:1f09f328aa4a5b53242055e8e24493ef7d9e4f770b90daa4d4de7c88523c232a", size = 126665, upload-time = "2025-12-26T10:28:55.986Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5d/d0/6c47488dac70e67746fc7b34b1b9fd1e59987991eaee8112b15c0c3eabdd/tatsu_lts-5.14.0-py3-none-any.whl", hash = "sha256:80c9db343cab0e35cacbbfd7148444a3b73584c27b571e606e34f0da292716e2", size = 80354, upload-time = "2025-12-26T10:28:54.346Z" },
 ]

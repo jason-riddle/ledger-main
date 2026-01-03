@@ -5,6 +5,8 @@ description = "Ledger data and statement parsers for Beancount."
 requires-python = ">=3.13"
 dependencies = [
   "beancount",
+  "beancount-docverif",
+  "beanquery",
 ]
 
 [project.scripts]

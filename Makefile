@@ -1,7 +1,6 @@
 UV_PYTHON_INSTALL_DIR ?= $(HOME)/.cache/uv/python
-BEANCHECK_BIN ?= bean-check
-BEANQUERY_BIN ?= bean-query
-PRE_COMMIT_BIN ?= pre-commit
+UV_RUN ?= UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run
+BEANQUERY_HOME ?= $(TMPDIR)/beanquery-home
 
 .PHONY: uv-sync test plugins-test check pre-commit
 
@@ -9,16 +8,17 @@ uv-sync:
 	UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv sync --dev
 
 test:
-	UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run pytest -q
+	$(UV_RUN) pytest -q
 
 plugins-test:
-	UV_PYTHON_INSTALL_DIR=$(UV_PYTHON_INSTALL_DIR) uv run plugins/tests/test_find_duplicates.py -q
+	$(UV_RUN) plugins/tests/test_find_duplicates.py -q
 
 check:
-	PYTHONPATH=$(CURDIR) $(BEANCHECK_BIN) ledger/main.bean
+	PYTHONPATH=$(CURDIR) $(UV_RUN) bean-check ledger/main.bean
 
 query:
-	PYTHONPATH=$(CURDIR) $(BEANQUERY_BIN) ledger/main.bean
+	mkdir -p $(BEANQUERY_HOME)/.config/beanquery
+	HOME=$(BEANQUERY_HOME) PYTHONPATH=$(CURDIR) $(UV_RUN) bean-query ledger/main.bean
 
 pre-commit:
-	PYTHONPATH=$(CURDIR) $(PRE_COMMIT_BIN) run --all-files
+	PYTHONPATH=$(CURDIR) pre-commit run --all-files
