@@ -85,42 +85,26 @@ def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
 
-    if args.command == "sps":
+    # Map command to render functions (bean and jsonl)
+    render_funcs = {
+        "sps": (
+            beanout.sps.render_sps_file,
+            beanout.sps.render_sps_file_to_jsonl,
+        ),
+        "clover-leaf": (
+            beanout.clover_leaf.render_clover_leaf_file,
+            beanout.clover_leaf.render_clover_leaf_file_to_jsonl,
+        ),
+        "sheer-value": (
+            beanout.sheer_value.render_sheer_value_file,
+            beanout.sheer_value.render_sheer_value_file_to_jsonl,
+        ),
+    }
+
+    if args.command in render_funcs:
+        render_func = render_funcs[args.command][1 if args.jsonl else 0]
         try:
-            if args.jsonl:
-                output = beanout.sps.render_sps_file_to_jsonl(args.input)
-            else:
-                output = beanout.sps.render_sps_file(args.input)
-        except ValueError as exc:
-            print(f"error: {exc}", file=sys.stderr)
-            return 2
-
-        if args.output == "-":
-            sys.stdout.write(output)
-        else:
-            pathlib.Path(args.output).write_text(output, encoding="utf-8")
-
-    if args.command == "clover-leaf":
-        try:
-            if args.jsonl:
-                output = beanout.clover_leaf.render_clover_leaf_file_to_jsonl(args.input)
-            else:
-                output = beanout.clover_leaf.render_clover_leaf_file(args.input)
-        except ValueError as exc:
-            print(f"error: {exc}", file=sys.stderr)
-            return 2
-
-        if args.output == "-":
-            sys.stdout.write(output)
-        else:
-            pathlib.Path(args.output).write_text(output, encoding="utf-8")
-
-    if args.command == "sheer-value":
-        try:
-            if args.jsonl:
-                output = beanout.sheer_value.render_sheer_value_file_to_jsonl(args.input)
-            else:
-                output = beanout.sheer_value.render_sheer_value_file(args.input)
+            output = render_func(args.input)
         except ValueError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2
