@@ -55,8 +55,6 @@ plugin "beancount.plugins.leafonly"
 ; plugin "beancount_periodic.recur" ; Removed due to unreliability
 
 ;;
-;;
-;;
 ;; 2022
 ;;
 

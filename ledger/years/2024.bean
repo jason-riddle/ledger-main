@@ -6,6 +6,9 @@
 ; AMORTIZATION
 include "../canonical/amortization/loans/2024-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
 
+; ASSETS
+include "../canonical/assets/improvements/2024-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
+
 ; DEPRECIATION
 include "../canonical/depreciation/buildings/2024-206-Hoover-Ave-2023-05-26-Building.bean"
 include "../canonical/depreciation/buildings/2024-2943-Butterfly-Palm-2023-01-01-Building.bean"
