@@ -579,6 +579,7 @@ def _build_owner_distribution(
     config: CloverLeafConfig,
 ) -> beancount.core.data.Transaction:
     meta = beancount.core.data.new_metadata("beanout", 0)
+    payee = _sanitize_text(payee)
     tags = set(config.tags)
     tags.add("distributions")
     postings = [
@@ -608,6 +609,8 @@ def _build_transaction(
     config: CloverLeafConfig,
 ) -> beancount.core.data.Transaction:
     meta = beancount.core.data.new_metadata("beanout", 0)
+    payee = _sanitize_text(payee)
+    narration = _sanitize_text(narration)
     postings = [
         _posting(config.account_property_management, net_amount, config),
         _posting(account, _negate(net_amount), config),
@@ -649,6 +652,10 @@ def _negate(value: Decimal) -> Decimal:
     if negated == 0:
         return beancount.core.number.D("0")
     return negated
+
+
+def _sanitize_text(value: str) -> str:
+    return value.replace("\r\n", " ").replace("\n", " ").replace("\t", " ").strip()
 
 
 def _extract_amounts(line: str) -> list[str]:
