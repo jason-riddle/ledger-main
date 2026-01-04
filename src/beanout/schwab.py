@@ -301,7 +301,7 @@ def _render_transaction(
 
 
 def _format_account_line(prefix: str, amount: str, currency: str) -> str:
-    amount_end_col = 69
+    amount_end_col = 46
     spaces = amount_end_col - len(prefix) - len(amount)
     if spaces < 1:
         spaces = 1
