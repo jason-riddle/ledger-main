@@ -12,6 +12,7 @@ import beancount.core.amount
 import beancount.core.data
 import beancount.core.number
 
+import beanout.formatter
 import beanout.jsonl
 
 
@@ -408,64 +409,5 @@ def _render_entries(
     if config is None:
         config = SheerValueConfig()
 
-    lines: list[str] = []
-    for entry in entries:
-        if lines:
-            lines.append("")
-        if isinstance(entry, beancount.core.data.Balance):
-            lines.append(_render_balance(entry, config))
-            continue
-        lines.extend(_render_transaction(entry, config))
-    return "\n".join(lines) + ("\n" if lines else "")
-
-
-def _render_transaction(
-    entry: beancount.core.data.Transaction, config: SheerValueConfig
-) -> list[str]:
-    tags = " ".join(f"#{tag}" for tag in sorted(entry.tags))
-    header = (
-        f'{entry.date.isoformat()} {entry.flag} "{entry.payee}" "{entry.narration}"'
-    )
-    if tags:
-        header = f"{header} {tags}"
-
-    lines = [header]
-    for posting in entry.postings:
-        amount_str = _format_amount(posting.units.number)
-        prefix = f"  {posting.account}"
-        lines.append(_format_account_line(prefix, amount_str, config.currency))
-    return lines
-
-
-def _render_balance(
-    entry: beancount.core.data.Balance, config: SheerValueConfig
-) -> str:
-    amount_str = _format_amount(entry.amount.number)
-    prefix = f"{entry.date.isoformat()} balance {entry.account}"
-    return _format_balance_line(prefix, amount_str, config.currency)
-
-
-def _format_account_line(prefix: str, amount: str, currency: str) -> str:
-    amount_end_col = 69
-    spaces = amount_end_col - len(prefix) - len(amount)
-    if spaces < 1:
-        spaces = 1
-    return f"{prefix}{' ' * spaces}{amount} {currency}"
-
-
-def _format_balance_line(prefix: str, amount: str, currency: str) -> str:
-    amount_end_col = 69
-    spaces = amount_end_col - len(prefix) - len(amount)
-    if spaces < 1:
-        spaces = 1
-    return f"{prefix}{' ' * spaces}{amount} {currency}"
-
-
-def _format_amount(value: Decimal) -> str:
-    if value == 0:
-        return "0"
-
-    is_negative = value < 0
-    magnitude = -value if is_negative else value
-    formatted = f"{magnitude:.2f}"
-    return f"-{formatted}" if is_negative else formatted
+    # Use Beancount's native formatter for consistent output
+    return beanout.formatter.format_entries(entries)
