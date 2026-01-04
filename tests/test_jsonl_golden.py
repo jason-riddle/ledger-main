@@ -10,6 +10,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "src"))
 import beanout.clover_leaf
 import beanout.sheer_value
 import beanout.sps
+import beanout.schwab
 
 
 def _test_jsonl_golden_files(
@@ -18,7 +19,7 @@ def _test_jsonl_golden_files(
     render_func: Callable[[str], str],
 ) -> None:
     """Validate JSONL golden files match expected output.
-    
+
     Args:
         parser_name: Name of the parser for error messages.
         golden_dir: Directory containing golden test files.
@@ -34,19 +35,23 @@ def _test_jsonl_golden_files(
 
         output = render_func(txt_path.read_text())
         expected = jsonl_path.read_text()
-        
+
         # Parse and compare as JSON objects for order-independent comparison
         output_lines = [json.loads(line) for line in output.strip().split("\n") if line]
-        expected_lines = [json.loads(line) for line in expected.strip().split("\n") if line]
-        
+        expected_lines = [
+            json.loads(line) for line in expected.strip().split("\n") if line
+        ]
+
         assert len(output_lines) == len(expected_lines), (
             f"Line count mismatch in {txt_path.name}: "
             f"got {len(output_lines)}, expected {len(expected_lines)}"
         )
-        
-        for i, (output_obj, expected_obj) in enumerate(zip(output_lines, expected_lines)):
+
+        for i, (output_obj, expected_obj) in enumerate(
+            zip(output_lines, expected_lines)
+        ):
             assert output_obj == expected_obj, (
-                f"Line {i+1} mismatch in {txt_path.name}"
+                f"Line {i + 1} mismatch in {txt_path.name}"
             )
 
 
@@ -77,12 +82,44 @@ def test_sheer_value_jsonl_golden_files() -> None:
     )
 
 
+def test_schwab_jsonl_golden_files() -> None:
+    """Validate Schwab JSONL golden files match expected output."""
+    golden_dir = pathlib.Path("fixtures/golden/schwab")
+    json_paths = sorted(golden_dir.glob("*.json"))
+
+    assert json_paths, "No Schwab golden .json files found"
+
+    for json_path in json_paths:
+        jsonl_path = json_path.with_suffix(f"{json_path.suffix}.jsonl")
+        assert jsonl_path.exists(), f"Missing golden file: {jsonl_path}"
+
+        output = beanout.schwab.render_schwab_json_text_to_jsonl(json_path.read_text())
+        expected = jsonl_path.read_text()
+
+        output_lines = [json.loads(line) for line in output.strip().split("\n") if line]
+        expected_lines = [
+            json.loads(line) for line in expected.strip().split("\n") if line
+        ]
+
+        assert len(output_lines) == len(expected_lines), (
+            f"Line count mismatch in {json_path.name}: "
+            f"got {len(output_lines)}, expected {len(expected_lines)}"
+        )
+
+        for i, (output_obj, expected_obj) in enumerate(
+            zip(output_lines, expected_lines)
+        ):
+            assert output_obj == expected_obj, (
+                f"Line {i + 1} mismatch in {json_path.name}"
+            )
+
+
 if __name__ == "__main__":
     test_sps_jsonl_golden_files()
     print("✓ SPS JSONL golden tests passed")
-    
+
     test_clover_leaf_jsonl_golden_files()
     print("✓ CloverLeaf JSONL golden tests passed")
-    
+
     test_sheer_value_jsonl_golden_files()
     print("✓ Sheer Value JSONL golden tests passed")

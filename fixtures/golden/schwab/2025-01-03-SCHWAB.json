@@ -1,0 +1,773 @@
+{
+  "FromDate": "07/03/2025",
+  "ToDate": "01/03/2026",
+  "PendingTransactions": [],
+  "PostedTransactions": [
+    {
+      "CheckNumber": null,
+      "Description": "Interest Paid",
+      "Date": "12/31/2025",
+      "RunningBalance": "$10,744.68",
+      "Withdrawal": "",
+      "Deposit": "$0.21",
+      "Type": "INTADJUST"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "ATM Fee Rebate",
+      "Date": "12/31/2025",
+      "RunningBalance": "$10,744.47",
+      "Withdrawal": "",
+      "Deposit": "$6.50",
+      "Type": "ATMREBATE"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "LK105391 ...152 CLEMENT ST SAN FRANCISCO",
+      "Date": "12/29/2025",
+      "RunningBalance": "$10,737.97",
+      "Withdrawal": "$143.00",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PENTAGON FEDERAL TRNSFR CR 251225",
+      "Date": "12/29/2025",
+      "RunningBalance": "$10,880.97",
+      "Withdrawal": "",
+      "Deposit": "$1,250.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE CRCARDPMT",
+      "Date": "12/23/2025",
+      "RunningBalance": "$9,630.97",
+      "Withdrawal": "$1,344.62",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO PAYMENT 251220",
+      "Date": "12/22/2025",
+      "RunningBalance": "$10,975.59",
+      "Withdrawal": "$10.00",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 251216~ Tran: ACHD",
+      "Date": "12/18/2025",
+      "RunningBalance": "$10,985.59",
+      "Withdrawal": "$1,805.84",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "Deposit Mobile Banking",
+      "Date": "12/17/2025",
+      "RunningBalance": "$12,791.43",
+      "Withdrawal": "",
+      "Deposit": "$25.00",
+      "Type": "DEPOSIT"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 251217",
+      "Date": "12/17/2025",
+      "RunningBalance": "$12,766.43",
+      "Withdrawal": "",
+      "Deposit": "$4,000.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 251215~ Tran: ACHD",
+      "Date": "12/16/2025",
+      "RunningBalance": "$8,766.43",
+      "Withdrawal": "$1,261.95",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 251215~ Tran: ACHD",
+      "Date": "12/16/2025",
+      "RunningBalance": "$10,028.38",
+      "Withdrawal": "$699.27",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PENTAGON FEDERAL TRNSFR CR 251211",
+      "Date": "12/15/2025",
+      "RunningBalance": "$10,727.65",
+      "Withdrawal": "",
+      "Deposit": "$1,250.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "HARRIS TEE 4250 CAMPBEL ARLINGTON",
+      "Date": "12/13/2025",
+      "RunningBalance": "$9,477.65",
+      "Withdrawal": "$143.50",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 251208",
+      "Date": "12/08/2025",
+      "RunningBalance": "$9,621.15",
+      "Withdrawal": "",
+      "Deposit": "$6,000.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 251205~ Tran: ACHD",
+      "Date": "12/08/2025",
+      "RunningBalance": "$3,621.15",
+      "Withdrawal": "$2,299.12",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "Interest Paid",
+      "Date": "11/28/2025",
+      "RunningBalance": "$5,920.27",
+      "Withdrawal": "",
+      "Deposit": "$0.32",
+      "Type": "INTADJUST"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "ATM Fee Rebate",
+      "Date": "11/28/2025",
+      "RunningBalance": "$5,919.95",
+      "Withdrawal": "",
+      "Deposit": "$13.49",
+      "Type": "ATMREBATE"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PAI ATM ...221 BENDIX RD VIRGINIA BEAC",
+      "Date": "11/27/2025",
+      "RunningBalance": "$5,906.46",
+      "Withdrawal": "$102.99",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE CRCARDPMT",
+      "Date": "11/24/2025",
+      "RunningBalance": "$6,009.45",
+      "Withdrawal": "$76.54",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO PAYMENT 251112",
+      "Date": "11/13/2025",
+      "RunningBalance": "$6,085.99",
+      "Withdrawal": "$30.00",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 251112~ Tran: ACHD",
+      "Date": "11/13/2025",
+      "RunningBalance": "$6,115.99",
+      "Withdrawal": "$1,248.84",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PAI ATM 4 EMBARCADERO C SAN FRANCISCO",
+      "Date": "11/13/2025",
+      "RunningBalance": "$7,364.83",
+      "Withdrawal": "$103.00",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CITIBAN0038880 ...130 WEST SF",
+      "Date": "11/10/2025",
+      "RunningBalance": "$7,467.83",
+      "Withdrawal": "$83.50",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO CASHOUT 251108",
+      "Date": "11/10/2025",
+      "RunningBalance": "$7,551.33",
+      "Withdrawal": "",
+      "Deposit": "$617.42",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 251107",
+      "Date": "11/10/2025",
+      "RunningBalance": "$6,933.91",
+      "Withdrawal": "$4,379.01",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE ONLINE PMT",
+      "Date": "11/10/2025",
+      "RunningBalance": "$11,312.92",
+      "Withdrawal": "$1,026.29",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE ...926 TARAVAL ST SAN FRANCISCO",
+      "Date": "11/07/2025",
+      "RunningBalance": "$12,339.21",
+      "Withdrawal": "$49.00",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "Interest Paid",
+      "Date": "10/31/2025",
+      "RunningBalance": "$12,388.21",
+      "Withdrawal": "",
+      "Deposit": "$0.56",
+      "Type": "INTADJUST"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "ATM Fee Rebate",
+      "Date": "10/31/2025",
+      "RunningBalance": "$12,387.65",
+      "Withdrawal": "",
+      "Deposit": "$11.50",
+      "Type": "ATMREBATE"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "BANK OF AMERICA *RICHMO SAN FRANCISCO",
+      "Date": "10/26/2025",
+      "RunningBalance": "$12,376.15",
+      "Withdrawal": "$64.00",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE CRCARDPMT",
+      "Date": "10/24/2025",
+      "RunningBalance": "$12,440.15",
+      "Withdrawal": "$360.14",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "BARCLAYCARD US CREDITCARD",
+      "Date": "10/23/2025",
+      "RunningBalance": "$12,800.29",
+      "Withdrawal": "$16.80",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 251022",
+      "Date": "10/22/2025",
+      "RunningBalance": "$12,817.09",
+      "Withdrawal": "",
+      "Deposit": "$1,000.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 251020",
+      "Date": "10/20/2025",
+      "RunningBalance": "$11,817.09",
+      "Withdrawal": "",
+      "Deposit": "$2,000.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 251017",
+      "Date": "10/20/2025",
+      "RunningBalance": "$9,817.09",
+      "Withdrawal": "$2,608.23",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE ONLINE PMT",
+      "Date": "10/20/2025",
+      "RunningBalance": "$12,425.32",
+      "Withdrawal": "$1,193.19",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "BANK OF AMERICA *4TH & SAN FRANCISCO",
+      "Date": "10/13/2025",
+      "RunningBalance": "$13,618.51",
+      "Withdrawal": "$64.00",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "SAFEWAY #2 ...735 7TH AVE SAN FRANCISCO",
+      "Date": "10/11/2025",
+      "RunningBalance": "$13,682.51",
+      "Withdrawal": "$83.50",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE ONLINE PMT",
+      "Date": "10/07/2025",
+      "RunningBalance": "$13,766.01",
+      "Withdrawal": "$237.52",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO PAYMENT 251006",
+      "Date": "10/07/2025",
+      "RunningBalance": "$14,003.53",
+      "Withdrawal": "$24.22",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 251006",
+      "Date": "10/06/2025",
+      "RunningBalance": "$14,027.75",
+      "Withdrawal": "",
+      "Deposit": "$1,521.32",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO PAYMENT 251005",
+      "Date": "10/06/2025",
+      "RunningBalance": "$12,506.43",
+      "Withdrawal": "$972.25",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO CASHOUT 251002",
+      "Date": "10/03/2025",
+      "RunningBalance": "$13,478.68",
+      "Withdrawal": "",
+      "Deposit": "$198.63",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "TGD30216 2161 MONTEREY SAN JOSE",
+      "Date": "10/01/2025",
+      "RunningBalance": "$13,280.05",
+      "Withdrawal": "$60.00",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE ONLINE PMT",
+      "Date": "10/01/2025",
+      "RunningBalance": "$13,340.05",
+      "Withdrawal": "$750.39",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 250930~ Tran: ACHD",
+      "Date": "10/01/2025",
+      "RunningBalance": "$14,090.44",
+      "Withdrawal": "$529.63",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "Interest Paid",
+      "Date": "09/30/2025",
+      "RunningBalance": "$14,620.07",
+      "Withdrawal": "",
+      "Deposit": "$0.50",
+      "Type": "INTADJUST"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "ATM Fee Rebate",
+      "Date": "09/30/2025",
+      "RunningBalance": "$14,619.57",
+      "Withdrawal": "",
+      "Deposit": "$2.50",
+      "Type": "ATMREBATE"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "KM AN NAM SAN JOSE",
+      "Date": "09/30/2025",
+      "RunningBalance": "$14,617.07",
+      "Withdrawal": "$31.07",
+      "Deposit": "",
+      "Type": "VISA"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO PAYMENT 250929",
+      "Date": "09/30/2025",
+      "RunningBalance": "$14,648.14",
+      "Withdrawal": "$1,650.00",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE CRCARDPMT 250923",
+      "Date": "09/24/2025",
+      "RunningBalance": "$16,298.14",
+      "Withdrawal": "$173.88",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 250919",
+      "Date": "09/19/2025",
+      "RunningBalance": "$16,472.02",
+      "Withdrawal": "",
+      "Deposit": "$8,000.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE ONLINE PMT",
+      "Date": "09/19/2025",
+      "RunningBalance": "$8,472.02",
+      "Withdrawal": "$828.47",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PENTAGON FEDERAL TRNSFR CR 250917",
+      "Date": "09/19/2025",
+      "RunningBalance": "$9,300.49",
+      "Withdrawal": "",
+      "Deposit": "$1,250.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 250918~ Tran: ACHD",
+      "Date": "09/19/2025",
+      "RunningBalance": "$8,050.49",
+      "Withdrawal": "$2,024.31",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "A409089 52 E SANTA CLAR SAN JOSE",
+      "Date": "09/14/2025",
+      "RunningBalance": "$10,074.80",
+      "Withdrawal": "$122.50",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE ONLINE PMT",
+      "Date": "09/09/2025",
+      "RunningBalance": "$10,197.30",
+      "Withdrawal": "$956.37",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 250908~ Tran: ACHD",
+      "Date": "09/09/2025",
+      "RunningBalance": "$11,153.67",
+      "Withdrawal": "$398.72",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 250908",
+      "Date": "09/08/2025",
+      "RunningBalance": "$11,552.39",
+      "Withdrawal": "",
+      "Deposit": "$8,000.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 250905~ Tran: ACHD",
+      "Date": "09/08/2025",
+      "RunningBalance": "$3,552.39",
+      "Withdrawal": "$3,731.16",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PENTAGON FEDERAL TRNSFR CR 250903",
+      "Date": "09/05/2025",
+      "RunningBalance": "$7,283.55",
+      "Withdrawal": "",
+      "Deposit": "$1,250.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO PAYMENT 250903",
+      "Date": "09/04/2025",
+      "RunningBalance": "$6,033.55",
+      "Withdrawal": "$1,650.00",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO PAYMENT 250903",
+      "Date": "09/04/2025",
+      "RunningBalance": "$7,683.55",
+      "Withdrawal": "$825.00",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO CASHOUT 250902",
+      "Date": "09/03/2025",
+      "RunningBalance": "$8,508.55",
+      "Withdrawal": "",
+      "Deposit": "$18.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD AUTOPAY 250901~ Tran: A",
+      "Date": "09/03/2025",
+      "RunningBalance": "$8,490.55",
+      "Withdrawal": "$1,391.75",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 250902",
+      "Date": "09/02/2025",
+      "RunningBalance": "$9,882.30",
+      "Withdrawal": "",
+      "Deposit": "$5,182.62",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "VENMO PAYMENT 250830",
+      "Date": "09/02/2025",
+      "RunningBalance": "$4,699.68",
+      "Withdrawal": "$32.00",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "Interest Paid",
+      "Date": "08/29/2025",
+      "RunningBalance": "$4,731.68",
+      "Withdrawal": "",
+      "Deposit": "$0.19",
+      "Type": "INTADJUST"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "ATM Fee Rebate",
+      "Date": "08/29/2025",
+      "RunningBalance": "$4,731.49",
+      "Withdrawal": "",
+      "Deposit": "$3.95",
+      "Type": "ATMREBATE"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE CRCARDPMT 250823",
+      "Date": "08/25/2025",
+      "RunningBalance": "$4,727.54",
+      "Withdrawal": "$552.61",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PENTAGON FEDERAL TRNSFR CR 250820",
+      "Date": "08/22/2025",
+      "RunningBalance": "$5,280.15",
+      "Withdrawal": "",
+      "Deposit": "$1,250.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "ACFN6961 1700 RICHMOND ARLINGTON",
+      "Date": "08/19/2025",
+      "RunningBalance": "$4,030.15",
+      "Withdrawal": "$123.95",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE ONLINE PMT",
+      "Date": "08/13/2025",
+      "RunningBalance": "$4,154.10",
+      "Withdrawal": "$1,996.92",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PENTAGON FEDERAL TRNSFR CR 250806",
+      "Date": "08/08/2025",
+      "RunningBalance": "$6,151.02",
+      "Withdrawal": "",
+      "Deposit": "$1,250.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "Interest Paid",
+      "Date": "07/31/2025",
+      "RunningBalance": "$4,901.02",
+      "Withdrawal": "",
+      "Deposit": "$0.24",
+      "Type": "INTADJUST"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "ATM Fee Rebate",
+      "Date": "07/31/2025",
+      "RunningBalance": "$4,900.78",
+      "Withdrawal": "",
+      "Deposit": "$3.50",
+      "Type": "ATMREBATE"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CHASE CREDIT CRD EPAY 250726",
+      "Date": "07/28/2025",
+      "RunningBalance": "$4,897.28",
+      "Withdrawal": "$1,185.76",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "HARRIS TEE 4250 CAMPBEL ARLINGTON",
+      "Date": "07/26/2025",
+      "RunningBalance": "$6,083.04",
+      "Withdrawal": "$123.50",
+      "Deposit": "",
+      "Type": "ATM"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "Speedway 7600 Richmond Hybla Valley",
+      "Date": "07/25/2025",
+      "RunningBalance": "$6,206.54",
+      "Withdrawal": "$13.40",
+      "Deposit": "",
+      "Type": "VISA"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PENTAGON FEDERAL TRNSFR CR 250723",
+      "Date": "07/25/2025",
+      "RunningBalance": "$6,219.94",
+      "Withdrawal": "",
+      "Deposit": "$1,250.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "CAPITAL ONE CRCARDPMT 250723",
+      "Date": "07/24/2025",
+      "RunningBalance": "$4,969.94",
+      "Withdrawal": "$230.06",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 250714",
+      "Date": "07/14/2025",
+      "RunningBalance": "$5,200.00",
+      "Withdrawal": "$1,449.09",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "PENTAGON FEDERAL TRNSFR CR 250709",
+      "Date": "07/11/2025",
+      "RunningBalance": "$6,649.09",
+      "Withdrawal": "",
+      "Deposit": "$1,250.00",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 250710",
+      "Date": "07/10/2025",
+      "RunningBalance": "$5,399.09",
+      "Withdrawal": "$400.00",
+      "Deposit": "",
+      "Type": "ACH"
+    },
+    {
+      "CheckNumber": null,
+      "Description": "FID BKG SVC LLC MONEYLINE 250703",
+      "Date": "07/03/2025",
+      "RunningBalance": "$5,799.09",
+      "Withdrawal": "$400.00",
+      "Deposit": "",
+      "Type": "ACH"
+    }
+  ],
+  "TotalPendingCheckAndOtherCredit": null
+}

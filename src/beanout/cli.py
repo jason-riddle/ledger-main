@@ -6,6 +6,7 @@ import sys
 
 import beanout.clover_leaf
 import beanout.fidelity
+import beanout.schwab
 import beanout.sheer_value
 import beanout.sps
 
@@ -98,6 +99,26 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output in JSONL format instead of Beancount format.",
     )
 
+    schwab_parser = subparsers.add_parser(
+        "schwab",
+        help="Parse Schwab .json files.",
+    )
+    schwab_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the Schwab .json file.",
+    )
+    schwab_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+    schwab_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
+
     return parser
 
 
@@ -123,6 +144,10 @@ def main(argv: list[str] | None = None) -> int:
         "fidelity": (
             beanout.fidelity.render_fidelity_csv_file,
             beanout.fidelity.render_fidelity_csv_file_to_jsonl,
+        ),
+        "schwab": (
+            beanout.schwab.render_schwab_json_file,
+            beanout.schwab.render_schwab_json_file_to_jsonl,
         ),
     }
 

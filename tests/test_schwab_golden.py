@@ -1,0 +1,24 @@
+"""Golden tests for Schwab statement parsing."""
+
+import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "src"))
+
+import beanout.schwab
+
+
+def test_schwab_golden_files() -> None:
+    """Render all Schwab golden fixtures and compare to expected output."""
+    golden_dir = pathlib.Path("fixtures/golden/schwab")
+    json_paths = sorted(golden_dir.glob("*.json"))
+
+    assert json_paths, "No Schwab golden .json files found"
+
+    for json_path in json_paths:
+        bean_path = json_path.with_suffix(f"{json_path.suffix}.bean")
+        assert bean_path.exists(), f"Missing golden file: {bean_path}"
+
+        output = beanout.schwab.render_schwab_json_text(json_path.read_text())
+        expected = bean_path.read_text()
+        assert output == expected
