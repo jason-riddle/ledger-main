@@ -1,0 +1,23 @@
+; AUTO-GENERATED. DO NOT EDIT.
+;;
+;; 2024 - YEAR - ALL
+;;
+
+; AMORTIZATION
+include "../canonical/amortization/loans/2024-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
+
+; DEPRECIATION
+include "../canonical/depreciation/buildings/2024-206-Hoover-Ave-2023-05-26-Building.bean"
+include "../canonical/depreciation/buildings/2024-2943-Butterfly-Palm-2023-01-01-Building.bean"
+include "../canonical/depreciation/improvements/2024-206-Hoover-Ave-2023-11-17-Improvements.bean"
+include "../canonical/depreciation/improvements/2024-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "../canonical/depreciation/improvements/2024-2943-Butterfly-Palm-2023-02-17-Water-Heater.bean"
+include "../canonical/depreciation/improvements/2024-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
+
+; MORTGAGE
+include "../canonical/mortgage/2024-2943-Butterfly-Palm-Escrow-Payouts.bean"
+include "../canonical/mortgage/2024-2943-Butterfly-Palm-Mortgage-Payments.bean"
+
+; TAXES
+include "../canonical/taxes/2024-206-Hoover-Ave-Taxes.bean"
+include "../canonical/taxes/2024-2943-Butterfly-Palm-Taxes.bean"

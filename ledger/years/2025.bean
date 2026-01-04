@@ -1,0 +1,29 @@
+; AUTO-GENERATED. DO NOT EDIT.
+;;
+;; 2025 - YEAR - ALL
+;;
+
+; ADJUSTMENTS
+include "../canonical/adjustments/2025-Owner-Distributions.bean"
+
+; AMORTIZATION
+include "../canonical/amortization/loans/2025-2943-Butterfly-Palm-2023-01-01-Loan-Costs-2023-SPS-Mortgage.bean"
+
+; DEPRECIATION
+include "../canonical/depreciation/buildings/2025-206-Hoover-Ave-2023-05-26-Building.bean"
+include "../canonical/depreciation/buildings/2025-2943-Butterfly-Palm-2023-01-01-Building.bean"
+include "../canonical/depreciation/improvements/2025-206-Hoover-Ave-2023-11-17-Improvements.bean"
+include "../canonical/depreciation/improvements/2025-2943-Butterfly-Palm-2023-01-01-Back-Door.bean"
+include "../canonical/depreciation/improvements/2025-2943-Butterfly-Palm-2024-05-08-Water-Heater.bean"
+
+; MORTGAGE
+include "../canonical/mortgage/2025-2943-Butterfly-Palm-Escrow-Payouts.bean"
+include "../canonical/mortgage/2025-2943-Butterfly-Palm-Mortgage-Payments.bean"
+
+; STATEMENTS
+include "../canonical/statements/CloverLeaf/2025-12-30-CloverLeaf-Statement.bean"
+include "../canonical/statements/SheerValue/2025-02-01-SheerValue-Statement.bean"
+
+; TAXES
+include "../canonical/taxes/2025-206-Hoover-Ave-Taxes.bean"
+include "../canonical/taxes/2025-2943-Butterfly-Palm-Taxes.bean"
