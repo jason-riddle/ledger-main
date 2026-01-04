@@ -18,7 +18,5 @@ def test_chase_account_line_alignment() -> None:
 
 
 def test_schwab_account_line_alignment() -> None:
-    line = schwab._format_account_line(
-        "  Equity:Opening-Balances", "-0.21", "USD"
-    )
+    line = schwab._format_account_line("  Equity:Opening-Balances", "-0.21", "USD")
     assert line == "  Equity:Opening-Balances                -0.21 USD"
