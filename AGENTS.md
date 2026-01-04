@@ -7,6 +7,20 @@
 - Environment metadata is in `devenv.nix`/`devenv.yaml` (Nix-based dev setup).
 - `src/beanout/` houses statement parsers and CLI utilities for generating Beancount output from `*.pdf.txt` files.
 
+## Document Pipeline & File Management
+- `inbox/` is the entry point for new statement files that need to be processed. Files here are unorganized and require renaming and moving.
+- `documents/` contains organized statement files following the naming convention `YYYY-MM-DD-ENTITY.ext`.
+- Entity subdirectories in `documents/` organize files by property manager or entity (e.g., `sps/`, `sheer-value/`, `clover-leaf/`).
+- Pipeline workflow:
+  1. New files arrive in `inbox/` with arbitrary names.
+  2. Files are renamed to follow the pattern `YYYY-MM-DD-ENTITY.ext` and moved to `documents/entity/`.
+  3. From the source file (e.g., `YYYY-MM-DD-ENTITY.pdf`), intermediate and final files are generated:
+     - `YYYY-MM-DD-ENTITY.pdf.txt` — extracted text content.
+     - `YYYY-MM-DD-ENTITY.pdf.jsonl` — structured transaction data.
+     - `YYYY-MM-DD-ENTITY.pdf.bean` — Beancount ledger entries.
+  4. All related files for a statement sit together in `documents/entity/` with the same base filename.
+- The naming pattern ensures consistent organization and makes it easy to track the transformation pipeline from source PDF through to final Beancount entries.
+
 ## Build, Test, and Development Commands
 - This repository is ledger data; there is no build step or runtime.
 - Before making any code changes, always read `ledger/header.bean` first.
