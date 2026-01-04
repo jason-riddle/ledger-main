@@ -1,7 +1,0 @@
-;;
-;; 2024 - OPERATIONS - ALL
-;;
-
-; TRANSACTIONS
-include "./2024-206-Hoover-Ave-Transactions.bean"
-include "./2024-2943-Butterfly-Palm-Transactions.bean"

@@ -1,7 +1,0 @@
-;;
-;; 2026 - TAXES - ALL
-;;
-
-; TRANSACTIONS
-include "./2026-206-Hoover-Ave-Taxes.bean"
-include "./2026-2943-Butterfly-Palm-Taxes.bean"
