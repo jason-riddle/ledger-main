@@ -1,0 +1,339 @@
+2025-12-31 * "Schwab Bank" "INTADJUST: Interest Paid" #beangulp #imported #schwab
+  Equity:Opening-Balances                -0.21 USD
+  Assets:Cash---Bank:Schwab-Checking      0.21 USD
+
+2025-12-31 * "Schwab Bank" "ATMREBATE: ATM Fee Rebate" #beangulp #imported #schwab
+  Equity:Opening-Balances                -6.50 USD
+  Assets:Cash---Bank:Schwab-Checking      6.50 USD
+
+2025-12-29 * "Schwab Bank" "ATM: LK105391 ...152 CLEMENT ST SAN FRANCISCO" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -143.00 USD
+  Equity:Opening-Balances               143.00 USD
+
+2025-12-29 * "Schwab Bank" "ACH: PENTAGON FEDERAL TRNSFR CR 251225" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1250.00 USD
+  Assets:Cash---Bank:Schwab-Checking   1250.00 USD
+
+2025-12-23 * "Schwab Bank" "ACH: CAPITAL ONE CRCARDPMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1344.62 USD
+  Equity:Opening-Balances              1344.62 USD
+
+2025-12-22 * "Schwab Bank" "ACH: VENMO PAYMENT 251220" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -10.00 USD
+  Equity:Opening-Balances                10.00 USD
+
+2025-12-18 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 251216~ Tran: ACHD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1805.84 USD
+  Equity:Opening-Balances              1805.84 USD
+
+2025-12-17 * "Schwab Bank" "DEPOSIT: Deposit Mobile Banking" #beangulp #imported #schwab
+  Equity:Opening-Balances               -25.00 USD
+  Assets:Cash---Bank:Schwab-Checking     25.00 USD
+
+2025-12-17 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 251217" #beangulp #imported #schwab
+  Equity:Opening-Balances             -4000.00 USD
+  Assets:Cash---Bank:Schwab-Checking   4000.00 USD
+
+2025-12-16 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 251215~ Tran: ACHD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1261.95 USD
+  Equity:Opening-Balances              1261.95 USD
+
+2025-12-16 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 251215~ Tran: ACHD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -699.27 USD
+  Equity:Opening-Balances               699.27 USD
+
+2025-12-15 * "Schwab Bank" "ACH: PENTAGON FEDERAL TRNSFR CR 251211" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1250.00 USD
+  Assets:Cash---Bank:Schwab-Checking   1250.00 USD
+
+2025-12-13 * "Schwab Bank" "ATM: HARRIS TEE 4250 CAMPBEL ARLINGTON" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -143.50 USD
+  Equity:Opening-Balances               143.50 USD
+
+2025-12-08 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 251208" #beangulp #imported #schwab
+  Equity:Opening-Balances             -6000.00 USD
+  Assets:Cash---Bank:Schwab-Checking   6000.00 USD
+
+2025-12-08 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 251205~ Tran: ACHD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -2299.12 USD
+  Equity:Opening-Balances              2299.12 USD
+
+2025-11-28 * "Schwab Bank" "INTADJUST: Interest Paid" #beangulp #imported #schwab
+  Equity:Opening-Balances                -0.32 USD
+  Assets:Cash---Bank:Schwab-Checking      0.32 USD
+
+2025-11-28 * "Schwab Bank" "ATMREBATE: ATM Fee Rebate" #beangulp #imported #schwab
+  Equity:Opening-Balances               -13.49 USD
+  Assets:Cash---Bank:Schwab-Checking     13.49 USD
+
+2025-11-27 * "Schwab Bank" "ATM: PAI ATM ...221 BENDIX RD VIRGINIA BEAC" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -102.99 USD
+  Equity:Opening-Balances               102.99 USD
+
+2025-11-24 * "Schwab Bank" "ACH: CAPITAL ONE CRCARDPMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -76.54 USD
+  Equity:Opening-Balances                76.54 USD
+
+2025-11-13 * "Schwab Bank" "ACH: VENMO PAYMENT 251112" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -30.00 USD
+  Equity:Opening-Balances                30.00 USD
+
+2025-11-13 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 251112~ Tran: ACHD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1248.84 USD
+  Equity:Opening-Balances              1248.84 USD
+
+2025-11-13 * "Schwab Bank" "ATM: PAI ATM 4 EMBARCADERO C SAN FRANCISCO" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -103.00 USD
+  Equity:Opening-Balances               103.00 USD
+
+2025-11-10 * "Schwab Bank" "ATM: CITIBAN0038880 ...130 WEST SF" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -83.50 USD
+  Equity:Opening-Balances                83.50 USD
+
+2025-11-10 * "Schwab Bank" "ACH: VENMO CASHOUT 251108" #beangulp #imported #schwab
+  Equity:Opening-Balances              -617.42 USD
+  Assets:Cash---Bank:Schwab-Checking    617.42 USD
+
+2025-11-10 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 251107" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -4379.01 USD
+  Equity:Opening-Balances              4379.01 USD
+
+2025-11-10 * "Schwab Bank" "ACH: CAPITAL ONE ONLINE PMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1026.29 USD
+  Equity:Opening-Balances              1026.29 USD
+
+2025-11-07 * "Schwab Bank" "ATM: CHASE ...926 TARAVAL ST SAN FRANCISCO" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -49.00 USD
+  Equity:Opening-Balances                49.00 USD
+
+2025-10-31 * "Schwab Bank" "INTADJUST: Interest Paid" #beangulp #imported #schwab
+  Equity:Opening-Balances                -0.56 USD
+  Assets:Cash---Bank:Schwab-Checking      0.56 USD
+
+2025-10-31 * "Schwab Bank" "ATMREBATE: ATM Fee Rebate" #beangulp #imported #schwab
+  Equity:Opening-Balances               -11.50 USD
+  Assets:Cash---Bank:Schwab-Checking     11.50 USD
+
+2025-10-26 * "Schwab Bank" "ATM: BANK OF AMERICA *RICHMO SAN FRANCISCO" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -64.00 USD
+  Equity:Opening-Balances                64.00 USD
+
+2025-10-24 * "Schwab Bank" "ACH: CAPITAL ONE CRCARDPMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -360.14 USD
+  Equity:Opening-Balances               360.14 USD
+
+2025-10-23 * "Schwab Bank" "ACH: BARCLAYCARD US CREDITCARD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -16.80 USD
+  Equity:Opening-Balances                16.80 USD
+
+2025-10-22 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 251022" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1000.00 USD
+  Assets:Cash---Bank:Schwab-Checking   1000.00 USD
+
+2025-10-20 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 251020" #beangulp #imported #schwab
+  Equity:Opening-Balances             -2000.00 USD
+  Assets:Cash---Bank:Schwab-Checking   2000.00 USD
+
+2025-10-20 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 251017" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -2608.23 USD
+  Equity:Opening-Balances              2608.23 USD
+
+2025-10-20 * "Schwab Bank" "ACH: CAPITAL ONE ONLINE PMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1193.19 USD
+  Equity:Opening-Balances              1193.19 USD
+
+2025-10-13 * "Schwab Bank" "ATM: BANK OF AMERICA *4TH & SAN FRANCISCO" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -64.00 USD
+  Equity:Opening-Balances                64.00 USD
+
+2025-10-11 * "Schwab Bank" "ATM: SAFEWAY #2 ...735 7TH AVE SAN FRANCISCO" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -83.50 USD
+  Equity:Opening-Balances                83.50 USD
+
+2025-10-07 * "Schwab Bank" "ACH: CAPITAL ONE ONLINE PMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -237.52 USD
+  Equity:Opening-Balances               237.52 USD
+
+2025-10-07 * "Schwab Bank" "ACH: VENMO PAYMENT 251006" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -24.22 USD
+  Equity:Opening-Balances                24.22 USD
+
+2025-10-06 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 251006" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1521.32 USD
+  Assets:Cash---Bank:Schwab-Checking   1521.32 USD
+
+2025-10-06 * "Schwab Bank" "ACH: VENMO PAYMENT 251005" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -972.25 USD
+  Equity:Opening-Balances               972.25 USD
+
+2025-10-03 * "Schwab Bank" "ACH: VENMO CASHOUT 251002" #beangulp #imported #schwab
+  Equity:Opening-Balances              -198.63 USD
+  Assets:Cash---Bank:Schwab-Checking    198.63 USD
+
+2025-10-01 * "Schwab Bank" "ATM: TGD30216 2161 MONTEREY SAN JOSE" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -60.00 USD
+  Equity:Opening-Balances                60.00 USD
+
+2025-10-01 * "Schwab Bank" "ACH: CAPITAL ONE ONLINE PMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -750.39 USD
+  Equity:Opening-Balances               750.39 USD
+
+2025-10-01 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 250930~ Tran: ACHD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -529.63 USD
+  Equity:Opening-Balances               529.63 USD
+
+2025-09-30 * "Schwab Bank" "INTADJUST: Interest Paid" #beangulp #imported #schwab
+  Equity:Opening-Balances                -0.50 USD
+  Assets:Cash---Bank:Schwab-Checking      0.50 USD
+
+2025-09-30 * "Schwab Bank" "ATMREBATE: ATM Fee Rebate" #beangulp #imported #schwab
+  Equity:Opening-Balances                -2.50 USD
+  Assets:Cash---Bank:Schwab-Checking      2.50 USD
+
+2025-09-30 * "Schwab Bank" "VISA: KM AN NAM SAN JOSE" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -31.07 USD
+  Equity:Opening-Balances                31.07 USD
+
+2025-09-30 * "Schwab Bank" "ACH: VENMO PAYMENT 250929" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1650.00 USD
+  Equity:Opening-Balances              1650.00 USD
+
+2025-09-24 * "Schwab Bank" "ACH: CAPITAL ONE CRCARDPMT 250923" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -173.88 USD
+  Equity:Opening-Balances               173.88 USD
+
+2025-09-19 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 250919" #beangulp #imported #schwab
+  Equity:Opening-Balances             -8000.00 USD
+  Assets:Cash---Bank:Schwab-Checking   8000.00 USD
+
+2025-09-19 * "Schwab Bank" "ACH: CAPITAL ONE ONLINE PMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -828.47 USD
+  Equity:Opening-Balances               828.47 USD
+
+2025-09-19 * "Schwab Bank" "ACH: PENTAGON FEDERAL TRNSFR CR 250917" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1250.00 USD
+  Assets:Cash---Bank:Schwab-Checking   1250.00 USD
+
+2025-09-19 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 250918~ Tran: ACHD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -2024.31 USD
+  Equity:Opening-Balances              2024.31 USD
+
+2025-09-14 * "Schwab Bank" "ATM: A409089 52 E SANTA CLAR SAN JOSE" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -122.50 USD
+  Equity:Opening-Balances               122.50 USD
+
+2025-09-09 * "Schwab Bank" "ACH: CAPITAL ONE ONLINE PMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -956.37 USD
+  Equity:Opening-Balances               956.37 USD
+
+2025-09-09 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 250908~ Tran: ACHD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -398.72 USD
+  Equity:Opening-Balances               398.72 USD
+
+2025-09-08 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 250908" #beangulp #imported #schwab
+  Equity:Opening-Balances             -8000.00 USD
+  Assets:Cash---Bank:Schwab-Checking   8000.00 USD
+
+2025-09-08 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 250905~ Tran: ACHD" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -3731.16 USD
+  Equity:Opening-Balances              3731.16 USD
+
+2025-09-05 * "Schwab Bank" "ACH: PENTAGON FEDERAL TRNSFR CR 250903" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1250.00 USD
+  Assets:Cash---Bank:Schwab-Checking   1250.00 USD
+
+2025-09-04 * "Schwab Bank" "ACH: VENMO PAYMENT 250903" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1650.00 USD
+  Equity:Opening-Balances              1650.00 USD
+
+2025-09-04 * "Schwab Bank" "ACH: VENMO PAYMENT 250903" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -825.00 USD
+  Equity:Opening-Balances               825.00 USD
+
+2025-09-03 * "Schwab Bank" "ACH: VENMO CASHOUT 250902" #beangulp #imported #schwab
+  Equity:Opening-Balances               -18.00 USD
+  Assets:Cash---Bank:Schwab-Checking     18.00 USD
+
+2025-09-03 * "Schwab Bank" "ACH: CHASE CREDIT CRD AUTOPAY 250901~ Tran: A" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1391.75 USD
+  Equity:Opening-Balances              1391.75 USD
+
+2025-09-02 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 250902" #beangulp #imported #schwab
+  Equity:Opening-Balances             -5182.62 USD
+  Assets:Cash---Bank:Schwab-Checking   5182.62 USD
+
+2025-09-02 * "Schwab Bank" "ACH: VENMO PAYMENT 250830" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -32.00 USD
+  Equity:Opening-Balances                32.00 USD
+
+2025-08-29 * "Schwab Bank" "INTADJUST: Interest Paid" #beangulp #imported #schwab
+  Equity:Opening-Balances                -0.19 USD
+  Assets:Cash---Bank:Schwab-Checking      0.19 USD
+
+2025-08-29 * "Schwab Bank" "ATMREBATE: ATM Fee Rebate" #beangulp #imported #schwab
+  Equity:Opening-Balances                -3.95 USD
+  Assets:Cash---Bank:Schwab-Checking      3.95 USD
+
+2025-08-25 * "Schwab Bank" "ACH: CAPITAL ONE CRCARDPMT 250823" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -552.61 USD
+  Equity:Opening-Balances               552.61 USD
+
+2025-08-22 * "Schwab Bank" "ACH: PENTAGON FEDERAL TRNSFR CR 250820" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1250.00 USD
+  Assets:Cash---Bank:Schwab-Checking   1250.00 USD
+
+2025-08-19 * "Schwab Bank" "ATM: ACFN6961 1700 RICHMOND ARLINGTON" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -123.95 USD
+  Equity:Opening-Balances               123.95 USD
+
+2025-08-13 * "Schwab Bank" "ACH: CAPITAL ONE ONLINE PMT" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1996.92 USD
+  Equity:Opening-Balances              1996.92 USD
+
+2025-08-08 * "Schwab Bank" "ACH: PENTAGON FEDERAL TRNSFR CR 250806" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1250.00 USD
+  Assets:Cash---Bank:Schwab-Checking   1250.00 USD
+
+2025-07-31 * "Schwab Bank" "INTADJUST: Interest Paid" #beangulp #imported #schwab
+  Equity:Opening-Balances                -0.24 USD
+  Assets:Cash---Bank:Schwab-Checking      0.24 USD
+
+2025-07-31 * "Schwab Bank" "ATMREBATE: ATM Fee Rebate" #beangulp #imported #schwab
+  Equity:Opening-Balances                -3.50 USD
+  Assets:Cash---Bank:Schwab-Checking      3.50 USD
+
+2025-07-28 * "Schwab Bank" "ACH: CHASE CREDIT CRD EPAY 250726" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1185.76 USD
+  Equity:Opening-Balances              1185.76 USD
+
+2025-07-26 * "Schwab Bank" "ATM: HARRIS TEE 4250 CAMPBEL ARLINGTON" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -123.50 USD
+  Equity:Opening-Balances               123.50 USD
+
+2025-07-25 * "Schwab Bank" "VISA: Speedway 7600 Richmond Hybla Valley" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking    -13.40 USD
+  Equity:Opening-Balances                13.40 USD
+
+2025-07-25 * "Schwab Bank" "ACH: PENTAGON FEDERAL TRNSFR CR 250723" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1250.00 USD
+  Assets:Cash---Bank:Schwab-Checking   1250.00 USD
+
+2025-07-24 * "Schwab Bank" "ACH: CAPITAL ONE CRCARDPMT 250723" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -230.06 USD
+  Equity:Opening-Balances               230.06 USD
+
+2025-07-14 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 250714" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking  -1449.09 USD
+  Equity:Opening-Balances              1449.09 USD
+
+2025-07-11 * "Schwab Bank" "ACH: PENTAGON FEDERAL TRNSFR CR 250709" #beangulp #imported #schwab
+  Equity:Opening-Balances             -1250.00 USD
+  Assets:Cash---Bank:Schwab-Checking   1250.00 USD
+
+2025-07-10 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 250710" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -400.00 USD
+  Equity:Opening-Balances               400.00 USD
+
+2025-07-03 * "Schwab Bank" "ACH: FID BKG SVC LLC MONEYLINE 250703" #beangulp #imported #schwab
+  Assets:Cash---Bank:Schwab-Checking   -400.00 USD
+  Equity:Opening-Balances               400.00 USD

@@ -160,6 +160,26 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output in JSONL format instead of Beancount format.",
     )
 
+    schwab_xml_parser = subparsers.add_parser(
+        "schwab-xml",
+        help="Parse Schwab .xml files.",
+    )
+    schwab_xml_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the Schwab .xml file.",
+    )
+    schwab_xml_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+    schwab_xml_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
+
     return parser
 
 
@@ -197,6 +217,10 @@ def main(argv: list[str] | None = None) -> int:
         "schwab": (
             beanout.schwab.render_schwab_json_file,
             beanout.schwab.render_schwab_json_file_to_jsonl,
+        ),
+        "schwab-xml": (
+            beanout.schwab.render_schwab_xml_file,
+            beanout.schwab.render_schwab_xml_file_to_jsonl,
         ),
     }
 

@@ -12,13 +12,22 @@ def test_schwab_golden_files() -> None:
     """Render all Schwab golden fixtures and compare to expected output."""
     golden_dir = pathlib.Path("fixtures/golden/schwab")
     json_paths = sorted(golden_dir.glob("*.json"))
+    xml_paths = sorted(golden_dir.glob("*.xml"))
 
-    assert json_paths, "No Schwab golden .json files found"
+    assert json_paths or xml_paths, "No Schwab golden files found"
 
     for json_path in json_paths:
         bean_path = json_path.with_suffix(f"{json_path.suffix}.bean")
         assert bean_path.exists(), f"Missing golden file: {bean_path}"
 
         output = beanout.schwab.render_schwab_json_text(json_path.read_text())
+        expected = bean_path.read_text()
+        assert output == expected
+
+    for xml_path in xml_paths:
+        bean_path = xml_path.with_suffix(f"{xml_path.suffix}.bean")
+        assert bean_path.exists(), f"Missing golden file: {bean_path}"
+
+        output = beanout.schwab.render_schwab_xml_text(xml_path.read_bytes())
         expected = bean_path.read_text()
         assert output == expected

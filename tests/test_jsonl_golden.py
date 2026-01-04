@@ -87,8 +87,9 @@ def test_schwab_jsonl_golden_files() -> None:
     """Validate Schwab JSONL golden files match expected output."""
     golden_dir = pathlib.Path("fixtures/golden/schwab")
     json_paths = sorted(golden_dir.glob("*.json"))
+    xml_paths = sorted(golden_dir.glob("*.xml"))
 
-    assert json_paths, "No Schwab golden .json files found"
+    assert json_paths or xml_paths, "No Schwab golden files found"
 
     for json_path in json_paths:
         jsonl_path = json_path.with_suffix(f"{json_path.suffix}.jsonl")
@@ -98,6 +99,15 @@ def test_schwab_jsonl_golden_files() -> None:
         expected = jsonl_path.read_text()
 
         _assert_jsonl_equal(output, expected, json_path.name)
+
+    for xml_path in xml_paths:
+        jsonl_path = xml_path.with_suffix(f"{xml_path.suffix}.jsonl")
+        assert jsonl_path.exists(), f"Missing golden file: {jsonl_path}"
+
+        output = beanout.schwab.render_schwab_xml_text_to_jsonl(xml_path.read_bytes())
+        expected = jsonl_path.read_text()
+
+        _assert_jsonl_equal(output, expected, xml_path.name)
 
 
 def test_ally_bank_jsonl_golden_files() -> None:
