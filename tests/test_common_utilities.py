@@ -1,8 +1,7 @@
 """Tests for shared common utilities."""
 
+import datetime
 from decimal import Decimal
-
-import beancount.core.number
 
 from beanout.common import amounts, beancount_helpers
 
@@ -35,8 +34,6 @@ def test_negate():
 
 def test_sort_postings():
     """Test posting sorting (negative before positive)."""
-    import datetime
-
     posting1 = beancount_helpers.create_posting("Assets:Test", Decimal("100"), "USD")
     posting2 = beancount_helpers.create_posting("Expenses:Test", Decimal("-100"), "USD")
 
@@ -49,8 +46,6 @@ def test_sort_postings():
 
 def test_create_transaction():
     """Test transaction creation."""
-    import datetime
-
     posting1 = beancount_helpers.create_posting("Assets:Cash", Decimal("-100"), "USD")
     posting2 = beancount_helpers.create_posting("Expenses:Food", Decimal("100"), "USD")
 

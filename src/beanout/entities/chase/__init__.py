@@ -1,1 +1,1 @@
-"""Ally Bank statement parser."""
+"""Chase bank statement parser."""
