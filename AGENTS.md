@@ -25,7 +25,7 @@
 ## Document Pipeline & File Management
 - `inbox/` is the entry point for new statement files that need to be processed. Files here are unorganized and require renaming and moving.
 - `documents/` contains organized statement files following the naming convention `YYYY-MM-DD-ENTITY.ext`.
-- Entity subdirectories in `documents/` organize files by property manager or entity (e.g., `sps/`, `sheer-value/`, `clover-leaf/`).
+- Entity subdirectories in `documents/` organize files by property manager or entity (e.g., `sps/`, `sheer_value/`, `clover_leaf/`).
 - Pipeline workflow:
   1. New files arrive in `inbox/` with arbitrary names.
   2. Files are renamed to follow the pattern `YYYY-MM-DD-ENTITY.ext` and moved to `documents/entity/`.

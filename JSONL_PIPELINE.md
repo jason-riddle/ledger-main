@@ -25,10 +25,10 @@ Use the `beanout` CLI with the `--jsonl` flag:
 python -m beanout sps --input statement.pdf.txt --jsonl --output statement.pdf.jsonl
 
 # CloverLeaf property management statements
-python -m beanout clover-leaf --input statement.pdf.txt --jsonl --output statement.pdf.jsonl
+python -m beanout clover_leaf --input statement.pdf.txt --jsonl --output statement.pdf.jsonl
 
 # Sheer Value property management statements
-python -m beanout sheer-value --input statement.pdf.txt --jsonl --output statement.pdf.jsonl
+python -m beanout sheer_value --input statement.pdf.txt --jsonl --output statement.pdf.jsonl
 ```
 
 Or output to stdout:

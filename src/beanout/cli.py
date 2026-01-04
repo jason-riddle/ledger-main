@@ -42,7 +42,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     clover_leaf_parser = subparsers.add_parser(
-        "clover-leaf",
+        "clover_leaf",
         help="Parse CloverLeaf .pdf.txt files.",
     )
     clover_leaf_parser.add_argument(
@@ -62,7 +62,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     clover_leaf_csv_parser = subparsers.add_parser(
-        "clover-leaf-csv",
+        "clover_leaf_csv",
         help="Parse CloverLeaf .csv files.",
     )
     clover_leaf_csv_parser.add_argument(
@@ -82,7 +82,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     clover_leaf_json_parser = subparsers.add_parser(
-        "clover-leaf-json",
+        "clover_leaf_json",
         help="Parse CloverLeaf .json files.",
     )
     clover_leaf_json_parser.add_argument(
@@ -102,7 +102,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     sheer_value_parser = subparsers.add_parser(
-        "sheer-value",
+        "sheer_value",
         help="Parse Sheer Value .pdf.txt files.",
     )
     sheer_value_parser.add_argument(
@@ -142,7 +142,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     ally_bank_csv_parser = subparsers.add_parser(
-        "ally-bank-csv",
+        "ally_bank_csv",
         help="Parse Ally Bank .csv files.",
     )
     ally_bank_csv_parser.add_argument(
@@ -162,7 +162,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     ally_bank_qfx_parser = subparsers.add_parser(
-        "ally-bank-qfx",
+        "ally_bank_qfx",
         help="Parse Ally Bank .qfx files.",
     )
     ally_bank_qfx_parser.add_argument(
@@ -182,7 +182,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     chase_csv_parser = subparsers.add_parser(
-        "chase-csv",
+        "chase_csv",
         help="Parse Chase .csv files.",
     )
     chase_csv_parser.add_argument(
@@ -202,7 +202,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     chase_qfx_parser = subparsers.add_parser(
-        "chase-qfx",
+        "chase_qfx",
         help="Parse Chase .qfx files.",
     )
     chase_qfx_parser.add_argument(
@@ -242,7 +242,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     schwab_xml_parser = subparsers.add_parser(
-        "schwab-xml",
+        "schwab_xml",
         help="Parse Schwab .xml files.",
     )
     schwab_xml_parser.add_argument(
@@ -275,19 +275,19 @@ def main(argv: list[str] | None = None) -> int:
             beanout.sps.render_sps_file,
             beanout.sps.render_sps_file_to_jsonl,
         ),
-        "clover-leaf": (
+        "clover_leaf": (
             beanout.clover_leaf.render_clover_leaf_file,
             beanout.clover_leaf.render_clover_leaf_file_to_jsonl,
         ),
-        "clover-leaf-csv": (
+        "clover_leaf_csv": (
             beanout.clover_leaf.render_clover_leaf_csv_file,
             beanout.clover_leaf.render_clover_leaf_csv_file_to_jsonl,
         ),
-        "clover-leaf-json": (
+        "clover_leaf_json": (
             beanout.clover_leaf.render_clover_leaf_json_file,
             beanout.clover_leaf.render_clover_leaf_json_file_to_jsonl,
         ),
-        "sheer-value": (
+        "sheer_value": (
             beanout.sheer_value.render_sheer_value_file,
             beanout.sheer_value.render_sheer_value_file_to_jsonl,
         ),
@@ -295,19 +295,19 @@ def main(argv: list[str] | None = None) -> int:
             beanout.fidelity.render_fidelity_csv_file,
             beanout.fidelity.render_fidelity_csv_file_to_jsonl,
         ),
-        "ally-bank-csv": (
+        "ally_bank_csv": (
             beanout.ally_bank.render_ally_bank_csv_file,
             beanout.ally_bank.render_ally_bank_csv_file_to_jsonl,
         ),
-        "ally-bank-qfx": (
+        "ally_bank_qfx": (
             beanout.ally_bank.render_ally_bank_qfx_file,
             beanout.ally_bank.render_ally_bank_qfx_file_to_jsonl,
         ),
-        "chase-csv": (
+        "chase_csv": (
             beanout.chase.render_chase_csv_file,
             beanout.chase.render_chase_csv_file_to_jsonl,
         ),
-        "chase-qfx": (
+        "chase_qfx": (
             beanout.chase.render_chase_qfx_file,
             beanout.chase.render_chase_qfx_file_to_jsonl,
         ),
@@ -315,7 +315,7 @@ def main(argv: list[str] | None = None) -> int:
             beanout.schwab.render_schwab_json_file,
             beanout.schwab.render_schwab_json_file_to_jsonl,
         ),
-        "schwab-xml": (
+        "schwab_xml": (
             beanout.schwab.render_schwab_xml_file,
             beanout.schwab.render_schwab_xml_file_to_jsonl,
         ),
