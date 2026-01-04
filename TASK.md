@@ -114,15 +114,14 @@ scripts/x/ledger-gen/generate_years.py --dry-run
 
 ## What changes have been made so far
 - Added generator script: `scripts/x/ledger-gen/generate_years.py` (executable).
-- No ledger files have been moved or renamed yet.
-- No canonical folder structure has been created yet.
+- Created `ledger/canonical/adjustments/` and moved owner distributions from 2025 operations to `2025-Owner-Distributions.bean`.
+- No statement structure created yet.
 
 ---
 
 ## Next steps (planned)
 1. **Create canonical structure** under `ledger/canonical/`:
-   - `statements/ManagerName/`
-   - `adjustments/`
+   - `statements/ManagerName/` (adjustments/ done)
 2. **Move existing statement-driven entries** into statement files:
    - Split by statement date and manager as appropriate.
 3. **Move non-statement entries** (owner distributions, outside expenses) into `canonical/adjustments/`.
@@ -137,10 +136,10 @@ scripts/x/ledger-gen/generate_years.py --dry-run
 
 ### Migration checklist
 - [ ] Create `ledger/canonical/statements/` and `ledger/canonical/adjustments/`.
-- [ ] Decide manager folder names (e.g., `CloverLeaf`, `SheerValue`) and keep them consistent.
+- [x] Decide manager folder names (e.g., `CloverLeaf`, `SheerValue`) and keep them consistent.
 - [ ] Move statement entries into `YYYY-MM-DD-Manager-Statement.bean` files.
-- [ ] Move owner distributions and outside expenses into `ledger/canonical/adjustments/`.
-- [ ] Ensure all canonical files use `YYYY-` prefix.
+- [x] Move owner distributions and outside expenses into `ledger/canonical/adjustments/`.
+- [x] Ensure all canonical files use `YYYY-` prefix.
 - [ ] Ensure year-specific asset/depreciation/amortization entries are year-prefixed if included in canonical.
 
 ### Generation checklist

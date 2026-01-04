@@ -1,0 +1,28 @@
+;;
+;; 2025 - ADJUSTMENTS - OWNER-DISTRIBUTIONS
+;;
+
+; PDF: 2/7 Owner Draw 892.50
+2025-02-07 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)" #206-hoover-ave #distributions
+  Assets:Property-Management:SheerValue-PM   -892.50 USD
+  Equity:Owner-Distributions:Owner-Draw       892.50 USD
+
+; PDF: 3/5 Owner Draw 1,046.50
+2025-03-05 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)" #206-hoover-ave #distributions
+  Assets:Property-Management:SheerValue-PM  -1046.50 USD
+  Equity:Owner-Distributions:Owner-Draw      1046.50 USD
+
+; PDF: 4/11 Owner Draw 1,184.50
+2025-04-11 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)" #206-hoover-ave #distributions
+  Assets:Property-Management:SheerValue-PM  -1184.50 USD
+  Equity:Owner-Distributions:Owner-Draw      1184.50 USD
+
+; PDF: 6/13 Owner Draw 1,605.00
+2025-06-13 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)" #206-hoover-ave #distributions
+  Assets:Property-Management:SheerValue-PM  -1605.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1605.00 USD
+
+; PDF: 6/13 Owner Draw 103.50 (as shown on statement)
+2025-06-13 * "Sheer Value PM" "206 Hoover Ave - Owner draw paid to owner (per statement)" #206-hoover-ave #distributions
+  Assets:Property-Management:SheerValue-PM   -103.50 USD
+  Equity:Owner-Distributions:Owner-Draw       103.50 USD
