@@ -12,7 +12,7 @@ include "./header.bean"
 
 option "insert_pythonpath" "True"
 ; plugin "plugins.comments_required"
-plugin "plugins.find_duplicates" "
+plugin "src.plugins.find_duplicates" "
     error_threshold=0.90
     warn_threshold=0.70
     window=7
@@ -49,7 +49,7 @@ plugin "beancount.plugins.leafonly"
 
 ; Third-party plugins
 
-plugin "beancount_docverif"
+; plugin "beancount_docverif"
 
 ; Generates periodic transactions based on recurring patterns in transaction metadata
 ; plugin "beancount_periodic.recur" ; Removed due to unreliability
