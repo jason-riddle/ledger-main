@@ -5,6 +5,7 @@ import pathlib
 import sys
 
 import beanout.clover_leaf
+import beanout.fidelity
 import beanout.sheer_value
 import beanout.sps
 
@@ -77,6 +78,26 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output in JSONL format instead of Beancount format.",
     )
 
+    fidelity_parser = subparsers.add_parser(
+        "fidelity",
+        help="Parse Fidelity .csv files.",
+    )
+    fidelity_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the Fidelity .csv file.",
+    )
+    fidelity_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+    fidelity_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
+
     return parser
 
 
@@ -98,6 +119,10 @@ def main(argv: list[str] | None = None) -> int:
         "sheer-value": (
             beanout.sheer_value.render_sheer_value_file,
             beanout.sheer_value.render_sheer_value_file_to_jsonl,
+        ),
+        "fidelity": (
+            beanout.fidelity.render_fidelity_csv_file,
+            beanout.fidelity.render_fidelity_csv_file_to_jsonl,
         ),
     }
 

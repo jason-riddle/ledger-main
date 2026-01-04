@@ -1,0 +1,143 @@
+2025-12-31 * "Fidelity" "Taxable: REINVESTMENT FIDELITY GOVERNMENT MONEY MARKET (SPAXX) (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash    -164.64 USD
+  Equity:Opening-Balances              164.64 USD
+
+2025-12-31 * "Fidelity" "Taxable: DIVIDEND RECEIVED FIDELITY GOVERNMENT MONEY MARKET (SPAXX) (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances             -164.64 USD
+  Assets:Investments:Fidelity:Cash     164.64 USD
+
+2025-12-30 * "Fidelity" "Roth IRA: REINVESTMENT FIDELITY FREEDOM INDEX 2060 INVESTOR (FDKLX) (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash  -12212.00 USD
+  Equity:Opening-Balances            12212.00 USD
+
+2025-12-30 * "Fidelity" "Roth IRA: DIVIDEND RECEIVED FIDELITY FREEDOM INDEX 2060 INVESTOR (FDKLX) (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances           -12091.98 USD
+  Assets:Investments:Fidelity:Cash   12091.98 USD
+
+2025-12-30 * "Fidelity" "Roth IRA: SHORT-TERM CAP GAIN FIDELITY FREEDOM INDEX 2060 INVESTOR (FDKLX) (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances             -120.02 USD
+  Assets:Investments:Fidelity:Cash     120.02 USD
+
+2025-12-17 * "Fidelity" "Taxable: Electronic Funds Transfer Paid (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash   -1000.00 USD
+  Equity:Opening-Balances             1000.00 USD
+
+2025-12-17 * "Fidelity" "Taxable: Electronic Funds Transfer Paid (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash   -4000.00 USD
+  Equity:Opening-Balances             4000.00 USD
+
+2025-12-15 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances            -2272.03 USD
+  Assets:Investments:Fidelity:Cash    2272.03 USD
+
+2025-12-08 * "Fidelity" "Taxable: Electronic Funds Transfer Paid (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash   -6000.00 USD
+  Equity:Opening-Balances             6000.00 USD
+
+2025-11-28 * "Fidelity" "Taxable: REINVESTMENT FIDELITY GOVERNMENT MONEY MARKET (SPAXX) (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash    -180.34 USD
+  Equity:Opening-Balances              180.34 USD
+
+2025-11-28 * "Fidelity" "Taxable: DIVIDEND RECEIVED FIDELITY GOVERNMENT MONEY MARKET (SPAXX) (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances             -180.34 USD
+  Assets:Investments:Fidelity:Cash     180.34 USD
+
+2025-11-12 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances            -1250.00 USD
+  Assets:Investments:Fidelity:Cash    1250.00 USD
+
+2025-10-31 * "Fidelity" "Taxable: REINVESTMENT FIDELITY GOVERNMENT MONEY MARKET (SPAXX) (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash    -186.98 USD
+  Equity:Opening-Balances              186.98 USD
+
+2025-10-31 * "Fidelity" "Taxable: DIVIDEND RECEIVED FIDELITY GOVERNMENT MONEY MARKET (SPAXX) (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances             -186.98 USD
+  Assets:Investments:Fidelity:Cash     186.98 USD
+
+2025-10-29 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances               -1.11 USD
+  Assets:Investments:Fidelity:Cash       1.11 USD
+
+2025-10-29 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances            -1250.00 USD
+  Assets:Investments:Fidelity:Cash    1250.00 USD
+
+2025-10-22 * "Fidelity" "Taxable: Electronic Funds Transfer Paid (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash   -1000.00 USD
+  Equity:Opening-Balances             1000.00 USD
+
+2025-10-22 * "Fidelity" "Taxable: Electronic Funds Transfer Paid (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash   -1500.00 USD
+  Equity:Opening-Balances             1500.00 USD
+
+2025-10-20 * "Fidelity" "Taxable: Electronic Funds Transfer Paid (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash   -2000.00 USD
+  Equity:Opening-Balances             2000.00 USD
+
+2025-10-20 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances             -591.00 USD
+  Assets:Investments:Fidelity:Cash     591.00 USD
+
+2025-10-20 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances            -2000.00 USD
+  Assets:Investments:Fidelity:Cash    2000.00 USD
+
+2025-10-15 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances            -1250.00 USD
+  Assets:Investments:Fidelity:Cash    1250.00 USD
+
+2025-10-14 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances            -2600.00 USD
+  Assets:Investments:Fidelity:Cash    2600.00 USD
+
+2025-10-09 * "Fidelity" "Roth IRA: YOU SOLD EXCHANGE FIDELITY SELECT GOLD (FSAGX) (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances              -21.01 USD
+  Assets:Investments:Fidelity:Cash      21.01 USD
+
+2025-10-09 * "Fidelity" "Roth IRA: YOU SOLD EXCHANGE FIDELITY INFLAT-PROT BD INDEX FUND (FIPDX) (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances              -21.64 USD
+  Assets:Investments:Fidelity:Cash      21.64 USD
+
+2025-10-09 * "Fidelity" "Roth IRA: YOU BOUGHT PROSPECTUS UNDER SEPARATE COVER EXCHANGE FIDELITY FREEDOM INDEX 2060 INVESTOR (FDKLX) (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash     -21.64 USD
+  Equity:Opening-Balances               21.64 USD
+
+2025-10-09 * "Fidelity" "Roth IRA: YOU BOUGHT PROSPECTUS UNDER SEPARATE COVER EXCHANGE FIDELITY FREEDOM INDEX 2060 INVESTOR (FDKLX) (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash     -21.01 USD
+  Equity:Opening-Balances               21.01 USD
+
+2025-10-06 * "Fidelity" "Taxable: Electronic Funds Transfer Paid (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash   -1085.29 USD
+  Equity:Opening-Balances             1085.29 USD
+
+2025-10-06 * "Fidelity" "Roth IRA: YOU BOUGHT PROSPECTUS UNDER SEPARATE COVER EXCHANGE FIDELITY INFLAT-PROT BD INDEX FUND (FIPDX) (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash     -21.57 USD
+  Equity:Opening-Balances               21.57 USD
+
+2025-10-06 * "Fidelity" "Taxable: Electronic Funds Transfer Paid (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash   -1521.32 USD
+  Equity:Opening-Balances             1521.32 USD
+
+2025-10-06 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances            -2425.11 USD
+  Assets:Investments:Fidelity:Cash    2425.11 USD
+
+2025-10-06 * "Fidelity" "Roth IRA: YOU SOLD EXCHANGE FIDELITY FREEDOM INDEX 2060 INVESTOR (FDKLX) (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances              -21.57 USD
+  Assets:Investments:Fidelity:Cash      21.57 USD
+
+2025-10-02 * "Fidelity" "Roth IRA: YOU BOUGHT PROSPECTUS UNDER SEPARATE COVER EXCHANGE FIDELITY SELECT GOLD (FSAGX) (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash     -21.45 USD
+  Equity:Opening-Balances               21.45 USD
+
+2025-10-02 * "Fidelity" "Roth IRA: YOU SOLD EXCHANGE FIDELITY FREEDOM INDEX 2060 INVESTOR (FDKLX) (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances              -21.45 USD
+  Assets:Investments:Fidelity:Cash      21.45 USD
+
+2025-10-01 * "Fidelity" "Taxable: Electronic Funds Transfer Paid (Cash)" #beangulp #fidelity #imported
+  Assets:Investments:Fidelity:Cash   -1175.00 USD
+  Equity:Opening-Balances             1175.00 USD
+
+2025-10-01 * "Fidelity" "Taxable: Electronic Funds Transfer Received (Cash)" #beangulp #fidelity #imported
+  Equity:Opening-Balances            -2500.00 USD
+  Assets:Investments:Fidelity:Cash    2500.00 USD
