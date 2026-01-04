@@ -6,6 +6,7 @@ import sys
 
 import beanout.clover_leaf
 import beanout.fidelity
+import beanout.ally_bank
 import beanout.schwab
 import beanout.sheer_value
 import beanout.sps
@@ -99,6 +100,46 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output in JSONL format instead of Beancount format.",
     )
 
+    ally_bank_csv_parser = subparsers.add_parser(
+        "ally-bank-csv",
+        help="Parse Ally Bank .csv files.",
+    )
+    ally_bank_csv_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the Ally Bank .csv file.",
+    )
+    ally_bank_csv_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+    ally_bank_csv_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
+
+    ally_bank_qfx_parser = subparsers.add_parser(
+        "ally-bank-qfx",
+        help="Parse Ally Bank .qfx files.",
+    )
+    ally_bank_qfx_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the Ally Bank .qfx file.",
+    )
+    ally_bank_qfx_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+    ally_bank_qfx_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
+
     schwab_parser = subparsers.add_parser(
         "schwab",
         help="Parse Schwab .json files.",
@@ -144,6 +185,14 @@ def main(argv: list[str] | None = None) -> int:
         "fidelity": (
             beanout.fidelity.render_fidelity_csv_file,
             beanout.fidelity.render_fidelity_csv_file_to_jsonl,
+        ),
+        "ally-bank-csv": (
+            beanout.ally_bank.render_ally_bank_csv_file,
+            beanout.ally_bank.render_ally_bank_csv_file_to_jsonl,
+        ),
+        "ally-bank-qfx": (
+            beanout.ally_bank.render_ally_bank_qfx_file,
+            beanout.ally_bank.render_ally_bank_qfx_file_to_jsonl,
         ),
         "schwab": (
             beanout.schwab.render_schwab_json_file,

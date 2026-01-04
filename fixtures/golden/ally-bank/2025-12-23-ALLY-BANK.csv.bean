@@ -1,0 +1,11 @@
+2025-12-23 * "Ally Bank" "Deposit: Interest Paid" #ally-bank #beangulp #imported
+  Equity:Opening-Balances          -0.97 USD
+  Assets:Cash---Bank:Ally-Bank      0.97 USD
+
+2025-12-17 * "Ally Bank" "Deposit: Z24826156  EAKR FID BKG SVC LLC MONEYLINE" #ally-bank #beangulp #imported
+  Equity:Opening-Balances       -1000.00 USD
+  Assets:Cash---Bank:Ally-Bank   1000.00 USD
+
+2025-12-08 * "Ally Bank" "Deposit: CLOVERLEAF PROPE ACH" #ally-bank #beangulp #imported
+  Equity:Opening-Balances        -817.92 USD
+  Assets:Cash---Bank:Ally-Bank    817.92 USD
