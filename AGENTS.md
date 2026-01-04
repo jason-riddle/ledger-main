@@ -1,8 +1,13 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `ledger/` contains the Beancount source files. `main.bean` is the entry point and includes `header.bean`, yearly ledgers (`2022/`–`2026/`), and `balances.bean` for assertions.
-- Year folders (e.g., `ledger/2025/`) hold the primary `YYYY.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/` (with `buildings/` and `improvements/`), `assets/` (with `buildings/` and `improvements/`), `operations/`, and other domain slices.
+- `ledger/` contains the Beancount source files. `main.bean` is the entry point and includes `header.bean`, `years/YYYY.bean` (generated), and `balances.bean` for assertions.
+- Canonical source-of-truth lives under `ledger/canonical/`:
+  - `statements/<Manager>/YYYY-MM-DD-Manager-Statement.bean`
+  - `adjustments/YYYY-<Description>.bean`
+  - Domain groups: `assets/`, `depreciation/`, `amortization/`, `mortgage/`, `taxes/` (year-prefixed files)
+- Generated year views live under `ledger/years/` and are produced from canonical files via `scripts/x/ledger-gen/generate_years.py`.
+- Legacy year folders (e.g., `ledger/2023/`) may still exist but are not the canonical source of truth.
 - Supporting notes live under `_notes/` with Markdown context files.
 - Environment metadata is in `devenv.nix`/`devenv.yaml` (Nix-based dev setup).
 - `src/beanout/` houses statement parsers and CLI utilities for generating Beancount output from `*.pdf.txt`, `.csv`, `.json`, `.qfx`, and `.xml` files.
@@ -39,22 +44,19 @@
 - Python code follows the Google Python Style Guide; see `PYTHON_STYLE_GUIDE.md`.
 - File naming follows descriptive, date/asset-driven patterns:
   - Year includes: `YYYY.bean`.
-  - Operations summary: `YYYY-Operations-All.bean`.
-  - Statements (manager-specific when needed): `YYYY-VENDOR-PROPERTY-Statement.bean` (stored in `operations/`).
-  - Operations transactions: `YYYY-PROPERTY-Transactions.bean` (stored in `operations/`).
+  - Statements: `YYYY-MM-DD-Manager-Statement.bean` (stored in `ledger/canonical/statements/Manager/`).
+  - Adjustments: `YYYY-<Description>.bean` (stored in `ledger/canonical/adjustments/`).
   - Buildings (property purchases): `YYYY-PROPERTY-YYYY-MM-DD-Property-Purchase.bean`.
   - Improvements: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
   - Depreciation/amortization: `YYYY-PROPERTY-YYYY-MM-DD-ASSET.bean`.
   - Mortgage/escrow: `YYYY-PROPERTY-Mortgage-Payments.bean`, `YYYY-PROPERTY-Escrow-Payouts.bean`.
   - Taxes: `YYYY-PROPERTY-Taxes.bean`.
   - `PROPERTY` is hyphenated (`206-Hoover-Ave`) and vendor casing is `SheerValue` / `CloverLeaf` in statement filenames when used.
-- Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `depreciation/buildings/`, `depreciation/improvements/`, `assets/`, `assets/buildings/`, `assets/improvements/`, `operations/`).
-- Include files should be named descriptively; year files are `YYYY.bean`.
-- For each domain directory that contains transactions, create a `YYYY-*-All.bean` that includes every `.bean` file at that directory level, then have the yearly `YYYY.bean` include only those `*-All` files (not the individual transaction files).
-- In yearly `YYYY.bean` files, alphabetize the section headers and keep every line within a section in strict lexicographic order (including `include` lines and `;; TODO:` notes).
+- Directory names are lowercase, domain-oriented (e.g., `mortgage/`, `taxes/`, `depreciation/`, `depreciation/buildings/`, `depreciation/improvements/`, `assets/`, `assets/buildings/`, `assets/improvements/`).
+- Canonical files are year-prefixed (`YYYY-...`) so the generator can include them automatically.
+- Year files in `ledger/years/` are auto-generated; do not hand-edit. Run `scripts/x/ledger-gen/generate_years.py` after adding/moving canonical files.
 - Keep account names consistent and hierarchical, with date-stamped subaccounts for fixed assets and accumulated depreciation (e.g., `Assets:Fixed-Assets:2943-Butterfly-Palm:Improvements:2023-02-17-Water-Heater`).
 - For transactions, list negative postings first, then positive postings.
-- `YYYY-Operations-All.bean` should include the per-property `YYYY-PROPERTY-Transactions.bean` files.
 - Tag conventions for transactions:
   - Amortization transactions: use the property tag plus `#amortization` only (no `#depreciation` or `#improvements`).
   - Buildings transactions: `#buildings`.
