@@ -1,0 +1,1 @@
+"""Ally Bank statement parser."""

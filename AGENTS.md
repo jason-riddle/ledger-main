@@ -10,7 +10,17 @@
 - Legacy year folders (e.g., `ledger/2023/`) may still exist but are not the canonical source of truth.
 - Supporting notes live under `_notes/` with Markdown context files.
 - Environment metadata is in `devenv.nix`/`devenv.yaml` (Nix-based dev setup).
-- `src/beanout/` houses statement parsers and CLI utilities for generating Beancount output from `*.pdf.txt`, `.csv`, `.json`, `.qfx`, and `.xml` files.
+- `src/beanout/` houses statement parsers and CLI utilities for generating Beancount output from `*.pdf.txt`, `.csv`, `.json`, `.qfx`, and `.xml` files:
+  - `src/beanout/common/` contains shared utilities:
+    - `amounts.py` - Amount parsing utilities (parse_amount, parse_optional_amount, negate, etc.)
+    - `beancount_helpers.py` - Helpers for creating Beancount directives (create_posting, create_transaction, create_balance, sort_postings, etc.)
+    - `io.py` - File I/O utilities (validate_file_extension, read_text_file, read_binary_file, render_file_generic, etc.)
+    - `rendering.py` - Output rendering utilities (render_to_beancount, render_to_jsonl)
+    - `ofx.py` - OFX/QFX parsing utilities (parse_ofx_data, build_ofx_narration)
+  - `src/beanout/entities/` contains entity-specific parsers in packages:
+    - `sps/parser.py` - SPS Mortgage Servicing parser (refactored to use shared utilities)
+    - Other parsers (ally_bank, chase, schwab, fidelity, sheer_value, clover_leaf) remain in root for now
+  - Top-level parser files (`sps.py`, `ally_bank.py`, etc.) provide backward compatibility by re-exporting from entities or containing the implementation
 
 ## Document Pipeline & File Management
 - `inbox/` is the entry point for new statement files that need to be processed. Files here are unorganized and require renaming and moving.
