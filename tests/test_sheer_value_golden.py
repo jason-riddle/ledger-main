@@ -10,7 +10,7 @@ import beanout.sheer_value
 
 def test_sheer_value_golden_files() -> None:
     """Render all Sheer Value golden fixtures and compare to expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/sheer-value")
+    golden_dir = pathlib.Path("fixtures/golden/managers/sheer-value")
     txt_paths = sorted(
         path
         for path in golden_dir.iterdir()

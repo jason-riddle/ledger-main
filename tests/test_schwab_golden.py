@@ -10,7 +10,7 @@ import beanout.schwab
 
 def test_schwab_golden_files() -> None:
     """Render all Schwab golden fixtures and compare to expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/schwab")
+    golden_dir = pathlib.Path("fixtures/golden/institutions/banking/schwab")
     json_paths = sorted(
         path for path in golden_dir.iterdir() if path.suffix.lower() == ".json"
     )

@@ -10,7 +10,7 @@ import beanout.clover_leaf
 
 def test_clover_leaf_golden_files() -> None:
     """Render all CloverLeaf golden fixtures and compare to expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/clover-leaf")
+    golden_dir = pathlib.Path("fixtures/golden/managers/clover-leaf")
     txt_paths = sorted(
         path
         for path in golden_dir.iterdir()

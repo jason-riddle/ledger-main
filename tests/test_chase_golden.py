@@ -10,7 +10,7 @@ import beanout.chase
 
 def test_chase_csv_golden_files() -> None:
     """Render all Chase CSV fixtures and compare to expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/chase")
+    golden_dir = pathlib.Path("fixtures/golden/institutions/banking/chase")
     csv_paths = sorted(
         path for path in golden_dir.iterdir() if path.suffix.lower() == ".csv"
     )
@@ -28,7 +28,7 @@ def test_chase_csv_golden_files() -> None:
 
 def test_chase_qfx_golden_files() -> None:
     """Render all Chase QFX fixtures and compare to expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/chase")
+    golden_dir = pathlib.Path("fixtures/golden/institutions/banking/chase")
     qfx_paths = sorted(
         path for path in golden_dir.iterdir() if path.suffix.lower() == ".qfx"
     )

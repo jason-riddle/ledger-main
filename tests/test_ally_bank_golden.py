@@ -10,7 +10,7 @@ import beanout.ally_bank
 
 def test_ally_bank_csv_golden_files() -> None:
     """Render all Ally Bank CSV fixtures and compare to expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/ally-bank")
+    golden_dir = pathlib.Path("fixtures/golden/institutions/banking/ally-bank")
     csv_paths = sorted(
         path for path in golden_dir.iterdir() if path.suffix.lower() == ".csv"
     )
@@ -28,7 +28,7 @@ def test_ally_bank_csv_golden_files() -> None:
 
 def test_ally_bank_qfx_golden_files() -> None:
     """Render all Ally Bank QFX fixtures and compare to expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/ally-bank")
+    golden_dir = pathlib.Path("fixtures/golden/institutions/banking/ally-bank")
     qfx_paths = sorted(
         path for path in golden_dir.iterdir() if path.suffix.lower() == ".qfx"
     )

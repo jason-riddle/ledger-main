@@ -65,7 +65,7 @@ def test_sps_jsonl_golden_files() -> None:
     """Validate SPS JSONL golden files match expected output."""
     _test_jsonl_golden_files(
         "SPS",
-        pathlib.Path("fixtures/golden/sps"),
+        pathlib.Path("fixtures/golden/loans/sps"),
         beanout.sps.render_sps_text_to_jsonl,
     )
 
@@ -74,7 +74,7 @@ def test_clover_leaf_jsonl_golden_files() -> None:
     """Validate CloverLeaf JSONL golden files match expected output."""
     _test_jsonl_golden_files(
         "CloverLeaf",
-        pathlib.Path("fixtures/golden/clover-leaf"),
+        pathlib.Path("fixtures/golden/managers/clover-leaf"),
         beanout.clover_leaf.render_clover_leaf_text_to_jsonl,
     )
 
@@ -83,14 +83,14 @@ def test_sheer_value_jsonl_golden_files() -> None:
     """Validate Sheer Value JSONL golden files match expected output."""
     _test_jsonl_golden_files(
         "Sheer Value",
-        pathlib.Path("fixtures/golden/sheer-value"),
+        pathlib.Path("fixtures/golden/managers/sheer-value"),
         beanout.sheer_value.render_sheer_value_text_to_jsonl,
     )
 
 
 def test_schwab_jsonl_golden_files() -> None:
     """Validate Schwab JSONL golden files match expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/schwab")
+    golden_dir = pathlib.Path("fixtures/golden/institutions/banking/schwab")
     json_paths = sorted(golden_dir.glob("*.json"))
     xml_paths = sorted(golden_dir.glob("*.xml"))
 
@@ -117,7 +117,7 @@ def test_schwab_jsonl_golden_files() -> None:
 
 def test_ally_bank_jsonl_golden_files() -> None:
     """Validate Ally Bank JSONL golden files match expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/ally-bank")
+    golden_dir = pathlib.Path("fixtures/golden/institutions/banking/ally-bank")
     csv_paths = sorted(
         path for path in golden_dir.iterdir() if path.suffix.lower() == ".csv"
     )
@@ -150,7 +150,7 @@ def test_ally_bank_jsonl_golden_files() -> None:
 
 def test_chase_jsonl_golden_files() -> None:
     """Validate Chase JSONL golden files match expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/chase")
+    golden_dir = pathlib.Path("fixtures/golden/institutions/banking/chase")
     csv_paths = sorted(
         path for path in golden_dir.iterdir() if path.suffix.lower() == ".csv"
     )

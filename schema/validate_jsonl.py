@@ -14,6 +14,7 @@ from pathlib import Path
 
 try:
     import jsonschema
+
     JSONSCHEMA_AVAILABLE = True
 except ImportError:
     JSONSCHEMA_AVAILABLE = False
@@ -61,7 +62,9 @@ def validate_jsonl_file(jsonl_path: Path, schema: dict) -> tuple[int, int, list[
                 valid_count += 1
             except jsonschema.ValidationError as e:
                 invalid_count += 1
-                errors.append(f"Line {line_num}: Schema validation failed - {e.message}")
+                errors.append(
+                    f"Line {line_num}: Schema validation failed - {e.message}"
+                )
 
     return valid_count, invalid_count, errors
 

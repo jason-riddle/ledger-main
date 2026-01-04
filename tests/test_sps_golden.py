@@ -10,7 +10,7 @@ import beanout.sps
 
 def test_sps_golden_files() -> None:
     """Render all SPS golden fixtures and compare to expected output."""
-    golden_dir = pathlib.Path("fixtures/golden/sps")
+    golden_dir = pathlib.Path("fixtures/golden/loans/sps")
     txt_paths = sorted(
         path
         for path in golden_dir.iterdir()

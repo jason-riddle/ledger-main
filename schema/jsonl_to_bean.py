@@ -96,7 +96,9 @@ def convert_jsonl_to_bean(jsonl_path: Path) -> tuple[str, list[str]]:
 
             if not obj.get("ok"):
                 error_msg = obj.get("error", "Unknown error")
-                errors.append(f"Line {line_num}: Skipped failed transaction - {error_msg}")
+                errors.append(
+                    f"Line {line_num}: Skipped failed transaction - {error_msg}"
+                )
                 continue
 
             transaction = obj.get("transaction")
