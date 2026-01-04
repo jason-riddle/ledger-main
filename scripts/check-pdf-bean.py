@@ -57,9 +57,9 @@ def _statement_year(txt: str) -> int | None:
 
 def _detect_kind(txt: str) -> str:
     if "Detail tr an saction s" in txt or "Detail transactions" in txt:
-        return "sheer-value"
+        return "sheer_value"
     if "TRANSACTION DETAILS" in txt:
-        return "clover-leaf"
+        return "clover_leaf"
     if "Transaction Activity" in txt:
         return "sps"
     return "generic"
@@ -76,7 +76,7 @@ def _parse_pdf_transactions(path: Path) -> tuple[str, list[tuple[str, list[str],
     for line in txt.splitlines():
         line_stripped = line.strip()
 
-        if kind == "sheer-value":
+        if kind == "sheer_value":
             if "Detail tr an saction s" in line or "Detail transactions" in line:
                 in_section = True
                 continue
@@ -94,7 +94,7 @@ def _parse_pdf_transactions(path: Path) -> tuple[str, list[tuple[str, list[str],
                             date = f"{year:04d}-{month:02d}-{day:02d}"
                             txns.append((date, [amount], line_stripped))
 
-        elif kind == "clover-leaf":
+        elif kind == "clover_leaf":
             if "TRANSACTION DETAILS" in line:
                 in_section = True
                 continue
