@@ -1,247 +1,310 @@
-2025-01-01 balance Assets:Property-Management:SheerValue-PM   3150.00 USD
+2025-01-01 balance Assets:Property-Management:SheerValue-PM        3150.00 USD
+
 
 2025-01-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
-  Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
-  Assets:Property-Management:SheerValue-PM                    1550.00 USD
+  Income:Rent:2943-Butterfly-Palm           -1550.00 USD
+  Assets:Property-Management:SheerValue-PM   1550.00 USD
+
 
 2025-01-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Pet Rent" #2943-butterfly-palm #beangulp #imported
-  Income:Pet-Fee:2943-Butterfly-Palm                           -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Pet-Fee:2943-Butterfly-Palm        -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2025-01-03 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income" #206-hoover-ave #beangulp #imported
-  Income:Rent:206-Hoover-Ave                                 -1150.00 USD
-  Assets:Property-Management:SheerValue-PM                    1150.00 USD
+  Income:Rent:206-Hoover-Ave                -1150.00 USD
+  Assets:Property-Management:SheerValue-PM   1150.00 USD
+
 
 2025-02-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
-  Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
-  Assets:Property-Management:SheerValue-PM                    1550.00 USD
+  Income:Rent:2943-Butterfly-Palm           -1550.00 USD
+  Assets:Property-Management:SheerValue-PM   1550.00 USD
+
 
 2025-02-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Pet Rent" #2943-butterfly-palm #beangulp #imported
-  Income:Pet-Fee:2943-Butterfly-Palm                           -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Pet-Fee:2943-Butterfly-Palm        -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2025-02-01 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income" #206-hoover-ave #beangulp #imported
-  Income:Rent:206-Hoover-Ave                                 -1150.00 USD
-  Assets:Property-Management:SheerValue-PM                    1150.00 USD
+  Income:Rent:206-Hoover-Ave                -1150.00 USD
+  Assets:Property-Management:SheerValue-PM   1150.00 USD
+
 
 2025-02-28 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income" #206-hoover-ave #beangulp #imported
-  Income:Rent:206-Hoover-Ave                                 -1150.00 USD
-  Assets:Property-Management:SheerValue-PM                    1150.00 USD
+  Income:Rent:206-Hoover-Ave                -1150.00 USD
+  Assets:Property-Management:SheerValue-PM   1150.00 USD
+
 
 2025-03-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
-  Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
-  Assets:Property-Management:SheerValue-PM                    1550.00 USD
+  Income:Rent:2943-Butterfly-Palm           -1550.00 USD
+  Assets:Property-Management:SheerValue-PM   1550.00 USD
+
 
 2025-03-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Pet Rent" #2943-butterfly-palm #beangulp #imported
-  Income:Pet-Fee:2943-Butterfly-Palm                           -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Pet-Fee:2943-Butterfly-Palm        -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2025-04-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
-  Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
-  Assets:Property-Management:SheerValue-PM                    1550.00 USD
+  Income:Rent:2943-Butterfly-Palm           -1550.00 USD
+  Assets:Property-Management:SheerValue-PM   1550.00 USD
+
 
 2025-04-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Pet Rent" #2943-butterfly-palm #beangulp #imported
-  Income:Pet-Fee:2943-Butterfly-Palm                           -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Pet-Fee:2943-Butterfly-Palm        -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2025-04-04 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Late Fee" #2943-butterfly-palm #beangulp #imported
-  Income:Late-Rent-Fee:2943-Butterfly-Palm                     -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Late-Rent-Fee:2943-Butterfly-Palm  -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2025-04-09 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income" #206-hoover-ave #beangulp #imported
-  Income:Rent:206-Hoover-Ave                                 -1150.00 USD
-  Assets:Property-Management:SheerValue-PM                    1150.00 USD
+  Income:Rent:206-Hoover-Ave                -1150.00 USD
+  Assets:Property-Management:SheerValue-PM   1150.00 USD
+
 
 2025-04-09 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Late Fee" #206-hoover-ave #beangulp #imported
-  Income:Late-Rent-Fee:206-Hoover-Ave                         -138.00 USD
-  Assets:Property-Management:SheerValue-PM                     138.00 USD
+  Income:Late-Rent-Fee:206-Hoover-Ave       -138.00 USD
+  Assets:Property-Management:SheerValue-PM   138.00 USD
+
 
 2025-04-14 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income - REVERSED" #206-hoover-ave #beangulp #imported #reversed
-  Assets:Property-Management:SheerValue-PM                   -1150.00 USD
-  Income:Rent:206-Hoover-Ave                                  1150.00 USD
+  Assets:Property-Management:SheerValue-PM  -1150.00 USD
+  Income:Rent:206-Hoover-Ave                 1150.00 USD
+
 
 2025-04-14 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Late Fee - REVERSED" #206-hoover-ave #beangulp #imported #reversed
-  Assets:Property-Management:SheerValue-PM                    -138.00 USD
-  Income:Late-Rent-Fee:206-Hoover-Ave                          138.00 USD
+  Assets:Property-Management:SheerValue-PM  -138.00 USD
+  Income:Late-Rent-Fee:206-Hoover-Ave        138.00 USD
+
 
 2025-04-26 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income" #206-hoover-ave #beangulp #imported
-  Income:Rent:206-Hoover-Ave                                 -1000.00 USD
-  Assets:Property-Management:SheerValue-PM                    1000.00 USD
+  Income:Rent:206-Hoover-Ave                -1000.00 USD
+  Assets:Property-Management:SheerValue-PM   1000.00 USD
+
 
 2025-05-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
-  Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
-  Assets:Property-Management:SheerValue-PM                    1550.00 USD
+  Income:Rent:2943-Butterfly-Palm           -1550.00 USD
+  Assets:Property-Management:SheerValue-PM   1550.00 USD
+
 
 2025-05-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Pet Rent" #2943-butterfly-palm #beangulp #imported
-  Income:Pet-Fee:2943-Butterfly-Palm                           -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Pet-Fee:2943-Butterfly-Palm        -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2025-05-17 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income" #206-hoover-ave #beangulp #imported
-  Income:Rent:206-Hoover-Ave                                  -400.00 USD
-  Assets:Property-Management:SheerValue-PM                     400.00 USD
+  Income:Rent:206-Hoover-Ave                -400.00 USD
+  Assets:Property-Management:SheerValue-PM   400.00 USD
+
 
 2025-06-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
-  Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
-  Assets:Property-Management:SheerValue-PM                    1550.00 USD
+  Income:Rent:2943-Butterfly-Palm           -1550.00 USD
+  Assets:Property-Management:SheerValue-PM   1550.00 USD
+
 
 2025-06-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Pet Rent" #2943-butterfly-palm #beangulp #imported
-  Income:Pet-Fee:2943-Butterfly-Palm                           -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Pet-Fee:2943-Butterfly-Palm        -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2025-06-02 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income" #206-hoover-ave #beangulp #imported
-  Income:Rent:206-Hoover-Ave                                 -1000.00 USD
-  Assets:Property-Management:SheerValue-PM                    1000.00 USD
+  Income:Rent:206-Hoover-Ave                -1000.00 USD
+  Assets:Property-Management:SheerValue-PM   1000.00 USD
+
 
 2025-06-12 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income" #206-hoover-ave #beangulp #imported
-  Income:Rent:206-Hoover-Ave                                  -700.00 USD
-  Assets:Property-Management:SheerValue-PM                     700.00 USD
+  Income:Rent:206-Hoover-Ave                -700.00 USD
+  Assets:Property-Management:SheerValue-PM   700.00 USD
+
 
 2025-07-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
-  Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
-  Assets:Property-Management:SheerValue-PM                    1550.00 USD
+  Income:Rent:2943-Butterfly-Palm           -1550.00 USD
+  Assets:Property-Management:SheerValue-PM   1550.00 USD
+
 
 2025-07-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Pet Rent" #2943-butterfly-palm #beangulp #imported
-  Income:Pet-Fee:2943-Butterfly-Palm                           -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Pet-Fee:2943-Butterfly-Palm        -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2025-07-16 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income" #206-hoover-ave #beangulp #imported
-  Income:Rent:206-Hoover-Ave                                 -1500.00 USD
-  Assets:Property-Management:SheerValue-PM                    1500.00 USD
+  Income:Rent:206-Hoover-Ave                -1500.00 USD
+  Assets:Property-Management:SheerValue-PM   1500.00 USD
+
 
 2025-07-16 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Late Fee" #206-hoover-ave #beangulp #imported
-  Income:Late-Rent-Fee:206-Hoover-Ave                         -628.50 USD
-  Assets:Property-Management:SheerValue-PM                     628.50 USD
+  Income:Late-Rent-Fee:206-Hoover-Ave       -628.50 USD
+  Assets:Property-Management:SheerValue-PM   628.50 USD
+
 
 2025-07-21 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Rent Income - REVERSED" #206-hoover-ave #beangulp #imported #reversed
-  Assets:Property-Management:SheerValue-PM                   -1500.00 USD
-  Income:Rent:206-Hoover-Ave                                  1500.00 USD
+  Assets:Property-Management:SheerValue-PM  -1500.00 USD
+  Income:Rent:206-Hoover-Ave                 1500.00 USD
+
 
 2025-07-21 * "Unit 1 - George Mahara by George Mahara" "Memo: 206 Hoover Avenue - Late Fee - REVERSED" #206-hoover-ave #beangulp #imported #reversed
-  Assets:Property-Management:SheerValue-PM                    -628.50 USD
-  Income:Late-Rent-Fee:206-Hoover-Ave                          628.50 USD
+  Assets:Property-Management:SheerValue-PM  -628.50 USD
+  Income:Late-Rent-Fee:206-Hoover-Ave        628.50 USD
+
 
 2025-08-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
-  Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
-  Assets:Property-Management:SheerValue-PM                    1550.00 USD
+  Income:Rent:2943-Butterfly-Palm           -1550.00 USD
+  Assets:Property-Management:SheerValue-PM   1550.00 USD
+
 
 2025-08-01 * "Unit 1 - Layla Noble-Davis by Layla Noble-Davis" "Memo: 2943 Butterfly Palm - Pet Rent" #2943-butterfly-palm #beangulp #imported
-  Income:Pet-Fee:2943-Butterfly-Palm                           -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Pet-Fee:2943-Butterfly-Palm        -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2025-01-07 * "Sheer Value Property Management" "Memo: 2943 Butterfly Palm - Management Fees" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -144.00 USD
-  Expenses:Management-Fees:2943-Butterfly-Palm                 144.00 USD
+  Assets:Property-Management:SheerValue-PM      -144.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm   144.00 USD
+
 
 2025-01-07 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Draw" #2943-butterfly-palm #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1456.00 USD
-  Equity:Owner-Distributions:Owner-Draw                       1456.00 USD
+  Assets:Property-Management:SheerValue-PM  -1456.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1456.00 USD
+
 
 2025-01-07 * "Unit 1 - Sheer Value Property Management" "Memo: 206 Hoover Avenue - Management Fees" #206-hoover-ave #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -103.50 USD
-  Expenses:Management-Fees:206-Hoover-Ave                      103.50 USD
+  Assets:Property-Management:SheerValue-PM  -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave    103.50 USD
+
 
 2025-01-07 * "Jason Riddle" "Memo: 206 Hoover Avenue - Owner Draw" #206-hoover-ave #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1046.50 USD
-  Equity:Owner-Distributions:Owner-Draw                       1046.50 USD
+  Assets:Property-Management:SheerValue-PM  -1046.50 USD
+  Equity:Owner-Distributions:Owner-Draw      1046.50 USD
+
 
 2025-01-22 * "Unit 1 - American Electric" "Memo: 206 Hoover Avenue - Repairs" #206-hoover-ave #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -154.00 USD
-  Expenses:Repairs:206-Hoover-Ave                              154.00 USD
+  Assets:Property-Management:SheerValue-PM  -154.00 USD
+  Expenses:Repairs:206-Hoover-Ave            154.00 USD
+
 
 2025-02-07 * "Sheer Value Property Management" "Memo: 2943 Butterfly Palm - Management Fees" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -144.00 USD
-  Expenses:Management-Fees:2943-Butterfly-Palm                 144.00 USD
+  Assets:Property-Management:SheerValue-PM      -144.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm   144.00 USD
+
 
 2025-02-07 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Draw" #2943-butterfly-palm #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1456.00 USD
-  Equity:Owner-Distributions:Owner-Draw                       1456.00 USD
+  Assets:Property-Management:SheerValue-PM  -1456.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1456.00 USD
+
 
 2025-02-07 * "Unit 1 - Sheer Value Property Management" "Memo: 206 Hoover Avenue - Management Fees" #206-hoover-ave #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -103.50 USD
-  Expenses:Management-Fees:206-Hoover-Ave                      103.50 USD
+  Assets:Property-Management:SheerValue-PM  -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave    103.50 USD
+
 
 2025-02-07 * "Jason Riddle" "Memo: 206 Hoover Avenue - Owner Draw" #206-hoover-ave #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                    -892.50 USD
-  Equity:Owner-Distributions:Owner-Draw                        892.50 USD
+  Assets:Property-Management:SheerValue-PM  -892.50 USD
+  Equity:Owner-Distributions:Owner-Draw      892.50 USD
+
 
 2025-03-05 * "Sheer Value Property Management" "Memo: 2943 Butterfly Palm - Management Fees" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -144.00 USD
-  Expenses:Management-Fees:2943-Butterfly-Palm                 144.00 USD
+  Assets:Property-Management:SheerValue-PM      -144.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm   144.00 USD
+
 
 2025-03-05 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Draw" #2943-butterfly-palm #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1456.00 USD
-  Equity:Owner-Distributions:Owner-Draw                       1456.00 USD
+  Assets:Property-Management:SheerValue-PM  -1456.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1456.00 USD
+
 
 2025-03-05 * "Unit 1 - Sheer Value Property Management" "Memo: 206 Hoover Avenue - Management Fees" #206-hoover-ave #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -103.50 USD
-  Expenses:Management-Fees:206-Hoover-Ave                      103.50 USD
+  Assets:Property-Management:SheerValue-PM  -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave    103.50 USD
+
 
 2025-03-05 * "Jason Riddle" "Memo: 206 Hoover Avenue - Owner Draw" #206-hoover-ave #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1046.50 USD
-  Equity:Owner-Distributions:Owner-Draw                       1046.50 USD
+  Assets:Property-Management:SheerValue-PM  -1046.50 USD
+  Equity:Owner-Distributions:Owner-Draw      1046.50 USD
+
 
 2025-04-07 * "Sheer Value Property Management" "Memo: 2943 Butterfly Palm - Management Fees" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -144.00 USD
-  Expenses:Management-Fees:2943-Butterfly-Palm                 144.00 USD
+  Assets:Property-Management:SheerValue-PM      -144.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm   144.00 USD
+
 
 2025-04-07 * "Unit 1 - Sheer Value Property Management" "Memo: 206 Hoover Avenue - Management Fees" #206-hoover-ave #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -103.50 USD
-  Expenses:Management-Fees:206-Hoover-Ave                      103.50 USD
+  Assets:Property-Management:SheerValue-PM  -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave    103.50 USD
+
 
 2025-04-08 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Draw" #2943-butterfly-palm #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1506.00 USD
-  Equity:Owner-Distributions:Owner-Draw                       1506.00 USD
+  Assets:Property-Management:SheerValue-PM  -1506.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1506.00 USD
+
 
 2025-04-11 * "Jason Riddle" "Memo: 206 Hoover Avenue - Owner Draw" #206-hoover-ave #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1184.50 USD
-  Equity:Owner-Distributions:Owner-Draw                       1184.50 USD
+  Assets:Property-Management:SheerValue-PM  -1184.50 USD
+  Equity:Owner-Distributions:Owner-Draw      1184.50 USD
+
 
 2025-05-07 * "Sheer Value Property Management" "Memo: 2943 Butterfly Palm - Management Fees" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -144.00 USD
-  Expenses:Management-Fees:2943-Butterfly-Palm                 144.00 USD
+  Assets:Property-Management:SheerValue-PM      -144.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm   144.00 USD
+
 
 2025-05-07 * "Unit 1 - Sheer Value Property Management" "Memo: 206 Hoover Avenue - Management Fees" #206-hoover-ave #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -103.50 USD
-  Expenses:Management-Fees:206-Hoover-Ave                      103.50 USD
+  Assets:Property-Management:SheerValue-PM  -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave    103.50 USD
+
 
 2025-05-08 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Draw" #2943-butterfly-palm #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1456.00 USD
-  Equity:Owner-Distributions:Owner-Draw                       1456.00 USD
+  Assets:Property-Management:SheerValue-PM  -1456.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1456.00 USD
+
 
 2025-06-04 * "Sheer Value Property Management" "Memo: 2943 Butterfly Palm - Management Fees" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -144.00 USD
-  Expenses:Management-Fees:2943-Butterfly-Palm                 144.00 USD
+  Assets:Property-Management:SheerValue-PM      -144.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm   144.00 USD
+
 
 2025-06-05 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Draw" #2943-butterfly-palm #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1456.00 USD
-  Equity:Owner-Distributions:Owner-Draw                       1456.00 USD
+  Assets:Property-Management:SheerValue-PM  -1456.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1456.00 USD
+
 
 2025-06-13 * "Jason Riddle" "Memo: 206 Hoover Avenue - Owner Draw" #206-hoover-ave #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1605.00 USD
-  Equity:Owner-Distributions:Owner-Draw                       1605.00 USD
+  Assets:Property-Management:SheerValue-PM  -1605.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1605.00 USD
+
 
 2025-06-13 * "Jason Riddle" "Memo: 206 Hoover Avenue - Owner Draw" #206-hoover-ave #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                    -103.50 USD
-  Equity:Owner-Distributions:Owner-Draw                        103.50 USD
+  Assets:Property-Management:SheerValue-PM  -103.50 USD
+  Equity:Owner-Distributions:Owner-Draw      103.50 USD
+
 
 2025-06-23 * "Richard Wagner" "Memo: 206 Hoover Avenue - Repairs" #206-hoover-ave #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -280.00 USD
-  Expenses:Repairs:206-Hoover-Ave                              280.00 USD
+  Assets:Property-Management:SheerValue-PM  -280.00 USD
+  Expenses:Repairs:206-Hoover-Ave            280.00 USD
+
 
 2025-07-07 * "Sheer Value Property Management" "Memo: 2943 Butterfly Palm - Management Fees" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -144.00 USD
-  Expenses:Management-Fees:2943-Butterfly-Palm                 144.00 USD
+  Assets:Property-Management:SheerValue-PM      -144.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm   144.00 USD
+
 
 2025-07-07 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Draw" #2943-butterfly-palm #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1456.00 USD
-  Equity:Owner-Distributions:Owner-Draw                       1456.00 USD
+  Assets:Property-Management:SheerValue-PM  -1456.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1456.00 USD
+
 
 2025-07-07 * "Unit 1 - Sheer Value Property Management" "Memo: 206 Hoover Avenue - Management Fees" #206-hoover-ave #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -103.50 USD
-  Expenses:Management-Fees:206-Hoover-Ave                      103.50 USD
+  Assets:Property-Management:SheerValue-PM  -103.50 USD
+  Expenses:Management-Fees:206-Hoover-Ave    103.50 USD
+
 
 2025-08-06 * "Sheer Value Property Management" "Memo: 2943 Butterfly Palm - Management Fees" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -144.00 USD
-  Expenses:Management-Fees:2943-Butterfly-Palm                 144.00 USD
+  Assets:Property-Management:SheerValue-PM      -144.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm   144.00 USD
 
-2025-08-07 balance Assets:Property-Management:SheerValue-PM   4222.50 USD
+
+2025-08-07 balance Assets:Property-Management:SheerValue-PM        4222.50 USD
+

@@ -1,39 +1,50 @@
-2024-05-09 balance Assets:Property-Management:SheerValue-PM   2000.00 USD
+2024-05-09 balance Assets:Property-Management:SheerValue-PM        2000.00 USD
+
 
 2024-05-23 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Contribution" #2943-butterfly-palm #beangulp #imported
-  Equity:Owner-Contributions:Cash-Infusion                   -7397.00 USD
-  Assets:Property-Management:SheerValue-PM                    7397.00 USD
+  Equity:Owner-Contributions:Cash-Infusion  -7397.00 USD
+  Assets:Property-Management:SheerValue-PM   7397.00 USD
+
 
 2024-05-29 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Contribution" #2943-butterfly-palm #beangulp #imported
-  Equity:Owner-Contributions:Cash-Infusion                   -2800.75 USD
-  Assets:Property-Management:SheerValue-PM                    2800.75 USD
+  Equity:Owner-Contributions:Cash-Infusion  -2800.75 USD
+  Assets:Property-Management:SheerValue-PM   2800.75 USD
+
 
 2024-06-02 * "Unit 1 - Jonathan by Jonathan Robertson" "Memo: 2943 Butterfly Palm - Rent Income" #2943-butterfly-palm #beangulp #imported
-  Income:Rent:2943-Butterfly-Palm                            -1550.00 USD
-  Assets:Property-Management:SheerValue-PM                    1550.00 USD
+  Income:Rent:2943-Butterfly-Palm           -1550.00 USD
+  Assets:Property-Management:SheerValue-PM   1550.00 USD
+
 
 2024-06-02 * "Unit 1 - Jonathan by Jonathan Robertson" "Memo: 2943 Butterfly Palm - Pet Rent" #2943-butterfly-palm #beangulp #imported
-  Income:Pet-Fee:2943-Butterfly-Palm                           -50.00 USD
-  Assets:Property-Management:SheerValue-PM                      50.00 USD
+  Income:Pet-Fee:2943-Butterfly-Palm        -50.00 USD
+  Assets:Property-Management:SheerValue-PM   50.00 USD
+
 
 2024-06-03 * "Sheer Value Property Management" "Memo: 2943 Butterfly Palm - Management Fees" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                    -144.00 USD
-  Expenses:Management-Fees:2943-Butterfly-Palm                 144.00 USD
+  Assets:Property-Management:SheerValue-PM      -144.00 USD
+  Expenses:Management-Fees:2943-Butterfly-Palm   144.00 USD
+
 
 2024-06-03 * "Unit 1 - Air & Plumbing" "Memo: 2943 Butterfly Palm - Repairs" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                   -2800.75 USD
-  Expenses:Repairs:2943-Butterfly-Palm                        2800.75 USD
+  Assets:Property-Management:SheerValue-PM  -2800.75 USD
+  Expenses:Repairs:2943-Butterfly-Palm       2800.75 USD
+
 
 2024-06-04 * "Unit 1 - Daley Air" "Memo: 2943 Butterfly Palm - Repairs" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                   -3698.50 USD
-  Expenses:Repairs:2943-Butterfly-Palm                        3698.50 USD
+  Assets:Property-Management:SheerValue-PM  -3698.50 USD
+  Expenses:Repairs:2943-Butterfly-Palm       3698.50 USD
+
 
 2024-06-04 * "Unit 1 - Daley Air" "Memo: 2943 Butterfly Palm - Repairs" #2943-butterfly-palm #beangulp #imported
-  Assets:Property-Management:SheerValue-PM                   -3698.50 USD
-  Expenses:Repairs:2943-Butterfly-Palm                        3698.50 USD
+  Assets:Property-Management:SheerValue-PM  -3698.50 USD
+  Expenses:Repairs:2943-Butterfly-Palm       3698.50 USD
+
 
 2024-06-06 * "Jason Riddle" "Memo: 2943 Butterfly Palm - Owner Draw" #2943-butterfly-palm #beangulp #distributions #imported
-  Assets:Property-Management:SheerValue-PM                   -1456.00 USD
-  Equity:Owner-Distributions:Owner-Draw                       1456.00 USD
+  Assets:Property-Management:SheerValue-PM  -1456.00 USD
+  Equity:Owner-Distributions:Owner-Draw      1456.00 USD
 
-2024-06-07 balance Assets:Property-Management:SheerValue-PM   2000.00 USD
+
+2024-06-07 balance Assets:Property-Management:SheerValue-PM        2000.00 USD
+
