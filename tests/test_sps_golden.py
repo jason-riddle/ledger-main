@@ -11,7 +11,11 @@ import beanout.sps
 def test_sps_golden_files() -> None:
     """Render all SPS golden fixtures and compare to expected output."""
     golden_dir = pathlib.Path("fixtures/golden/sps")
-    txt_paths = sorted(golden_dir.glob("*.pdf.txt"))
+    txt_paths = sorted(
+        path
+        for path in golden_dir.iterdir()
+        if path.is_file() and path.name.lower().endswith(".pdf.txt")
+    )
 
     assert txt_paths, "No SPS golden .pdf.txt files found"
 

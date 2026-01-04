@@ -83,7 +83,7 @@ def render_sps_file(filepath: str, config: Optional[SPSConfig] = None) -> str:
     Returns:
         Beancount-formatted text.
     """
-    if not filepath.endswith(".pdf.txt"):
+    if not filepath.lower().endswith(".pdf.txt"):
         raise ValueError("Input must be a .pdf.txt file")
     with open(filepath, "r", encoding="utf-8") as handle:
         return render_sps_text(handle.read(), config=config)
@@ -113,7 +113,7 @@ def render_sps_file_to_jsonl(filepath: str, config: Optional[SPSConfig] = None) 
     Returns:
         JSONL-formatted text.
     """
-    if not filepath.endswith(".pdf.txt"):
+    if not filepath.lower().endswith(".pdf.txt"):
         raise ValueError("Input must be a .pdf.txt file")
     with open(filepath, "r", encoding="utf-8") as handle:
         return render_sps_text_to_jsonl(handle.read(), config=config)

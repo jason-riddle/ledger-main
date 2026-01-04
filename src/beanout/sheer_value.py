@@ -50,7 +50,7 @@ def render_sheer_value_file(
     filepath: str, config: Optional[SheerValueConfig] = None
 ) -> str:
     """Render a *.pdf.txt Sheer Value file into Beancount text."""
-    if not filepath.endswith(".pdf.txt"):
+    if not filepath.lower().endswith(".pdf.txt"):
         raise ValueError("Input must be a .pdf.txt file")
     with open(filepath, "r", encoding="utf-8") as handle:
         return render_sheer_value_text(handle.read(), config=config)
@@ -68,7 +68,7 @@ def render_sheer_value_file_to_jsonl(
     filepath: str, config: Optional[SheerValueConfig] = None
 ) -> str:
     """Render a *.pdf.txt Sheer Value file into JSONL format."""
-    if not filepath.endswith(".pdf.txt"):
+    if not filepath.lower().endswith(".pdf.txt"):
         raise ValueError("Input must be a .pdf.txt file")
     with open(filepath, "r", encoding="utf-8") as handle:
         return render_sheer_value_text_to_jsonl(handle.read(), config=config)

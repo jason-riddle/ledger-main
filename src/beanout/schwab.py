@@ -46,7 +46,7 @@ def render_schwab_json_file(
     filepath: str, config: Optional[SchwabConfig] = None
 ) -> str:
     """Render a *.json Schwab file into Beancount text."""
-    if not filepath.endswith(".json"):
+    if not filepath.lower().endswith(".json"):
         raise ValueError("Input must be a .json file")
     with open(filepath, "r", encoding="utf-8") as handle:
         return render_schwab_json_text(handle.read(), config=config)
@@ -54,7 +54,7 @@ def render_schwab_json_file(
 
 def render_schwab_xml_file(filepath: str, config: Optional[SchwabConfig] = None) -> str:
     """Render a *.xml Schwab file into Beancount text."""
-    if not filepath.endswith(".xml"):
+    if not filepath.lower().endswith(".xml"):
         raise ValueError("Input must be a .xml file")
     with open(filepath, "rb") as handle:
         return render_schwab_xml_text(handle.read(), config=config)
@@ -80,7 +80,7 @@ def render_schwab_json_file_to_jsonl(
     filepath: str, config: Optional[SchwabConfig] = None
 ) -> str:
     """Render a *.json Schwab file into JSONL format."""
-    if not filepath.endswith(".json"):
+    if not filepath.lower().endswith(".json"):
         raise ValueError("Input must be a .json file")
     with open(filepath, "r", encoding="utf-8") as handle:
         return render_schwab_json_text_to_jsonl(handle.read(), config=config)
@@ -90,7 +90,7 @@ def render_schwab_xml_file_to_jsonl(
     filepath: str, config: Optional[SchwabConfig] = None
 ) -> str:
     """Render a *.xml Schwab file into JSONL format."""
-    if not filepath.endswith(".xml"):
+    if not filepath.lower().endswith(".xml"):
         raise ValueError("Input must be a .xml file")
     with open(filepath, "rb") as handle:
         return render_schwab_xml_text_to_jsonl(handle.read(), config=config)

@@ -7,8 +7,9 @@ from typing import Callable
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "src"))
 
-import beanout.clover_leaf
 import beanout.ally_bank
+import beanout.chase
+import beanout.clover_leaf
 import beanout.sheer_value
 import beanout.sps
 import beanout.schwab
@@ -26,7 +27,11 @@ def _test_jsonl_golden_files(
         golden_dir: Directory containing golden test files.
         render_func: Function that takes text and returns JSONL.
     """
-    txt_paths = sorted(golden_dir.glob("*.pdf.txt"))
+    txt_paths = sorted(
+        path
+        for path in golden_dir.iterdir()
+        if path.is_file() and path.name.lower().endswith(".pdf.txt")
+    )
 
     assert txt_paths, f"No {parser_name} golden .pdf.txt files found"
 
@@ -113,8 +118,12 @@ def test_schwab_jsonl_golden_files() -> None:
 def test_ally_bank_jsonl_golden_files() -> None:
     """Validate Ally Bank JSONL golden files match expected output."""
     golden_dir = pathlib.Path("fixtures/golden/ally-bank")
-    csv_paths = sorted(golden_dir.glob("*.csv"))
-    qfx_paths = sorted(golden_dir.glob("*.qfx"))
+    csv_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".csv"
+    )
+    qfx_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".qfx"
+    )
 
     assert csv_paths or qfx_paths, "No Ally Bank golden files found"
 
@@ -135,6 +144,35 @@ def test_ally_bank_jsonl_golden_files() -> None:
         output = beanout.ally_bank.render_ally_bank_qfx_text_to_jsonl(
             qfx_path.read_text()
         )
+        expected = jsonl_path.read_text()
+        _assert_jsonl_equal(output, expected, qfx_path.name)
+
+
+def test_chase_jsonl_golden_files() -> None:
+    """Validate Chase JSONL golden files match expected output."""
+    golden_dir = pathlib.Path("fixtures/golden/chase")
+    csv_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".csv"
+    )
+    qfx_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".qfx"
+    )
+
+    assert csv_paths or qfx_paths, "No Chase golden files found"
+
+    for csv_path in csv_paths:
+        jsonl_path = csv_path.with_suffix(f"{csv_path.suffix}.jsonl")
+        assert jsonl_path.exists(), f"Missing golden file: {jsonl_path}"
+
+        output = beanout.chase.render_chase_csv_text_to_jsonl(csv_path.read_text())
+        expected = jsonl_path.read_text()
+        _assert_jsonl_equal(output, expected, csv_path.name)
+
+    for qfx_path in qfx_paths:
+        jsonl_path = qfx_path.with_suffix(f"{qfx_path.suffix}.jsonl")
+        assert jsonl_path.exists(), f"Missing golden file: {jsonl_path}"
+
+        output = beanout.chase.render_chase_qfx_text_to_jsonl(qfx_path.read_text())
         expected = jsonl_path.read_text()
         _assert_jsonl_equal(output, expected, qfx_path.name)
 

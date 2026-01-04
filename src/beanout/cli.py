@@ -7,6 +7,7 @@ import sys
 import beanout.clover_leaf
 import beanout.fidelity
 import beanout.ally_bank
+import beanout.chase
 import beanout.schwab
 import beanout.sheer_value
 import beanout.sps
@@ -140,6 +141,46 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output in JSONL format instead of Beancount format.",
     )
 
+    chase_csv_parser = subparsers.add_parser(
+        "chase-csv",
+        help="Parse Chase .csv files.",
+    )
+    chase_csv_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the Chase .csv file.",
+    )
+    chase_csv_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+    chase_csv_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
+
+    chase_qfx_parser = subparsers.add_parser(
+        "chase-qfx",
+        help="Parse Chase .qfx files.",
+    )
+    chase_qfx_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the Chase .qfx file.",
+    )
+    chase_qfx_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+    chase_qfx_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
+
     schwab_parser = subparsers.add_parser(
         "schwab",
         help="Parse Schwab .json files.",
@@ -213,6 +254,14 @@ def main(argv: list[str] | None = None) -> int:
         "ally-bank-qfx": (
             beanout.ally_bank.render_ally_bank_qfx_file,
             beanout.ally_bank.render_ally_bank_qfx_file_to_jsonl,
+        ),
+        "chase-csv": (
+            beanout.chase.render_chase_csv_file,
+            beanout.chase.render_chase_csv_file_to_jsonl,
+        ),
+        "chase-qfx": (
+            beanout.chase.render_chase_qfx_file,
+            beanout.chase.render_chase_qfx_file_to_jsonl,
         ),
         "schwab": (
             beanout.schwab.render_schwab_json_file,

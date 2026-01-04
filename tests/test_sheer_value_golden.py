@@ -11,7 +11,11 @@ import beanout.sheer_value
 def test_sheer_value_golden_files() -> None:
     """Render all Sheer Value golden fixtures and compare to expected output."""
     golden_dir = pathlib.Path("fixtures/golden/sheer-value")
-    txt_paths = sorted(golden_dir.glob("*.pdf.txt"))
+    txt_paths = sorted(
+        path
+        for path in golden_dir.iterdir()
+        if path.is_file() and path.name.lower().endswith(".pdf.txt")
+    )
 
     assert txt_paths, "No Sheer Value golden .pdf.txt files found"
 

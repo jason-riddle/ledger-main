@@ -38,7 +38,7 @@ def render_fidelity_csv_file(
     filepath: str, config: Optional[FidelityConfig] = None
 ) -> str:
     """Render a *.csv Fidelity file into Beancount text."""
-    if not filepath.endswith(".csv"):
+    if not filepath.lower().endswith(".csv"):
         raise ValueError("Input must be a .csv file")
     with open(filepath, "r", encoding="utf-8-sig") as handle:
         return render_fidelity_csv_text(handle.read(), config=config)
@@ -56,7 +56,7 @@ def render_fidelity_csv_file_to_jsonl(
     filepath: str, config: Optional[FidelityConfig] = None
 ) -> str:
     """Render a *.csv Fidelity file into JSONL format."""
-    if not filepath.endswith(".csv"):
+    if not filepath.lower().endswith(".csv"):
         raise ValueError("Input must be a .csv file")
     with open(filepath, "r", encoding="utf-8-sig") as handle:
         return render_fidelity_csv_text_to_jsonl(handle.read(), config=config)

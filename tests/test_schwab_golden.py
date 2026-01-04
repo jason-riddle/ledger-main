@@ -11,8 +11,12 @@ import beanout.schwab
 def test_schwab_golden_files() -> None:
     """Render all Schwab golden fixtures and compare to expected output."""
     golden_dir = pathlib.Path("fixtures/golden/schwab")
-    json_paths = sorted(golden_dir.glob("*.json"))
-    xml_paths = sorted(golden_dir.glob("*.xml"))
+    json_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".json"
+    )
+    xml_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".xml"
+    )
 
     assert json_paths or xml_paths, "No Schwab golden files found"
 

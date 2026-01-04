@@ -1,0 +1,75 @@
+2025-12-31 * "Chase" "DEBIT - SIENNA PARK (SAN ANTONIO" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265   -164.41 USD
+  Equity:Opening-Balances                164.41 USD
+
+2025-12-31 * "Chase" "DEBIT - BEXAR COUNTY TAX COLLECTO" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265  -3123.13 USD
+  Equity:Opening-Balances               3123.13 USD
+
+2025-12-15 * "Chase" "CREDIT - Payment Thank You - Web" #beangulp #chase #imported
+  Equity:Opening-Balances               -699.27 USD
+  Liabilities:Credit-Cards:Chase-9265    699.27 USD
+
+2025-12-15 * "Chase" "CREDIT - THE HOME DEPOT #6529" #beangulp #chase #imported
+  Equity:Opening-Balances                -19.45 USD
+  Liabilities:Credit-Cards:Chase-9265     19.45 USD
+
+2025-11-30 * "Chase" "DEBIT - THE HOME DEPOT #6529" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265   -699.27 USD
+  Equity:Opening-Balances                699.27 USD
+
+2025-04-28 * "Chase" "CREDIT - Payment Thank You - Web" #beangulp #chase #imported
+  Equity:Opening-Balances              -1099.52 USD
+  Liabilities:Credit-Cards:Chase-9265   1099.52 USD
+
+2025-04-03 * "Chase" "DEBIT - RLI INSURANCE COMPANY" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265   -869.00 USD
+  Equity:Opening-Balances                869.00 USD
+
+2025-03-06 * "Chase" "DEBIT - SIENNA PARK (SAN ANTONIO" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265   -230.52 USD
+  Equity:Opening-Balances                230.52 USD
+
+2025-02-06 * "Chase" "CREDIT - Payment Thank You - Web" #beangulp #chase #imported
+  Equity:Opening-Balances              -2308.68 USD
+  Liabilities:Credit-Cards:Chase-9265   2308.68 USD
+
+2025-02-02 * "Chase" "DEBIT - USAA INSURANCE PAYMENT" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265  -2308.68 USD
+  Equity:Opening-Balances               2308.68 USD
+
+2024-03-15 * "Chase" "CREDIT - Payment Thank You - Web" #beangulp #chase #imported
+  Equity:Opening-Balances              -2731.02 USD
+  Liabilities:Credit-Cards:Chase-9265   2731.02 USD
+
+2024-03-03 * "Chase" "DEBIT - USAA INSURANCE PAYMENT" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265  -2248.02 USD
+  Equity:Opening-Balances               2248.02 USD
+
+2024-02-27 * "Chase" "DEBIT - RLI INSURANCE COMPANY" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265   -483.00 USD
+  Equity:Opening-Balances                483.00 USD
+
+2024-02-06 * "Chase" "CREDIT - Payment Thank You - Web" #beangulp #chase #imported
+  Equity:Opening-Balances               -391.97 USD
+  Liabilities:Credit-Cards:Chase-9265    391.97 USD
+
+2024-02-02 * "Chase" "DEBIT - USAA INSURANCE PAYMENT" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265   -391.97 USD
+  Equity:Opening-Balances                391.97 USD
+
+2024-01-24 * "Chase" "CREDIT - Payment Thank You - Web" #beangulp #chase #imported
+  Equity:Opening-Balances              -1852.50 USD
+  Liabilities:Credit-Cards:Chase-9265   1852.50 USD
+
+2024-01-21 * "Chase" "DEBIT - PAYPAL *VICTORP627" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265  -1852.50 USD
+  Equity:Opening-Balances               1852.50 USD
+
+2024-01-10 * "Chase" "CREDIT - Payment Thank You - Web" #beangulp #chase #imported
+  Equity:Opening-Balances              -1544.68 USD
+  Liabilities:Credit-Cards:Chase-9265   1544.68 USD
+
+2024-01-08 * "Chase" "DEBIT - THE HOME DEPOT #6550" #beangulp #chase #imported
+  Liabilities:Credit-Cards:Chase-9265  -1544.68 USD
+  Equity:Opening-Balances               1544.68 USD

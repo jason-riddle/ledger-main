@@ -2,6 +2,7 @@
 
 __all__ = [
     "ally_bank",
+    "chase",
     "cli",
     "clover_leaf",
     "fidelity",
