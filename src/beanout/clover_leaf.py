@@ -2,8 +2,11 @@
 
 from __future__ import annotations
 
+import csv
 import dataclasses
 import datetime
+import io
+import json
 import re
 from decimal import Decimal
 from typing import Optional
@@ -47,6 +50,22 @@ def render_clover_leaf_text(
     return _render_entries(entries, config=config)
 
 
+def render_clover_leaf_csv_text(
+    text: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render CloverLeaf CSV ledger content into Beancount entries."""
+    entries = parse_clover_leaf_csv_text(text, config=config)
+    return _render_entries(entries, config=config)
+
+
+def render_clover_leaf_json_text(
+    text: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render CloverLeaf JSON ledger content into Beancount entries."""
+    entries = parse_clover_leaf_json_text(text, config=config)
+    return _render_entries(entries, config=config)
+
+
 def render_clover_leaf_file(
     filepath: str, config: Optional[CloverLeafConfig] = None
 ) -> str:
@@ -57,11 +76,47 @@ def render_clover_leaf_file(
         return render_clover_leaf_text(handle.read(), config=config)
 
 
+def render_clover_leaf_csv_file(
+    filepath: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render a *.csv CloverLeaf file into Beancount text."""
+    if not filepath.lower().endswith(".csv"):
+        raise ValueError("Input must be a .csv file")
+    with open(filepath, "r", encoding="utf-8") as handle:
+        return render_clover_leaf_csv_text(handle.read(), config=config)
+
+
+def render_clover_leaf_json_file(
+    filepath: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render a *.json CloverLeaf file into Beancount text."""
+    if not filepath.lower().endswith(".json"):
+        raise ValueError("Input must be a .json file")
+    with open(filepath, "r", encoding="utf-8") as handle:
+        return render_clover_leaf_json_text(handle.read(), config=config)
+
+
 def render_clover_leaf_text_to_jsonl(
     text: str, config: Optional[CloverLeafConfig] = None
 ) -> str:
     """Render CloverLeaf statement text into JSONL format."""
     entries = parse_clover_leaf_text(text, config=config)
+    return beanout.jsonl.directives_to_jsonl(entries)
+
+
+def render_clover_leaf_csv_text_to_jsonl(
+    text: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render CloverLeaf CSV ledger content into JSONL format."""
+    entries = parse_clover_leaf_csv_text(text, config=config)
+    return beanout.jsonl.directives_to_jsonl(entries)
+
+
+def render_clover_leaf_json_text_to_jsonl(
+    text: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render CloverLeaf JSON ledger content into JSONL format."""
+    entries = parse_clover_leaf_json_text(text, config=config)
     return beanout.jsonl.directives_to_jsonl(entries)
 
 
@@ -73,6 +128,26 @@ def render_clover_leaf_file_to_jsonl(
         raise ValueError("Input must be a .pdf.txt file")
     with open(filepath, "r", encoding="utf-8") as handle:
         return render_clover_leaf_text_to_jsonl(handle.read(), config=config)
+
+
+def render_clover_leaf_csv_file_to_jsonl(
+    filepath: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render a *.csv CloverLeaf file into JSONL format."""
+    if not filepath.lower().endswith(".csv"):
+        raise ValueError("Input must be a .csv file")
+    with open(filepath, "r", encoding="utf-8") as handle:
+        return render_clover_leaf_csv_text_to_jsonl(handle.read(), config=config)
+
+
+def render_clover_leaf_json_file_to_jsonl(
+    filepath: str, config: Optional[CloverLeafConfig] = None
+) -> str:
+    """Render a *.json CloverLeaf file into JSONL format."""
+    if not filepath.lower().endswith(".json"):
+        raise ValueError("Input must be a .json file")
+    with open(filepath, "r", encoding="utf-8") as handle:
+        return render_clover_leaf_json_text_to_jsonl(handle.read(), config=config)
 
 
 def parse_clover_leaf_text(
@@ -136,6 +211,164 @@ def parse_clover_leaf_text(
         entries.append(
             _build_balance(
                 period[1], config.account_property_management, ending_balance, config
+            )
+        )
+
+    return entries
+
+
+def parse_clover_leaf_csv_text(
+    text: str, config: Optional[CloverLeafConfig] = None
+) -> list[beancount.core.data.Directive]:
+    """Parse CloverLeaf CSV ledger content into Beancount directives."""
+    if config is None:
+        config = CloverLeafConfig()
+
+    entries: list[beancount.core.data.Directive] = []
+    reader = csv.reader(io.StringIO(text))
+    rows = [row for row in reader if row]
+    if not rows:
+        return entries
+
+    header_index = None
+    for idx, row in enumerate(rows):
+        header = [col.strip().lower() for col in row]
+        if header[:8] == [
+            "date posted",
+            "account",
+            "property / unit",
+            "reference",
+            "description",
+            "increase",
+            "decrease",
+            "balance",
+        ]:
+            header_index = idx
+            break
+
+    if header_index is None:
+        raise ValueError("Unexpected CloverLeaf CSV header")
+
+    for row in rows[header_index + 1 :]:
+        if len(row) < 8:
+            continue
+        (
+            date_raw,
+            account_raw,
+            property_raw,
+            _,
+            description,
+            increase_raw,
+            decrease_raw,
+            _,
+        ) = [col.strip() for col in row[:8]]
+        if not date_raw:
+            continue
+        try:
+            tx_date = datetime.datetime.strptime(date_raw, "%m-%d-%Y").date()
+        except ValueError:
+            continue
+
+        increase = _parse_optional_amount(increase_raw)
+        decrease = _parse_optional_amount(decrease_raw)
+        net_amount = increase - decrease
+        if net_amount == 0:
+            continue
+
+        account_number, account_name = _split_account(account_raw)
+        property_name = _infer_property_name(property_raw)
+        tags = _build_tags(property_name, config)
+
+        mapped = _map_ledger_account(
+            account_number, account_name, description, property_name, config
+        )
+        if mapped is None:
+            continue
+        account, payee, is_owner_distribution = mapped
+
+        if is_owner_distribution:
+            entries.append(
+                _build_owner_distribution(tx_date, payee, net_amount, config)
+            )
+            continue
+
+        entries.append(
+            _build_transaction(
+                tx_date,
+                payee,
+                f"Memo: {description}".strip(),
+                tags,
+                net_amount,
+                account,
+                config,
+            )
+        )
+
+    return entries
+
+
+def parse_clover_leaf_json_text(
+    text: str, config: Optional[CloverLeafConfig] = None
+) -> list[beancount.core.data.Directive]:
+    """Parse CloverLeaf JSON ledger content into Beancount directives."""
+    if config is None:
+        config = CloverLeafConfig()
+
+    data = json.loads(text)
+    rows = data.get("rows", []) or []
+    entries: list[beancount.core.data.Directive] = []
+
+    for row in rows:
+        if row.get("rowTypeID") != 3:
+            continue
+        payload = row.get("data") or {}
+        date_raw = (payload.get("datePosted") or "").strip()
+        if not date_raw:
+            continue
+        try:
+            tx_date = datetime.datetime.strptime(date_raw, "%Y-%m-%d").date()
+        except ValueError:
+            continue
+
+        increase = _parse_optional_amount(payload.get("increase"))
+        decrease = _parse_optional_amount(payload.get("decrease"))
+        net_amount = increase - decrease
+        if net_amount == 0:
+            continue
+
+        account_number = (payload.get("accountNumber") or "").strip()
+        account_name = (payload.get("accountName") or "").strip()
+        description = (payload.get("description") or "").strip()
+        payee = (payload.get("payeePayerName") or "").strip()
+        property_name = _infer_property_name(
+            payload.get("propertyAddress") or payload.get("unitAddress") or ""
+        )
+        tags = _build_tags(property_name, config)
+
+        mapped = _map_ledger_account(
+            account_number, account_name, description, property_name, config
+        )
+        if mapped is None:
+            continue
+        account, mapped_payee, is_owner_distribution = mapped
+        if not payee:
+            payee = mapped_payee
+
+        if is_owner_distribution:
+            entries.append(
+                _build_owner_distribution(tx_date, payee, net_amount, config)
+            )
+            continue
+
+        entries.append(
+            _build_transaction(
+                tx_date,
+                payee,
+                f"Memo: {description}".strip(),
+                tags,
+                net_amount,
+                account,
+                config,
             )
         )
 
@@ -214,6 +447,112 @@ def _categorize_transaction(
         return account, config.payee_contractor
 
     return None, None
+
+
+def _parse_optional_amount(value: Optional[str]) -> Decimal:
+    if value is None:
+        return beancount.core.number.D("0")
+    cleaned = str(value).strip()
+    if not cleaned or cleaned == "$0.00":
+        return beancount.core.number.D("0")
+    return _parse_amount(cleaned)
+
+
+def _split_account(raw: str) -> tuple[str, str]:
+    if ":" in raw:
+        number, name = raw.split(":", 1)
+        return number.strip(), name.strip()
+    return "", raw.strip()
+
+
+def _infer_property_name(raw: str) -> Optional[str]:
+    lowered = raw.lower()
+    if "2943" in lowered and "butterfly" in lowered:
+        return "2943-Butterfly-Palm"
+    if "206" in lowered and "hoover" in lowered:
+        return "206-Hoover-Ave"
+    return None
+
+
+def _build_tags(property_name: Optional[str], config: CloverLeafConfig) -> set[str]:
+    tags = set(config.tags)
+    if property_name:
+        tag = _PROPERTY_TAGS.get(property_name)
+        if tag:
+            tags.add(tag)
+    return tags
+
+
+def _map_ledger_account(
+    account_number: str,
+    account_name: str,
+    description: str,
+    property_name: Optional[str],
+    config: CloverLeafConfig,
+) -> Optional[tuple[str, str, bool]]:
+    account_number = account_number.strip()
+    account_name_upper = account_name.upper()
+    desc_upper = description.upper()
+
+    if account_number == "3250" or "OWNER DISTRIBUTION" in account_name_upper:
+        return config.account_owner_distribution, "Owner", True
+
+    if not property_name:
+        return None
+
+    if account_number == "4100" or account_name_upper == "RENT":
+        return f"Income:Rent:{property_name}", config.payee_tenant, False
+
+    if account_number == "6100" or "MANAGEMENT FEE" in account_name_upper:
+        return (
+            f"Expenses:Management-Fees:{property_name}",
+            config.payee_management,
+            False,
+        )
+
+    if account_number == "6415" or "UTILITIES" in account_name_upper:
+        if "WATER" in desc_upper:
+            return (
+                f"Expenses:Utilities:Water:{property_name}",
+                config.payee_management,
+                False,
+            )
+        return (
+            f"Expenses:Utilities:Electric:{property_name}",
+            config.payee_management,
+            False,
+        )
+
+    if account_number == "6404" or "LANDSCAP" in account_name_upper:
+        return (
+            f"Expenses:Cleaning---Maintenance:{property_name}",
+            config.payee_contractor,
+            False,
+        )
+
+    if account_number == "6403" or "GENERAL REPAIRS" in account_name_upper:
+        return f"Expenses:Repairs:{property_name}", config.payee_contractor, False
+
+    if account_number == "6405" or "LOCK CHANGE" in account_name_upper:
+        return f"Expenses:Repairs:{property_name}", config.payee_contractor, False
+
+    if account_number == "6420" or "PAINT" in account_name_upper:
+        return f"Expenses:Repairs:{property_name}", config.payee_contractor, False
+
+    if account_number == "6430" or "MAID CLEAN" in account_name_upper:
+        return (
+            f"Expenses:Cleaning---Maintenance:{property_name}",
+            config.payee_contractor,
+            False,
+        )
+
+    if account_number == "6450" or "INSPECTION" in account_name_upper:
+        return f"Expenses:Repairs:{property_name}", config.payee_contractor, False
+
+    if account_number == "6460" or account_number == "6461":
+        return f"Expenses:Repairs:{property_name}", config.payee_contractor, False
+
+    return f"Expenses:Unidentified:{property_name}", config.payee_management, False
 
 
 def _build_balance(
@@ -318,7 +657,7 @@ def _extract_amounts(line: str) -> list[str]:
 
 
 def _parse_amount(amount_str: str) -> Decimal:
-    cleaned = amount_str.replace(",", "")
+    cleaned = amount_str.replace("$", "").replace(",", "")
     if cleaned.startswith("(") and cleaned.endswith(")"):
         cleaned = "-" + cleaned[1:-1]
     return beancount.core.number.D(cleaned)

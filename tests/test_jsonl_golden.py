@@ -77,6 +77,33 @@ def test_clover_leaf_jsonl_golden_files() -> None:
         pathlib.Path("fixtures/golden/managers/clover-leaf"),
         beanout.clover_leaf.render_clover_leaf_text_to_jsonl,
     )
+    golden_dir = pathlib.Path("fixtures/golden/managers/clover-leaf")
+    csv_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".csv"
+    )
+    json_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".json"
+    )
+
+    for csv_path in csv_paths:
+        jsonl_path = csv_path.with_suffix(f"{csv_path.suffix}.jsonl")
+        assert jsonl_path.exists(), f"Missing golden file: {jsonl_path}"
+
+        output = beanout.clover_leaf.render_clover_leaf_csv_text_to_jsonl(
+            csv_path.read_text()
+        )
+        expected = jsonl_path.read_text()
+        _assert_jsonl_equal(output, expected, csv_path.name)
+
+    for json_path in json_paths:
+        jsonl_path = json_path.with_suffix(f"{json_path.suffix}.jsonl")
+        assert jsonl_path.exists(), f"Missing golden file: {jsonl_path}"
+
+        output = beanout.clover_leaf.render_clover_leaf_json_text_to_jsonl(
+            json_path.read_text()
+        )
+        expected = jsonl_path.read_text()
+        _assert_jsonl_equal(output, expected, json_path.name)
 
 
 def test_sheer_value_jsonl_golden_files() -> None:
@@ -91,8 +118,12 @@ def test_sheer_value_jsonl_golden_files() -> None:
 def test_schwab_jsonl_golden_files() -> None:
     """Validate Schwab JSONL golden files match expected output."""
     golden_dir = pathlib.Path("fixtures/golden/institutions/banking/schwab")
-    json_paths = sorted(golden_dir.glob("*.json"))
-    xml_paths = sorted(golden_dir.glob("*.xml"))
+    json_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".json"
+    )
+    xml_paths = sorted(
+        path for path in golden_dir.iterdir() if path.suffix.lower() == ".xml"
+    )
 
     assert json_paths or xml_paths, "No Schwab golden files found"
 

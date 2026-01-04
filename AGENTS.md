@@ -5,7 +5,7 @@
 - Year folders (e.g., `ledger/2025/`) hold the primary `YYYY.bean` include plus subfolders for `mortgage/`, `taxes/`, `depreciation/` (with `buildings/` and `improvements/`), `assets/` (with `buildings/` and `improvements/`), `operations/`, and other domain slices.
 - Supporting notes live under `_notes/` with Markdown context files.
 - Environment metadata is in `devenv.nix`/`devenv.yaml` (Nix-based dev setup).
-- `src/beanout/` houses statement parsers and CLI utilities for generating Beancount output from `*.pdf.txt` files.
+- `src/beanout/` houses statement parsers and CLI utilities for generating Beancount output from `*.pdf.txt`, `.csv`, `.json`, `.qfx`, and `.xml` files.
 
 ## Document Pipeline & File Management
 - `inbox/` is the entry point for new statement files that need to be processed. Files here are unorganized and require renaming and moving.
@@ -75,10 +75,17 @@
 - No shared automated test framework is configured, but some tests are standalone `uv` scripts.
 - Treat `bean-check` as the primary validation step before changes.
 - Prefer adding balance assertions to `balances.bean` or year-specific files when introducing new accounts. Because `leafonly` is enabled, assertions must target leaf accounts.
-- Golden test files in `fixtures/golden/` follow the naming pattern `YYYY-MM-DD-ENTITY.filetype`:
-  - SPS files: `YYYY-MM-DD-SPS.pdf`, `YYYY-MM-DD-SPS.pdf.txt`, `YYYY-MM-DD-SPS.pdf.bean`, `YYYY-MM-DD-SPS.pdf.jsonl`
-  - Sheer Value files: `YYYY-MM-DD-SHEER-VALUE.pdf`, `YYYY-MM-DD-SHEER-VALUE.pdf.txt`, `YYYY-MM-DD-SHEER-VALUE.pdf.bean`, `YYYY-MM-DD-SHEER-VALUE.pdf.jsonl`
-  - Clover Leaf files: `YYYY-MM-DD-CLOVER-LEAF.pdf`, `YYYY-MM-DD-CLOVER-LEAF.pdf.txt`, `YYYY-MM-DD-CLOVER-LEAF.pdf.bean`, `YYYY-MM-DD-CLOVER-LEAF.pdf.jsonl`
+- Golden test files live under `fixtures/golden/` and are grouped by domain:
+  - `fixtures/golden/managers/{clover-leaf,sheer-value}/`
+  - `fixtures/golden/loans/sps/`
+  - `fixtures/golden/institutions/banking/{ally-bank,chase,schwab}/`
+  - `fixtures/golden/institutions/brokerages/fidelity/`
+- Naming pattern remains `YYYY-MM-DD-ENTITY.ext`, with paired outputs alongside each source:
+  - PDF sources: `*.pdf`, `*.pdf.txt`, `*.pdf.jsonl`, `*.pdf.bean`
+  - CSV sources: `*.csv`, `*.csv.jsonl`, `*.csv.bean`
+  - JSON sources: `*.json`, `*.json.jsonl`, `*.json.bean`
+  - QFX sources: `*.qfx`, `*.qfx.jsonl`, `*.qfx.bean`
+  - XML sources: `*.xml`, `*.xml.jsonl`, `*.xml.bean`
 
 ## Plugin Notes
 - `plugins/find_duplicates.py` supports a `cash_only=true` flag to compare only `Assets:*` postings for amount/currency matching. Warning-level matches are logged and do not fail `bean-check`.

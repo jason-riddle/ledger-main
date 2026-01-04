@@ -61,6 +61,46 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output in JSONL format instead of Beancount format.",
     )
 
+    clover_leaf_csv_parser = subparsers.add_parser(
+        "clover-leaf-csv",
+        help="Parse CloverLeaf .csv files.",
+    )
+    clover_leaf_csv_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the CloverLeaf .csv file.",
+    )
+    clover_leaf_csv_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+    clover_leaf_csv_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
+
+    clover_leaf_json_parser = subparsers.add_parser(
+        "clover-leaf-json",
+        help="Parse CloverLeaf .json files.",
+    )
+    clover_leaf_json_parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to the CloverLeaf .json file.",
+    )
+    clover_leaf_json_parser.add_argument(
+        "--output",
+        default="-",
+        help="Output path or '-' for stdout (default).",
+    )
+    clover_leaf_json_parser.add_argument(
+        "--jsonl",
+        action="store_true",
+        help="Output in JSONL format instead of Beancount format.",
+    )
+
     sheer_value_parser = subparsers.add_parser(
         "sheer-value",
         help="Parse Sheer Value .pdf.txt files.",
@@ -238,6 +278,14 @@ def main(argv: list[str] | None = None) -> int:
         "clover-leaf": (
             beanout.clover_leaf.render_clover_leaf_file,
             beanout.clover_leaf.render_clover_leaf_file_to_jsonl,
+        ),
+        "clover-leaf-csv": (
+            beanout.clover_leaf.render_clover_leaf_csv_file,
+            beanout.clover_leaf.render_clover_leaf_csv_file_to_jsonl,
+        ),
+        "clover-leaf-json": (
+            beanout.clover_leaf.render_clover_leaf_json_file,
+            beanout.clover_leaf.render_clover_leaf_json_file_to_jsonl,
         ),
         "sheer-value": (
             beanout.sheer_value.render_sheer_value_file,
