@@ -1,0 +1,60 @@
+;;
+;; 2023 - TAXES - ADJUSTMENTS
+;;
+
+2023-12-31 * "Adjustment" "Correcting Asset Basis to match 2023 Tax Return Form 4562" #tax-adjustment #taxes
+  ; References:
+  ; - 2023 Federal Tax Return (Form 4562 Depreciation and Amortization)
+  ; - ledger/_notes/_depreciation.bean (Verified Source of Truth)
+  ;
+  ; Context:
+  ; The original asset allocations recorded at purchase (based on HUD-1/Closing Disclosure)
+  ; differed slightly from the final cost basis reported to and used by the IRS.
+  ; This transaction adjusts the book value of these assets to match the tax return,
+  ; ensuring that future depreciation calculations and capital gains match official tax records.
+  ;
+  ; -----------------------------------------------------------------------
+  ; 2943 Butterfly Palm Calculation:
+  ; -----------------------------------------------------------------------
+  ; Land:
+  ;   Original Book Value: $44,358.00 (from ledger/2022/assets/buildings/2022-2943-Butterfly-Palm-2022-10-21-Property-Purchase.bean)
+  ;   Verified Tax Basis:  $45,191.00 (from Form 4562)
+  ;   Adjustment:          +$833.00
+  ;
+  ; Building (Capital Improvements):
+  ;   Original Book Value: $161,766.40 (from ledger/2022/assets/buildings/2022-2943-Butterfly-Palm-2022-10-21-Property-Purchase.bean)
+  ;   Verified Tax Basis:  $164,791.00 (from Form 4562)
+  ;   Adjustment:          +$3,024.60
+  ;
+  ; Loan Costs:
+  ;   Original Book Value: $2,388.75
+  ;   Verified Tax Basis:  $2,389.00
+  ;   Adjustment:          +$0.25
+  ;
+  ;
+  ; -----------------------------------------------------------------------
+  ; 206 Hoover Ave Calculation:
+  ; -----------------------------------------------------------------------
+  ; Land:
+  ;   Original Book Value: $28,410.32 (from ledger/2023/assets/buildings/2023-206-Hoover-Ave-2023-05-26-Property-Purchase.bean)
+  ;   Verified Tax Basis:  $27,469.00 (from Form 4562)
+  ;   Adjustment:          -$941.32
+  ;
+  ; Building:
+  ;   Original Book Value: $73,358.00
+  ;   Verified Tax Basis:  $73,358.00
+  ;   Adjustment:          $0.00 (Match)
+  ;
+  ;
+  ; -----------------------------------------------------------------------
+  ; Balancing Entry:
+  ; -----------------------------------------------------------------------
+  ; Net Change in Assets: +$2,916.53
+  ; Credited to Equity to represent the increase in Net Worth derived from
+  ; the finalized tax valuation (likely due to capitalized closing costs
+  ; that were previously expensed or omitted).
+  Assets:Land:206-Hoover-Ave                                             -941.32 USD
+  Equity:Retained-Earnings                                              -2916.53 USD
+  Assets:Land:2943-Butterfly-Palm                                         833.00 USD
+  Assets:Fixed-Assets:2943-Butterfly-Palm:Building:2023-01-01-Building   3024.60 USD
+  Assets:Loan-Costs:2943-Butterfly-Palm:2023-SPS-Mortgage                   0.25 USD

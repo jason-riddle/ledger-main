@@ -8,3 +8,6 @@ include "../canonical/adjustments/2022-Owner-Contributions.bean"
 
 ; ASSETS
 include "../canonical/assets/buildings/2022-2943-Butterfly-Palm-2022-10-21-Property-Purchase.bean"
+
+; MORTGAGE
+include "../canonical/mortgage/2022-2943-Butterfly-Palm-Mortgage-Payments.bean"

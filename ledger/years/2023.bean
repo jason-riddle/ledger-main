@@ -26,3 +26,4 @@ include "../canonical/mortgage/2023-2943-Butterfly-Palm-Mortgage-Payments.bean"
 ; TAXES
 include "../canonical/taxes/2023-206-Hoover-Ave-Taxes.bean"
 include "../canonical/taxes/2023-2943-Butterfly-Palm-Taxes.bean"
+include "../canonical/taxes/2023-Taxes-Adjustments.bean"
